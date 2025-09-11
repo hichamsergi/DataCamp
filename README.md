@@ -24,7 +24,7 @@ Estatus de los cursos:
 
 | Curso | Estado | Temas principales |
 |---------------------------------------------|---------|---------------------------------------------------|
-| Introduction to Python                      | ⏳ Pendiente | Sintaxis básica · funciones · estructuras de datos |
+| [Introduction to Python](https://github.com/hichamsergi/DataCamp/tree/main/Introduction%20to%20Python)                      | ⏳ Pendiente | Sintaxis básica · funciones · estructuras de datos |
 | Intermediate Python                         | ⏳ Pendiente | List comprehensions · manejo de errores · módulos  |
 | Introduction to Importing Data in Python    | ⏳ Pendiente | Importación de datos · formatos comunes · pandas   |
 | Intermediate Importing Data in Python       | ⏳ Pendiente | Técnicas avanzadas de importación · optimización   |
