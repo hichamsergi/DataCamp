@@ -15,13 +15,14 @@ El objetivo es consolidar conocimientos en Python, SQL, sistemas de datos y herr
 ## 📚 Progreso de la carrera
 
 Estatus de los cursos:
-    - 🔄 En progreso: Para los cursos que esté completando en el momento.
-    - ⏳ Pendiente: Para cursos que se completarán en un futuro.
-    - ✅ Completado: Para cursos ya completados. 
+
+- 🔄 **En progreso**: Para los cursos que esté completando en el momento.
+- ⏳ **Pendiente**: Para cursos que se completarán en un futuro.
+- ✅ **Completado**: Para cursos ya completados. 
 
 | Curso | Estado | Temas principales |
 |-------------------------------|---------|-------------------------|
-| [Introduction to Python](link) | ✅ Completado | Sintaxis básica, funciones, estructuras de datos |
+| [Introduction to Python] (https://github.com/hichamsergi/DataCamp/tree/main/Introduction%20to%20Python) | ✅ Completado | Sintaxis básica, funciones, estructuras de datos |
 | [Intermediate Python](link)   | 🔄 En progreso | List comprehensions, errores, módulos |
 | [Introduction to SQL](link)   | ⏳ Pendiente | SELECT, JOIN, agregaciones |
 | ...                           | ...     | ... |
