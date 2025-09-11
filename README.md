@@ -22,7 +22,7 @@ Estatus de los cursos:
 
 | Curso | Estado | Temas principales |
 |-------------------------------|---------|-------------------------|
-| [Introduction to Python] (https://github.com/hichamsergi/DataCamp/tree/main/Introduction%20to%20Python) | ✅ Completado | Sintaxis básica, funciones, estructuras de datos |
+| [Introduction to Python](https://github.com/hichamsergi/DataCamp/tree/main/Introduction%20to%20Python) | ✅ Completado | Sintaxis básica, funciones, estructuras de datos |
 | [Intermediate Python](link)   | 🔄 En progreso | List comprehensions, errores, módulos |
 | [Introduction to SQL](link)   | ⏳ Pendiente | SELECT, JOIN, agregaciones |
 | ...                           | ...     | ... |
