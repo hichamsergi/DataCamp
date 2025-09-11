@@ -12,15 +12,9 @@ El objetivo es consolidar conocimientos en Python, SQL, sistemas de datos y herr
 
 ---
 
-## 📚 Progreso de la carrera
+## 📚 Progreso de la carrera:
 
-Estatus de los cursos:
-
-- 🔄 **En progreso**: Para los cursos que esté completando en el momento.
-- ⏳ **Pendiente**: Para cursos que se completarán en un futuro.
-- ✅ **Completado**: Para cursos ya completados. 
-
-## 📚 Cursos de la carrera
+### 📚 Cursos de la carrera
 
 | Curso | Estado | Temas principales |
 |---------------------------------------------|---------|---------------------------------------------------|
@@ -40,7 +34,7 @@ Estatus de los cursos:
 
 ---
 
-## 📂 Proyectos de la carrera
+### 📂 Proyectos de la carrera
 
 | Proyecto                                    | Estado | Objetivo principal |
 |---------------------------------------------|---------|---------------------------------------------|
@@ -48,7 +42,6 @@ Estatus de los cursos:
 | Performing a Code Review                    | ⏳ Pendiente | Aplicar buenas prácticas de ingeniería de software |
 | Building a Retail Data Pipeline             | ⏳ Pendiente | Construcción de un pipeline de datos de retail |
 | Cleaning Data in Python                     | ⏳ Pendiente | Técnicas avanzadas de limpieza con Python    |
-
 
 ---
 
@@ -60,4 +53,8 @@ Estatus de los cursos:
 ---
 
 ## 📌 Nota
-Este repositorio es un **work in progress**: se irá actualizando conforme avance en los cursos de la carrera.
+Este repositorio es un **work in progress**: se irá actualizando conforme avance en los cursos de la carrera. 
+El estado de los diferentes cursos se marcaráde la siguiente forma:
+- 🔄 **En progreso**: Para los cursos que esté completando en el momento.
+- ⏳ **Pendiente**: Para cursos que se completarán en un futuro.
+- ✅ **Completado**: Para cursos ya completados. 
