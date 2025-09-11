@@ -6,7 +6,7 @@ El objetivo es consolidar conocimientos en Python, SQL, sistemas de datos y herr
 ---
 
 ## 📌 Objetivos del repositorio
-- Documentar mí paso por cada curso completado con resumenes.
+- Documentar mi paso por cada curso con resúmenes.
 - Guardar apuntes, ejercicios, notebooks y proyectos relevantes.
 - Mostrar el progreso realizado en el desarrollo de habilidades clave para el rol de **Data Engineer**.
 
@@ -54,7 +54,7 @@ El objetivo es consolidar conocimientos en Python, SQL, sistemas de datos y herr
 
 ## 📌 Nota
 Este repositorio es un **work in progress**: se irá actualizando conforme avance en los cursos de la carrera. 
-El estado de los diferentes cursos se marcaráde la siguiente forma:
+El estado de los diferentes cursos se marcará de la siguiente forma:
 - 🔄 **En progreso**: Para los cursos que esté completando en el momento.
 - ⏳ **Pendiente**: Para cursos que se completarán en un futuro.
 - ✅ **Completado**: Para cursos ya completados. 
