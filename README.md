@@ -12,7 +12,7 @@ El objetivo es consolidar conocimientos en Python, SQL, sistemas de datos y herr
 
 ---
 
-## 📚 Progreso de la carrera:
+## 🔄 Progreso de la carrera:
 
 ### 📚 Cursos de la carrera
 
