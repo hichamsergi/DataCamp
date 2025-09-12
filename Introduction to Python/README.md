@@ -30,6 +30,8 @@ Breve introducción a Python desde 0, sin requerimientos de conocimientos previo
 
 ### Capítulo 2: **Trabajar con diferéntes *data types***
 
+El objetivo de este capítulo es descubrir los tiferentes tipos de datos en Python, y saber cuándo y cómo utilizarlos.
+
 ---
 
 ### Capítulo 3: **Control de flujo y bucles**
