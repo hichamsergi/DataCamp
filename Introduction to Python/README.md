@@ -1,36 +1,38 @@
-# 📘 [Nombre del curso]
+# 📘 Introduction to Python
 
 ---
 
 ## 1. Descripción
 
-Breve explicación del curso, qué temas cubre y por qué es relevante para el rol de Data Engineer.
+Breve introducción a Python desde 0, sin requerimientos de conocimientos previos en este lenguaje de programación.
 
 ---
 
-## 2. Índice de contenidos
+## 2. Índice:
 
-1. Tema / módulo 1  
-2. Tema / módulo 2  
-3. Tema / módulo 3  
-4. …  
-
----
-
-## 3. Apuntes y conceptos clave
-
-### Tema 1: [Nombre del tema]
-
-- Punto importante 1  
-- Punto importante 2  
-- Ejemplo de código o uso  
-- Buenas prácticas relacionadas
+1. [Que es Python?](#capítulo-1-que-es-python)
+2. [Trabajar con diferéntes *data types*.](#capítulo-2-trabajar-con-diferéntes-data-types)
+3. [Control de flujo y bucles.](#capítulo-3-control-de-flujo-y-bucles)
 
 ---
 
-### Tema 2: [Nombre del tema]
+## 3. Apuntes:
 
-- …
+### Capítulo 1: **Que es Python?**
+
+- *Python* es un lenguaje de *alto nivel*, su sintaxis es muy parecida al *inglés*.
+
+- Al tener una sintaxis clara y legible es muy *fácil de aprender*, haciendolo ideal para principiantes.
+
+- Tiene un *grán ecosistema de librerías* lo que lo convierte en un lenguaje ampliamente utilizado en campos como el desarrollo de software, análisis de datos, inteligencia artificial y más.
+
+---
+
+### Capítulo 2: **Trabajar con diferéntes *data types***
+
+---
+
+### Capítulo 3: **Control de flujo y bucles**
 
 ---
 
