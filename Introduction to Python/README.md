@@ -44,23 +44,9 @@ Breve introducción a Python desde 0, sin requerimientos de conocimientos previo
 
 ---
 
-## 5. Reflexión personal
-
-- Qué conceptos me costaron más  
-- Qué me ha parecido útil  
-- Qué mejoraré en futuras prácticas o cursos  
-
 ---
 
-## 6. Estado
-
-- ✍️ En progreso / ✅ Completado  
-- Fecha de inicio: [fecha]  
-- Fecha de finalización: [fecha] (cuando lo completes)  
-
----
-
-## 7. Recursos adicionales
+## 5. Recursos adicionales
 
 - Enlace al curso oficial en DataCamp  
 - Materiales complementarios, documentación, lecturas recomendadas  
