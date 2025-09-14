@@ -30,7 +30,32 @@ Breve introducción a Python desde 0, sin requerimientos de conocimientos previo
 
 ### Capítulo 2: **Trabajar con diferéntes *data types***
 
-El objetivo de este capítulo es descubrir los tiferentes tipos de datos en Python, y saber cuándo y cómo utilizarlos.
+El objetivo de este capítulo es descubrir los tiferentes tipos de datos en Python, y saber cuándo y cómo utilizarlos. Los tipos de datos son los siguientes:
+
+- **Strings:** Podríamos entenderlo como un tipo de dato que representa **texto**. Los *strings*, al igual que otros tipos de datos, tienen **métodos**. Los métodos son funciones específicas para un tipo de datos en concreto:
+```
+mi_texto = "Hola Jorge, mi nombre es Sergi"
+
+# Reemplazar el nombre de Sergi por Hicham:
+mi_texto = mi_texto.replace("Sergi","Hicham")
+
+# Eliminar todas las mayusculas:
+mi_texto = mi_texto.lower()
+
+# Eliminar todas las minúsculas:
+mi_texto = mi_texto.upper()
+
+# Mostramos el contenido de la variable mi_texto
+print(mi_texto)
+```
+Normalmente enmarcamos los *strings* entre dos comillas dobles, de tal forma que, así podemos evitar falsas delimitaciones al usar otros carácteres especiales como las comillas simples. Ahora bien, al tener un string muy largo, enmarcamos el string entre tres comillas dobles para poder hacer saltos de línea de forma que el texto sea más legible:
+```
+mi_texto_largo = """Buenos días Jorge,
+Mí nombre es Hicham, y estoy encantado de haberte conocido.
+Te escribo para comentarte que estoy aprendiendo Python y,
+de momento, he aprendido a manejar strings.
+"""
+```
 
 ---
 
