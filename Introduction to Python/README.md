@@ -57,6 +57,13 @@ de momento, he aprendido a manejar strings.
 """
 ```
 
+- **Listas:** Las listas representan un tipo de dato que puede almacenar múltiples valores en una única variable, conteniendo múltiples tipos de datos como *strings*, *integers*, *floats* o *booleans*. Todo el contenido de una lista debe de delimitarse entre **corchetes**, separando los diferentes datos por comas ```,```:
+```
+# Lista de precios:
+precios = [10, 20, 30, 40]
+
+```
+
 ---
 
 ### Capítulo 3: **Control de flujo y bucles**
