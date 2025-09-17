@@ -57,13 +57,48 @@ de momento, he aprendido a manejar strings.
 """
 ```
 
-- **Listas:** Las listas representan un tipo de dato que puede almacenar múltiples valores en una única variable, conteniendo múltiples tipos de datos como *strings*, *integers*, *floats* o *booleans*. Todo el contenido de una lista debe de delimitarse entre **corchetes**, separando los diferentes datos por comas ```,```:
+- **Listas:** Las listas representan un tipo de dato que puede almacenar múltiples valores en una única variable, conteniendo múltiples tipos de datos como *strings*, *integers*, *floats* o *booleans*. Todo el contenido de una lista debe de delimitarse entre **corchetes**, separando los diferentes datos por comas:
 ```
 # Lista de precios:
 precios = [10, 20, 30, 40]
 
+# Mostrar los precios:
+print(precios)
+```
+Otro atributo de las listas es que son elementos ordenados, lo que implica que podemos acceder a los diferentes elementos que conforman una lista mediante el **indice** que ocupa dicho elemento. Hay que aclarar que el indice de elementos siempre empieza por **cero**:
+```
+# Mostrar el valor del primer y del tercer indice:
+
+precios[0] # 10
+
+precios[2] # 30
+```
+Un **pequeño truco** que nos proporciona python es el hecho de no necesitar contar cuantos elementos hay en una lista, ya que podemos acceder a lo elementos de manera inversa indicando el indice en negativo:
+```
+# Mostrar el último valor de la lista:
+
+precios[-1] # 40
 ```
 
+En el caso de necesitar mostrar multiples elementos, podemos hacerlo indicando dos puntos entre los diferentes indices que queremos:
+```
+# Mostrar los 3 primeros precios:
+
+precios[0:2] # 10, 20, 30
+
+# Mostrar todos los precios a partir del segundo:
+
+precios[1:] # 20, 30, 40
+```
+
+La forma de acceder a diferentes elementos se indica por *rangos*, como se puede ver previamente. Pero también podemos jugar un poco con estos rangos, de forma que si añadimos otros dos puntos al y final e indicamos un **2**, por ejemplo, solo se mostrarán los datos cada 2 posiciones:
+```
+# Mostrar solo los valores cada 2 precios:
+
+precios[::2] # 10 y 30
+
+precios[1::2] # 20 y 40
+```
 ---
 
 ### Capítulo 3: **Control de flujo y bucles**
