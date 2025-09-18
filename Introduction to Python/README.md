@@ -57,7 +57,7 @@ de momento, he aprendido a manejar strings.
 """
 ```
 
-- **Listas:** Las listas representan un tipo de dato que puede almacenar múltiples valores en una única variable, conteniendo múltiples tipos de datos como *strings*, *integers*, *floats* o *booleans*. Todo el contenido de una lista debe de delimitarse entre **corchetes**, separando los diferentes datos por comas:
+- **Listas:** Las listas representan un tipo de dato que puede almacenar múltiples valores en una única variable, conteniendo múltiples tipos de datos como *strings*, *integers*, *floats* o *booleans*. Todo el contenido de una lista debe de delimitarse entre **corchetes**,```[]```, separando los diferentes datos por comas:
 ```
 # Lista de precios:
 precios = [10, 20, 30, 40]
@@ -99,6 +99,48 @@ precios[::2] # 10 y 30
 
 precios[1::2] # 20 y 40
 ```
+- **Diccionarios:** Los diccionarios son una estructura de datos formada por dos componentes, la **clave** y el **valor**. Mientras las *listas* se componian de diferentes elementos *individuales*, los diccionarios al igual que su versión física se componen de una palabra, lo que sería la *clave*, y una definición, el *valor*. Esta estructura de datos se encapsula entre dos llaves, ```{}```:
+```
+# Diccionario asociando un producto con su precio:
+
+prod_prec = {"P1":10, "P2":20,
+             "P3":30, "P4":40,
+             "P5":50, "P6":60}
+```
+Este tipo de dato no utiliza una indexación numérica, como las listas. Para poder acceder a los valores que el mísmo diccionario contiene, accedemos refiriendonos a la clave asociada al valor:
+```
+# Ver el precio del producto "P4":
+
+prod_prec["P4"] # 40
+```
+Ahora bien, en algunos casos podemos querer ver el listado completo de productos, siguiendo el ejemplo, o por le contrario, el listado de precios de los productos. Para poder obtener toda esa información, podemos hacero así:
+```
+prod_prec.key() # dict_keys(['P1', 'P2', 'P3', 'P4', 'P5', 'P6'])
+
+prod_prec.value() # dict_values([10, 20, 30, 40, 50, 60])
+
+print(prod_prec)
+```
+
+Otro **pequeño truco** que podemos aplicar con los diccionarios es el hecho de generar una lista compuesta por todas las asociaciones clave-valor que tiene el diccionario:
+```
+prod_prec.items() # dict_items([('P1', 10), ('P2', 20), ('P3', 30), ('P4', 40), ('P5', 50), ('P6', 60)])
+```
+Comentar qué, esta lísta esta compuesta por diferentes paréntesis que encapsulan los conjuntos clave-valor. Eso implica que la lista esta compuesta por diferentes *tumplas*, que es un tipo de dato que veremos más adelante.
+
+Pero los diccionarios pueden, y a veces deben, de ser modificables. De tal forma que podemos llegar a necesitar modificar un valor o añadir uno nuevo. Podemos hacerlo así:
+```
+# Añadimos un nuevo producto con su precio:
+
+prod_prec["P7"] = 70
+
+# Actualizamos el precio de un producto:
+
+prod_prec["P6"] = 50
+```
+
+**¡¡¡IMPORTANTE!!!**: LOS DICCIONARIOS NO ACEPTAN CLAVES DUPLICADAS, estas deben de ser únicas.
+
 ---
 
 ### Capítulo 3: **Control de flujo y bucles**
