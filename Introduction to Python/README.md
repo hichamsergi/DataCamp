@@ -141,6 +141,36 @@ prod_prec["P6"] = 50
 
 **¡¡¡IMPORTANTE!!!**: LOS DICCIONARIOS NO ACEPTAN CLAVES DUPLICADAS, estas deben de ser únicas.
 
+- **Set**: Es un tipo de dato en python que **almacena valores únicos**. El contenido del *set* no puede cambiar, por lo que una vez se ha generado uno es inalterable. Pese a ello, podemos eliminar o añadir nuevos valores. Este tipo de dato es especialmente útil para eliminar valores duplicados de un conjunto de datos. Los datos en los *sets* se almacenan de forma desordenada, haciendolos bastante rapidos a la hora de buscar valores en su interior, pero inindexables.Esta estructura de datos se encapsula entre dos llaves, ```{}```:
+```
+# Invitados a un evento:
+
+invitados = {"Isaac", "Natxo",
+             "Marc", "Alberto",
+             "Marcia", "Hicham"}
+
+print(invitados)
+```
+
+Dadas las propiedades que tienen los sets, podemos necesitar en algun momento convertir otros tipo de datos a *set*, a esto lo llamamos **casting**:
+```
+lista_invitados = ["Isaac", "Natxo",
+            "Marc", "Alberto",
+            "Marcia", "Hicham", "Isaac"]
+
+# Convertimos la lista en un set:
+
+invitados_VIP = set(lista_invitados)
+
+# Comprobamos que tipo de dato es "invitados_VIP":
+type(invitados_VIP) # <class 'set'>
+```
+Pese al hecho de que **los valores contenidos en los sets no pueden tener índices**, hay funcines bastante útiles a la hora de tratar con ellos:
+```
+# Ordenar un set:
+
+sorted(invitados_VIP) # ['Alberto', 'Hicham', 'Isaac', 'Marc', 'Marcia', 'Natxo']
+```
 ---
 
 ### Capítulo 3: **Control de flujo y bucles**
