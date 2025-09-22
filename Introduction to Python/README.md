@@ -185,7 +185,7 @@ ofi_localizacion[2] # Bilbao
 2_tupla = tuple(my_lista)
 ```
 
-##### RESUMEN:
+##### **RESUMEN:**
 
 | Estructura de datos | Sintaxis     | Inmutable | Permite valores duplicados | Ordenada | Indexación con  [..] |
 |----------------------|-------------|-----------|----------------------------|----------|--------------------|
