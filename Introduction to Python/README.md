@@ -12,7 +12,7 @@ Breve introducción a Python desde 0, sin requerimientos de conocimientos previo
 
 1. [Que es Python?](#capítulo-1-que-es-python)
 2. [Trabajar con diferéntes *data types*.](#capítulo-2-trabajar-con-diferéntes-data-types)
-3. [Control de flujo y bucles.](#capítulo-3-control-de-flujo-y-bucles)
+3. [Estructuras condicionales y bucles.](#capítulo-3-estructuras-condicionales-y-bucles)
 
 ---
 
@@ -196,7 +196,7 @@ ofi_localizacion[2] # Bilbao
 
 ---
 
-### Capítulo 3: **Control de flujo y bucles**
+### Capítulo 3: **Estructuras condicionales y bucles**
 
 ---
 
