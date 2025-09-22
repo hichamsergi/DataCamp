@@ -141,7 +141,7 @@ prod_prec["P6"] = 50
 
 **¡¡¡IMPORTANTE!!!**: LOS DICCIONARIOS NO ACEPTAN CLAVES DUPLICADAS, estas deben de ser únicas.
 
-- **Set**: Es un tipo de dato en python que **almacena valores únicos**. El contenido del *set* no puede cambiar, por lo que una vez se ha generado uno es inalterable. Pese a ello, podemos eliminar o añadir nuevos valores. Este tipo de dato es especialmente útil para eliminar valores duplicados de un conjunto de datos. Los datos en los *sets* se almacenan de forma desordenada, haciendolos bastante rapidos a la hora de buscar valores en su interior, pero inindexables.Esta estructura de datos se encapsula entre dos llaves, ```{}```:
+- **Set:** Es un tipo de dato en python que **almacena valores únicos**. Los valores contenidos en el *set* no puede cambiar, por lo que una vez se han generado son inalterable. Pese a ello, podemos eliminar o añadir nuevos valores. Este tipo de dato es especialmente útil para eliminar valores duplicados de un conjunto de datos. Los datos en los *sets* se almacenan de forma desordenada, haciendolos bastante rapidos a la hora de buscar valores en su interior, pero inindexables.Esta estructura de datos se encapsula entre dos llaves, ```{}```:
 ```
 # Invitados a un evento:
 
@@ -171,6 +171,29 @@ Pese al hecho de que **los valores contenidos en los sets no pueden tener índic
 
 sorted(invitados_VIP) # ['Alberto', 'Hicham', 'Isaac', 'Marc', 'Marcia', 'Natxo']
 ```
+
+- **Tuplas:** Este es otro tipo de dato que tiene una peculiaridad significativa, es **inmutable**. A diferencia del *set*, donde los valores son los inmutables, las tuplas no pueden ser modificadas de ninguna de las formas. No se puede añadir valores, eliminarlos o modificar ningún tipo de datos o elemento contenido por una tupla, una vez creada es inalterable. También podemos diferenciarlo de los *set* en el hecho de que están ordenados, de forma que son indexables. Este dato es especialmente útil cuando pretendemos almacenar datos que de ninguna de las formas debe o puede ser alterable, como contraseñas. Los datos de las tuplas son almacenados de enre dos paréntesis, ```()```:
+```
+# Almacenamos las localizaciones de oficinas:
+
+ofi_localizacion = ("Barcelona", "Madrid", "Bilbao", "Malaga")
+
+ofi_localizacion[2] # Bilbao 
+
+# Convertir una lista en una tupla:
+
+2_tupla = tuple(my_lista)
+```
+
+##### RESUMEN:
+
+| Estructura de datos | Sintaxis     | Inmutable | Permite valores duplicados | Ordenada | Indexación con  [..] |
+|----------------------|-------------|-----------|----------------------------|----------|--------------------|
+| Lista (List)        | [1, 2, 3]   | No        | Sí                         | Sí       | Sí - por índice    |
+| Diccionario (Dict)  | {clave:valor} | No      | Sí                         | Sí       | Sí - por clave     |
+| Conjunto (Set)      | {1, 2, 3}   | No        | No                         | No       | No                 |
+| Tupla (Tuple)       | (1, 2, 3)   | Sí        | Sí                         | Sí       | Sí - por índice    |
+
 ---
 
 ### Capítulo 3: **Control de flujo y bucles**
