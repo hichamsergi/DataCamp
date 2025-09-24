@@ -11,9 +11,9 @@ Breve introducción a Python desde 0, sin requerimientos de conocimientos previo
 ## 2. Índice:
 
 1. [Qué es Python?](#capítulo-1-que-es-python)
-2. [Trabajar con diferentes *data types*.](#capítulo-2-trabajar-con-diferentes-data-types)
-3. [Estructuras condicionales y bucles.](#capítulo-3-estructuras-condicionales-y-bucles)
-
+2. [Trabajar con diferentes *data types*](#capítulo-2-trabajar-con-diferentes-data-types)
+3. [Estructuras condicionales y bucles](#capítulo-3-estructuras-condicionales-y-bucles)
+4. [Flujos de trabajo](#capítulo-4-flujos-de-trabajo)
 ---
 
 ## 3. Apuntes:
@@ -73,7 +73,7 @@ precios[0] # 10
 
 precios[2] # 30
 ```
-Un **pequeño truco** que nos proporciona python es el hecho de no necesitar contar cuantos elementos hay en una lista, ya que podemos acceder a los elementos de manera inversa indicando el índice en negativo:
+**Pequeño truco:** No necesitamos contar cuantos elementos hay en una lista, podemos acceder a los elementos de manera inversa indicando el índice en negativo:
 ```
 # Mostrar el último valor de la lista:
 
@@ -122,7 +122,7 @@ prod_prec.value() # dict_values([10, 20, 30, 40, 50, 60])
 print(prod_prec)
 ```
 
-Otro **pequeño truco** que podemos aplicar con los diccionarios es el hecho de generar una lista compuesta por todas las asociaciones clave-valor que tiene el diccionario:
+**Pequeño truco:** Podemos aplicar con los diccionarios es el hecho de generar una lista compuesta por todas las asociaciones clave-valor que tiene el diccionario:
 ```
 prod_prec.items() # dict_items([('P1', 10), ('P2', 20), ('P3', 30), ('P4', 40), ('P5', 50), ('P6', 60)])
 ```
@@ -221,7 +221,7 @@ else:
 
 - **Bucles:** Son fragmentos de código que nos permiten iterar sobre si mismos en funcion de ciertas condiciones. Los bucles también nos permiten introducir otros fragmentos de código en su interior. Cuando hablamos de bucles, hay de dos típos:
 
-    - **Bucles *for*:** Iteramos sobre una cantidad de valores finita y conocida. Es especialmente útil para listas con un número de valores determinado.
+    - **Bucles *for*:** Iteramos sobre una cantidad de valores finita y conocida. Es especialmente útil para listas con un número de valores determinado:
     ```
     precios = [1,4,6,2,3]
 
@@ -230,17 +230,102 @@ else:
     ```
     En el ejemplo anterior podemos entender que por cada iteración mostramos el valor de *precio* en ese momento.
 
-    **Pequeño truco:** En el caso de querer iterar sobre *diccionarios*, hay una forma especialmente útil de hacerlo:
+    **Pequeño truco:** En el caso de querer iterar sobre *diccionarios*, hay una forma especialmente útil de hacerlo mediante el método ```*.items()```:
     ```
     dict = {1:"Hicham", 2:"Ana", 3:"Manolo", 4:"Vicky"}
 
     for key,value in dict.items(): 
         print(key,value)
+
+        # Son aplicables el resto de métodos de diccionarios.
+    ```
+    Si además queremos modificar el contenido de una estructura de datos como podría ser una lista, podemos hacerlo con ```range()```, una función integrada de python:
+
+    ```
+    # Mostrar los números entre el 1 y el 5
+    
+    for num in range(1,6): # El primer digito es el inicio
+                           # El segundo digito es el último del rango, este no se cuenta (n-1)
+        
+        print(num) # 1,2,3,4,5
+    
     ```
 
-    - **Bucles *while*:**
+    - **Bucles *while*:** En este caso iteramos siempre y cuando se cumpla una determinada condición, podríamos decir que es un bucle *booleano*. Se utiliza cuando no sabemos cuantas veces debemos de iterar:
+
+    ```
+    valor_max = 10
+
+    num_compras = 0
+
+    # Queremos seguir comprando acciónes hasta que llegue a "x" precio:
+
+    while num_compras < valor_max:
+
+        # Aumentamos nuestras posciónes:
+        num_compras += 1
+    ```
+
+    **¡¡¡IMPORTANTE!!!**: Si no llega a cumplirse nunca la condición del bucle **while**, el bucle iterará **HASTA EL INFINITO**.
+
+    Para evitar entrar en un bucle perpetuo, hay un metodo que podemos utilizar para finalizar el bucle antes de tiempo y salir:
+    ```
+    while num_compras < valor_max:
+
+        # Queremos dejar de comprar cuando llegue a 7:
+        if num _compras == 7:
+
+            break #Esto termina el bucle repentinamente
+    
+        num_compras += 1
+    ```
+    
 ---
 
+
+### Capítulo 4: **Flujos de trabajo**
+
+Una vez ya hemos aprendido los diferentes tipos de datos, lo que implican las estructuras condicionales y como iterar, hay formas mas avanzadas y rapidas de hacer todo lo que hemos aprendido previamente. Algunas de estas formas:
+
+- ```in```: Comprueba si el valor se encuentra en una variable o estructura de datos:
+```
+prod_prec = {
+    "aa":10,"bb":20,
+    "cc":30,"dd":40,
+    "ee":50,"ff":60
+}
+
+if "dd" in prod_prec: # 
+    print("dd","price is",prod_prec["dd"])
+```
+
+- ```not```: Comprueba que un valor no se encuentra en una variable o estructura de datos:
+```
+prod_prec = {
+    "aa":10,"bb":20,
+    "cc":30,"dd":40,
+    "ee":50,"ff":60
+}
+
+if "hh" not in prod_prec: # 
+    print("hh","price not expected")
+```
+
+- ```and``` y ```or```: Estas dos palabras comprueban que la condición booleana se cumple **si y solo si** se dan ambas condiciones, en el caso del ```and```, o **si se cumple una de las dos**, en el caso del ```or```.
+
+- ```append(...)```: Esto es una función especifica para **listas**, y nos permite añadir valores a una lista preexistente:
+```
+prod = []
+
+# Imaginamos que tenemosun diccionario preexistente:
+for key,val in dicc_prod:
+    
+    # Queremos los productos de un determinado precio:
+    if val == 20:
+        prod.append(key)
+
+print(prod) # Mostrará solo los productos con un precio de 20
+```
 ## 4. Ejercicios / Prácticas
 
 - Descripción breve de cada ejercicio trabajado.  
