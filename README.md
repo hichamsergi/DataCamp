@@ -19,7 +19,7 @@ El objetivo es consolidar conocimientos en Python, SQL, sistemas de datos y herr
 | Curso |     Estado     | Temas principales |
 |---------------------------------------------|---------|---------------------------------------------------|
 | [Introduction to Python](https://github.com/hichamsergi/DataCamp/tree/main/Introduction%20to%20Python)                      | ✅ **Completado** | Sintaxis básica · funciones · estructuras de datos |
-| [Intermediate Python]                         | 🔄 *En progreso* | List comprehensions · manejo de errores · módulos  |
+| [Intermediate Python](https://github.com/hichamsergi/DataCamp/tree/main/Intermediate%20Python)                         | 🔄 *En progreso* | List comprehensions · manejo de errores · módulos  |
 | Introduction to Importing Data in Python    | ⏳ Pendiente | Importación de datos · formatos comunes · pandas   |
 | Intermediate Importing Data in Python       | ⏳ Pendiente | Técnicas avanzadas de importación · optimización   |
 | Introduction to APIs in Python              | ⏳ Pendiente | Consumo de APIs · requests · JSON                  |
