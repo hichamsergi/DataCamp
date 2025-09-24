@@ -326,6 +326,7 @@ for key,val in dicc_prod:
 
 print(prod) # Mostrará solo los productos con un precio de 20
 ```
+
 ## 4. Ejercicios / Prácticas
 
 - Descripción breve de cada ejercicio trabajado.  
