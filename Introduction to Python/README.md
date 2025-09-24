@@ -200,6 +200,45 @@ ofi_localizacion[2] # Bilbao
 
 ### Capítulo 3: **Estructuras condicionales y bucles**
 
+- **Estructuras condicionales:** Son fragmentos de código que nos permiten generar un flujo de trabajo en función de una operación *booleana*, ```True/False```:
+```
+# Unidades vendidas y objectivos de ventas:
+u_vend = 1600
+obje_vend = 1500
+
+    #Operacion booleana principal
+if u_vend > obje_vend:
+    print("Objectivo alcanzado")
+
+    #Operacion booleana alternativa
+elif u_vend >= 1000:
+    print("Objetivo casi alcanzado")
+
+    #En caso negativo ejecutara este fragmento
+else:
+    print("No has alcanzado el objetivo")
+```
+
+- **Bucles:** Son fragmentos de código que nos permiten iterar sobre si mismos en funcion de ciertas condiciones. Los bucles también nos permiten introducir otros fragmentos de código en su interior. Cuando hablamos de bucles, hay de dos típos:
+
+    - **Bucles *for*:** Iteramos sobre una cantidad de valores finita y conocida. Es especialmente útil para listas con un número de valores determinado.
+    ```
+    precios = [1,4,6,2,3]
+
+    for precio in precio:
+        print("El precio es ", precio)
+    ```
+    En el ejemplo anterior podemos entender que por cada iteración mostramos el valor de *precio* en ese momento.
+
+    **Pequeño truco:** En el caso de querer iterar sobre *diccionarios*, hay una forma especialmente útil de hacerlo:
+    ```
+    dict = {1:"Hicham", 2:"Ana", 3:"Manolo", 4:"Vicky"}
+
+    for key,value in dict.items(): 
+        print(key,value)
+    ```
+
+    - **Bucles *while*:**
 ---
 
 ## 4. Ejercicios / Prácticas
