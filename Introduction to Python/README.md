@@ -326,18 +326,3 @@ for key,val in dicc_prod:
 
 print(prod) # Mostrará solo los productos con un precio de 20
 ```
-
-## 4. Ejercicios / Prácticas
-
-- Descripción breve de cada ejercicio trabajado.  
-- Enlaces a notebooks o scripts.  
-- Acerca de lo que he aprendido haciendo los ejercicios.  
-
----
-
----
-
-## 5. Recursos adicionales
-
-- Enlace al curso oficial en DataCamp  
-- Materiales complementarios, documentación, lecturas recomendadas.  
