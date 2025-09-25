@@ -1,48 +1,33 @@
-# 📘 [Nombre del curso]
-
-## 📌 Descripción
-Breve resumen del curso: qué trata, cuáles son sus objetivos principales y qué aporta al desarrollo como Data Engineer.  
-
-Ejemplo:  
-Este curso introduce los fundamentos de Python, abordando sintaxis básica, estructuras de datos y buenas prácticas para la manipulación de información.
+# 📘 Intermediate Python for Developers
 
 ---
 
-## 🎯 Objetivos de aprendizaje
-- [ ] Objetivo 1  
-- [ ] Objetivo 2  
-- [ ] Objetivo 3  
+## 1. Descripción
 
-*(Marca con ✅ cuando lo completes)*
+
 
 ---
 
-## 🛠️ Temas principales
-- Tema 1  
-- Tema 2  
-- Tema 3  
+## 2. Índice:
+
+1. [El ecosistema Python](#capítulo-1-el-ecosistema-python)
+2. [Alias con funciones](#capítulo-2-alias-con-funciones)
+3. [Funciones lambda y gestión de errores](#capítulo-3-funciones-lambda-y-gestión-de-errores)
 
 ---
 
-## 📂 Materiales del curso
-- 📓 Notebooks: [enlace o carpeta]  
-- 📑 Apuntes: [enlace o carpeta]  
-- 📦 Ejercicios / Scripts: [enlace o carpeta]  
+## 3. Apuntes:
+
+### Capítulo 1: **<ins>El ecosistema Python</ins>**
+
+
+
+### Capítulo 2: **<ins>Alias con funciones</ins>**
+
+
+
+### Capítulo 3: **<ins>Funciones lambda y gestión de errores</ins>**
+
+
 
 ---
-
-## ✅ Conocimientos adquiridos
-- Punto clave aprendido 1  
-- Punto clave aprendido 2  
-- Punto clave aprendido 3  
-
----
-
-## 🔗 Recursos adicionales
-- [Enlace a la página del curso en DataCamp](url_del_curso)  
-- [Documentación relacionada](link)  
-
----
-
-## 📌 Estado
-⏳ En progreso / ✅ Completado  
