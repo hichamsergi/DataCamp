@@ -46,7 +46,7 @@ total_ventas = sum(ventas)
 
 round(total_ventas,2) # Esto nos redondeara a dos decimales, 88.58
 
-# Para hacerlo mas rapido round(sum(total_ventas),2)
+# Para hacerlo mas rapido:
 total_ventas = round(sum(total_ventas),2)
 
 ```
