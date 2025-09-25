@@ -32,7 +32,7 @@ Breve introducción a Python desde 0, sin requerimientos de conocimientos previo
 
 El objetivo de este capítulo es descubrir los diferentes tipos de datos en Python, y saber cuándo y cómo utilizarlos. Los tipos de datos son los siguientes:
 
-- **Strings:** Podríamos entenderlo como un tipo de dato que representa **texto**. Los *strings*, al igual que otros tipos de datos, tienen **métodos**. Los métodos son funciones específicas para un tipo de datos en concreto:
+- <ins>**Strings:**</ins> Podríamos entenderlo como un tipo de dato que representa **texto**. Los *strings*, al igual que otros tipos de datos, tienen **métodos**. Los métodos son funciones específicas para un tipo de datos en concreto:
 ```
 mi_texto = "Hola Jorge, mi nombre es Sergi"
 
@@ -57,7 +57,7 @@ de momento, he aprendido a manejar strings.
 """
 ```
 
-- **Listas:** Las listas representan un tipo de dato que puede almacenar múltiples valores en una única variable, conteniendo múltiples tipos de datos como *strings*, *integers*, *floats* o *booleans*. Todo el contenido de una lista debe de delimitarse entre **corchetes**,```[]```, separando los diferentes datos por comas:
+- <ins>**Listas:**</ins> Las listas representan un tipo de dato que puede almacenar múltiples valores en una única variable, conteniendo múltiples tipos de datos como *strings*, *integers*, *floats* o *booleans*. Todo el contenido de una lista debe de delimitarse entre **corchetes**,```[]```, separando los diferentes datos por comas:
 ```
 # Lista de precios:
 precios = [10, 20, 30, 40]
@@ -99,7 +99,7 @@ precios[::2] # 10 y 30
 
 precios[1::2] # 20 y 40
 ```
-- **Diccionarios:** Los diccionarios son una estructura de datos formada por dos componentes, la **clave** y el **valor**. Mientras las *listas* se compongan de diferentes elementos *individuales*, los diccionarios, al igual que su versión física, se componen de una palabra, lo que sería la *clave*, y una definición, el *valor*. Esta estructura de datos se encapsula entre dos llaves, ```{}```:
+- <ins>**Diccionarios:**</ins> Los diccionarios son una estructura de datos formada por dos componentes, la **clave** y el **valor**. Mientras las *listas* se compongan de diferentes elementos *individuales*, los diccionarios, al igual que su versión física, se componen de una palabra, lo que sería la *clave*, y una definición, el *valor*. Esta estructura de datos se encapsula entre dos llaves, ```{}```:
 ```
 # Diccionario asociando un producto con su precio:
 
@@ -141,7 +141,8 @@ prod_prec["P6"] = 50
 
 **¡¡¡IMPORTANTE!!!**: LOS DICCIONARIOS NO ACEPTAN CLAVES DUPLICADAS, estas deben de ser únicas.
 
-- **Set:** Es un tipo de dato en python que **almacena valores únicos**. Los valores contenidos en el *set* no pueden cambiar, por lo que una vez se han generado son inalterables. Pese a ello, podemos eliminar o añadir nuevos valores. 
+- <ins>**Set:**</ins> Es un tipo de dato en python que **almacena valores únicos**. Los valores contenidos en el *set* no pueden cambiar, por lo que una vez se han generado son inalterables. Pese a ello, podemos eliminar o añadir nuevos valores. 
+
 Este tipo de dato es especialmente útil para eliminar valores duplicados de un conjunto de datos. Los datos en los *sets* se almacenan de forma desordenada, haciéndolos bastante rápidos a la hora de buscar valores en su interior, pero no son indexables. Esta estructura de datos se encapsula entre dos llaves, ```{}```:
 ```
 # Invitados a un evento:
@@ -173,7 +174,8 @@ Pese al hecho de que **los valores contenidos en los sets no pueden tener índic
 sorted(invitados_VIP) # ['Alberto', 'Hicham', 'Isaac', 'Marc', 'Marcia', 'Natxo']
 ```
 
-- **Tuplas:** Este es otro tipo de dato que tiene una peculiaridad significativa, es **inmutable**. A diferencia del *set*, donde los valores son los inmutables, las tuplas no pueden ser modificadas de ninguna de las formas. No se puede añadir valores, eliminarlos o modificar ningún tipo de datos o elemento contenido por una tupla, que una vez creada es inalterable. 
+- <ins>**Tuplas:**</ins> Este es otro tipo de dato que tiene una peculiaridad significativa, es **inmutable**. A diferencia del *set*, donde los valores son los inmutables, las tuplas no pueden ser modificadas de ninguna de las formas. No se puede añadir valores, eliminarlos o modificar ningún tipo de datos o elemento contenido por una tupla, que una vez creada es inalterable.
+
 También podemos diferenciarlo de los *sets* en el hecho de que están ordenados, de forma que no son indexables. Este dato es especialmente útil cuando pretendemos almacenar datos que de ninguna de las formas deben o pueden ser alterables, como contraseñas. Los datos de las tuplas son almacenados entre dos paréntesis, ```()```:
 ```
 # Almacenamos las localizaciones de oficinas:
@@ -221,7 +223,7 @@ else:
 
 - **Bucles:** Son fragmentos de código que nos permiten iterar sobre si mismos en funcion de ciertas condiciones. Los bucles también nos permiten introducir otros fragmentos de código en su interior. Cuando hablamos de bucles, hay de dos típos:
 
-    - **Bucles *for*:** Iteramos sobre una cantidad de valores finita y conocida. Es especialmente útil para listas con un número de valores determinado:
+    - <ins>**Bucles *for*:**</ins> Iteramos sobre una cantidad de valores finita y conocida. Es especialmente útil para listas con un número de valores determinado:
     ```
     precios = [1,4,6,2,3]
 
@@ -251,7 +253,7 @@ else:
     
     ```
 
-    - **Bucles *while*:** En este caso iteramos siempre y cuando se cumpla una determinada condición, podríamos decir que es un bucle *booleano*. Se utiliza cuando no sabemos cuantas veces debemos de iterar:
+    - <ins>**Bucles *while*:**</ins> En este caso iteramos siempre y cuando se cumpla una determinada condición, podríamos decir que es un bucle *booleano*. Se utiliza cuando no sabemos cuantas veces debemos de iterar:
 
     ```
     valor_max = 10
