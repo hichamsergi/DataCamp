@@ -74,7 +74,38 @@ help(sorted)
 #     Return a new list containing all items from the iterable  in ascending order.
 ```
 
-**2) Módulos**:
+**2) Módulos**: Son *scripts* integrados en Python que contienen **atributos**, **funciones** e incluso **otros modulos**. Esto nos ayuda especialmente a evitar escribir código que ya existe.
+
+Algunos de los módulos más populares:
+
+ - ```os```: Módulo que nos permite interactuar e interpretar el sistema operativo del equipo donde se ejecuta Python.
+
+ - ```collections```: Módulo que ofrece una amplia variedad de estructuras de datos avanzadas.
+
+ - ```string```: Módulo que nos permite realizar operaciones avanzadas con strings.
+
+ - ```logging```: Módulo que permite registrar información cuando se realizan pruebas de software.
+
+ - ```subprocess```: Módulo que permite ejecutar comandos de terminal.
+
+ Toda esta información es muy útil, pero necesitamos saber como integrar estos módulos dentro de nuestro código. Para poder hacerlo, debemos de importarlos:
+ 
+ ```python
+ 
+    import os
+
+    os.getcwd() # Nos mostrará el directorio activo actual
+    os.chdir("/home/hichamsergi")  # Cambiará de directorio raíz del usuario hichamsergi
+
+    help(os) # Nos mostrará toda la documentación referente al módulo OS
+ ```
+
+ Pese a todo, el hecho importar un modulo entero para utilizar unicamente unas pocas funciones es algo muy poco eficiente. Podemos importar unicamente las funciones que sean necesarias de la siguiente forma:
+ ```python
+
+   from os import getcwd, chdir # Así solo importamos las funciones necesárias.
+ ```
+
 **3) Paquetes**:
 
 ### Capítulo 2: **<ins>Alias con funciones</ins>**
