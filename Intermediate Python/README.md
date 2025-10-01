@@ -38,6 +38,8 @@ sum(ventas) # 88.57999
 
 len(ventas) # 5
 
+sorted(ventas) # [2,3,6.57999,10,67]
+
 # Con esta herraminentas podemso jugar y extraer un promedio:
 sum(ventas) / len(ventas)
 
@@ -58,7 +60,20 @@ Estas funciones integradas no solo tienen aplicaciones numéricas, también pode
 # String:
 
 len("Introduccion a Python para desarrolladores") # 42
+
+sorted("Hicham") # ['H','a','c','h','i','m']
 ```
+
+En caso de tener dudas de como podemos utilizar una función, podemos llamar a la misma función ```help(...)```, y esta nos dará toda la documentación de la función que pretendemos utilizar:
+
+```python
+
+help(sorted)
+
+# sorted(iterable, /, *, key=None, reverse=False)
+#     Return a new list containing all items from the iterable  in ascending order.
+```
+
 **2) Módulos**:
 **3) Paquetes**:
 
