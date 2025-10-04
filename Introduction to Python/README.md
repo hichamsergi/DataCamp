@@ -67,7 +67,7 @@ print(precios)
 ```
 Otro atributo de las listas es que son elementos ordenados, lo que implica que podemos acceder a los diferentes elementos que conforman una lista mediante el índice** que ocupa dicho elemento. Hay que aclarar que el índice de elementos siempre empieza por **cero**:
 ```python
-# Mostrar el valor del primer y del tercer indice:
+# Mostrar el valor del primer y del tercer índice:
 
 precios[0] # 10
 
@@ -216,12 +216,12 @@ if u_vend > obje_vend:
 elif u_vend >= 1000:
     print("Objetivo casi alcanzado")
 
-    #En caso negativo ejecutara este fragmento
+    #En caso negativo ejecutará este fragmento
 else:
     print("No has alcanzado el objetivo")
 ```
 
-- **Bucles:** Son fragmentos de código que nos permiten iterar sobre si mismos en funcion de ciertas condiciones. Los bucles también nos permiten introducir otros fragmentos de código en su interior. Cuando hablamos de bucles, hay de dos típos:
+- **Bucles:** Son fragmentos de código que nos permiten iterar sobre si mismos en función de ciertas condiciones. Los bucles también nos permiten introducir otros fragmentos de código en su interior. Cuando hablamos de bucles, hay de dos tipos:
 
     - <ins>**Bucles *for*:**</ins> Iteramos sobre una cantidad de valores finita y conocida. Es especialmente útil para listas con un número de valores determinado:
     ```python
@@ -264,13 +264,13 @@ else:
 
     while num_compras < valor_max:
 
-        # Aumentamos nuestras posciónes:
+        # Aumentamos nuestras posiciones:
         num_compras += 1
     ```
 
     **¡¡¡IMPORTANTE!!!**: Si no llega a cumplirse nunca la condición del bucle **while**, el bucle iterará **HASTA EL INFINITO**.
 
-    Para evitar entrar en un bucle perpetuo, hay un metodo que podemos utilizar para finalizar el bucle antes de tiempo y salir:
+    Para evitar entrar en un bucle perpetuo, hay un método que podemos utilizar para finalizar el bucle antes de tiempo y salir:
     ```python
     while num_compras < valor_max:
 
@@ -287,7 +287,7 @@ else:
 
 ### Capítulo 4: **<ins>Flujos de trabajo</ins>**
 
-Una vez ya hemos aprendido los diferentes tipos de datos, lo que implican las estructuras condicionales y como iterar, hay formas mas avanzadas y rapidas de hacer todo lo que hemos aprendido previamente. Algunas de estas formas:
+Una vez ya hemos aprendido los diferentes tipos de datos, lo que implican las estructuras condicionales y como iterar, hay formas más avanzadas y rápidas de hacer todo lo que hemos aprendido previamente. Algunas de estas formas:
 
 - ```in```: Comprueba si el valor se encuentra en una variable o estructura de datos:
 ```python
@@ -315,11 +315,11 @@ if "hh" not in prod_prec: #
 
 - ```and``` y ```or```: Estas dos palabras comprueban que la condición booleana se cumple **si y solo si** se dan ambas condiciones, en el caso del ```and```, o **si se cumple una de las dos**, en el caso del ```or```.
 
-- ```append(...)```: Esto es una función especifica para **listas**, y nos permite añadir valores a una lista preexistente:
+- ```append(...)```: Esto es una función específica para **listas**, y nos permite añadir valores a una lista preexistente:
 ```python
 prod = []
 
-# Imaginamos que tenemosun diccionario preexistente:
+# Imaginamos que tenemos un diccionario preexistente:
 for key,val in dicc_prod:
     
     # Queremos los productos de un determinado precio:
