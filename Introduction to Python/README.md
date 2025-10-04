@@ -202,7 +202,7 @@ ofi_localizacion[2] # Bilbao
 
 ### Capítulo 3: **<ins>Estructuras condicionales y bucles</ins>**
 
-- **Estructuras condicionales:** Son fragmentos de código que nos permiten generar un flujo de trabajo en función de una operación *booleana*, ```True/False```:
+- **<ins>Estructuras condicionales:</ins>** Son fragmentos de código que nos permiten generar un flujo de trabajo en función de una operación *booleana*, ```True/False```:
 ```python
 # Unidades vendidas y objectivos de ventas:
 u_vend = 1600
@@ -221,7 +221,7 @@ else:
     print("No has alcanzado el objetivo")
 ```
 
-- **Bucles:** Son fragmentos de código que nos permiten iterar sobre si mismos en función de ciertas condiciones. Los bucles también nos permiten introducir otros fragmentos de código en su interior. Cuando hablamos de bucles, hay de dos tipos:
+- **<ins>Bucles:</ins>** Son fragmentos de código que nos permiten iterar sobre si mismos en función de ciertas condiciones. Los bucles también nos permiten introducir otros fragmentos de código en su interior. Cuando hablamos de bucles, hay de dos tipos:
 
     - <ins>**Bucles *for*:**</ins> Iteramos sobre una cantidad de valores finita y conocida. Es especialmente útil para listas con un número de valores determinado:
     ```python
