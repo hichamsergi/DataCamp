@@ -24,7 +24,7 @@ El atractivo de Python para el desarrollo de software, la inteligencia artificia
 
 Estas herramientas, las podríamos diferenciar en tres grandes grupos:
 
-**1) Funciones integradas**: Son funciones integradas en el mísmo lenguaje, disponibles por defecto, sin necesidad de importar módulos externos. Algunas de las más interesante, para lo que nos ocupa, serían las funciones numéricas. Estas son funciones nos facilitan la vida bastante, algunos ejemplos:
+**<ins>1) Funciones integradas</ins>**: Son funciones integradas en el mísmo lenguaje, disponibles por defecto, sin necesidad de importar módulos externos. Algunas de las más interesante, para lo que nos ocupa, serían las funciones numéricas. Estas son funciones nos facilitan la vida bastante, algunos ejemplos:
 
 ```python
 
@@ -74,7 +74,7 @@ help(sorted)
 #     Return a new list containing all items from the iterable  in ascending order.
 ```
 
-**2) Módulos**: Son *scripts* integrados en Python que contienen **atributos**, **funciones** e incluso **otros módulos**. Esto nos ayuda especialmente a evitar escribir código que ya existe.
+**<ins>2) Módulos</ins>**: Son *scripts* integrados en Python que contienen **atributos**, **funciones** e incluso **otros módulos**. Esto nos ayuda especialmente a evitar escribir código que ya existe.
 
 Algunos de los módulos más populares:
 
@@ -106,7 +106,7 @@ Algunos de los módulos más populares:
    from os import getcwd, chdir # Así solo importamos las funciones necesarias.
  ```
 
-**3) Paquetes**:
+**<ins>3) Paquetes</ins>**:
 
 ### Capítulo 2: **<ins>Alias con funciones</ins>**
 
