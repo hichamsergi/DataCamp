@@ -106,11 +106,72 @@ Algunos de los módulos más populares:
    from os import getcwd, chdir # Así solo importamos las funciones necesarias.
  ```
 
-**<ins>3) Paquetes</ins>**:
+**<ins>3) Paquetes</ins>**: Es una colección de módulos organizados dentro de una carpeta. Esto permite estructurar y reutilizar el código de las funciónes contenidas en los diferentes módulos de la carpeta.
+
+Para poder importar los módulos contenidos en un paquete, debemos instalar el mismo paquete, en este caso ```pandas```:
+```bash
+hicham@localhost:~$ python3 -m pip install pandas
+```
+Una vez hemos instalado el paquete con todos los módulos, podemos hacer uso de esos módulos importándolos.
+
+Una buena práctica en python, consiste en renombrar los paquetes dentro de nuestro código de forma que no tengamos que llamar todo el rato al mismo módulo:
+```python
+import pandas as pd
+...
+```
+
+Siguiendo el  ejemplo, ```pandas``` es un paquete especialmente interesante, ya que nos permite hacer cosas útiles como transformar un simple diccionario en un **DataFrame**. Los *Dataframe*, son una forma de organizar información parecida a la de las matrices o tablas de *Excel*, en las que hay columnas con datos organizados en filas:
+```python
+import pandas as pd
+
+#Simple diccionario:
+ventas = {
+  "user_id":["KM37","PR19","YU88"],
+  "order_value":[10,200,132]
+}
+
+#Convertimos el diccionario en un DataFrame:
+ventas_df = pd.DataFrame(ventas)
+
+ventas_df
+
+#  user_id  order_value
+#0    KM37           10
+#1    PR19          200
+#2    YU88          132
+```
+
+También podemos leer diferentes tipos de archivos con pandas, como CSV:
+```python
+
+ventas = pd.read_csv("ventas.csv") # Esto convertirá el contenido del CSV en un DataFrame
+
+ventas.head() # Esto nos mostraá las primeras 5 filas del DataFrame generado
+```
 
 ### Capítulo 2: **<ins>Alias con funciones</ins>**
 
+Habitualmente, podemos encontrarnos con ciertas limitaciones, puede haber ocasiones donde las funciones integradas de python o paquetes de funciones no sean suficiente y necesitemos crear las nuestras propias. Para poder hacerlo debemos de hacernos las siquientes preguntas:
 
+  **1) ¿Cuantas líneas ocupará nuestro código si no creamos la función?**
+  **2) ¿Cual es la complejidad de nuestra función?**
+  **3) ¿Cual será la frecuencia de uso de nuestra función?**
+
+Esto nos ayudará a cuestionarnos si realmente es necesario crear nuestra función propia. Pese a ello podemos seguir la regla mas simple de todas, *Don't Repeat Yourself* (**DRY**).
+
+Para poder crear nuestra porpia función podemos hacerlo de la siguiente forma:
+```python
+
+def average(values):
+
+  # Calcular el promedio
+  average_value = sum(values) / len(values)
+
+  rounded_average = round(average_value, 2)
+
+  # Devolvemos el valor deseado fuera de la función
+  return rounded_average
+```
 
 ### Capítulo 3: **<ins>Funciones lambda y gestión de errores</ins>**
 
