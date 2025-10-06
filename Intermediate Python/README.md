@@ -173,6 +173,35 @@ def average(values):
   return rounded_average
 ```
 
+Ahora, entendemos el funcionamiento basico de las funciones. Pese a ello, podemos profundizar aun más en como trabajan y porqué hacen lo que hacen. Empezando por descomponer las funciones:
+
+```python
+def function_name(argument):
+  ...
+```
+
+La descripción de los dos primeros terminos es simple, utilizamos ```def``` para definir una función propia, y lo siguiente es el mísmo nombre que le asignaremos a la función, en este caso ```function_name(...)```.
+
+En cuanto al ```argument```, serían los argumentos que les transmitimos a la función para poder funcionar. Podemos transmitirle de dos tipos diferentes:
+
+* **Posicional**: Los argumentos posicionales corresponden a su utilidad dependiendo de la posición en la que se recogen. Tomando como ejemplo una función que ya conocemos, la función round:
+  
+  ```python
+  round(3.1415926535, 2)
+  ```
+  Estaríamos indicando que el primer número es el que queremos redondear, y el segundo, el decimal sobre el que redondearemos, en este caso el segundo:
+
+  ```python
+  >>> round(3.1415926535, 2)
+  3.14
+  ```
+
+* **Palabras clave**: Por el contrario, los argumentos basados en palabras clave, requieren que definamos el valor de cada argumento utilizando su palabra clave. Esto es especialmente útil cuando tenemos una función con muchos argumentos, dado que podemos asignar una palabra clave a cada argumento para poderlos utilizar. Volvemos a utilizar la función round para ejemplificar:
+```python
+
+round(number=3.1415926535, ndigits=2)
+```
+
 ### Capítulo 3: **<ins>Funciones lambda y gestión de errores</ins>**
 
 
