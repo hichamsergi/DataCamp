@@ -33,161 +33,161 @@ Breve introducción a Python desde 0, sin requerimientos de conocimientos previo
 El objetivo de este capítulo es descubrir los diferentes tipos de datos en Python, y saber cuándo y cómo utilizarlos. Los tipos de datos son los siguientes:
 
 - <ins>**Strings:**</ins> Podríamos entenderlo como un tipo de dato que representa **texto**. Los *strings*, al igual que otros tipos de datos, tienen **métodos**. Los métodos son funciones específicas para un tipo de datos en concreto:
-```python
-mi_texto = "Hola Jorge, mi nombre es Sergi"
+    ```python
+    mi_texto = "Hola Jorge, mi nombre es Sergi"
 
-# Reemplazar el nombre de Sergi por Hicham:
-mi_texto = mi_texto.replace("Sergi","Hicham")
+    # Reemplazar el nombre de Sergi por Hicham:
+    mi_texto = mi_texto.replace("Sergi","Hicham")
 
-# Eliminar todas las mayusculas:
-mi_texto = mi_texto.lower()
+    # Eliminar todas las mayusculas:
+    mi_texto = mi_texto.lower()
 
-# Eliminar todas las minúsculas:
-mi_texto = mi_texto.upper()
+    # Eliminar todas las minúsculas:
+    mi_texto = mi_texto.upper()
 
-# Mostramos el contenido de la variable mi_texto
-print(mi_texto)
-```
-Normalmente, enmarcamos los *strings* entre dos comillas dobles, de tal forma que así, podemos evitar falsas delimitaciones al usar otros caracteres especiales como las comillas simples. Ahora bien, al tener un string muy largo, enmarcamos el string entre tres comillas dobles para poder hacer saltos de línea, de forma que el texto sea más legible:
-```python
-mi_texto_largo = """Buenos días Jorge,
-Mí nombre es Hicham, y estoy encantado de haberte conocido.
-Te escribo para comentarte que estoy aprendiendo Python y,
-de momento, he aprendido a manejar strings.
-"""
-```
+    # Mostramos el contenido de la variable mi_texto
+    print(mi_texto)
+    ```
+    Normalmente, enmarcamos los *strings* entre dos comillas dobles, de tal forma que así, podemos evitar falsas delimitaciones al usar otros caracteres especiales como las comillas simples. Ahora bien, al tener un string muy largo, enmarcamos el string entre tres comillas dobles para poder hacer saltos de línea, de forma que el texto sea más legible:
+    ```python
+    mi_texto_largo = """Buenos días Jorge,
+    Mí nombre es Hicham, y estoy encantado de haberte conocido.
+    Te escribo para comentarte que estoy aprendiendo Python y,
+    de momento, he aprendido a manejar strings.
+    """
+    ```
 
 - <ins>**Listas:**</ins> Las listas representan un tipo de dato que puede almacenar múltiples valores en una única variable, conteniendo múltiples tipos de datos como *strings*, *integers*, *floats* o *booleans*. Todo el contenido de una lista debe de delimitarse entre **corchetes**,```[]```, separando los diferentes datos por comas:
-```python
-# Lista de precios:
-precios = [10, 20, 30, 40]
+    ```python
+    # Lista de precios:
+    precios = [10, 20, 30, 40]
 
-# Mostrar los precios:
-print(precios)
-```
-Otro atributo de las listas es que son elementos ordenados, lo que implica que podemos acceder a los diferentes elementos que conforman una lista mediante el índice** que ocupa dicho elemento. Hay que aclarar que el índice de elementos siempre empieza por **cero**:
-```python
-# Mostrar el valor del primer y del tercer índice:
+    # Mostrar los precios:
+    print(precios)
+    ```
+    Otro atributo de las listas es que son elementos ordenados, lo que implica que podemos acceder a los diferentes elementos que conforman una lista mediante el índice** que ocupa dicho elemento. Hay que aclarar que el índice de elementos siempre empieza por **cero**:
+    ```python
+    # Mostrar el valor del primer y del tercer índice:
 
-precios[0] # 10
+    precios[0] # 10
 
-precios[2] # 30
-```
-**Pequeño truco:** No necesitamos contar cuantos elementos hay en una lista, podemos acceder a los elementos de manera inversa indicando el índice en negativo:
-```python
-# Mostrar el último valor de la lista:
+    precios[2] # 30
+    ```
+    **Pequeño truco:** No necesitamos contar cuantos elementos hay en una lista, podemos acceder a los elementos de manera inversa indicando el índice en negativo:
+    ```python
+    # Mostrar el último valor de la lista:
 
-precios[-1] # 40
-```
+    precios[-1] # 40
+    ```
 
-En el caso de necesitar mostrar múltiples elementos, podemos hacerlo indicando dos puntos entre los diferentes índices que queremos:
-```python
-# Mostrar los 3 primeros precios:
+    En el caso de necesitar mostrar múltiples elementos, podemos hacerlo indicando dos puntos entre los diferentes índices que queremos:
+    ```python
+    # Mostrar los 3 primeros precios:
 
-precios[0:2] # 10, 20, 30
+    precios[0:2] # 10, 20, 30
 
-# Mostrar todos los precios a partir del segundo:
+    # Mostrar todos los precios a partir del segundo:
 
-precios[1:] # 20, 30, 40
-```
+    precios[1:] # 20, 30, 40
+    ```
 
-La forma de acceder a diferentes elementos se indica por *rangos*, como se puede ver previamente. Pero también podemos jugar un poco con estos rangos, de forma que si añadimos otros dos puntos al y final e indicamos un **2**, por ejemplo, solo se mostrarán los datos cada 2 posiciones:
-```python
-# Mostrar solo los valores cada 2 precios:
+    La forma de acceder a diferentes elementos se indica por *rangos*, como se puede ver previamente. Pero también podemos jugar un poco con estos rangos, de forma que si añadimos otros dos puntos al y final e indicamos un **2**, por ejemplo, solo se mostrarán los datos cada 2 posiciones:
+    ```python
+    # Mostrar solo los valores cada 2 precios:
 
-precios[::2] # 10 y 30
+    precios[::2] # 10 y 30
 
-precios[1::2] # 20 y 40
-```
+    precios[1::2] # 20 y 40
+    ```
 - <ins>**Diccionarios:**</ins> Los diccionarios son una estructura de datos formada por dos componentes, la **clave** y el **valor**. Mientras las *listas* se compongan de diferentes elementos *individuales*, los diccionarios, al igual que su versión física, se componen de una palabra, lo que sería la *clave*, y una definición, el *valor*. Esta estructura de datos se encapsula entre dos llaves, ```{}```:
-```python
-# Diccionario asociando un producto con su precio:
+    ```python
+    # Diccionario asociando un producto con su precio:
 
-prod_prec = {"P1":10, "P2":20,
-             "P3":30, "P4":40,
-             "P5":50, "P6":60}
-```
-Este tipo de dato no utiliza una indexación numérica, como las listas. Para poder acceder a los valores que el mismo diccionario contiene, accedemos refiriéndonos a la clave asociada al valor:
-```python
-# Ver el precio del producto "P4":
+    prod_prec = {"P1":10, "P2":20,
+                "P3":30, "P4":40,
+                "P5":50, "P6":60}
+    ```
+    Este tipo de dato no utiliza una indexación numérica, como las listas. Para poder acceder a los valores que el mismo diccionario contiene, accedemos refiriéndonos a la clave asociada al valor:
+    ```python
+    # Ver el precio del producto "P4":
 
-prod_prec["P4"] # 40
-```
-Ahora bien, en algunos casos podemos querer ver el listado completo de productos, siguiendo el ejemplo, o por el contrario, el listado de precios de los productos. Para poder obtener toda esa información, podemos hacerlo así:
-```python
-prod_prec.key() # dict_keys(['P1', 'P2', 'P3', 'P4', 'P5', 'P6'])
+    prod_prec["P4"] # 40
+    ```
+    Ahora bien, en algunos casos podemos querer ver el listado completo de productos, siguiendo el ejemplo, o por el contrario, el listado de precios de los productos. Para poder obtener toda esa información, podemos hacerlo así:
+    ```python
+    prod_prec.key() # dict_keys(['P1', 'P2', 'P3', 'P4', 'P5', 'P6'])
 
-prod_prec.value() # dict_values([10, 20, 30, 40, 50, 60])
+    prod_prec.value() # dict_values([10, 20, 30, 40, 50, 60])
 
-print(prod_prec)
-```
+    print(prod_prec)
+    ```
 
-**Pequeño truco:** Podemos aplicar con los diccionarios es el hecho de generar una lista compuesta por todas las asociaciones clave-valor que tiene el diccionario:
-```python
-prod_prec.items() # dict_items([('P1', 10), ('P2', 20), ('P3', 30), ('P4', 40), ('P5', 50), ('P6', 60)])
-```
-Comentar que, esta lista está compuesta por diferentes paréntesis que encapsulan los conjuntos clave-valor. Eso implica que la lista está compuesta por diferentes *tuplas*, que es un tipo de dato que veremos más adelante.
+    **Pequeño truco:** Podemos aplicar con los diccionarios es el hecho de generar una lista compuesta por todas las asociaciones clave-valor que tiene el diccionario:
+    ```python
+    prod_prec.items() # dict_items([('P1', 10), ('P2', 20), ('P3', 30), ('P4', 40), ('P5', 50), ('P6', 60)])
+    ```
+    Comentar que, esta lista está compuesta por diferentes paréntesis que encapsulan los conjuntos clave-valor. Eso implica que la lista está compuesta por diferentes *tuplas*, que es un tipo de dato que veremos más adelante.
 
-Pero los diccionarios pueden, y a veces deben, de ser modificables. De tal forma, podemos llegar a necesitar modificar un valor o añadir uno nuevo. Podemos hacerlo así:
-```python
-# Añadimos un nuevo producto con su precio:
+    Pero los diccionarios pueden, y a veces deben, de ser modificables. De tal forma, podemos llegar a necesitar modificar un valor o añadir uno nuevo. Podemos hacerlo así:
+    ```python
+    # Añadimos un nuevo producto con su precio:
 
-prod_prec["P7"] = 70
+    prod_prec["P7"] = 70
 
-# Actualizamos el precio de un producto:
+    # Actualizamos el precio de un producto:
 
-prod_prec["P6"] = 50
-```
+    prod_prec["P6"] = 50
+    ```
 
 **¡¡¡IMPORTANTE!!!**: LOS DICCIONARIOS NO ACEPTAN CLAVES DUPLICADAS, estas deben de ser únicas.
 
 - <ins>**Set:**</ins> Es un tipo de dato en python que **almacena valores únicos**. Los valores contenidos en el *set* no pueden cambiar, por lo que una vez se han generado son inalterables. Pese a ello, podemos eliminar o añadir nuevos valores. 
 
-Este tipo de dato es especialmente útil para eliminar valores duplicados de un conjunto de datos. Los datos en los *sets* se almacenan de forma desordenada, haciéndolos bastante rápidos a la hora de buscar valores en su interior, pero no son indexables. Esta estructura de datos se encapsula entre dos llaves, ```{}```:
-```python
-# Invitados a un evento:
+    Este tipo de dato es especialmente útil para eliminar valores duplicados de un conjunto de datos. Los datos en los *sets* se almacenan de forma desordenada, haciéndolos bastante rápidos a la hora de buscar valores en su interior, pero no son indexables. Esta estructura de datos se encapsula entre dos llaves, ```{}```:
+    ```python
+    # Invitados a un evento:
 
-invitados = {"Isaac", "Natxo",
-             "Marc", "Alberto",
-             "Marcia", "Hicham"}
+    invitados = {"Isaac", "Natxo",
+                "Marc", "Alberto",
+                "Marcia", "Hicham"}
 
-print(invitados)
-```
+    print(invitados)
+    ```
 
-Dadas las propiedades que tienen los sets, podemos necesitar en algún momento convertir otros tipos de datos a *set*. Esto lo llamamos **casting**:
-```python
-lista_invitados = ["Isaac", "Natxo",
-            "Marc", "Alberto",
-            "Marcia", "Hicham", "Isaac"]
+    Dadas las propiedades que tienen los sets, podemos necesitar en algún momento convertir otros tipos de datos a *set*. Esto lo llamamos **casting**:
+    ```python
+    lista_invitados = ["Isaac", "Natxo",
+                "Marc", "Alberto",
+                "Marcia", "Hicham", "Isaac"]
 
-# Convertimos la lista en un set:
+    # Convertimos la lista en un set:
 
-invitados_VIP = set(lista_invitados)
+    invitados_VIP = set(lista_invitados)
 
-# Comprobamos que tipo de dato es "invitados_VIP":
-type(invitados_VIP) # <class 'set'>
-```
-Pese al hecho de que **los valores contenidos en los sets no pueden tener índices**, hay funciones bastante útiles a la hora de tratar con ellos:
-```python
-# Ordenar un set:
+    # Comprobamos que tipo de dato es "invitados_VIP":
+    type(invitados_VIP) # <class 'set'>
+    ```
+    Pese al hecho de que **los valores contenidos en los sets no pueden tener índices**, hay funciones bastante útiles a la hora de tratar con ellos:
+    ```python
+    # Ordenar un set:
 
-sorted(invitados_VIP) # ['Alberto', 'Hicham', 'Isaac', 'Marc', 'Marcia', 'Natxo']
-```
+    sorted(invitados_VIP) # ['Alberto', 'Hicham', 'Isaac', 'Marc', 'Marcia', 'Natxo']
+    ```
 
 - <ins>**Tuplas:**</ins> Este es otro tipo de dato que tiene una peculiaridad significativa, es **inmutable**. A diferencia del *set*, donde los valores son los inmutables, **las tuplas no pueden ser modificadas de ninguna de las formas**. No se puede añadir valores, eliminarlos o modificar ningún tipo de datos o elemento contenido por una tupla, que una vez creada es inalterable.
 
-También podemos diferenciarlo de los *sets* en el hecho de que están ordenados, de forma que no son indexables. Este dato es especialmente útil cuando pretendemos almacenar datos que de ninguna de las formas deben o pueden ser alterables, como contraseñas. Los datos de las tuplas son almacenados entre dos paréntesis, ```()```:
-```python
-# Almacenamos las localizaciones de oficinas:
+    También podemos diferenciarlo de los *sets* en el hecho de que están ordenados, de forma que no son indexables. Este dato es especialmente útil cuando pretendemos almacenar datos que de ninguna de las formas deben o pueden ser alterables, como contraseñas. Los datos de las tuplas son almacenados entre dos paréntesis, ```()```:
+    ```python
+    # Almacenamos las localizaciones de oficinas:
 
-ofi_localizacion = ("Barcelona", "Madrid", "Bilbao", "Malaga")
+    ofi_localizacion = ("Barcelona", "Madrid", "Bilbao", "Malaga")
 
-ofi_localizacion[2] # Bilbao 
+    ofi_localizacion[2] # Bilbao 
 
-# Convertir una lista en una tupla:
+    # Convertir una lista en una tupla:
 
-2_tupla = tuple(my_lista)
-```
+    2_tupla = tuple(my_lista)
+    ```
 
 ##### **RESUMEN:**
 
@@ -268,19 +268,20 @@ else:
         num_compras += 1
     ```
 
-    **¡¡¡IMPORTANTE!!!**: Si no llega a cumplirse nunca la condición del bucle **while**, el bucle iterará **HASTA EL INFINITO**.
+**¡¡¡IMPORTANTE!!!**: Si no llega a cumplirse nunca la condición del bucle **while**, el bucle iterará **HASTA EL INFINITO**.
 
-    Para evitar entrar en un bucle perpetuo, hay un método que podemos utilizar para finalizar el bucle antes de tiempo y salir:
-    ```python
-    while num_compras < valor_max:
+Para evitar entrar en un bucle perpetuo, hay un método que podemos utilizar para finalizar el bucle antes de tiempo y salir:
 
-        # Queremos dejar de comprar cuando llegue a 7:
-        if num _compras == 7:
+```python
+while num_compras < valor_max:
 
-            break #Esto termina el bucle repentinamente
+# Queremos dejar de comprar cuando llegue a 7:
+    if num _compras == 7:
+
+        break #Esto termina el bucle repentinamente
     
-        num_compras += 1
-    ```
+    num_compras += 1
+```
     
 ---
 
