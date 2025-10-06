@@ -174,7 +174,7 @@ Pese al hecho de que **los valores contenidos en los sets no pueden tener índic
 sorted(invitados_VIP) # ['Alberto', 'Hicham', 'Isaac', 'Marc', 'Marcia', 'Natxo']
 ```
 
-- <ins>**Tuplas:**</ins> Este es otro tipo de dato que tiene una peculiaridad significativa, es **inmutable**. A diferencia del *set*, donde los valores son los inmutables, las tuplas no pueden ser modificadas de ninguna de las formas. No se puede añadir valores, eliminarlos o modificar ningún tipo de datos o elemento contenido por una tupla, que una vez creada es inalterable.
+- <ins>**Tuplas:**</ins> Este es otro tipo de dato que tiene una peculiaridad significativa, es **inmutable**. A diferencia del *set*, donde los valores son los inmutables, **las tuplas no pueden ser modificadas de ninguna de las formas**. No se puede añadir valores, eliminarlos o modificar ningún tipo de datos o elemento contenido por una tupla, que una vez creada es inalterable.
 
 También podemos diferenciarlo de los *sets* en el hecho de que están ordenados, de forma que no son indexables. Este dato es especialmente útil cuando pretendemos almacenar datos que de ninguna de las formas deben o pueden ser alterables, como contraseñas. Los datos de las tuplas son almacenados entre dos paréntesis, ```()```:
 ```python

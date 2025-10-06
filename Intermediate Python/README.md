@@ -184,7 +184,7 @@ La descripción de los dos primeros terminos es simple, utilizamos ```def``` par
 
 En cuanto al ```argument```, serían los argumentos que les transmitimos a la función para poder funcionar. Podemos transmitirle de dos tipos diferentes:
 
-* **Posicional**: Los argumentos posicionales corresponden a su utilidad dependiendo de la posición en la que se recogen. Tomando como ejemplo una función que ya conocemos, la función round:
+* <ins>**Posicional**</ins>: Los argumentos posicionales corresponden a su utilidad dependiendo de la posición en la que se recogen. Tomando como ejemplo una función que ya conocemos, la función round:
   
   ```python
   round(3.1415926535, 2)
@@ -196,11 +196,39 @@ En cuanto al ```argument```, serían los argumentos que les transmitimos a la fu
   3.14
   ```
 
-* **Palabras clave**: Por el contrario, los argumentos basados en palabras clave, requieren que definamos el valor de cada argumento utilizando su palabra clave. Esto es especialmente útil cuando tenemos una función con muchos argumentos, dado que podemos asignar una palabra clave a cada argumento para poderlos utilizar. Volvemos a utilizar la función round para ejemplificar:
-```python
+* <ins>**Palabras clave**</ins>: Por el contrario, los argumentos basados en palabras clave, requieren que definamos el valor de cada argumento utilizando su palabra clave. Esto es especialmente útil cuando tenemos una función con muchos argumentos, dado que podemos asignar una palabra clave a cada argumento para poderlos utilizar. Volvemos a utilizar la función round para ejemplificar:
 
-round(number=3.1415926535, ndigits=2)
-```
+  ```python
+  round(number=3.1415926535, ndigits=2)
+  ```
+  Entendiendo esto, podemos asignar valores por defecto a los mismo argumentos que transmitimos a una función. Tomamos por ejemplo la función la función del promedio redondeado a 2 dígitos:
+  ```python
+
+  def average(values,rounded=False): #Podemos definir tambiém None, indicando que el argumento está vacío
+
+    # Calcular el promedio si reunded es True
+    if rounded == True:
+      average_value = sum(values) / len(values)
+      rounded_average = round(average_value, 2)
+      return rounded_average
+
+    # Sinó, no redondeamos:
+    else:
+      average_value = sum(values) / len(values)
+      return rounded_average
+  ```
+  Esta función es especial, y únicamente redondeará los valores que que nosotros decidamos. Dado qué como segundo valor definimos por defecto de tipo *booleano* tal que ```False```, solo se redondearán los números que forcemos que tengan un segundo argumento de tipo ```True```:
+
+  ```python
+  ventas = [125.97,84.32,99.78,154.21,78.50,83.67,111.13]
+
+  average(ventas, False) # No redondeará
+
+  average(ventas) # No redondeará, utilizando el valor por defecto FALSE
+
+  average(values=ventas, rounded=True) # Redondeará
+  ```
+
 
 ### Capítulo 3: **<ins>Funciones lambda y gestión de errores</ins>**
 
