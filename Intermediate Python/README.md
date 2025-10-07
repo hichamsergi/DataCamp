@@ -215,9 +215,9 @@ En cuanto al ```argument```, serían los argumentos que les transmitimos a la fu
     # Sino, no redondeamos:
     else:
       average_value = sum(values) / len(values)
-      return rounded_average
+      return average_value
   ```
-  Esta función es especial, y únicamente redondeará los valores que nosotros decidamos. Dado qué como segundo valor definimos por defecto de tipo *booleano* tal que ```False```, solo se redondearán los números que forcemos que tengan un segundo argumento de tipo ```True```:
+Esta función es especial, y únicamente redondeará los valores que nosotros decidamos. Dado qué como segundo valor definimos por defecto de tipo *booleano* tal que ```False```, solo se redondearán los números que forcemos que tengan un segundo argumento de tipo ```True```:
 
   ```python
   ventas = [125.97,84.32,99.78,154.21,78.50,83.67,111.13]
@@ -227,6 +227,37 @@ En cuanto al ```argument```, serían los argumentos que les transmitimos a la fu
   average(ventas) # No redondeará, utilizando el valor por defecto FALSE
 
   average(values=ventas, rounded=True) # Redondeará
+  ```
+
+
+
+Y antes de terminar, algo que nos ayuda y podríamos considerar como la mejor de las practicas cuando generamos funciones personalizafas, el **DOCSTRING** de una función. Los *docstrings* de las funciones, corresponden a una breve descripción de la utilidad de la función. Pese a no ser obligatorio el hecho de definirlo, esto nos puede ayudar a entender las funciones en un futuro, no solo a nosotros sino también a cualquiera que lea nuestro código y quiera hacer uso de nuestras funciones:
+
+  ```python
+
+  def average(values,rounded=False): 
+    """
+    Esta función se utiliza para poder redondear a 2 decimales los promedios de los 
+    conjuntos de valores que deseemos.
+    
+    Args:
+        values (list): Lista de valores numéricos.
+        rounded (boolean): Valor booleano, utilizado para decidir cuando redondeamos.
+    
+    Returns:
+        rounded_average: Promédio redondeado, cuando rounded == True.
+        average_value: Promédio sin redondear, cuando rounded == False.
+    """
+  
+    if rounded == True:
+      average_value = sum(values) / len(values)
+      rounded_average = round(average_value, 2)
+      return rounded_average
+
+  
+    else:
+      average_value = sum(values) / len(values)
+      return average_value
   ```
 
 
