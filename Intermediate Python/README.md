@@ -106,7 +106,7 @@ Algunos de los módulos más populares:
    from os import getcwd, chdir # Así solo importamos las funciones necesarias.
  ```
 
-**<ins>3) Paquetes</ins>**: Es una colección de módulos organizados dentro de una carpeta. Esto permite estructurar y reutilizar el código de las funciónes contenidas en los diferentes módulos de la carpeta.
+**<ins>3) Paquetes</ins>**: Es una colección de módulos organizados dentro de una carpeta. Esto permite estructurar y reutilizar el código de las funciones contenidas en los diferentes módulos de la carpeta.
 
 Para poder importar los módulos contenidos en un paquete, debemos instalar el mismo paquete, en este caso ```pandas```:
 ```bash
@@ -114,7 +114,7 @@ hicham@localhost:~$ python3 -m pip install pandas
 ```
 Una vez hemos instalado el paquete con todos los módulos, podemos hacer uso de esos módulos importándolos.
 
-Una buena práctica en python, consiste en renombrar los paquetes dentro de nuestro código de forma que no tengamos que llamar todo el rato al mismo módulo:
+Una buena práctica en python, consiste en renombrar los paquetes dentro de nuestro código, de forma que no tengamos que llamar todo el rato al mismo módulo:
 ```python
 import pandas as pd
 ...
@@ -146,20 +146,20 @@ También podemos leer diferentes tipos de archivos con pandas, como CSV:
 
 ventas = pd.read_csv("ventas.csv") # Esto convertirá el contenido del CSV en un DataFrame
 
-ventas.head() # Esto nos mostraá las primeras 5 filas del DataFrame generado
+ventas.head() # Esto nos mostrará las primeras 5 filas del DataFrame generado
 ```
 
 ### Capítulo 2: **<ins>Alias con funciones</ins>**
 
-Habitualmente, podemos encontrarnos con ciertas limitaciones, puede haber ocasiones donde las funciones integradas de python o paquetes de funciones no sean suficiente y necesitemos crear las nuestras propias. Para poder hacerlo debemos de hacernos las siquientes preguntas:
+Habitualmente, podemos encontrarnos con ciertas limitaciones, puede haber ocasiones donde las funciones integradas de python o paquetes de funciones no sean suficiente y necesitemos crear las nuestras propias. Para poder hacerlo debemos de hacernos las siguientes preguntas:
 
-  **1) ¿Cuantas líneas ocupará nuestro código si no creamos la función?**
-  **2) ¿Cual es la complejidad de nuestra función?**
-  **3) ¿Cual será la frecuencia de uso de nuestra función?**
+  **1) ¿Cuántas líneas ocupará nuestro código si no creamos la función?**
+  **2) ¿Cuál es la complejidad de nuestra función?**
+  **3) ¿Cuál será la frecuencia de uso de nuestra función?**
 
-Esto nos ayudará a cuestionarnos si realmente es necesario crear nuestra función propia. Pese a ello podemos seguir la regla mas simple de todas, *Don't Repeat Yourself* (**DRY**).
+Esto nos ayudará a cuestionarnos si realmente es necesario crear nuestra función propia. Pese a ello, podemos seguir la regla más simple de todas, *Don't Repeat Yourself* (**DRY**).
 
-Para poder crear nuestra porpia función podemos hacerlo de la siguiente forma:
+Para poder crear nuestra propia función podemos hacerlo de la siguiente forma:
 ```python
 
 def average(values):
@@ -173,14 +173,14 @@ def average(values):
   return rounded_average
 ```
 
-Ahora, entendemos el funcionamiento basico de las funciones. Pese a ello, podemos profundizar aun más en como trabajan y porqué hacen lo que hacen. Empezando por descomponer las funciones:
+Ahora, entendemos el funcionamiento básico de las funciones. Pese a ello, podemos profundizar aún más en como trabajan y porque hacen lo que hacen. Empezando por descomponer las funciones:
 
 ```python
 def function_name(argument):
   ...
 ```
 
-La descripción de los dos primeros terminos es simple, utilizamos ```def``` para definir una función propia, y lo siguiente es el mísmo nombre que le asignaremos a la función, en este caso ```function_name(...)```.
+La descripción de los dos primeros términos es simple, utilizamos ```def``` para definir una función propia, y lo siguiente es el mísmo nombre que le asignaremos a la función, en este caso ```function_name(...)```.
 
 En cuanto al ```argument```, serían los argumentos que les transmitimos a la función para poder funcionar. Podemos transmitirle de dos tipos diferentes:
 
@@ -201,10 +201,10 @@ En cuanto al ```argument```, serían los argumentos que les transmitimos a la fu
   ```python
   round(number=3.1415926535, ndigits=2)
   ```
-  Entendiendo esto, podemos asignar valores por defecto a los mismo argumentos que transmitimos a una función. Tomamos por ejemplo la función la función del promedio redondeado a 2 dígitos:
+  Entendiendo esto, podemos asignar valores por defecto a los mismos argumentos que transmitimos a una función. Tomamos por ejemplo la función del promedio redondeado a 2 dígitos:
   ```python
 
-  def average(values,rounded=False): #Podemos definir tambiém None, indicando que el argumento está vacío
+  def average(values,rounded=False): #Podemos definir también None, indicando que el argumento está vacío
 
     # Calcular el promedio si reunded es True
     if rounded == True:
@@ -212,12 +212,12 @@ En cuanto al ```argument```, serían los argumentos que les transmitimos a la fu
       rounded_average = round(average_value, 2)
       return rounded_average
 
-    # Sinó, no redondeamos:
+    # Sino, no redondeamos:
     else:
       average_value = sum(values) / len(values)
       return rounded_average
   ```
-  Esta función es especial, y únicamente redondeará los valores que que nosotros decidamos. Dado qué como segundo valor definimos por defecto de tipo *booleano* tal que ```False```, solo se redondearán los números que forcemos que tengan un segundo argumento de tipo ```True```:
+  Esta función es especial, y únicamente redondeará los valores que nosotros decidamos. Dado qué como segundo valor definimos por defecto de tipo *booleano* tal que ```False```, solo se redondearán los números que forcemos que tengan un segundo argumento de tipo ```True```:
 
   ```python
   ventas = [125.97,84.32,99.78,154.21,78.50,83.67,111.13]
