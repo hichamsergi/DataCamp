@@ -229,7 +229,56 @@ Esta función es especial, y únicamente redondeará los valores que nosotros de
   average(values=ventas, rounded=True) # Redondeará
   ```
 
+Puede haber casos en los que no sabemos cuántos valores se van a pasar a una función. Python nos permite manejar esta situación utilizando **argumentos arbitrarios**, que hacen nuestras funciones más flexibles.
 
+Siguiendo con el ejemplo anterior, podemos modificar nuestra función **`average()`** para que acepte un número **indefinido** de valores en lugar de una lista.
+Para ello, utilizamos `*args`, que agrupa todos los valores recibidos en una tupla:
+
+```python
+def average(*values, rounded=False):
+  """
+  Calcula el promedio de un número variable de valores numéricos.
+  Permite redondear el resultado si se indica.
+  
+  Args:
+      *values (float): Conjunto de valores numéricos.
+      rounded (bool): Determina si el resultado debe redondearse.
+  
+  Returns:
+      float: Promedio redondeado o sin redondear según 'rounded'.
+  """
+
+  average_value = sum(values) / len(values)
+
+  if rounded:
+    return round(average_value, 2)
+  else:
+    return average_value
+
+
+print(average(5, 10, 15))           # 10.0
+print(average(5, 10, 15, rounded=True))  # 10.0
+```
+
+También podemos añadir **`**kwargs`** para aceptar pares **clave-valor** y mostrar, por ejemplo, información adicional sobre el cálculo:
+
+```python
+
+# Define a function called concat
+def concat(**kwarg):
+  
+  # Crea una cadena vacía
+  result = ""
+  
+  # Iteramos sobre los valores asignados a las claves
+  for arg in kwarg.values():
+    result += " " + arg
+  
+  return result
+
+# Ejemplo:
+print(concat(start="Python", middle="is", end="great!")) # Python is great!
+```
 
 Y antes de terminar, algo que nos ayuda y podríamos considerar como la mejor de las practicas cuando generamos funciones personalizafas, el **DOCSTRING** de una función. Los *docstrings* de las funciones, corresponden a una breve descripción de la utilidad de la función. Pese a no ser obligatorio el hecho de definirlo, esto nos puede ayudar a entender las funciones en un futuro, no solo a nosotros sino también a cualquiera que lea nuestro código y quiera hacer uso de nuestras funciones:
 
@@ -241,7 +290,7 @@ Y antes de terminar, algo que nos ayuda y podríamos considerar como la mejor de
     conjuntos de valores que deseemos.
     
     Args:
-        values (list): Lista de valores numéricos.
+        values (list): Conjunto de valores numéricos.
         rounded (boolean): Valor booleano, utilizado para decidir cuando redondeamos.
     
     Returns:
@@ -259,7 +308,6 @@ Y antes de terminar, algo que nos ayuda y podríamos considerar como la mejor de
       average_value = sum(values) / len(values)
       return average_value
   ```
-
 
 ### Capítulo 3: **<ins>Funciones lambda y gestión de errores</ins>**
 
