@@ -153,11 +153,9 @@ ventas.head() # Esto nos mostrará las primeras 5 filas del DataFrame generado
 
 Habitualmente, podemos encontrarnos con ciertas limitaciones, puede haber ocasiones donde las funciones integradas de python o paquetes de funciones no sean suficiente y necesitemos crear las nuestras propias. Para poder hacerlo debemos de hacernos las siguientes preguntas:
 
-  **1) ¿Cuántas líneas ocupará nuestro código si no creamos la función?**
-
-  **2) ¿Cuál es la complejidad de nuestra función?**
-  
-  **3) ¿Cuál será la frecuencia de uso de nuestra función?**
+  **1) ¿Cuántas líneas ocupará nuestro código si no creamos la función?**  
+  **2) ¿Cuál es la complejidad de nuestra función?**  
+  **3) ¿Cuál será la frecuencia de uso de nuestra función?**  
 
 Esto nos ayudará a cuestionarnos si realmente es necesario crear nuestra función propia. Pese a ello, podemos seguir la regla más simple de todas, *Don't Repeat Yourself* (**DRY**).
 
