@@ -396,3 +396,75 @@ En cualquier caso, es importante tener siempre claro cuando y como se deben de u
 ---
 
 ### Capítulo 4: **<ins>Gestión de errores</ins>**
+
+Finalmente, algo demasiado importante como para pasar por alto, la **gestión de errores**. Entendemos por gestionar errores, como preparamos a nuestro codigo para manejar situaciones para las que no está preparado.
+
+Si nos paramos a pensar, pese a que puede sonar paradogico, lo que estamos haciendo es decirle al programa qué en caso de no reaccionar de la forma deseada genere un error determinado. Conociendo algún error podemos entender la idea:
+
+  - **<ins>TypeError</ins>**: Errore que se genera cuando el dato que estamos manejando es incompatible para la tarea que lo está utilizando. Ejemplo:
+  
+  ```python
+
+  >>> "Hello" + 5
+
+  TypeError: can only concatenate str (not "int") to str
+  ```
+
+  - **<ins>ValueError</ins>**: Error que se genera cuando el valor introducido no esta dentro de un rango aceptable. Ejemplo:
+  
+  ```python
+
+  >>> float("Hello")
+
+  ValueError: could not convert string to float: 'Hello'
+  ```
+
+  - **<ins>IndexError</ins>**: Error generado al acceder a un índice fuera de rango. Ejemplo:
+  
+  ```python
+
+  >>> valores = [1, 2, 3]
+
+  >>> valores[4]
+
+  IndexError: list index out of rang
+  ```
+
+Pero más allá de poder diferenciar entre tipos de errores, lo que nos interesa es saber como podemos integrar este  conocimiento en nuestro código. Para poder integrarlo, utilizamos las sentencias ```try``` y ```except```. Utilizamos el ejemplo de nuestra querida función de promedios:
+
+```python
+def promedio(values):
+  
+  try:
+
+    #Código que podría causar un error:
+    valor_promedio = sum(values)/len(values)
+    return valor_promedio
+
+  except TypeError:
+    #Código a utilizar si aparece un error:
+    print("promedio() solo acepta listas o sets. Dato introducido incorrecto.")
+  
+```
+
+También podemos hacerlo utilizando el metodo ```rise```:
+
+```python
+def promedio(values):
+  
+  if type(values) not in ["list","set"]:
+    #Código que podría causar un error:
+    valor_promedio = sum(values)/len(values)
+    return valor_promedio
+  
+  else:
+    #Código a utilizar si aparece un error:
+    raise TypeError("promedio() solo acepta listas o sets. Dato introducido incorrecto.")
+```
+
+Ambas opciones tienen sus ventajas y desventajas, como siempre, lo importante es escoger bien la ocasión:
+
+| Método             | Descripción                                                                                                                                        | Cuándo usarlo                                                                                                            |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | 
+| **`try - except`** | Se utiliza para **capturar y manejar errores** que ocurren durante la ejecución del código. Permite evitar que el programa se detenga bruscamente. | Cuando queremos **prevenir fallos** y ofrecer una **alternativa controlada** al usuario o al flujo del programa.         |
+| **`raise`**        | Se utiliza para **lanzar manualmente un error** cuando se detecta una condición no deseada.                                                        | Cuando queremos **forzar un error personalizado** o **detener la ejecución** si algo no cumple una condición específica. |
