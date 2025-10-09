@@ -367,6 +367,23 @@ Y de igual forma, podemos extender las funciones lambda y complicarnos mas la vi
 (lambda x, y: x**y)(2,3) # 8
 ```
 
+Un caso importante a comentar sería el uso de funciones lambda sobre iterables, como elementos de una lista. Dado que cuando utilizamos una función lambda, podríamos llegar a necesitar que se ejecutase sobre cada elemento de la lista:
+
+```python
+
+numeros = [1, 2, 3, 4]
+resultado = map(lambda x: x ** 2, numeros)
+
+print(list(resultado))  # [1, 4, 9, 16]
+```
+
+En estos casos, utilizamos la función integrada de python ```map``` para aplicar la función lambda a cada elemento de la lista. Esta función genera un **objeto map**, que posteriormente deberemos transformar en una lista utilizando de nuevo la función integrada de python ```list```. ```Map``` puede aplicar nuestra función lambda a todos los iterables grácias a su sintaxis:
+
+```python
+
+map(funcion,iterable)
+```
+
 En cualquier caso, es importante tener siempre claro cuando y como se deben de utilizar las funciones dadas las utilidades que nos presenta cada una.
 
 |Escenários|Tipo de función|
