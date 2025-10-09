@@ -13,7 +13,7 @@
 1. [El ecosistema Python](#capítulo-1-el-ecosistema-python)
 2. [Alias con funciones](#capítulo-2-alias-con-funciones)
 3. [Funciones lambda y gestión de errores](#capítulo-3-funciones-lambda-y-gestión-de-errores)
-
+4. [Gestión de errores](#capítulo-4-gestión-de-errores)
 ---
 
 ## 3. Apuntes:
@@ -310,7 +310,7 @@ Y antes de terminar, algo que nos ayuda y podríamos considerar como la mejor de
       return average_value
   ```
 
-### Capítulo 3: **<ins>Funciones lambda y gestión de errores</ins>**
+### Capítulo 3: **<ins>Funciones lambda</ins>**
 
 Llegados a este punto, hemos aprendido a utilizar las funciones incorporadas de python y a generar nuestras propias funciones. Pese a ello, escribir una función personalizada de python desde cero puede ser algo tedioso y requerir mucho código. Para solucionar esto, python nos permite hacer uso de las **funciones lambda**.
 
@@ -394,3 +394,5 @@ En cualquier caso, es importante tener siempre claro cuando y como se deben de u
 |Tarea una única vez| Lambda|
 
 ---
+
+### Capítulo 4: **<ins>Gestión de errores</ins>**
