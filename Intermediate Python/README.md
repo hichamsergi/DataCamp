@@ -217,6 +217,7 @@ En cuanto al ```argument```, serían los argumentos que les transmitimos a la fu
       average_value = sum(values) / len(values)
       return average_value
   ```
+
 Esta función es especial, y únicamente redondeará los valores que nosotros decidamos. Dado qué como segundo valor definimos por defecto de tipo *booleano* tal que ```False```, solo se redondearán los números que forcemos que tengan un segundo argumento de tipo ```True```:
 
   ```python
@@ -311,6 +312,68 @@ Y antes de terminar, algo que nos ayuda y podríamos considerar como la mejor de
 
 ### Capítulo 3: **<ins>Funciones lambda y gestión de errores</ins>**
 
+Llegados a este punto, hemos aprendido a utilizar las funciones incorporadas de python y a generar nuestras propias funciones. Pese a ello, escribir una función personalizada de python desde cero puede ser algo tedioso y requerir mucho código. Para solucionar esto, python nos permite hacer uso de las **funciones lambda**.
 
+Las **funciones lambda**, son funciones anónimas que no requieren de nombres ni necesitan guardarse como veriables, pese a que podemos almacenarlas. La forma de declararlas es la siguiente:
+
+```python
+lambda argument(x): expresion
+```
+
+  - Se utiliza **```x```** para un argumento simple.
+  - **```expresion```** corresponderia al cuerpo de la función.
+  - No requiere de declara **```return```** para devolver valores.
+
+    
+Ahora vamos a comparar una función personalizada y una lambda:
+
+  - **Función Personalizada**:
+
+```python
+def promedio(valores):
+
+  valor_promedio = sum(values) / len(values)
+
+  return valor_promedio
+
+print(promedio[3,6,9]) # 6.0
+```
+
+  - **Función Lambda**:
+
+```python
+
+lambda x: sum(x) / len(x)
+
+#Recoger el promedio utilizando función lambda:
+(lambda x: sum(x) / len(x))([3,6,9]) # 6.0
+```
+
+Como se puede ver, la función lambda nos permite ejecutar en una única línea de código exactamente lo mísmo que la función personalizada.
+
+Como comentaba, pese a que las funciones lambda no necesítan ser asignadas a una variable, podemos hacerlo sin problema:
+
+```python
+
+# Asignación:
+promedio = lambda x: sum(x) / len(x)
+
+#Llamamos a la función lambda:
+promedio([3,6,9]) # 6.0
+```
+
+Y de igual forma, podemos extender las funciones lambda y complicarnos mas la vida:
+```python
+(lambda x, y: x**y)(2,3) # 8
+```
+
+En cualquier caso, es importante tener siempre claro cuando y como se deben de utilizar las funciones dadas las utilidades que nos presenta cada una.
+
+|Escenários|Tipo de función|
+|----------|---------------|
+|Tareas complejas| Personalizada|
+|Misma tarea repetidamente| Personalizada|
+|Tarea simple| Lambda|
+|Tarea una única vez| Lambda|
 
 ---
