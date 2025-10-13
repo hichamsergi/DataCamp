@@ -13,9 +13,9 @@ El objetivo es que pases de escribir scripts simples a construir componentes reu
 ## 2. Índice:
 
 1. [El ecosistema Python](#capítulo-1-el-ecosistema-python)
-   - [Funciones integradas](#11-funciones-integradas)
-   - [Módulos](#12-módulos)
-   - [Paquetes](#13-paquetes)
+   1.1 [Funciones integradas](#11-funciones-integradas)
+   1.2 [Módulos](#12-módulos)
+   1.3 [Paquetes](#13-paquetes)
 2. [Alias con funciones](#capítulo-2-alias-con-funciones)
 3. [Funciones lambda y gestión de errores](#capítulo-3-funciones-lambda-y-gestión-de-errores)
 4. [Gestión de errores](#capítulo-4-gestión-de-errores)
