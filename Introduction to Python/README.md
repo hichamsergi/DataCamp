@@ -99,6 +99,7 @@ El objetivo de este capítulo es descubrir los diferentes tipos de datos en Pyth
 
     precios[1::2] # 20 y 40
     ```
+
 - <ins>**Diccionarios:**</ins> Los diccionarios son una estructura de datos formada por dos componentes, la **clave** y el **valor**. Mientras las *listas* se compongan de diferentes elementos *individuales*, los diccionarios, al igual que su versión física, se componen de una palabra, lo que sería la *clave*, y una definición, el *valor*. Esta estructura de datos se encapsula entre dos llaves, ```{}```:
     ```python
     # Diccionario asociando un producto con su precio:
@@ -139,9 +140,10 @@ El objetivo de este capítulo es descubrir los diferentes tipos de datos en Pyth
     prod_prec["P6"] = 50
     ```
 
+
 **¡¡¡IMPORTANTE!!!**: LOS DICCIONARIOS NO ACEPTAN CLAVES DUPLICADAS, estas deben de ser únicas.
 
-- <ins>**Set:**</ins> Es un tipo de dato en python que **almacena valores únicos**. Los valores contenidos en el *set* no pueden cambiar, por lo que una vez se han generado son inalterables. Pese a ello, podemos eliminar o añadir nuevos valores. 
+- <ins>**Set:**</ins> Es un tipo de dato en python que **almacena valores únicos**. Los **valores contenidos en el *set* no pueden cambiar**, por lo que una vez se han generado son inalterables. Pese a ello, podemos eliminar o añadir nuevos valores. 
 
     Este tipo de dato es especialmente útil para eliminar valores duplicados de un conjunto de datos. Los datos en los *sets* se almacenan de forma desordenada, haciéndolos bastante rápidos a la hora de buscar valores en su interior, pero no son indexables. Esta estructura de datos se encapsula entre dos llaves, ```{}```:
     ```python
@@ -284,7 +286,6 @@ while num_compras < valor_max:
 ```
     
 ---
-
 
 ### Capítulo 4: **<ins>Flujos de trabajo</ins>**
 

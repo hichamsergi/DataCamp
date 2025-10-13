@@ -4,13 +4,18 @@
 
 ## 1. Descripción
 
+En este capítulo profundizarás en conceptos avanzados de Python pensados para desarrolladores: cómo manejar funciones más flexibles, crear código eficiente, gestionar errores correctamente y escribir programas más robustos.
 
+El objetivo es que pases de escribir scripts simples a construir componentes reutilizables y sostenibles, con buenas prácticas que se usan profesionalmente.
 
 ---
 
 ## 2. Índice:
 
 1. [El ecosistema Python](#capítulo-1-el-ecosistema-python)
+    1.1 [Funciones integradas](#11-funciones-integradas)
+    1.2 [Módulos](#12-módulos)
+    1.3 [Paquetes](#13-paquetes)
 2. [Alias con funciones](#capítulo-2-alias-con-funciones)
 3. [Funciones lambda y gestión de errores](#capítulo-3-funciones-lambda-y-gestión-de-errores)
 4. [Gestión de errores](#capítulo-4-gestión-de-errores)
@@ -24,7 +29,8 @@ El atractivo de Python para el desarrollo de software, la inteligencia artificia
 
 Estas herramientas, las podríamos diferenciar en tres grandes grupos:
 
-**<ins>1) Funciones integradas</ins>**: Son funciones integradas en el mísmo lenguaje, disponibles por defecto, sin necesidad de importar módulos externos. Algunas de las más interesante, para lo que nos ocupa, serían las funciones numéricas. Estas son funciones nos facilitan la vida bastante, algunos ejemplos:
+#### 1.1) **<ins>Funciones integradas</ins>**: 
+Son funciones integradas en el mísmo lenguaje, disponibles por defecto, sin necesidad de importar módulos externos. Algunas de las más interesante, para lo que nos ocupa, serían las funciones numéricas. Estas son funciones nos facilitan la vida bastante, algunos ejemplos:
 
 ```python
 
@@ -74,7 +80,8 @@ help(sorted)
 #     Return a new list containing all items from the iterable  in ascending order.
 ```
 
-**<ins>2) Módulos</ins>**: Son *scripts* integrados en Python que contienen **atributos**, **funciones** e incluso **otros módulos**. Esto nos ayuda especialmente a evitar escribir código que ya existe.
+#### 1.2) **<ins>Módulos</ins>**: 
+Son *scripts* integrados en Python que contienen **atributos**, **funciones** e incluso **otros módulos**. Esto nos ayuda especialmente a evitar escribir código que ya existe.
 
 Algunos de los módulos más populares:
 
@@ -106,7 +113,8 @@ Algunos de los módulos más populares:
    from os import getcwd, chdir # Así solo importamos las funciones necesarias.
  ```
 
-**<ins>3) Paquetes</ins>**: Es una colección de módulos organizados dentro de una carpeta. Esto permite estructurar y reutilizar el código de las funciones contenidas en los diferentes módulos de la carpeta.
+#### 1.3) **<ins>Paquetes</ins>**: 
+Consiste en una colección de módulos organizados dentro de una carpeta. Esto permite estructurar y reutilizar el código de las funciones contenidas en los diferentes módulos de la carpeta.
 
 Para poder importar los módulos contenidos en un paquete, debemos instalar el mismo paquete, en este caso ```pandas```:
 ```bash
