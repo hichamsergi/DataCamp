@@ -67,7 +67,15 @@ PR19,Ratón,18
 YU88,Pantalla,132
 ```
 
+Este fragmento, sería una representación de un documento **CSV**. Los documentos *CSV*, *Comma-Separated values*, repesentan la información separando los valores por comas. Su extensión es `*.csv`.
 
+Aun así, hay multiples tipos de formatos y delimitadores de campos. Dependiendo de que tipo de documento y datos que contenga, podemos llegar a utilizar diferentes *paquetes* con módulos útiles para importar documentos y poder manipular los datos contenidos.
+
+Algunos de los paquetes útiles para la importación y manipulación de datos:
+
+- **Pandas**: Tanto para datos numéricos como para cadenas de texto que queramos almacenar en *DataFrames*, como documentos tipo `*.csv`
+    
+- **Numpy**: Si el documento consta enteramente de números, que queramos alacenar en una *matriz numpy* como los documentos *MNIST*.
 
 ---
 
