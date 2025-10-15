@@ -77,7 +77,7 @@ Algunos de los paquetes útiles para la importación y manipulación de datos:
 
 - **Numpy**: Muy útil si el documento consta enteramente de números que queramos alacenar en una *matriz numpy*, como los documentos *MNIST*.
 
-- **Pandas**: Tanto para datos numéricos como para cadenas de texto que queramos almacenar en *DataFrames*, como documentos tipo `*.csv`
+- **Pandas**: Tanto para datos numéricos como para cadenas de texto que queramos almacenar en *DataFrames*, como documentos tipo `*.csv`.
 
 #### 1.3) **<ins>Importar archivos planos en NumPy</ins>**:
 
