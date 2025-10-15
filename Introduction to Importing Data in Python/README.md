@@ -75,9 +75,9 @@ Aun así, hay multiples tipos de formatos y delimitadores de campos. Dependiendo
 
 Algunos de los paquetes útiles para la importación y manipulación de datos:
 
+- **Numpy**: Muy útil si el documento consta enteramente de números que queramos alacenar en una *matriz numpy*, como los documentos *MNIST*.
+
 - **Pandas**: Tanto para datos numéricos como para cadenas de texto que queramos almacenar en *DataFrames*, como documentos tipo `*.csv`
-    
-- **Numpy**: Si el documento consta enteramente de números, que queramos alacenar en una *matriz numpy* como los documentos *MNIST*.
 
 #### 1.3) **<ins>Importar archivos planos en NumPy</ins>**:
 
@@ -116,16 +116,50 @@ datos = np.loadtxt(filename, delimiter=',', skiprows=1, usecols=[0,2]) # Especif
                                                                        # la primera y la tercera columna
 ```
 
-De igual forma, trabajar con otros tipos de datos en NumPy no es dificil tampoco. Podemos especificar el tipo de dato que queremos para que todas las entradas sean como indicamos:
+De igual forma, trabajar con otros tipos de datos en NumPy no es difícil. Podemos especificar el tipo de dato que queremos para que todas las entradas sean como indicamos:
 
 ```python
 
-datos = np.loadtext(filename, delimiter=',', dtype=str) # Todos los datos serán strings
+datos = np.loadtext(filename, delimiter=',', dtype=str) # Todos los datos cargados serán strings
 ```
+
+En resumen, NumPy es la herramienta ideal para poder manejar datos númericos dadas las matrices tan eficientes que podemos generar.
 
 #### 1.4) **<ins>Importar archivos planos en Pandas</ins>**:
 
-Pandas tambien tiene su forma de 
+Pandas tambien tiene su forma de importar archivos planos. Pero su principal atractivo es algo de lo que ya hemos hablado antes, y en lo que ahora profundizaremos, los **DataFrames**. 
+
+Esta estructura de datos organizada en filas y columnas similar a una tabla de base de datos. Y podemos organizar los datos importados de un documento en un **DataFrame**:
+
+```python
+
+import pandas as pd
+
+filename = 'calidad_vino.csv'
+
+datos = pd.read_csv(filename)
+
+datos.head() # Así mostramos los primeros 5 registros.
+
+array_datos = datos.to_numpy() # Convertimos el DataFrame de datos
+                               # en una matriz de NumPy
+```
+
+
+```python
+data = pd.read_csv(file, nrows=5, header=None)
+```
+
+```python
+# Assign filename: file
+file = 'titanic_corrupt.txt'
+
+# Import file: data
+data = pd.read_csv(file, sep='\t', comment='#', na_values=['Nothing'])
+
+# Print the head of the DataFrame
+print(data.head())
+```
 
 ### Capítulo 2: **<ins>Importar datos de otros tipos de archivos</ins>**
 
