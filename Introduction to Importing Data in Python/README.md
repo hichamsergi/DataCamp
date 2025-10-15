@@ -15,6 +15,8 @@ Este conocimiento es esencial para cualquier perfil orientado al análisis de da
 1. [Introducción y ficheros planos](#capítulo-1-introducción-y-ficheros-planos)
    - [Manipulación de documentos](#11-manipulación-de-documentos)
    - [Ficheros planos](#12-ficheros-planos)
+   - [Importar archivos planos en NumPy](#13-importar-archivos-planos-en-numpy)
+   - [Importar archivos planos en Pandas](#14-importar-archivos-planos-en-pandas)
 2. [Importar datos de otros tipos de archivos](#capítulo-2-importar-datos-de-otros-tipos-de-archivos)
 3. [Trabajar con bases de datos relacionales en Python](#capítulo-3-trabajar-con-bases-de-datos-relacionales-en-python)
 
@@ -121,6 +123,9 @@ De igual forma, trabajar con otros tipos de datos en NumPy no es dificil tampoco
 datos = np.loadtext(filename, delimiter=',', dtype=str) # Todos los datos serán strings
 ```
 
+#### 1.4) **<ins>Importar archivos planos en Pandas</ins>**:
+
+Pandas tambien tiene su forma de 
 
 ### Capítulo 2: **<ins>Importar datos de otros tipos de archivos</ins>**
 
