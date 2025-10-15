@@ -145,21 +145,24 @@ array_datos = datos.to_numpy() # Convertimos el DataFrame de datos
                                # en una matriz de NumPy
 ```
 
+Otra forma de indicarle a pandas que queremos un número determinado de registros es con `nrow=*`, donde le indicamos el número que queremos:
 
 ```python
 data = pd.read_csv(file, nrows=5, header=None)
 ```
 
+El argumento `header` debe contener el número de líneas que ocupa el encabezado del documento, siendo un argumento posicional. En el caso de no tener ningúno debemos de indicar **None**.
+
+Hay multiples argumentos que podemos indicar en la función de importación de documentos. Desde indicarle el separador de datos, con `sep='*'`, hasta el carácter que interpretamos como comentario, con `comment='*'`, pasando por especificar los strings que podemos considerar como *valores no disponibles(**Na**)*:
+
 ```python
-# Assign filename: file
+
 file = 'titanic_corrupt.txt'
 
-# Import file: data
 data = pd.read_csv(file, sep='\t', comment='#', na_values=['Nothing'])
-
-# Print the head of the DataFrame
-print(data.head())
 ```
+
+En este caso **\t** representa una tabulación, como **\n** podría representar un salto de línea.
 
 ### Capítulo 2: **<ins>Importar datos de otros tipos de archivos</ins>**
 
