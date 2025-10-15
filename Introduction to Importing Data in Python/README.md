@@ -77,7 +77,50 @@ Algunos de los paquetes útiles para la importación y manipulación de datos:
     
 - **Numpy**: Si el documento consta enteramente de números, que queramos alacenar en una *matriz numpy* como los documentos *MNIST*.
 
----
+#### 1.3) **<ins>Importar archivos planos en NumPy</ins>**:
+
+Como acabamos de comentar, NumPy es de los mejores paquetes que hay para manipular datos numericos. Aprender a utilizar alguna de sus funciones puede ser esencial dependiendo de la tarea que queramos realizar. Utilizando el caso que comentabamos de los archivos *MNIST*, podemos utilizarlo de la siguiente forma:
+
+```python
+
+import numpy as np # Importamos el paquete y lo renombramos
+
+filename = 'MNIST.txt'
+
+datos = np.loadtxt(filename, delimiter=',') # Utilizamos esta función para cargar los datos
+                                            # Tambien definimos el delimitador como ','
+```
+
+Tambien nos podemos encontrar con casos en los que el documento tenga encabezados que debamos evitar en la carga de datos. Simplemente utilizamos el parametro `skiprows`, indicandole el número de líneas a evitar:
+
+```python
+
+import numpy as np # Importamos el paquete y lo renombramos
+
+filename = 'MNIST.txt'
+
+datos = np.loadtxt(filename, delimiter=',', skiprows=1) # Evitamos solo la primera línea
+```
+
+Otro parametro útil puede ser `usecols`, donde podemos recoger únicamente los datos de los registros contenidos en las columnas especificadas:
+
+```python
+
+import numpy as np # Importamos el paquete y lo renombramos
+
+filename = 'MNIST.txt'
+
+datos = np.loadtxt(filename, delimiter=',', skiprows=1, usecols=[0,2]) # Especificamos que queremos 
+                                                                       # la primera y la tercera columna
+```
+
+De igual forma, trabajar con otros tipos de datos en NumPy no es dificil tampoco. Podemos especificar el tipo de dato que queremos para que todas las entradas sean como indicamos:
+
+```python
+
+datos = np.loadtext(filename, delimiter=',', dtype=str) # Todos los datos serán strings
+```
+
 
 ### Capítulo 2: **<ins>Importar datos de otros tipos de archivos</ins>**
 
