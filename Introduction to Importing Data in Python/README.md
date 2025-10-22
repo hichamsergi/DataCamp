@@ -166,6 +166,44 @@ En este caso **\t** representa una tabulación, como **\n** podría representar 
 
 ### Capítulo 2: **<ins>Importar datos de otros tipos de archivos</ins>**
 
+Como el nombre del capítulo indica, hay otros tipos de archivo a parte de los planos. Podemos empezar, con los **archivos Pickled**, archivos encurtidos. Es un tipo de archivos nativos de python, nace con la necesidad de almacenar diferentes tipos de datos de los que no es tan obio como almacenarlos, como diccionarios o listas. Algun ejemplo:
+
+```python
+import pickle
+
+with open('pickled_fruit.pkl','rb') as file:
+    
+    data = pickle.load(file)
+
+print(data) # {'limon':13, 'manzana':4, 'naranja':11}
+```
+
+Es importante indicar el tipo de modo en el que abrimos el archivo para poder interpretar los datos contenidos. En el caso del ejemplo anterior, indicamos el valor `'rb'`, especificando dos cosas:
+
+1. El archivo lo abriremos en modo de **SOLO LECTURA**, `'r*'`. 
+2. El archivo es un **binario**, únicamente legible por una máquina, `'*b'`.
+
+También tenemos las **hojas de cálculo de Excel**, un tipo de archivo tan extendido y utilizado que no necesita ningún tipo de presentación ni descripción. En este caso nos interesa interpretarlo con *Pandas* dado que podemos generar DataFrames con el contenido de las hojas:
+
+```python
+import pandas as pd
+
+file = 'contabilidad.xlsx'
+
+data = pd.ExcelFile(file)
+
+print(data.sheet_names) #['1960-1966','1967-1974','1975-2020']
+```
+
+Dado que este tipo de archivos se organizan en hojas, lo primero sería identificar la hoja que queremos utilizar. Podemos acceder a ellas tanto por el nombre como por el indice que ocupan en la lista generada por la función **`data.sheet_names`**:
+
+```python
+df1 = data.parse('1960-1966') #Nombre de la hoja, como un string
+df2 = data.parse(1) #Indice de la hoja
+```
+
+Dado que en ambos ejemplos hemos almacenado la información como DataFrame de la hoja que queremos utilizar, ahora tenemos contenido en las variables `df1` y `df2` únicamente la información que nos interesa.
+
 ---
 
 ### Capítulo 3: **<ins>Trabajar con bases de datos relacionales en Python</ins>**
