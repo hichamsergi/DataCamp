@@ -17,7 +17,14 @@ Este conocimiento es esencial para cualquier perfil orientado al análisis de da
    - [Ficheros planos](#12-ficheros-planos)
    - [Importar archivos planos en NumPy](#13-importar-archivos-planos-en-numpy)
    - [Importar archivos planos en Pandas](#14-importar-archivos-planos-en-pandas)
+
 2. [Importar datos de otros tipos de archivos](#capítulo-2-importar-datos-de-otros-tipos-de-archivos)
+    - [Archivos Pickled](#21-archivos-pickled)
+    - [Archivos Excel](#22-archivos-excel)
+    - [Archivos SAS/Stata](#23-archivos-sasstata)
+    - [Archivos HDF5](#24-archivos-hdf5)
+    - [Archivos MATLAB](#25-archivos-matlab)
+
 3. [Trabajar con bases de datos relacionales en Python](#capítulo-3-trabajar-con-bases-de-datos-relacionales-en-python)
 
 ---
@@ -166,6 +173,8 @@ En este caso **\t** representa una tabulación, como **\n** podría representar 
 
 ### Capítulo 2: **<ins>Importar datos de otros tipos de archivos</ins>**
 
+
+#### 2.1) **<ins>Archivos Pickled</ins>**:
 Como el nombre del capítulo indica, hay otros tipos de archivo a parte de los planos. Podemos empezar, con los **archivos Pickled**, archivos encurtidos. Es un tipo de archivos nativos de python, nace con la necesidad de almacenar diferentes tipos de datos de los que no es tan obio como almacenarlos, como diccionarios o listas. Algun ejemplo:
 
 ```python
@@ -183,6 +192,7 @@ Es importante indicar el tipo de modo en el que abrimos el archivo para poder in
 1. El archivo lo abriremos en modo de **SOLO LECTURA**, `'r*'`. 
 2. El archivo es un **binario**, únicamente legible por una máquina, `'*b'`.
 
+#### 2.2) **<ins>Archivos Excel</ins>**:
 También tenemos las **hojas de cálculo de Excel**, un tipo de archivo tan extendido y utilizado que no necesita ningún tipo de presentación ni descripción. En este caso nos interesa interpretarlo con *Pandas* dado que podemos generar DataFrames con el contenido de las hojas:
 
 ```python
@@ -221,6 +231,36 @@ De esta forma indicamos que únicamente utilizaremos la primera columna de la te
 
 ---
 
+#### 2.3) **<ins>Archivos SAS/Stata</ins>**:
+Los archivos **SAS**, *Statisctical Analysis System*, son habitualmente utilizados para el análisis avanzado, adminitración de datos e inteligéncia de negocios, utilizar los datos para mejorar.
+
+Los archivos SAS más comúnes suelen tener una extensión **sas7bdat**, y los podemos importar de la siguiente forma:
+
+```python
+
+import pandas as pd
+from sas7bdat import SAS7BDAT
+
+with SAS7BDAT('urbanpop.sas7bdat') as file:
+
+    df_sas = file.to_data_frame() #De esta forma convertimos los datos SAS7BDAT en un DataFrame
+```
+
+Por otro lado los documentos **Stata**, *Statistics data*, que podríamos decir que contienen el mismo tipo de información que los SAS, tienen una extensión **dta**. También se importan de otra manera:
+
+```python
+import pandas as pd
+
+data = pd.read_stata('urbanpop.dta')
+```
+
+#### 2.4) **<ins>Archivos HDF5</ins>**:
+
+#### 2.5) **<ins>Archivos MATLAB</ins>**:
+
+
+
+---
 ### Capítulo 3: **<ins>Trabajar con bases de datos relacionales en Python</ins>**
 
 ---
