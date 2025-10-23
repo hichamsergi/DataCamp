@@ -229,8 +229,6 @@ De esta forma hacemos lo siguiente:
 
 De esta forma indicamos que únicamente utilizaremos la primera columna de la tercera hoja del libro de Excel contenido en `data`. Además, evitamos la primera fila, dado que contiene el encabezado de la columna, y lo renombramos como *Country*.
 
----
-
 #### 2.3) **<ins>Archivos SAS/Stata</ins>**:
 Los archivos **SAS**, *Statisctical Analysis System*, son habitualmente utilizados para el análisis avanzado, adminitración de datos e inteligéncia de negocios, utilizar los datos para mejorar.
 
