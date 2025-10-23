@@ -255,6 +255,51 @@ data = pd.read_stata('urbanpop.dta')
 ```
 
 #### 2.4) **<ins>Archivos HDF5</ins>**:
+Otro de los muchos tipos de archivos es **HDF5**, *Hierarchical Data Format version 5*. Lo que diferencia a HDF5 del resto, es el hecho de que es el formato más común para poder almacenar **grandes cantidades de datos numéricos**. Una pregunta lógica sería, `Como de grandes son estas cantidades?`, y el hecho es que estamos hablando de cientos de gigabytes, sino de terabytes.
+
+Pero para poder entender la magnitud de la que hablamos necesitamos un ejemplo, pero lo primero sería aprender a importarlos:
+
+```python
+
+import h5py
+
+file = 'LOSC_4_V1-815411200-4096.hdf5'
+
+data = h5py.File(file,'r') #Solo lectura
+```
+
+Ahora que ya tenemos importado el archivo `LOSC_4_V1-815411200-4096.hdf5`, podemos empezar a jugar con el:
+
+```python
+
+from key in data.keys()
+
+    print(key) #meta
+               #quality
+               #strain
+```
+
+Como podemos ver, la estructura jerarquica de este archivo se puede explorar con el metodo `*.keys()` de la misma forma que lo haríamos con un diccionario. 
+
+Esto nos puede hacer entender que dado que es un fichero gerárquico y de gran tamaño, cada clave puede llegar a tener otras "subclaves":
+
+```python
+for skey in data['meta'].keys:
+    
+    print(skey) # Description
+                # Description
+                # Detector
+                # GPSstart
+                # Type
+```
+
+Dado que son datos númericos, conocemos la estructura gerárquica y sabemos utilizar NumPy, es interesante utilizar este paquete para poder manipular los datos que contienen estos tipos de archivos:
+
+```python
+print(np.array(data['meta']['Detector']), np.array(data['meta']['GPSstart']))
+```
+
+De esta forma, los datos contenidos en la  jerarquia `meta/Detector` y `meta/GPSstart`, se verán transformados en una matriz de NumPy.
 
 #### 2.5) **<ins>Archivos MATLAB</ins>**:
 
