@@ -202,7 +202,22 @@ df1 = data.parse('1960-1966') #Nombre de la hoja, como un string
 df2 = data.parse(1) #Indice de la hoja
 ```
 
-Dado que en ambos ejemplos hemos almacenado la información como DataFrame de la hoja que queremos utilizar, ahora tenemos contenido en las variables `df1` y `df2` únicamente la información que nos interesa.
+Dado que en ambos ejemplos hemos almacenado la información como DataFrame de la hoja que queremos utilizar, ahora tenemos contenido en las variables `df1` y `df2` únicamente la información que nos interesa. De hecho podemos jugar la función parse y generar DataFrames "personalizados", de forma que la información que contengan esté organizada de la forma que deseemos:
+
+```python
+
+df3 = data.parse(2, usecols=[0], skiprows=[0], names=['Country'])
+```
+
+De esta forma hacemos lo siguiente:
+
+- `usecols=[*]`: Utilizamos unicamente las columnas que indicamos, especificado en indice o nombre. 
+
+- `skiprows=[*]`: Evitamos incluír los registros indicados, especificado como el indice que ocupa el registro que queremos evitar.
+
+- `names=['Country']`: Atribuimos un nombre a la columna del DataFrame que queremos evitar.
+
+De esta forma indicamos que únicamente utilizaremos la primera columna de la tercera hoja del libro de Excel contenido en `data`. Además, evitamos la primera fila, dado que contiene el encabezado de la columna, y lo renombramos como *Country*.
 
 ---
 
