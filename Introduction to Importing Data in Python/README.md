@@ -300,7 +300,37 @@ print(np.array(data['meta']['Detector']), np.array(data['meta']['GPSstart']))
 De esta forma, los datos contenidos en la  jerarquia `meta/Detector` y `meta/GPSstart`, se verán transformados en una matriz de NumPy.
 
 #### 2.5) **<ins>Archivos MATLAB</ins>**:
+Matlab, la abreviación de *Matrix Laboratory*, es un tipo de documento ampliamente utilizado en entornos de ciéncia e ingenieria. La estensión de este tipo de documentos es **\*.mat**. Pero en cuanto a este tipo de documentos, a diferencia del resto que hemos estado tratando, para poderlos importar necesitamos el módulo de funciones **SciPy**.
 
+**SciPy** tiene dos funciones especialemente interesantes para poder importar archivos:
+
+- **scipy.io.loadmat()**: Nos permite leer documentos en formato Matlab.
+
+- **scipy.io.savemat()**: Nos permite escribir archivos en formato Matlab.
+
+Ahora vamos a poner un ejemplo de como importaríamos un documento Matlab
+
+```python
+import scipy.io
+
+filename = 'test.mat'
+
+mat = scipy.io.loadmat(filename)
+```
+
+Ahora bien, el entorno de trabajo de Matlab podemos visualizar todas las variables que hemos utilizado en nuestro código. Dentro de python, no sucede exactamente así, sino que lo intepretamos como un diccionario donde las claves son los nombres de las variables de Matlab que utilizamos, y los valores los objetos asignados a estas variables. Esto queda mas claro si cogemos el ejemplo del caso anterior e intentamos jugar un poco con el:
+
+```python
+gm
+filename = 'test.mat'
+
+mat = scipy.io.loadmat(filename)
+
+print(type(mat)) # <class 'dict'>
+print(type(mat['x'])) #  <class 'numpy.ndarray'>
+```
+
+Ahora que podemos comprender mejor, en el primer objeto al que accedemos, nos indica que es un *diccionario* dado que tenemos los nombres de las variables. Por el contrario, al indicarle el *type()* de una de estas rutas, accede al valor que contiene esta variable, indicandonos que se trata de una matriz de NumPy.
 
 
 ---
