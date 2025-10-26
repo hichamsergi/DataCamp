@@ -173,7 +173,6 @@ En este caso **\t** representa una tabulación, como **\n** podría representar 
 
 ### Capítulo 2: **<ins>Importar datos de otros tipos de archivos</ins>**
 
-
 #### 2.1) **<ins>Archivos Pickled</ins>**:
 Como el nombre del capítulo indica, hay otros tipos de archivo a parte de los planos. Podemos empezar, con los **archivos Pickled**, archivos encurtidos. Es un tipo de archivos nativos de python, nace con la necesidad de almacenar diferentes tipos de datos de los que no es tan obio como almacenarlos, como diccionarios o listas. Algun ejemplo:
 
@@ -332,9 +331,7 @@ print(type(mat['x'])) #  <class 'numpy.ndarray'>
 
 Ahora que podemos comprender mejor, en el primer objeto al que accedemos, nos indica que es un *diccionario* dado que tenemos los nombres de las variables. Por el contrario, al indicarle el *type()* de una de estas rutas, accede al valor que contiene esta variable, indicandonos que se trata de una matriz de NumPy.
 
-
 ---
+
 ### Capítulo 3: **<ins>Trabajar con bases de datos relacionales en Python</ins>**
-
----
 
