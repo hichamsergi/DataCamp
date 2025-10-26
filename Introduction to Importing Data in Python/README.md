@@ -317,19 +317,23 @@ filename = 'test.mat'
 mat = scipy.io.loadmat(filename)
 ```
 
-Ahora bien, el entorno de trabajo de Matlab podemos visualizar todas las variables que hemos utilizado en nuestro código. Dentro de python, no sucede exactamente así, sino que lo intepretamos como un diccionario donde las claves son los nombres de las variables de Matlab que utilizamos, y los valores los objetos asignados a estas variables. Esto queda mas claro si cogemos el ejemplo del caso anterior e intentamos jugar un poco con el:
+Ahora bien, en el entorno de trabajo de MATLAB podemos visualizar directamente todas las variables utilizadas en nuestro código. En Python, en cambio, esto no funciona de la misma forma: el contenido del archivo .mat se interpreta como un diccionario, donde las claves corresponden a los nombres de las variables creadas en MATLAB, y los valores son los objetos asociados a dichas variables.
+
+Esto se entiende mejor si retomamos el ejemplo anterior y exploramos su estructura:
 
 ```python
-gm
+import scipy.io
+
 filename = 'test.mat'
 
 mat = scipy.io.loadmat(filename)
 
-print(type(mat)) # <class 'dict'>
-print(type(mat['x'])) #  <class 'numpy.ndarray'>
+print(type(mat))      # <class 'dict'>
+print(type(mat['x'])) # <class 'numpy.ndarray'>
+
 ```
 
-Ahora que podemos comprender mejor, en el primer objeto al que accedemos, nos indica que es un *diccionario* dado que tenemos los nombres de las variables. Por el contrario, al indicarle el *type()* de una de estas rutas, accede al valor que contiene esta variable, indicandonos que se trata de una matriz de NumPy.
+Como se puede observar, el primer objeto (mat) es un diccionario, ya que contiene los nombres de las variables del archivo. En cambio, al inspeccionar uno de sus elementos, por ejemplo mat['x'], accedemos al valor almacenado en esa variable, que en este caso corresponde a una matriz de NumPy.
 
 ---
 
