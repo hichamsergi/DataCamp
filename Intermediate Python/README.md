@@ -30,7 +30,7 @@ El atractivo de Python para el desarrollo de software, la inteligencia artificia
 Estas herramientas, las podríamos diferenciar en tres grandes grupos:
 
 #### 1.1) **<ins>Funciones integradas</ins>**: 
-Son funciones integradas en el mísmo lenguaje, disponibles por defecto, sin necesidad de importar módulos externos. Algunas de las más interesante, para lo que nos ocupa, serían las funciones numéricas. Estas son funciones nos facilitan la vida bastante, algunos ejemplos:
+Son funciones integradas en el mismo lenguaje, disponibles por defecto, sin necesidad de importar módulos externos. Algunas de las más interesantes, para lo que nos ocupa, serían las funciones numéricas. Estas funciones nos facilitan bastante la vida, algunos ejemplos:
 
 ```python
 
@@ -70,7 +70,7 @@ len("Introduccion a Python para desarrolladores") # 42
 sorted("Hicham") # ['H','a','c','h','i','m']
 ```
 
-En caso de tener dudas de como podemos utilizar una función, podemos llamar a la misma función ```help(...)```, y esta nos dará toda la documentación de la función que pretendemos utilizar:
+En caso de tener dudas de cómo podemos utilizar una función, podemos llamar a la misma función ```help(...)```, y esta nos dará toda la documentación de la función que pretendemos utilizar:
 
 ```python
 
@@ -107,7 +107,7 @@ Algunos de los módulos más populares:
     help(os) # Nos mostrará toda la documentación referente al módulo OS
  ```
 
- Pese a todo, el hecho importar un módulo entero para utilizar únicamente unas pocas funciones es algo muy poco eficiente. Podemos importar unicamente las funciones que sean necesarias de la siguiente forma:
+ Pese a todo, el hecho de importar un módulo entero para utilizar únicamente unas pocas funciones es algo muy poco eficiente. Podemos importar únicamente las funciones que sean necesarias de la siguiente forma:
  ```python
 
    from os import getcwd, chdir # Así solo importamos las funciones necesarias.
@@ -128,7 +128,7 @@ import pandas as pd
 ...
 ```
 
-Siguiendo el  ejemplo, ```pandas``` es un paquete especialmente interesante, ya que nos permite hacer cosas útiles como transformar un simple diccionario en un **DataFrame**. Los *Dataframe*, son una forma de organizar información parecida a la de las matrices o tablas de *Excel*, en las que hay columnas con datos organizados en filas:
+Siguiendo el ejemplo, ```pandas``` es un paquete especialmente interesante, ya que nos permite hacer cosas útiles como transformar un simple diccionario en un **DataFrame**. Los *DataFrame*, son una forma de organizar información parecida a la de las matrices o tablas de *Excel*, en las que hay columnas con datos organizados en filas:
 ```python
 import pandas as pd
 
@@ -159,7 +159,7 @@ ventas.head() # Esto nos mostrará las primeras 5 filas del DataFrame generado
 
 ### Capítulo 2: **<ins>Alias con funciones</ins>**
 
-Habitualmente, podemos encontrarnos con ciertas limitaciones, puede haber ocasiones donde las funciones integradas de python o paquetes de funciones no sean suficiente y necesitemos crear las nuestras propias. Para poder hacerlo debemos de hacernos las siguientes preguntas:
+Habitualmente podemos encontrarnos con ciertas limitaciones. Puede haber ocasiones donde las funciones integradas de python o paquetes de funciones no sean suficiente y necesitemos crear las nuestras propias. Para poder hacerlo debemos de hacernos las siguientes preguntas:
 
   **1) ¿Cuántas líneas ocupará nuestro código si no creamos la función?**  
   **2) ¿Cuál es la complejidad de nuestra función?**  
@@ -181,14 +181,14 @@ def average(values):
   return rounded_average
 ```
 
-Ahora, entendemos el funcionamiento básico de las funciones. Pese a ello, podemos profundizar aún más en como trabajan y porque hacen lo que hacen. Empezando por descomponer las funciones:
+Ahora, entendemos el funcionamiento básico de las funciones. Pese a ello, podemos profundizar aún más en cómo trabajan y por qué hacen lo que hacen. Empezando por descomponer las funciones:
 
 ```python
 def function_name(argument):
   ...
 ```
 
-La descripción de los dos primeros términos es simple, utilizamos ```def``` para definir una función propia, y lo siguiente es el mísmo nombre que le asignaremos a la función, en este caso ```function_name(...)```.
+La descripción de los dos primeros términos es simple, utilizamos ```def``` para definir una función propia, y lo siguiente es el mismo nombre que le asignaremos a la función, en este caso ```function_name(...)```.
 
 En cuanto al ```argument```, serían los argumentos que les transmitimos a la función para poder funcionar. Podemos transmitirle de dos tipos diferentes:
 
@@ -226,7 +226,7 @@ En cuanto al ```argument```, serían los argumentos que les transmitimos a la fu
       return average_value
   ```
 
-Esta función es especial, y únicamente redondeará los valores que nosotros decidamos. Dado qué como segundo valor definimos por defecto de tipo *booleano* tal que ```False```, solo se redondearán los números que forcemos que tengan un segundo argumento de tipo ```True```:
+Esta función es especial, y únicamente redondeará los valores que nosotros decidamos. Dado que como segundo valor definimos por defecto de tipo *booleano* tal que ```False```, solo se redondearán los números para los que forcemos que tengan un segundo argumento de tipo ```True```:
 
   ```python
   ventas = [125.97,84.32,99.78,154.21,78.50,83.67,111.13]
@@ -289,7 +289,7 @@ def concat(**kwarg):
 print(concat(start="Python", middle="is", end="great!")) # Python is great!
 ```
 
-Y antes de terminar, algo que nos ayuda y podríamos considerar como la mejor de las practicas cuando generamos funciones personalizafas, el **DOCSTRING** de una función. Los *docstrings* de las funciones, corresponden a una breve descripción de la utilidad de la función. Pese a no ser obligatorio el hecho de definirlo, esto nos puede ayudar a entender las funciones en un futuro, no solo a nosotros sino también a cualquiera que lea nuestro código y quiera hacer uso de nuestras funciones:
+Y antes de terminar, algo que nos ayuda y podríamos considerar como la mejor de las practicas cuando generamos funciones personalizadas, el **DOCSTRING** de una función. Los *docstrings* de las funciones, corresponden a una breve descripción de la utilidad de la función. Pese a no ser obligatorio el hecho de definirlo, esto nos puede ayudar a entender las funciones en un futuro, no solo a nosotros sino también a cualquiera que lea nuestro código y quiera hacer uso de nuestras funciones:
 
   ```python
 
@@ -303,8 +303,8 @@ Y antes de terminar, algo que nos ayuda y podríamos considerar como la mejor de
         rounded (boolean): Valor booleano, utilizado para decidir cuando redondeamos.
     
     Returns:
-        rounded_average: Promédio redondeado, cuando rounded == True.
-        average_value: Promédio sin redondear, cuando rounded == False.
+        rounded_average: promedio redondeado, cuando rounded == True.
+        average_value: promedio sin redondear, cuando rounded == False.
     """
   
     if rounded == True:
@@ -329,7 +329,7 @@ lambda argument(x): expresion
 ```
 
   - Se utiliza **```x```** para un argumento simple.
-  - **```expresion```** corresponderia al cuerpo de la función.
+  - **```expresion```** correspondería al cuerpo de la función.
   - No requiere de declara **```return```** para devolver valores.
 
     
@@ -357,9 +357,9 @@ lambda x: sum(x) / len(x)
 (lambda x: sum(x) / len(x))([3,6,9]) # 6.0
 ```
 
-Como se puede ver, la función lambda nos permite ejecutar en una única línea de código exactamente lo mísmo que la función personalizada.
+Como se puede ver, la función lambda nos permite ejecutar en una única línea de código exactamente lo mismo que la función personalizada.
 
-Como comentaba, pese a que las funciones lambda no necesítan ser asignadas a una variable, podemos hacerlo sin problema:
+Como comentaba, pese a que las funciones lambda no necesitan ser asignadas a una variable, podemos hacerlo sin problema:
 
 ```python
 
@@ -370,7 +370,7 @@ promedio = lambda x: sum(x) / len(x)
 promedio([3,6,9]) # 6.0
 ```
 
-Y de igual forma, podemos extender las funciones lambda y complicarnos mas la vida:
+Y de igual forma, podemos extender las funciones lambda y complicarnos más la vida:
 ```python
 (lambda x, y: x**y)(2,3) # 8
 ```
@@ -385,7 +385,7 @@ resultado = map(lambda x: x ** 2, numeros)
 print(list(resultado))  # [1, 4, 9, 16]
 ```
 
-En estos casos, utilizamos la función integrada de python ```map``` para aplicar la función lambda a cada elemento de la lista. Esta función genera un **objeto map**, que posteriormente deberemos transformar en una lista utilizando de nuevo la función integrada de python ```list```. ```Map``` puede aplicar nuestra función lambda a todos los iterables grácias a su sintaxis:
+En estos casos, utilizamos la función integrada de python ```map``` para aplicar la función lambda a cada elemento de la lista. Esta función genera un **objeto map**, que posteriormente deberemos transformar en una lista utilizando de nuevo la función integrada de python ```list```. ```Map``` puede aplicar nuestra función lambda a todos los iterables gracias a su sintaxis:
 
 ```python
 
@@ -394,7 +394,7 @@ map(funcion,iterable)
 
 En cualquier caso, es importante tener siempre claro cuando y como se deben de utilizar las funciones dadas las utilidades que nos presenta cada una.
 
-|Escenários|Tipo de función|
+|Escenarios|Tipo de función|
 |----------|---------------|
 |Tareas complejas| Personalizada|
 |Misma tarea repetidamente| Personalizada|
@@ -405,11 +405,11 @@ En cualquier caso, es importante tener siempre claro cuando y como se deben de u
 
 ### Capítulo 4: **<ins>Gestión de errores</ins>**
 
-Finalmente, algo demasiado importante como para pasar por alto, la **gestión de errores**. Entendemos por gestionar errores, como preparamos a nuestro codigo para manejar situaciones para las que no está preparado.
+Finalmente, algo demasiado importante como para pasar por alto, la **gestión de errores**. Entendemos por gestionar errores, como preparamos a nuestro código para manejar situaciones para las que no está preparado.
 
-Si nos paramos a pensar, pese a que puede sonar paradogico, lo que estamos haciendo es decirle al programa qué en caso de no reaccionar de la forma deseada genere un error determinado. Conociendo algún error podemos entender la idea:
+Si nos paramos a pensar, pese a que puede sonar paradójico, lo que estamos haciendo es decirle al programa que en caso de no reaccionar de la forma deseada genere un error determinado. Conociendo algún error podemos entender la idea:
 
-  - **<ins>TypeError</ins>**: Errore que se genera cuando el dato que estamos manejando es incompatible para la tarea que lo está utilizando. Ejemplo:
+  - **<ins>TypeError</ins>**: Error que se genera cuando el dato que estamos manejando es incompatible para la tarea que lo está utilizando. Ejemplo:
   
   ```python
 
@@ -418,7 +418,7 @@ Si nos paramos a pensar, pese a que puede sonar paradogico, lo que estamos hacie
   TypeError: can only concatenate str (not "int") to str
   ```
 
-  - **<ins>ValueError</ins>**: Error que se genera cuando el valor introducido no esta dentro de un rango aceptable. Ejemplo:
+  - **<ins>ValueError</ins>**: Error que se genera cuando el valor introducido no está dentro de un rango aceptable. Ejemplo:
   
   ```python
 
@@ -435,7 +435,7 @@ Si nos paramos a pensar, pese a que puede sonar paradogico, lo que estamos hacie
 
   >>> valores[4]
 
-  IndexError: list index out of rang
+  IndexError: list index out of range
   ```
 
 Pero más allá de poder diferenciar entre tipos de errores, lo que nos interesa es saber como podemos integrar este  conocimiento en nuestro código. Para poder integrarlo, utilizamos las sentencias ```try``` y ```except```. Utilizamos el ejemplo de nuestra querida función de promedios:
@@ -455,7 +455,7 @@ def promedio(values):
   
 ```
 
-También podemos hacerlo utilizando el metodo ```rise```:
+También podemos hacerlo utilizando el método ```rise```:
 
 ```python
 def promedio(values):
