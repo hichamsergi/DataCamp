@@ -339,3 +339,6 @@ Como se puede observar, el primer objeto (mat) es un diccionario, ya que contien
 
 ### Capítulo 3: **<ins>Trabajar con bases de datos relacionales en Python</ins>**
 
+Para entender como funcionan las bases de datos relacionales en Python, hay que tentender qué son las bases de datos relacionales. Estas son bases de datos basadas en un modelo relacional de datos, lo que implica qué, la información esta contenida en **tablas**, compuestas por **registros** y columnas, **atributos** de cada registro de datos.
+
+Esta estructura de bases de datos, es especialmente eficiente cuando las diferentes tablas estan interconectadas entre si. Para poder hacerlo es esencial que cada registro tenga un identificador único, conocido como clave primária, esto es útil para poder acceder al registro en concreto. Por lo tanto, al contener también claves primarias de otras tablas podemos relacionarlas entre si. 
