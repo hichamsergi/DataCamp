@@ -403,16 +403,18 @@ from sqlalchemy import create_engine
 import pandas as pd
 
 #2)
-engine = create_engine('sqlite:///Northwind.sqlite')
+engine = create_engine('sqlite:///Logistica.sqlite')
 
 #3)
-con = engine.connect() #Método para conectarnos al motor
+con = engine.connect() #Método spara conectarnos al motor
 
 #4)
 rs = con.execute("SELECT * FROM Pedidos") #Método para ejecutar la consulta
 
 #5)
 df = pd.DataFrame(rs.fetchall()) #Tranferimos todos los datos a el DataFrame
+
+df.columns = rs.keys() #Esto nos permite asignar el mismo nombre de las columnas de BDD en el DataFrame
 
 #6)
 con.close() #Cerramos
@@ -422,3 +424,31 @@ Teniendo en cuenta los diferentes métodos para poder conectarnos y ejecutar con
 
 * `rs.fetchall()`: Recuperamos todas las filas de la ejecución de la consulta. Convinando esto con la función `pd.DataFrame(...)` podemos transformar lo obtenido en un objeto DataFrame con la información consultada.
 
+**Pequeño truco:** Si queremos despreocuparnos del hecho de tener que cerrar el motor de la base de datos, podemos utilizar el método `with`:
+
+```python
+
+with engine.connect() as con:
+    ...
+    rs = con.execute('SELECT * FROM Pedidos ORDER BY Fecha_pedido')
+    df = pd.DataFrame(rs.fetchmany(size=5)) #Solo importamos 5 registros
+
+```
+
+#### 3.3) **<ins>Consultar bases de datos directamente con Pandas</ins>**:
+Despues de crear un motor de bases de datos, hemos obtenido los resultados de consultas utilizando múltiples líneas de código. Pandas, permite hacer exactamente lo mismo en una única línea:
+
+```python
+import pandas as pd
+from sqlalchemy import create_engine
+
+engine = create_engine('sqlite:///Logistica.sqlite')
+
+df = pd.read_sql_query('SELECT * FROM Pedidos ORDER BY Fecha_pedido', engine)
+```
+
+Para generar el mismo DataFrame que teniamos en los ejemplos anteriores, hemos tenido que introducir diferentes argumentos a la función `pd.read_sql_query(...)`:
+    
+* ``SELECT * FROM Pedidos ORDER BY Fecha_pedido``:  Sería la sentencia que queremos ejecutar.
+
+* ``engine``: El motor sobre el que ejecutaremos la sentencia.
