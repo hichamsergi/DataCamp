@@ -339,6 +339,7 @@ Como se puede observar, el primer objeto (mat) es un diccionario, ya que contien
 
 ### Capítulo 3: **<ins>Trabajar con bases de datos relacionales en Python</ins>**
 
+#### 3.1) **<ins>Introducción a las Bases de Datos Relacionales</ins>**:
 Para entender como funcionan las bases de datos relacionales en Python, hay que tentender qué son las bases de datos relacionales. Estas son bases de datos basadas en un modelo relacional de datos, lo que implica qué, la información esta contenida en **tablas**, compuestas por **registros** y columnas, **atributos** de cada registro de datos.
 
 Esta estructura de bases de datos, es especialmente eficiente cuando las diferentes tablas estan interconectadas entre si. Para poder hacerlo es esencial que cada registro tenga un identificador único, conocido como clave primária, esto es útil para poder acceder al registro en concreto. Por lo tanto, al contener también claves primarias de otras tablas podemos relacionarlas entre si. 
@@ -365,15 +366,15 @@ Pero el RDBMS por si solo no nos permite hacer mucha cosa, por eso exiten los **
 
 from sqlalchemy import create_engine
 
-engine = create_engine('sqlite://Northwind.sqlite')
+engine = create_engine('sqlite:///Northwind.sqlite')
 ```
 
 - `sqlalchemy`: Es el paquete **SQLAlchemy** del que podemos extraer la función que nos interesa, qué sería `create_engine`.
 
-- `create_engine('sqlite://Northwind.sqlite')`: Indicamos que creamos un motor de bases de datos que conectará con la base de datos `sqlite://Northwind.sqlite`. Es importante matizar que le estamos dando dos tipos de datos en esta cadena:
+- `create_engine('sqlite:///Northwind.sqlite')`: Indicamos que creamos un motor de bases de datos que conectará con la base de datos `sqlite:///Northwind.sqlite`. Es importante matizar que le estamos dando dos tipos de datos en esta cadena:
 
     - `sqlite`: Le indicamos el **RDBMS** de la base de datos que pretendemos manipular.
-    - `..://Northwind.sqlite`: Le indicamos el nombre y la ruta de la base de datos a la que debe conectarse.
+    - `..:///Northwind.sqlite`: Le indicamos el nombre y la ruta de la base de datos a la que debe conectarse.
 
 Importante recordar que si no sabemos el nombre de las tablas que contienen información podemos ejecutar el siguiente fragmento:
 
@@ -383,4 +384,41 @@ tables_names = engine.table_names()
 print(table_names) # ['Categorias', 'Clientes', `Pedidos`, `Empleados`, ...]
 ```
 
-Si seguimos los fragmentos de código anteriores, para poder consultar la base de datos, necesitamos conectarnos al motor. 
+#### 3.2) **<ins>Consultas en Bases de Datos Relacionales</ins>**:
+Como hemos visto, el procedimiento para podernos conectar a una base de datos y hacer consultas, sería el siguiente:
+
+1) Importar los paquetes, y funciones, necesarios.
+2) Crear el motor de la base de datos.
+3) Conectarnos al motor.
+4) Consultar la base de datos.
+5) Guardar los resultados en un DataFrame.
+6) Cerrar la coneixón.
+
+Un ejemplo visual puede ser más ilustrativo:
+
+```python
+
+#1)
+from sqlalchemy import create_engine
+import pandas as pd
+
+#2)
+engine = create_engine('sqlite:///Northwind.sqlite')
+
+#3)
+con = engine.connect() #Método para conectarnos al motor
+
+#4)
+rs = con.execute("SELECT * FROM Pedidos") #Método para ejecutar la consulta
+
+#5)
+df = pd.DataFrame(rs.fetchall()) #Tranferimos todos los datos a el DataFrame
+
+#6)
+con.close() #Cerramos
+```
+
+Teniendo en cuenta los diferentes métodos para poder conectarnos y ejecutar consultar, lo interesante en ese punto es como el motor se comunica con la libreria de Pandas. 
+
+* `rs.fetchall()`: Recuperamos todas las filas de la ejecución de la consulta. Convinando esto con la función `pd.DataFrame(...)` podemos transformar lo obtenido en un objeto DataFrame con la información consultada.
+
