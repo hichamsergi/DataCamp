@@ -342,3 +342,45 @@ Como se puede observar, el primer objeto (mat) es un diccionario, ya que contien
 Para entender como funcionan las bases de datos relacionales en Python, hay que tentender qué son las bases de datos relacionales. Estas son bases de datos basadas en un modelo relacional de datos, lo que implica qué, la información esta contenida en **tablas**, compuestas por **registros** y columnas, **atributos** de cada registro de datos.
 
 Esta estructura de bases de datos, es especialmente eficiente cuando las diferentes tablas estan interconectadas entre si. Para poder hacerlo es esencial que cada registro tenga un identificador único, conocido como clave primária, esto es útil para poder acceder al registro en concreto. Por lo tanto, al contener también claves primarias de otras tablas podemos relacionarlas entre si. 
+
+Ahora bien, el lenguaje estándar de comunicación con bases de datos es **SQL**, *Structured Query Language* o Lenguaje de Consultas Estructurado. Si bien es diferente de Python, también tiene una sintáxis bastante fácil de comprender:
+
+```sql
+SELECT * FROM pedidos WHERE IDcliente = '666';
+```
+
+- `*`: Es un valor polivalente, seleccionamos todo lo que coincida.
+
+- `pedidos`: Es el nombre de la tabla de la que seleccionamos la información.
+
+- `IDcliente = '666'`: Podríamos considerarlo como la estructura condicional en la que solo recogemos el registro que coincide con el atributo `IDcliente` igual a `666`.
+
+Todo lo comentado previamente son conceptos básicos, pero imprescindibles, para poder comprender lo que viene a continuación.
+
+Cuando pretendemos trabajar con una base de datos desde Python, lo primero que necesitamos es importar un *Sistema de Gestión de Bases de Datos Relacionales*, o **Relational Database Management System(RDBMS)**. Un RDBMS es un software utilizado para crear, gestionar y mantener bases de datos relacionales, los más utilizados serían SQLite, MySQL o PostgreSQL.
+
+Pero el RDBMS por si solo no nos permite hacer mucha cosa, por eso exiten los **motores de bases de datos**. Estos son softwares que se encargan de crear, leer, actualizar y eliminar registros del RDBMS. Para poder crear un motor de bases de datos podemos hacerlo de la siguiente forma:
+
+```python
+
+from sqlalchemy import create_engine
+
+engine = create_engine('sqlite://Northwind.sqlite')
+```
+
+- `sqlalchemy`: Es el paquete **SQLAlchemy** del que podemos extraer la función que nos interesa, qué sería `create_engine`.
+
+- `create_engine('sqlite://Northwind.sqlite')`: Indicamos que creamos un motor de bases de datos que conectará con la base de datos `sqlite://Northwind.sqlite`. Es importante matizar que le estamos dando dos tipos de datos en esta cadena:
+
+    - `sqlite`: Le indicamos el **RDBMS** de la base de datos que pretendemos manipular.
+    - `..://Northwind.sqlite`: Le indicamos el nombre y la ruta de la base de datos a la que debe conectarse.
+
+Importante recordar que si no sabemos el nombre de las tablas que contienen información podemos ejecutar el siguiente fragmento:
+
+```python
+tables_names = engine.table_names()
+
+print(table_names) # ['Categorias', 'Clientes', `Pedidos`, `Empleados`, ...]
+```
+
+Si seguimos los fragmentos de código anteriores, para poder consultar la base de datos, necesitamos conectarnos al motor. 
