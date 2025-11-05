@@ -10,7 +10,7 @@ En este capítulo aprenderás
 
 ## 2. Índice
 
-1. []()
+1. [Importación de datos desde Internet](#capítulo-1-importación-de-datos-desde-internet)
 2. []()
 3. []()
 4. []()
@@ -19,7 +19,7 @@ En este capítulo aprenderás
 
 ## 3. Apuntes
 
-### Capítulo 1: **<ins>Importación avanzada de archivos de texto</ins>**
+### Capítulo 1: **<ins>Importación de datos desde Internet</ins>**
 
 ### Capítulo 2: **<ins></ins>**
 
