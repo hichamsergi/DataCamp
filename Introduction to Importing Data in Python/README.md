@@ -26,6 +26,10 @@ Este conocimiento es esencial para cualquier perfil orientado al análisis de da
     - [Archivos MATLAB](#25-archivos-matlab)
 
 3. [Trabajar con bases de datos relacionales en Python](#capítulo-3-trabajar-con-bases-de-datos-relacionales-en-python)
+    - [Introducción a las Bases de Datos Relacionales](#31-introducción-a-las-bases-de-datos-relacionales)
+    - [Consultas en Bases de Datos Relacionales](#32-consultas-en-bases-de-datos-relacionales)
+    - [Consultar bases de datos con Pandas](#33-consultar-bases-de-datos-con-pandas)
+    - [JOINing tablas](#34-joining-tablas)
 
 ---
 
@@ -435,7 +439,7 @@ with engine.connect() as con:
 
 ```
 
-#### 3.3) **<ins>Consultar bases de datos directamente con Pandas</ins>**:
+#### 3.3) **<ins>Consultar bases de datos con Pandas</ins>**:
 Despues de crear un motor de bases de datos, hemos obtenido los resultados de consultas utilizando múltiples líneas de código. Pandas, permite hacer exactamente lo mismo en una única línea:
 
 ```python
@@ -452,3 +456,18 @@ Para generar el mismo DataFrame que teniamos en los ejemplos anteriores, hemos t
 * ``SELECT * FROM Pedidos ORDER BY Fecha_pedido``:  Sería la sentencia que queremos ejecutar.
 
 * ``engine``: El motor sobre el que ejecutaremos la sentencia.
+
+#### 3.4) **<ins>JOINing tablas</ins>**:
+
+En inglés, **JOIN**, significa juntar. Entendiendo esto, y la que la ventaja principal de las bases de datos relacionales es el hecho de la poder correlacionar diferentes tablas, podemos con una sentencia como la siguiente:
+
+```python
+import pandas as pd
+from sqlalchemy import create_engine
+
+engine = create_engine('sqlite:///Logistica.sqlite')
+
+df = pd.read_sql_query('SELECT NPedidos, IdCliente FROM Pedidos INNER JOIN Clientes on Pedidos.IdCliente = Clientes.IdCliente', engine)
+```
+
+Con **INNER JOIN** lo que hacemos es importar otra tabla para poder referenciarla en la sentencia SQL que ejecutamos.
