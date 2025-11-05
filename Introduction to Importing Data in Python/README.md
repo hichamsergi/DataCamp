@@ -4,7 +4,7 @@
 
 ## 1. Descripción general
 
-En este curso aprenderás las bases para importar datos a Python desde distintos formatos de archivo.
+En este capítulo aprenderás las bases para importar datos a Python desde distintos formatos de archivo.
 Conocerás cómo leer archivos planos, formatos estructurados como Excel o SAS, y también cómo conectarte a bases de datos relacionales mediante SQL.
 Este conocimiento es esencial para cualquier perfil orientado al análisis de datos o ingeniería de datos.
 
