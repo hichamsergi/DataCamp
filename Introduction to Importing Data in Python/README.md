@@ -48,14 +48,14 @@ filename = 'quijote.txt' # Asignamos el nombre del documento a una variable.
 
 file = open(filename, mode='r') # Abrimos el archivo
 
-texto = file.read() # De está forma almacenamos todo el texto
-                    # contenido en el archivo, dentro de la varible texto
+texto = file.read() # De esta forma almacenamos todo el texto
+                    # contenido en el archivo, dentro de la variable texto
 file.close()
 ```
 
 Como se puede ver en el fragmento de código anterior, al final utilizamos un cierre, `file.close()`. El cierre finaliza la función `open`, por lo que podemos decir que cerramos el fichero que hemos abierto. De esta forma, no solo nos aseguramos de que todos los datos se guarden correctamente, sino que también ejercemos una buena práctica de programación en Python.
 
-Pese a ello, si somos un poco perezosos y no queremos tener que acordarnos de cerrar todos los documentos que abramos, podemos hacerlo con una declaración `with`. está nos permite ejecutar comandos dentro de la declaración, con el documento abierto, y además sin necesidad de tener que acordarnos de cerrar el documento una vez estámos fuera de la declaración:
+Pese a ello, si somos un poco perezosos y no queremos tener que acordarnos de cerrar todos los documentos que abramos, podemos hacerlo con una declaración `with`. está nos permite ejecutar comandos dentro de la declaración, con el documento abierto, y además sin necesidad de tener que acordarnos de cerrar el documento una vez estamos fuera de la declaración:
 
 ```python
 with open('quijote.txt', 'r') as file:
@@ -65,9 +65,9 @@ with open('quijote.txt', 'r') as file:
 
 #### 1.2) **<ins>Ficheros planos</ins>**:
 
-Lo primero de todo es entender que es un archivo plano, estos **son archivos de texto basicos que contienen registros, datos de tablas sin relaciones estructuradas**.
+Lo primero de todo es entender que es un archivo plano, estos **son archivos de texto básicos que contienen registros, datos de tablas sin relaciones estructuradas**.
 
-Si profundizamos en los **registros**(*record*), veremos que cada uno corresponde a una línea del archivo que contiene diferentes datos, estos datos suelen estár separados por un **delimitador**, como `,` o `;`.
+Si profundizamos en los **registros**(*record*), veremos que cada uno corresponde a una línea del archivo que contiene diferentes datos, estos datos suelen estar separados por un **delimitador**, como `,` o `;`.
 
 En cambio, las **columnas**(*column*), representan los atributos o campos que describen cada dato dentro de los registros.
 
@@ -134,13 +134,13 @@ De igual forma, trabajar con otros tipos de datos en NumPy no es difícil. Podem
 datos = np.loadtxt(filename, delimiter=',', dtype=str) # Todos los datos cargados serán strings
 ```
 
-En resumen, NumPy es la herramienta ideal para poder manejar datos númericos dadas las matrices tan eficientes que podemos generar.
+En resumen, NumPy es la herramienta ideal para poder manejar datos numéricos dadas las matrices tan eficientes que podemos generar.
 
 #### 1.4) **<ins>Importar archivos planos en Pandas</ins>**:
 
 Pandas también tiene su forma de importar archivos planos. Pero su principal atractivo es algo de lo que ya hemos hablado antes, y en lo que ahora profundizaremos, los **DataFrames**. 
 
-está estructura de datos organizada en filas y columnas similar a una tabla de base de datos. Y podemos organizar los datos importados de un documento en un **DataFrame**:
+esta estructura de datos organizada en filas y columnas similar a una tabla de base de datos. Y podemos organizar los datos importados de un documento en un **DataFrame**:
 
 ```python
 
@@ -162,7 +162,7 @@ Otra forma de indicarle a pandas que queremos un número determinado de registro
 data = pd.read_csv(file, nrows=5, header=None)
 ```
 
-El argumento `header` debe contener el número de líneas que ocupa el encabezado del documento, siendo un argumento posicional. En el caso de no tener ningúno debemos de indicar **None**.
+El argumento `header` debe contener el número de líneas que ocupa el encabezado del documento, siendo un argumento posicional. En el caso de no tener ninguno debemos de indicar **None**.
 
 Hay múltiples argumentos que podemos indicar en la función de importación de documentos. Desde indicarle el separador de datos, con `sep='*'`, hasta el carácter que interpretamos como comentario, con `comment='*'`, pasando por especificar los strings que podemos considerar como *valores no disponibles(**Na**)*:
 
@@ -215,14 +215,14 @@ df1 = data.parse('1960-1966') #Nombre de la hoja, como un string
 df2 = data.parse(1) #Índice de la hoja
 ```
 
-Dado que en ambos ejemplos hemos almacenado la información como DataFrame de la hoja que queremos utilizar, ahora tenemos contenido en las variables `df1` y `df2` únicamente la información que nos interesa. De hecho podemos jugar la función parse y generar DataFrames "personalizados", de forma que la información que contengan esté organizada de la forma que deseemos:
+Dado que en ambos ejemplos hemos almacenado la información como DataFrame de la hoja que queremos utilizar, ahora tenemos contenido en las variables `df1` y `df2` únicamente la información que nos interesa. De hecho podemos jugar la función parse y generar DataFrames "personalizados", de forma que la información que contengan este organizada de la forma que deseemos:
 
 ```python
 
 df3 = data.parse(2, usecols=[0], skiprows=[0], names=['Country'])
 ```
 
-De está forma hacemos lo siguiente:
+De esta forma hacemos lo siguiente:
 
 - `usecols=[*]`: Utilizamos únicamente las columnas que indicamos, especificado en índice o nombre. 
 
@@ -230,12 +230,12 @@ De está forma hacemos lo siguiente:
 
 - `names=['Country']`: Atribuimos un nombre a la columna del DataFrame que queremos evitar.
 
-De está forma indicamos que únicamente utilizaremos la primera columna de la tercera hoja del libro de Excel contenido en `data`. Además, evitamos la primera fila, dado que contiene el encabezado de la columna, y lo renombramos como *Country*.
+De esta forma indicamos que únicamente utilizaremos la primera columna de la tercera hoja del libro de Excel contenido en `data`. Además, evitamos la primera fila, dado que contiene el encabezado de la columna, y lo renombramos como *Country*.
 
 #### 2.3) **<ins>Archivos SAS/Stata</ins>**:
 Los archivos **SAS**, *Statisctical Analysis System*, son habitualmente utilizados para el análisis avanzado, administración de datos e inteligencia de negocios, utilizar los datos para mejorar.
 
-Los archivos SAS más comúnes suelen tener una extensión **sas7bdat**, y los podemos importar de la siguiente forma:
+Los archivos SAS más comunes suelen tener una extensión **sas7bdat**, y los podemos importar de la siguiente forma:
 
 ```python
 
@@ -244,7 +244,7 @@ from sas7bdat import SAS7BDAT
 
 with SAS7BDAT('urbanpop.sas7bdat') as file:
 
-    df_sas = file.to_data_frame() #De está forma convertimos los datos SAS7BDAT en un DataFrame
+    df_sas = file.to_data_frame() #De esta forma convertimos los datos SAS7BDAT en un DataFrame
 ```
 
 Por otro lado los documentos **Stata**, *Statistics data*, que podríamos decir que contienen el mismo tipo de información que los SAS, tienen una extensión **dta**. También se importan de otra manera:
@@ -256,7 +256,7 @@ data = pd.read_stata('urbanpop.dta')
 ```
 
 #### 2.4) **<ins>Archivos HDF5</ins>**:
-Otro de los muchos tipos de archivos es **HDF5**, *Hierarchical Data Format version 5*. Lo que diferencia a HDF5 del resto, es el hecho de que es el formato más común para poder almacenar **grandes cantidades de datos numéricos**. Una pregunta lógica sería, `¿Qué tan grandes son estas cantidades?`, y el hecho es que estámos hablando de cientos de gigabytes, sino de terabytes.
+Otro de los muchos tipos de archivos es **HDF5**, *Hierarchical Data Format version 5*. Lo que diferencia a HDF5 del resto, es el hecho de que es el formato más común para poder almacenar **grandes cantidades de datos numéricos**. Una pregunta lógica sería, `¿Qué tan grandes son estas cantidades?`, y el hecho es que estamos hablando de cientos de gigabytes, sino de terabytes.
 
 Pero para poder entender la magnitud de la que hablamos necesitamos un ejemplo, pero lo primero sería aprender a importarlos:
 
@@ -280,7 +280,7 @@ for key in data.keys():
                #strain
 ```
 
-Como podemos ver, la estructura jerarquica de este archivo se puede explorar con el metodo `*.keys()` de la misma forma que lo haríamos con un diccionario. 
+Como podemos ver, la estructura jerárquica de este archivo se puede explorar con el método `*.keys()` de la misma forma que lo haríamos con un diccionario. 
 
 Esto nos puede hacer entender que dado que es un fichero jerárquico y de gran tamaño, cada clave puede llegar a tener otras "subclaves":
 
@@ -294,18 +294,18 @@ for skey in data['meta'].keys:
                 # Type
 ```
 
-Dado que son datos númericos, conocemos la estructura gerárquica y sabemos utilizar NumPy, es interesante utilizar este paquete para poder manipular los datos que contienen estos tipos de archivos:
+Dado que son datos numéricos, conocemos la estructura jerárquica y sabemos utilizar NumPy, es interesante utilizar este paquete para poder manipular los datos que contienen estos tipos de archivos:
 
 ```python
 print(np.array(data['meta']['Detector']), np.array(data['meta']['GPSstart']))
 ```
 
-De está forma, los datos contenidos en la  jerarquia `meta/Detector` y `meta/GPSstart`, se verán transformados en una matriz de NumPy.
+De esta forma, los datos contenidos en la  jerarquia `meta/Detector` y `meta/GPSstart`, se verán transformados en una matriz de NumPy.
 
 #### 2.5) **<ins>Archivos MATLAB</ins>**:
-Matlab, la abreviación de *Matrix Laboratory*, es un tipo de documento ampliamente utilizado en entornos de ciéncia e ingenieria. La estensión de este tipo de documentos es **\*.mat**. Pero en cuanto a este tipo de documentos, a diferencia del resto que hemos estádo tratando, para poderlos importar necesitamos el módulo de funciones **SciPy**.
+Matlab, la abreviación de *Matrix Laboratory*, es un tipo de documento ampliamente utilizado en entornos de ciencia e ingeniería. La extensión de este tipo de documentos es **\*.mat**. Pero en cuanto a este tipo de documentos, a diferencia del resto que hemos estado tratando, para poderlos importar necesitamos el módulo de funciones **SciPy**.
 
-**SciPy** tiene dos funciones especialemente interesantes para poder importar archivos:
+**SciPy** tiene dos funciones especialmente interesantes para poder importar archivos:
 
 - **scipy.io.loadmat()**: Nos permite leer documentos en formato Matlab.
 
@@ -344,9 +344,9 @@ Como se puede observar, el primer objeto (mat) es un diccionario, ya que contien
 ### Capítulo 3: **<ins>Trabajar con bases de datos relacionales en Python</ins>**
 
 #### 3.1) **<ins>Introducción a las Bases de Datos Relacionales</ins>**:
-Para entender como funcionan las bases de datos relacionales en Python, hay que entender qué son las bases de datos relacionales. estás son bases de datos basadas en un modelo relacional de datos, lo que implica qué, la información está contenida en **tablas**, compuestás por **registros** y columnas, **atributos** de cada registro de datos.
+Para entender como funcionan las bases de datos relacionales en Python, hay que entender qué son las bases de datos relacionales. estás son bases de datos basadas en un modelo relacional de datos, lo que implica que la información está contenida en **tablas**, compuestás por **registros** y columnas, **atributos** de cada registro de datos.
 
-está estructura de bases de datos, es especialmente eficiente cuando las diferentes tablas están interconectadas entre sí. Para poder hacerlo es esencial que cada registro tenga un identificador único, conocido como clave primaria, esto es útil para poder acceder al registro en concreto. Por lo tanto, al contener también claves primarias de otras tablas podemos relacionarlas entre sí. 
+esta estructura de bases de datos, es especialmente eficiente cuando las diferentes tablas están interconectadas entre sí. Para poder hacerlo es esencial que cada registro tenga un identificador único, conocido como clave primaria, esto es útil para poder acceder al registro en concreto. Por lo tanto, al contener también claves primarias de otras tablas podemos relacionarlas entre sí. 
 
 Ahora bien, el lenguaje estándar de comunicación con bases de datos es **SQL**, *Structured Query Language* o Lenguaje de Consultas Estructurado. Si bien es diferente de Python, también tiene una sintáxis bastante fácil de comprender:
 
@@ -373,9 +373,9 @@ from sqlalchemy import create_engine
 engine = create_engine('sqlite:///Northwind.sqlite')
 ```
 
-- `sqlalchemy`: Es el paquete **SQLAlchemy** del que podemos extraer la función que nos interesa, qué sería `create_engine`.
+- `sqlalchemy`: Es el paquete **SQLAlchemy** del que podemos extraer la función que nos interesa, que sería `create_engine`.
 
-- `create_engine('sqlite:///Northwind.sqlite')`: Indicamos que creamos un motor de bases de datos que conectará con la base de datos `sqlite:///Northwind.sqlite`. Es importante matizar que le estámos dando dos tipos de datos en está cadena:
+- `create_engine('sqlite:///Northwind.sqlite')`: Indicamos que creamos un motor de bases de datos que conectará con la base de datos `sqlite:///Northwind.sqlite`. Es importante matizar que le estamos dando dos tipos de datos en está cadena:
 
     - `sqlite`: Le indicamos el **RDBMS** de la base de datos que pretendemos manipular.
     - `..:///Northwind.sqlite`: Le indicamos el nombre y la ruta de la base de datos a la que debe conectarse.
@@ -418,13 +418,13 @@ rs = con.execute("SELECT * FROM Pedidos") #Método para ejecutar la consulta
 #5)
 df = pd.DataFrame(rs.fetchall()) #Transferimos todos los datos al DataFrame
 
-df.columns = rs.keys() #Esto nos permite asignar el mismo nombre de las columnas de BDD en el DataFrame
+df.columns = rs.keys() #Esto nos permite asignar el mismo nombre de las columnas de BD en el DataFrame
 
 #6)
 con.close() #Cerramos
 ```
 
-Teniendo en cuenta los diferentes métodos para poder conectarnos y ejecutar consultar, lo interesante en ese punto es cómo el motor se comunica con la libreria de Pandas. 
+Teniendo en cuenta los diferentes métodos para poder conectarnos y ejecutar consultar, lo interesante en ese punto es cómo el motor se comunica con la librería de Pandas. 
 
 * `rs.fetchall()`: Recuperamos todas las filas de la ejecución de la consulta. Combinando esto con la función `pd.DataFrame(...)` podemos transformar lo obtenido en un objeto DataFrame con la información consultada.
 
