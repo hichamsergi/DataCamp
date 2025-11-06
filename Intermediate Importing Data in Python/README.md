@@ -20,6 +20,10 @@ En este capítulo aprenderás
 ## 3. Apuntes
 
 ### Capítulo 1: **<ins>Importación de datos desde Internet</ins>**
+Si bien anteriormente hemos aprendido a importar datos desde documentos locales, como archivos *pickle*, *CSV* o *MATLAB*, puede haber veces donde necesitemos importar datos directamente desde internet.
+
+Para poder extraer información desde las páginas web que nos interesen, 
+
 
 ### Capítulo 2: **<ins></ins>**
 
