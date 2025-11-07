@@ -39,7 +39,6 @@ Ahora bien, si ni siquiera queremos mantener la información de forma local pode
 
 ```python
 import pandas as pd
-from urllib.request import urlretrieve
 
 url = 'https://assets.datacamp.com/production/course_1606/datasets/winequality-red.csv'
 
@@ -63,6 +62,43 @@ print(xls.keys())
 
 #De la hoja '1700 mostramos algunos datos'
 print(xls['1700'].head())
+```
+
+#### 1.1) **<ins>URLs y HTTP</ins>**:
+Si bien ya hemos definido lo que es una URL, hace falta entender que realmente lo qué se indica en realidad cuando especificamos una es un recurso en web. Por lo tanto al indicar una URL, en vez de especificar una ruta local, lo que hacemos es indicar una ruta para poder acceder a traves de internet a un recurso.
+
+Hemos utilizado referencias de rutas *web*, pero también podemos hacerlo para recursos almacenados en servidores *FTP*. Por lo tanto, podemos entender un poco mejor los ejemplos que dabamos antes donde habia una URL:
+
+    https://assets.datacamp.com/course/importing_data_into_r/latitude.xls
+
+- `https://`: Consisten en el identificador del protocolo que se va a utilizar para conectarse. Podemos llegar a indicar `ftp`, en el caso de que necesitemos conectarnos a traves de dicho protoloco al recurso en red.
+
+- `assets.datacamp.com/course/importing_data_into_r/latitude.xls`: Ruta del recurso en red al que vamos a acceder.
+
+Dado que el concepto de ruta es fácilmente comprensible, podemos concentrarnos en el del protocolo. **HTTP**, *HyperText Transfer Protocol*, es el protocolo que utiliza la web para poder transmitir información. Por lo tanto, cada vez que accedemos a una página web lo que hacemos es lanzar una **petición HTTP**, en concreto una petición **GET**. Así podemos entender, que en los ejemplos anteriores, cuando utilizamos la función `urlretrieve` lo que hacemos en realidad es lanzar una petición GET contra la URL especificada.
+
+```python
+import requests
+
+url = 'https://www.wikipedia.org'
+
+r = requests.get(url) #Envia la solcitud GET a la URL
+
+text = r.text #Transforma el HTML de respuesta en una cadena
+```
+
+```python
+from urllib.request import urlopen, Request
+
+url = 'https://www.wikipedia.org'
+
+request = Request(url)
+
+response = urlopen(request) #Abrimos la URL como si fuera un archivo
+
+html = response.read()
+
+response.close() #Cerramos la URL
 ```
 
 ### Capítulo 2: **<ins></ins>**
