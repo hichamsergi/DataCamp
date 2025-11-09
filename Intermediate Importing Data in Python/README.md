@@ -13,6 +13,7 @@ En este capítulo aprenderás
 1. [Importación de datos desde Internet](#capítulo-1-importación-de-datos-desde-internet)
     - [De remoto a local, o solo remoto?](#11-de-remoto-a-local-o-solo-remoto)
     - [URLs y HTTP](#12-urls-y-http)
+    - [Rastreando la web](#13-rastreando-la-web)
 2. []()
 3. []()
 4. []()
@@ -119,7 +120,40 @@ text = r.text #Transforma el HTML de respuesta en una cadena
 
 Entonces, en menos líneas, leemos la información que nos retorna la petición HTTP y la lamacenamos para poder manejarla.
 
-#### 1.3) **<ins></ins>**:
+#### 1.3) **<ins>Rastreando la web</ins>**:
+Anteriormente hemos comentado qué, despues de una solicitud, recibimos información en formato HTML. **HTML**, *HyperText Markup Language*, es el código en el que las páginas web estructuran su contenido. Por lo tanto, después de una petición GET, recibiremos toda la información de la página web en dicho formato.
+
+Si bien el contenido que podemos recibir es el total, este puede ser una mezcla de dos tipos diferentes de datos:
+
+- **Estructurados**: Son datos predefinidos, organizados de una forma determinada.
+
+- **No estructurados**: Son datos que ni estan predefinidos ni organizados. Pese a ello, contiene etiquetas que nos indican donde se localizan los encabezados o *hypervínculos*, por ejemplo.
+
+En general, para poder manipular datos HTML estraídos de una web, necesitaremos analizar y extraer datos estructurados de ellos. Para poder realizar esto, utilizaremos el paquete **BeatifulSoup** de Python:
+
+```python
+
+from bs4 import BeautifulSoup
+import requests
+
+url = 'https://www.crummy.com/software/BeautifulSoup'
+
+r = requests.get(url)
+
+html_doc = r.text
+
+soup = BeautifulSoup(html_doc)
+
+print(soup.prettify()) # Esto nos mostrará de una forma bonita el HTML extraido
+```
+
+Este paquet tiene algunos métodos interesantes que podemos utilizar con el ejemplo anterior:
+
+- `soup.title`: Recogemos el título principal del HTML.
+
+- `soup.get_text()`:Recogemos todo el texto contenido en el HTML.
+
+- `soup.find_all(...)`: Recogemos todos los datos contenidos en la etiqueta HTML que seleccionemos en su interior.
 
 ### Capítulo 2: **<ins></ins>**
 
