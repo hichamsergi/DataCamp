@@ -14,7 +14,7 @@ En este capítulo aprenderás
     - [De remoto a local, o solo remoto?](#11-de-remoto-a-local-o-solo-remoto)
     - [URLs y HTTP](#12-urls-y-http)
     - [Rastreando la web](#13-rastreando-la-web)
-2. []()
+2. [Interactuar con API para importar datos desde la web](#capítulo-2-interactuar-con-api-para-importar-datos-desde-la-web)
 3. []()
 4. []()
 
@@ -155,6 +155,43 @@ Este paquet tiene algunos métodos interesantes que podemos utilizar con el ejem
 
 - `soup.find_all(...)`: Recogemos todos los datos contenidos en la etiqueta HTML que seleccionemos en su interior.
 
-### Capítulo 2: **<ins></ins>**
+### Capítulo 2: **<ins>Interactuar con API para importar datos desde la web</ins>**
+Para poder acceder a datos a traves de la web, hay multiples formas. Ya hemos aprendido como hacerlo mediante peticiones a traves del protocolo HTTP, ahora aprenderemos a como hacerlo a traves de API. **API**, o *Application Programming Interface*, es un conjunto de reglas, protocolos y rutinas, creadas para interactuar con aplicaciones de software. En la realidad, funcionan como una especie de intermediario entre dos aplicaciones, el solicitante y el proveedor de información.
+
+Como hemos comentado, tanto el que solicita información como el que la provee, se comunican entre ellos a traves de una API. Estas APIs, de forma habitual, suelen intercambiar dicha información en formato de archivo JSON. El formato **JSON**, *JavaScript Object Notation*, se compone de pares **clave-valor** separados por comas, al igual que un diccionario. Este par, a diferencia de los diccionarios, tiene alguna peculiaridad:
+
+- `Clave`: En los archivos JSON, las claves siempre van entre comilladas, siendo entonces un string.
+
+- `Valor`: Los valores, pueden ser cualquier tipo de datos, strings, enteros, matrices e incluso objetos.
+
+En este formato, y bajo estas características, se estructura toda la información de un archivo JSON.
+
+#### 2.1) **<ins>Cargar JSON en Python</ins>**:
+En este sentido, pese a que pueda sonar repetitivo, la forma de interpretar los datos contenidos en un JSON es la misma, mediante el metodo `with`. La variante caracteristica de este tipo de formato de documento, es el paquete que necesitamos para poder cargar los datos contenidos, el paquete `json`. Vamos a aprender a utilizarlo:
+
+```python
+
+import json
+
+with open('snakes.json', 'r') as json_file:
+
+    json_data = json.load(json_file) #Cargamos los datos
+
+type(json_data) #Este nos mostrará que es un diccionario: <dic>
+```
+
+Hay que fijarse en el hecho de que hemos abierto el archivo en modo lectura, `r`, a diferencia de otro tipo de formatos como el *pickle*, JSON es legible al ojo humano.
+
+Ahora que entendemos mejor como se estructura este tipo de archivos y ya hemos aprendido a cargar uno, vamos a experimentar con el:
+
+```python
+
+for key,value in json_data.items():
+    print(key + ': ', value) #Nos mostrará todas las claves + valor que haya
+```
+
+
+
+
 
 ### Capítulo 3: **<ins></ins>**
