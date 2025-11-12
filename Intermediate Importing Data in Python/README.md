@@ -156,7 +156,7 @@ Este paquet tiene algunos métodos interesantes que podemos utilizar con el ejem
 - `soup.find_all(...)`: Recogemos todos los datos contenidos en la etiqueta HTML que seleccionemos en su interior.
 
 ### Capítulo 2: **<ins>Interactuar con API para importar datos desde la web</ins>**
-Para poder acceder a datos a traves de la web, hay multiples formas. Ya hemos aprendido como hacerlo mediante peticiones a traves del protocolo HTTP, ahora aprenderemos a como hacerlo a traves de API. **API**, o *Application Programming Interface*, es un conjunto de reglas, protocolos y rutinas, creadas para interactuar con aplicaciones de software. En la realidad, funcionan como una especie de intermediario entre dos aplicaciones, el solicitante y el proveedor de información.
+Para poder acceder a datos a traves de la web, hay multiples formas. Ya hemos aprendido como hacerlo mediante peticiones a traves del protocolo HTTP, ahora aprenderemos a como hacerlo a traves de API. **API**, o *Application Programming Interface*, es un conjunto de reglas, protocolos y rutinas, creadas para interactuar entre aplicaciones de software. En la realidad, funcionan como una especie de intermediario entre dos aplicaciones, el solicitante y el proveedor de información.
 
 Como hemos comentado, tanto el que solicita información como el que la provee, se comunican entre ellos a traves de una API. Estas APIs, de forma habitual, suelen intercambiar dicha información en formato de archivo JSON. El formato **JSON**, *JavaScript Object Notation*, se compone de pares **clave-valor** separados por comas, al igual que un diccionario. Este par, a diferencia de los diccionarios, tiene alguna peculiaridad:
 
@@ -190,7 +190,31 @@ for key,value in json_data.items():
     print(key + ': ', value) #Nos mostrará todas las claves + valor que haya
 ```
 
+#### 2.2) **<ins>Las API y la interacción con la Web</ins>**:
+Como ya sabemos lo que es una API, como interactuar con una web, que formato de datos nos exportan y como interpretarlos, ahora podemos ir directamente con ejemplos practicos de casos reales:
 
+```python
+import requests
+
+url = 'http://www.omdbapi.com/?t=Hackers'
+
+r = requests.get(url)
+
+json_data = r.json()
+
+print(json_data)
+    #{'Response': 'False', 'Error': 'No API key provided.'}
+```
+
+En apartados anteriores comentabamos que el retorno de las peticiones GET, a traves del protocolo HTTP, nos retornaba el contenido real del documento. En este caso esperaríamos que fuera un HTML, pero hemos utilizado una función incorporada realmente útil, `r.json()`. Esta nos transformará el HTML que recibamos en un diccionario JSON. 
+
+Ahora bien, si nos fijamos un poco, veremos que la URL es un poco rara. Tiene varias cosas a comentar:
+
+- `../?t=..`: Este conjunto de carácteres le indica a la API que vamos a realizar una consulta.
+
+- `..Hackers`: Es la consulta que realizamos a la API.
+
+Por lo tanto, lo que hemos hecho es consultar a la API *omdbapi* sobre la película *Hackers* de 1995.
 
 
 
