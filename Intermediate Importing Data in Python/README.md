@@ -191,4 +191,5 @@ for key,value in json_data.items():
 ```
 
 ### Capítulo 3: **<ins>La API de Twitter y la autenticación</ins>**
-Como ejercicio final, se ha hecho un pequeño proyecto guiado sobre la API de Twitter. El proyecto incluye el analisis de twitts on-stream y la visualización del dicho análisis. Podemos encontrarlo pulsando en [API de twitter y visualización de datos](#twitter_API_visualization.ipynb)
+Como ejercicio final, se ha hecho un pequeño proyecto guiado sobre la API de Twitter. El proyecto incluye el analisis de twitts on-stream y la visualización del dicho análisis. Podemos encontrarlo pulsando en [API de Twitter y visualización de datos](twitter_API_visualization.ipynb)
+
