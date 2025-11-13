@@ -15,8 +15,9 @@ En este capítulo aprenderás
     - [URLs y HTTP](#12-urls-y-http)
     - [Rastreando la web](#13-rastreando-la-web)
 2. [Interactuar con API para importar datos desde la web](#capítulo-2-interactuar-con-api-para-importar-datos-desde-la-web)
-3. []()
-4. []()
+    - [Cargar JSON en Python](#21-cargar-json-en-python)
+    - [Las API y la interacción con la Web](#22-las-api-y-la-interacción-con-la-web)
+3. [Profundizando en la API de Twitter](#capítulo-3-profundizando-en-la-api-de-twitter)
 
 ---
 
@@ -214,8 +215,88 @@ Ahora bien, si nos fijamos un poco, veremos que la URL es un poco rara. Tiene va
 
 - `..Hackers`: Es la consulta que realizamos a la API.
 
-Por lo tanto, lo que hemos hecho es consultar a la API *omdbapi* sobre la película *Hackers* de 1995.
+Por lo tanto, lo que hemos hecho es consultar a la API *omdbapi* sobre la película *Hackers* de 1995, y esta nos ha respodido con **"Error: No API key provided"**.
+
+El error nos deja entender un poco mejor como funcionan las API. Muchas de ellas necesitan de una llave, o codigo identificador, para poder proporcionar la información que se solicita. Esta **key**, es la forma que tienene los desarrolladores de controlar, e identificar, las diferentes aplicaciones y usuarios que tienen acceso a los servicios de la API.
+
+Ahora que sabemos esto, vamos a solucionar el error de antes:
+
+```python
+import requests
+
+url = 'http://www.omdbapi.com/?apikey=72bc447a&t=the+social+network'
+
+r = requests.get(url)
+
+print(r.text)
+```
+
+La respuesta de la API ahora es diferente:
+
+```python
+{
+    "Title": "The Social Network",
+    "Year": "2010",
+    "Rated": "PG-13",
+    "Released": "01 Oct 2010",
+    "Runtime": "120 min",
+    "Genre": "Biography, Drama",
+    "Director": "David Fincher",
+    "Writer": "Aaron Sorkin, Ben Mezrich",
+    "Actors": "Jesse Eisenberg, Andrew Garfield, Justin Timberlake",
+    "Plot": "As Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, he is sued by the twins who claimed he stole their idea and by the co-founder who was later squeezed out of the business.",
+    "Language": "English, French",
+    "Country": "United States",
+    "Awards": "Won 3 Oscars. 174 wins & 188 nominations total",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMjlkNTE5ZTUtNGEwNy00MGVhLThmZjMtZjU1NDE5Zjk1NDZkXkEyXkFqcGc@._V1_SX300.jpg",
+    "Ratings": [
+        {
+            "Source": "Internet Movie Database",
+            "Value": "7.8/10"
+        },
+        {
+            "Source": "Rotten Tomatoes",
+            "Value": "96%"
+        },
+        {
+            "Source": "Metacritic",
+            "Value": "95/100"
+        }
+    ],
+    "Metascore": "95",
+    "imdbRating": "7.8",
+    "imdbVotes": "803,217",
+    "imdbID": "tt1285016",
+    "Type": "movie",
+    "DVD": "N/A",
+    "BoxOffice": "$96,962,694",
+    "Production": "N/A",
+    "Website": "N/A",
+    "Response": "True"
+}
+```
+
+Ahora que hemos indicado correctamente todo, podemos ver toda la información sobre la película *The Social Network* que nos ha proporcionado la API de *omdb*.
+
+### Capítulo 3: **<ins>Profundizando en la API de Twitter</ins>**
 
 
+```python
 
-### Capítulo 3: **<ins></ins>**
+import tweepy, json
+
+access_token = '...'
+
+access_token_secret = '...'
+
+consumer_key = '...'
+
+consumer_secret = '...'
+
+#Create Streaming object
+stream = tweepy.Stream(consumer_key, consumer_secret,
+                       access_token, access_token_secret)
+
+#This line filters Twitter Streams to capture data by keywords:
+stream.filter(track=['apples', 'oranges'])
+```
