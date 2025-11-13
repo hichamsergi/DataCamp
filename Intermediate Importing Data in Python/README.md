@@ -16,8 +16,6 @@ En este capítulo aprenderás
     - [Rastreando la web](#13-rastreando-la-web)
 2. [Interactuar con API para importar datos desde la web](#capítulo-2-interactuar-con-api-para-importar-datos-desde-la-web)
 3. []()
-4. []()
-
 ---
 
 ## 3. Apuntes
