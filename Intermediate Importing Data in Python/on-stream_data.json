@@ -1,0 +1,3478 @@
+[
+{
+    "in_reply_to_user_id": null,
+    "created_at": "Tue Mar 29 23:40:17 +0000 2016",
+    "filter_level": "low",
+    "truncated": false,
+    "possibly_sensitive": false,
+    "timestamp_ms": "1459294817758",
+    "user": {
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/2290155049/1456586630",
+        "created_at": "Mon Jan 13 20:05:32 +0000 2014",
+        "utc_offset": 3600,
+        "geo_enabled": false,
+        "notifications": null,
+        "lang": "en",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/700888033558720512/KexOIMN4_normal.jpg",
+        "time_zone": "London",
+        "listed_count": 71,
+        "screen_name": "greyman25",
+        "url": "http://www.get-saved-today.webnode.com",
+        "profile_background_tile": false,
+        "followers_count": 578,
+        "profile_link_color": "1B95E0",
+        "default_profile": false,
+        "name": "Born in Britain",
+        "follow_request_sent": null,
+        "following": null,
+        "profile_use_background_image": false,
+        "profile_background_color": "000000",
+        "id": 2290155049,
+        "favourites_count": 3961,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/700888033558720512/KexOIMN4_normal.jpg",
+        "description": "Ex con, dry alcoholic, non smoker, love Jesus Christ &  Britain. Internet evangelist. Pro Israel.",
+        "id_str": "2290155049",
+        "profile_sidebar_border_color": "000000",
+        "protected": false,
+        "default_profile_image": false,
+        "contributors_enabled": false,
+        "profile_text_color": "000000",
+        "location": "Yorkshire and The Humber",
+        "statuses_count": 23034,
+        "verified": false,
+        "friends_count": 502,
+        "is_translator": false,
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_sidebar_fill_color": "000000"
+    },
+    "text": "RT @bpolitics: .@krollbondrating's Christopher Whalen says Clinton is the weakest Dem candidate in 50 years https://t.co/pLk7rvoRSn https:/\u2026",
+    "extended_entities": {
+        "media": [
+            {
+                "source_user_id_str": "564111558",
+                "source_user_id": 564111558,
+                "display_url": "pic.twitter.com/lJcw0N8EZf",
+                "media_url": "http://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                "source_status_id": 714950482930896897,
+                "media_url_https": "https://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                "id_str": "714950482331041795",
+                "source_status_id_str": "714950482930896897",
+                "id": 714950482331041795,
+                "type": "photo",
+                "indices": [
+                    139,
+                    140
+                ],
+                "url": "https://t.co/lJcw0N8EZf",
+                "sizes": {
+                    "large": {
+                        "w": 1024,
+                        "resize": "fit",
+                        "h": 691
+                    },
+                    "medium": {
+                        "w": 600,
+                        "resize": "fit",
+                        "h": 405
+                    },
+                    "small": {
+                        "w": 340,
+                        "resize": "fit",
+                        "h": 229
+                    },
+                    "thumb": {
+                        "w": 150,
+                        "resize": "crop",
+                        "h": 150
+                    }
+                },
+                "expanded_url": "http://twitter.com/bpolitics/status/714950482930896897/photo/1"
+            }
+        ]
+    },
+    "in_reply_to_status_id": null,
+    "entities": {
+        "media": [
+            {
+                "source_user_id_str": "564111558",
+                "source_user_id": 564111558,
+                "display_url": "pic.twitter.com/lJcw0N8EZf",
+                "media_url": "http://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                "source_status_id": 714950482930896897,
+                "media_url_https": "https://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                "id_str": "714950482331041795",
+                "source_status_id_str": "714950482930896897",
+                "id": 714950482331041795,
+                "type": "photo",
+                "indices": [
+                    139,
+                    140
+                ],
+                "url": "https://t.co/lJcw0N8EZf",
+                "sizes": {
+                    "large": {
+                        "w": 1024,
+                        "resize": "fit",
+                        "h": 691
+                    },
+                    "medium": {
+                        "w": 600,
+                        "resize": "fit",
+                        "h": 405
+                    },
+                    "small": {
+                        "w": 340,
+                        "resize": "fit",
+                        "h": 229
+                    },
+                    "thumb": {
+                        "w": 150,
+                        "resize": "crop",
+                        "h": 150
+                    }
+                },
+                "expanded_url": "http://twitter.com/bpolitics/status/714950482930896897/photo/1"
+            }
+        ],
+        "user_mentions": [
+            {
+                "id": 564111558,
+                "indices": [
+                    3,
+                    13
+                ],
+                "screen_name": "bpolitics",
+                "id_str": "564111558",
+                "name": "Bloomberg Politics"
+            },
+            {
+                "id": 1963523857,
+                "indices": [
+                    16,
+                    32
+                ],
+                "screen_name": "krollbondrating",
+                "id_str": "1963523857",
+                "name": "Kroll Bond Ratings"
+            }
+        ],
+        "urls": [
+            {
+                "indices": [
+                    108,
+                    131
+                ],
+                "url": "https://t.co/pLk7rvoRSn",
+                "display_url": "bloom.bg/1RETAha",
+                "expanded_url": "http://bloom.bg/1RETAha"
+            }
+        ],
+        "symbols": [],
+        "hashtags": []
+    },
+    "favorited": false,
+    "retweeted": false,
+    "is_quote_status": false,
+    "id": 714960401759387648,
+    "favorite_count": 0,
+    "retweeted_status": {
+        "in_reply_to_user_id": null,
+        "created_at": "Tue Mar 29 23:00:52 +0000 2016",
+        "filter_level": "low",
+        "truncated": false,
+        "possibly_sensitive": false,
+        "user": {
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/564111558/1449075077",
+            "created_at": "Thu Apr 26 20:50:01 +0000 2012",
+            "utc_offset": -14400,
+            "geo_enabled": false,
+            "notifications": null,
+            "lang": "en",
+            "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/540884395/Bloomberg_twback_orng.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/714804098890133504/cUO4gD1A_normal.jpg",
+            "time_zone": "Eastern Time (US & Canada)",
+            "listed_count": 1788,
+            "screen_name": "bpolitics",
+            "url": "http://www.bloombergpolitics.com",
+            "profile_background_tile": false,
+            "followers_count": 52842,
+            "profile_link_color": "0084B4",
+            "default_profile": false,
+            "name": "Bloomberg Politics",
+            "follow_request_sent": null,
+            "following": null,
+            "profile_use_background_image": true,
+            "profile_background_color": "C0DEED",
+            "id": 564111558,
+            "favourites_count": 114,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/714804098890133504/cUO4gD1A_normal.jpg",
+            "description": "Bloomberg Politics is the spot for smart, non-partisan political coverage + analysis. #WADR with @jheil and @MarkHalperin airs at 5pm ET on @BloombergTV.",
+            "id_str": "564111558",
+            "profile_sidebar_border_color": "C0DEED",
+            "protected": false,
+            "default_profile_image": false,
+            "contributors_enabled": false,
+            "profile_text_color": "333333",
+            "location": null,
+            "statuses_count": 36188,
+            "verified": true,
+            "friends_count": 539,
+            "is_translator": false,
+            "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/540884395/Bloomberg_twback_orng.jpg",
+            "profile_sidebar_fill_color": "DDEEF6"
+        },
+        "text": ".@krollbondrating's Christopher Whalen says Clinton is the weakest Dem candidate in 50 years https://t.co/pLk7rvoRSn https://t.co/lJcw0N8EZf",
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 714950482331041795,
+                    "type": "photo",
+                    "indices": [
+                        117,
+                        140
+                    ],
+                    "display_url": "pic.twitter.com/lJcw0N8EZf",
+                    "media_url": "http://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                    "sizes": {
+                        "large": {
+                            "w": 1024,
+                            "resize": "fit",
+                            "h": 691
+                        },
+                        "medium": {
+                            "w": 600,
+                            "resize": "fit",
+                            "h": 405
+                        },
+                        "small": {
+                            "w": 340,
+                            "resize": "fit",
+                            "h": 229
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "resize": "crop",
+                            "h": 150
+                        }
+                    },
+                    "expanded_url": "http://twitter.com/bpolitics/status/714950482930896897/photo/1",
+                    "id_str": "714950482331041795",
+                    "url": "https://t.co/lJcw0N8EZf"
+                }
+            ]
+        },
+        "in_reply_to_status_id": null,
+        "entities": {
+            "media": [
+                {
+                    "id": 714950482331041795,
+                    "type": "photo",
+                    "indices": [
+                        117,
+                        140
+                    ],
+                    "display_url": "pic.twitter.com/lJcw0N8EZf",
+                    "media_url": "http://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                    "sizes": {
+                        "large": {
+                            "w": 1024,
+                            "resize": "fit",
+                            "h": 691
+                        },
+                        "medium": {
+                            "w": 600,
+                            "resize": "fit",
+                            "h": 405
+                        },
+                        "small": {
+                            "w": 340,
+                            "resize": "fit",
+                            "h": 229
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "resize": "crop",
+                            "h": 150
+                        }
+                    },
+                    "expanded_url": "http://twitter.com/bpolitics/status/714950482930896897/photo/1",
+                    "id_str": "714950482331041795",
+                    "url": "https://t.co/lJcw0N8EZf"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id": 1963523857,
+                    "indices": [
+                        1,
+                        17
+                    ],
+                    "screen_name": "krollbondrating",
+                    "id_str": "1963523857",
+                    "name": "Kroll Bond Ratings"
+                }
+            ],
+            "urls": [
+                {
+                    "indices": [
+                        93,
+                        116
+                    ],
+                    "url": "https://t.co/pLk7rvoRSn",
+                    "display_url": "bloom.bg/1RETAha",
+                    "expanded_url": "http://bloom.bg/1RETAha"
+                }
+            ],
+            "symbols": [],
+            "hashtags": []
+        },
+        "favorited": false,
+        "retweeted": false,
+        "is_quote_status": false,
+        "id": 714950482930896897,
+        "favorite_count": 40,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id_str": null,
+        "id_str": "714950482930896897",
+        "in_reply_to_screen_name": null,
+        "coordinates": null,
+        "lang": "en",
+        "place": null,
+        "contributors": null,
+        "geo": null,
+        "retweet_count": 31,
+        "source": "<a href=\"http://www.hootsuite.com\" rel=\"nofollow\">Hootsuite</a>"
+    },
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id_str": null,
+    "id_str": "714960401759387648",
+    "in_reply_to_screen_name": null,
+    "coordinates": null,
+    "lang": "en",
+    "place": null,
+    "contributors": null,
+    "geo": null,
+    "retweet_count": 0,
+    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>"
+},
+{
+    "in_reply_to_user_id": null,
+    "created_at": "Tue Mar 29 23:40:17 +0000 2016",
+    "filter_level": "low",
+    "truncated": false,
+    "possibly_sensitive": false,
+    "timestamp_ms": "1459294817810",
+    "user": {
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/4851614681/1457054038",
+        "created_at": "Wed Jan 27 00:07:53 +0000 2016",
+        "utc_offset": null,
+        "geo_enabled": false,
+        "notifications": null,
+        "lang": "en",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/692633809200656384/joTnDm5v_normal.jpg",
+        "time_zone": null,
+        "listed_count": 16,
+        "screen_name": "blazebandit2015",
+        "url": null,
+        "profile_background_tile": false,
+        "followers_count": 797,
+        "profile_link_color": "E81C1F",
+        "default_profile": false,
+        "name": "Ourn Raphael Brown",
+        "follow_request_sent": null,
+        "following": null,
+        "profile_use_background_image": false,
+        "profile_background_color": "000000",
+        "id": 4851614681,
+        "favourites_count": 421,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/692633809200656384/joTnDm5v_normal.jpg",
+        "description": "24 yrs old American Patriot. NSSAR member. 7th Great Grand Parents Captain David Brown and Col. John Buttrick. The Revolutionary War. April 19 1775. #Trump2016",
+        "id_str": "4851614681",
+        "profile_sidebar_border_color": "000000",
+        "protected": false,
+        "default_profile_image": false,
+        "contributors_enabled": false,
+        "profile_text_color": "000000",
+        "location": "Maine, USA",
+        "statuses_count": 2308,
+        "verified": false,
+        "friends_count": 1391,
+        "is_translator": false,
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_sidebar_fill_color": "000000"
+    },
+    "text": "RT @HeidiAlpine: @dmartosko Cruz video found.....racing from the scene.... #cruzsexscandal https://t.co/zuAPZfQDk3",
+    "extended_entities": {
+        "media": [
+            {
+                "source_user_id_str": "932568674",
+                "source_user_id": 932568674,
+                "display_url": "pic.twitter.com/zuAPZfQDk3",
+                "media_url": "http://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                "source_status_id": 714656471963688960,
+                "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                "id_str": "714656417991536640",
+                "source_status_id_str": "714656471963688960",
+                "id": 714656417991536640,
+                "type": "animated_gif",
+                "indices": [
+                    91,
+                    114
+                ],
+                "url": "https://t.co/zuAPZfQDk3",
+                "sizes": {
+                    "large": {
+                        "w": 500,
+                        "resize": "fit",
+                        "h": 290
+                    },
+                    "medium": {
+                        "w": 500,
+                        "resize": "fit",
+                        "h": 290
+                    },
+                    "small": {
+                        "w": 340,
+                        "resize": "fit",
+                        "h": 197
+                    },
+                    "thumb": {
+                        "w": 150,
+                        "resize": "crop",
+                        "h": 150
+                    }
+                },
+                "video_info": {
+                    "variants": [
+                        {
+                            "content_type": "video/mp4",
+                            "bitrate": 0,
+                            "url": "https://pbs.twimg.com/tweet_video/Cer4OcrWsAAh-9p.mp4"
+                        }
+                    ],
+                    "aspect_ratio": [
+                        50,
+                        29
+                    ]
+                },
+                "expanded_url": "http://twitter.com/HeidiAlpine/status/714656471963688960/photo/1"
+            }
+        ]
+    },
+    "in_reply_to_status_id": null,
+    "entities": {
+        "media": [
+            {
+                "source_user_id_str": "932568674",
+                "source_user_id": 932568674,
+                "display_url": "pic.twitter.com/zuAPZfQDk3",
+                "media_url": "http://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                "source_status_id": 714656471963688960,
+                "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                "id_str": "714656417991536640",
+                "source_status_id_str": "714656471963688960",
+                "id": 714656417991536640,
+                "type": "photo",
+                "indices": [
+                    91,
+                    114
+                ],
+                "url": "https://t.co/zuAPZfQDk3",
+                "sizes": {
+                    "large": {
+                        "w": 500,
+                        "resize": "fit",
+                        "h": 290
+                    },
+                    "medium": {
+                        "w": 500,
+                        "resize": "fit",
+                        "h": 290
+                    },
+                    "small": {
+                        "w": 340,
+                        "resize": "fit",
+                        "h": 197
+                    },
+                    "thumb": {
+                        "w": 150,
+                        "resize": "crop",
+                        "h": 150
+                    }
+                },
+                "expanded_url": "http://twitter.com/HeidiAlpine/status/714656471963688960/photo/1"
+            }
+        ],
+        "user_mentions": [
+            {
+                "id": 932568674,
+                "indices": [
+                    3,
+                    15
+                ],
+                "screen_name": "HeidiAlpine",
+                "id_str": "932568674",
+                "name": "Heidi"
+            },
+            {
+                "id": 38497702,
+                "indices": [
+                    17,
+                    27
+                ],
+                "screen_name": "dmartosko",
+                "id_str": "38497702",
+                "name": "David Martosko"
+            }
+        ],
+        "urls": [],
+        "symbols": [],
+        "hashtags": [
+            {
+                "text": "cruzsexscandal",
+                "indices": [
+                    75,
+                    90
+                ]
+            }
+        ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "is_quote_status": false,
+    "id": 714960401977319424,
+    "favorite_count": 0,
+    "retweeted_status": {
+        "in_reply_to_user_id": 38497702,
+        "created_at": "Tue Mar 29 03:32:35 +0000 2016",
+        "filter_level": "low",
+        "truncated": false,
+        "possibly_sensitive": false,
+        "user": {
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/932568674/1353367156",
+            "created_at": "Wed Nov 07 17:45:25 +0000 2012",
+            "utc_offset": null,
+            "geo_enabled": false,
+            "notifications": null,
+            "lang": "en",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme4/bg.gif",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/654384398469476352/JNoe0tQz_normal.jpg",
+            "time_zone": null,
+            "listed_count": 22,
+            "screen_name": "HeidiAlpine",
+            "url": null,
+            "profile_background_tile": false,
+            "followers_count": 1004,
+            "profile_link_color": "0078B8",
+            "default_profile": false,
+            "name": "Heidi",
+            "follow_request_sent": null,
+            "following": null,
+            "profile_use_background_image": true,
+            "profile_background_color": "009AB9",
+            "id": 932568674,
+            "favourites_count": 17277,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/654384398469476352/JNoe0tQz_normal.jpg",
+            "description": "Ski-Travel-Foodie-Lab Service Dogs-Search & Rescue [Ski-Reise Foodie Hunde Suchen Rettungs]",
+            "id_str": "932568674",
+            "profile_sidebar_border_color": "FFFFFF",
+            "protected": false,
+            "default_profile_image": false,
+            "contributors_enabled": false,
+            "profile_text_color": "3C3940",
+            "location": "BC EU Ski Urlaubsort",
+            "statuses_count": 5448,
+            "verified": false,
+            "friends_count": 1030,
+            "is_translator": false,
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme4/bg.gif",
+            "profile_sidebar_fill_color": "95E8EC"
+        },
+        "text": "@dmartosko Cruz video found.....racing from the scene.... #cruzsexscandal https://t.co/zuAPZfQDk3",
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 714656417991536640,
+                    "type": "animated_gif",
+                    "indices": [
+                        74,
+                        97
+                    ],
+                    "display_url": "pic.twitter.com/zuAPZfQDk3",
+                    "media_url": "http://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                    "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                    "sizes": {
+                        "large": {
+                            "w": 500,
+                            "resize": "fit",
+                            "h": 290
+                        },
+                        "medium": {
+                            "w": 500,
+                            "resize": "fit",
+                            "h": 290
+                        },
+                        "small": {
+                            "w": 340,
+                            "resize": "fit",
+                            "h": 197
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "resize": "crop",
+                            "h": 150
+                        }
+                    },
+                    "video_info": {
+                        "variants": [
+                            {
+                                "content_type": "video/mp4",
+                                "bitrate": 0,
+                                "url": "https://pbs.twimg.com/tweet_video/Cer4OcrWsAAh-9p.mp4"
+                            }
+                        ],
+                        "aspect_ratio": [
+                            50,
+                            29
+                        ]
+                    },
+                    "expanded_url": "http://twitter.com/HeidiAlpine/status/714656471963688960/photo/1",
+                    "id_str": "714656417991536640",
+                    "url": "https://t.co/zuAPZfQDk3"
+                }
+            ]
+        },
+        "in_reply_to_status_id": 714550665838731264,
+        "entities": {
+            "media": [
+                {
+                    "id": 714656417991536640,
+                    "type": "photo",
+                    "indices": [
+                        74,
+                        97
+                    ],
+                    "display_url": "pic.twitter.com/zuAPZfQDk3",
+                    "media_url": "http://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                    "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                    "sizes": {
+                        "large": {
+                            "w": 500,
+                            "resize": "fit",
+                            "h": 290
+                        },
+                        "medium": {
+                            "w": 500,
+                            "resize": "fit",
+                            "h": 290
+                        },
+                        "small": {
+                            "w": 340,
+                            "resize": "fit",
+                            "h": 197
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "resize": "crop",
+                            "h": 150
+                        }
+                    },
+                    "expanded_url": "http://twitter.com/HeidiAlpine/status/714656471963688960/photo/1",
+                    "id_str": "714656417991536640",
+                    "url": "https://t.co/zuAPZfQDk3"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id": 38497702,
+                    "indices": [
+                        0,
+                        10
+                    ],
+                    "screen_name": "dmartosko",
+                    "id_str": "38497702",
+                    "name": "David Martosko"
+                }
+            ],
+            "urls": [],
+            "symbols": [],
+            "hashtags": [
+                {
+                    "text": "cruzsexscandal",
+                    "indices": [
+                        58,
+                        73
+                    ]
+                }
+            ]
+        },
+        "favorited": false,
+        "retweeted": false,
+        "is_quote_status": false,
+        "id": 714656471963688960,
+        "favorite_count": 20,
+        "in_reply_to_status_id_str": "714550665838731264",
+        "in_reply_to_user_id_str": "38497702",
+        "id_str": "714656471963688960",
+        "in_reply_to_screen_name": "dmartosko",
+        "coordinates": null,
+        "lang": "en",
+        "place": null,
+        "contributors": null,
+        "geo": null,
+        "retweet_count": 15,
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>"
+    },
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id_str": null,
+    "id_str": "714960401977319424",
+    "in_reply_to_screen_name": null,
+    "coordinates": null,
+    "lang": "en",
+    "place": null,
+    "contributors": null,
+    "geo": null,
+    "retweet_count": 0,
+    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>"
+},
+{
+    "in_reply_to_user_id": null,
+    "created_at": "Tue Mar 29 23:40:17 +0000 2016",
+    "filter_level": "low",
+    "in_reply_to_user_id_str": null,
+    "truncated": false,
+    "possibly_sensitive": false,
+    "timestamp_ms": "1459294817917",
+    "user": {
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/120160631/1453134805",
+        "created_at": "Fri Mar 05 17:02:32 +0000 2010",
+        "utc_offset": 7200,
+        "geo_enabled": true,
+        "notifications": null,
+        "lang": "en",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme18/bg.gif",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/709053755782619136/Uj7gZl9x_normal.jpg",
+        "time_zone": "Rome",
+        "listed_count": 20,
+        "screen_name": "djal1keq",
+        "url": "http://www.facebook.com/lyrical.warfare",
+        "profile_background_tile": true,
+        "followers_count": 400,
+        "profile_link_color": "3B94D9",
+        "default_profile": false,
+        "name": "Mi Ri",
+        "follow_request_sent": null,
+        "following": null,
+        "profile_use_background_image": true,
+        "profile_background_color": "ACDED6",
+        "id": 120160631,
+        "favourites_count": 221,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/709053755782619136/Uj7gZl9x_normal.jpg",
+        "description": "\u201cSometimes, saying \u201cGoodbye\u201d is like saying \u201cLet\u2019s stop hurting each other\u201d.",
+        "id_str": "120160631",
+        "profile_sidebar_border_color": "000000",
+        "protected": false,
+        "default_profile_image": false,
+        "contributors_enabled": false,
+        "profile_text_color": "000000",
+        "location": "(\u2665\u203f\u2665)  Albania (\u2665\u203f\u2665) ",
+        "statuses_count": 118946,
+        "verified": false,
+        "friends_count": 450,
+        "is_translator": false,
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme18/bg.gif",
+        "profile_sidebar_fill_color": "000000"
+    },
+    "text": "Njihuni me Zonj\u00ebn Trump !!! | Ekskluzive https://t.co/4KmsQi47VD",
+    "in_reply_to_status_id": null,
+    "entities": {
+        "user_mentions": [],
+        "urls": [
+            {
+                "indices": [
+                    41,
+                    64
+                ],
+                "url": "https://t.co/4KmsQi47VD",
+                "display_url": "fb.me/3ZOkPfHWn",
+                "expanded_url": "http://fb.me/3ZOkPfHWn"
+            }
+        ],
+        "symbols": [],
+        "hashtags": []
+    },
+    "retweeted": false,
+    "is_quote_status": false,
+    "id": 714960402426
+},
+{
+    "filter_level": "low",
+    "in_reply_to_user_id_str": null,
+    "truncated": false,
+    "user": {
+        "listed_count": 4,
+        "screen_name": "charliesanchez2",
+        "url": null,
+        "profile_background_tile": true,
+        "followers_count": 59,
+        "profile_link_color": "F00000",
+        "default_profile": false,
+        "name": "Charlie",
+        "follow_request_sent": null,
+        "following": null,
+        "profile_use_background_image": true,
+        "profile_background_color": "C0DEED",
+        "id": 169994273,
+        "favourites_count": 81,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/455648834608306176/iU0u-qU1_normal.jpeg",
+        "description": "I believe in God, the Constitution, and Capitalism. \n\nNo, I'm not Charlie Sanchez, the politician.",
+        "id_str": "169994273",
+        "profile_sidebar_border_color": "C0DEED",
+        "protected": false,
+        "default_profile_image": false,
+        "contributors_enabled": false,
+        "profile_text_color": "333333",
+        "location": "California",
+        "statuses_count": 1782,
+        "verified": false,
+        "friends_count": 103,
+        "is_translator": false,
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/190125479/26740_375485986614_595536614_4295006_6429957_n.jpg",
+        "profile_sidebar_fill_color": "EFEFEF"
+    },
+    "text": "Stop asking Bernie supporters if they\u2019ll vote for Hillary against Trump. We got a plan to beat Trump already. Called Bernie. Check him out.",
+    "in_reply_to_status_id": null,
+    "entities": {
+        "user_mentions": [],
+        "urls": [],
+        "symbols": [],
+        "hashtags": []
+    },
+    "retweeted": false,
+    "is_quote_status": false,
+    "id": 714810789681618944,
+    "favorite_count": 131,
+    "in_reply_to_status_id_str": null,
+    "favorited": false,
+    "id_str": "714810789681618944",
+    "in_reply_to_screen_name": null,
+    "coordinates": null,
+    "lang": "en",
+    "place": null,
+    "contributors": null,
+    "geo": null,
+    "retweet_count": 75,
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>"
+},
+{
+    "in_reply_to_user_id": null,
+    "created_at": "Tue Mar 29 23:40:17 +0000 2016",
+    "filter_level": "low",
+    "truncated": false,
+    "possibly_sensitive": false,
+    "timestamp_ms": "1459294817758",
+    "user": {
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/2290155049/1456586630",
+        "created_at": "Mon Jan 13 20:05:32 +0000 2014",
+        "utc_offset": 3600,
+        "geo_enabled": false,
+        "notifications": null,
+        "lang": "en",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/700888033558720512/KexOIMN4_normal.jpg",
+        "time_zone": "London",
+        "listed_count": 71,
+        "screen_name": "greyman25",
+        "url": "http://www.get-saved-today.webnode.com",
+        "profile_background_tile": false,
+        "followers_count": 578,
+        "profile_link_color": "1B95E0",
+        "default_profile": false,
+        "name": "Born in Britain",
+        "follow_request_sent": null,
+        "following": null,
+        "profile_use_background_image": false,
+        "profile_background_color": "000000",
+        "id": 2290155049,
+        "favourites_count": 3961,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/700888033558720512/KexOIMN4_normal.jpg",
+        "description": "Ex con, dry alcoholic, non smoker, love Jesus Christ &  Britain. Internet evangelist. Pro Israel.",
+        "id_str": "2290155049",
+        "profile_sidebar_border_color": "000000",
+        "protected": false,
+        "default_profile_image": false,
+        "contributors_enabled": false,
+        "profile_text_color": "000000",
+        "location": "Yorkshire and The Humber",
+        "statuses_count": 23034,
+        "verified": false,
+        "friends_count": 502,
+        "is_translator": false,
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_sidebar_fill_color": "000000"
+    },
+    "text": "RT @bpolitics: .@krollbondrating's Christopher Whalen says Clinton is the weakest Dem candidate in 50 years https://t.co/pLk7rvoRSn https:/\u2026",
+    "extended_entities": {
+        "media": [
+            {
+                "source_user_id_str": "564111558",
+                "source_user_id": 564111558,
+                "display_url": "pic.twitter.com/lJcw0N8EZf",
+                "media_url": "http://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                "source_status_id": 714950482930896897,
+                "media_url_https": "https://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                "id_str": "714950482331041795",
+                "source_status_id_str": "714950482930896897",
+                "id": 714950482331041795,
+                "type": "photo",
+                "indices": [
+                    139,
+                    140
+                ],
+                "url": "https://t.co/lJcw0N8EZf",
+                "sizes": {
+                    "large": {
+                        "w": 1024,
+                        "resize": "fit",
+                        "h": 691
+                    },
+                    "medium": {
+                        "w": 600,
+                        "resize": "fit",
+                        "h": 405
+                    },
+                    "small": {
+                        "w": 340,
+                        "resize": "fit",
+                        "h": 229
+                    },
+                    "thumb": {
+                        "w": 150,
+                        "resize": "crop",
+                        "h": 150
+                    }
+                },
+                "expanded_url": "http://twitter.com/bpolitics/status/714950482930896897/photo/1"
+            }
+        ]
+    },
+    "in_reply_to_status_id": null,
+    "entities": {
+        "media": [
+            {
+                "source_user_id_str": "564111558",
+                "source_user_id": 564111558,
+                "display_url": "pic.twitter.com/lJcw0N8EZf",
+                "media_url": "http://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                "source_status_id": 714950482930896897,
+                "media_url_https": "https://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                "id_str": "714950482331041795",
+                "source_status_id_str": "714950482930896897",
+                "id": 714950482331041795,
+                "type": "photo",
+                "indices": [
+                    139,
+                    140
+                ],
+                "url": "https://t.co/lJcw0N8EZf",
+                "sizes": {
+                    "large": {
+                        "w": 1024,
+                        "resize": "fit",
+                        "h": 691
+                    },
+                    "medium": {
+                        "w": 600,
+                        "resize": "fit",
+                        "h": 405
+                    },
+                    "small": {
+                        "w": 340,
+                        "resize": "fit",
+                        "h": 229
+                    },
+                    "thumb": {
+                        "w": 150,
+                        "resize": "crop",
+                        "h": 150
+                    }
+                },
+                "expanded_url": "http://twitter.com/bpolitics/status/714950482930896897/photo/1"
+            }
+        ],
+        "user_mentions": [
+            {
+                "id": 564111558,
+                "indices": [
+                    3,
+                    13
+                ],
+                "screen_name": "bpolitics",
+                "id_str": "564111558",
+                "name": "Bloomberg Politics"
+            },
+            {
+                "id": 1963523857,
+                "indices": [
+                    16,
+                    32
+                ],
+                "screen_name": "krollbondrating",
+                "id_str": "1963523857",
+                "name": "Kroll Bond Ratings"
+            }
+        ],
+        "urls": [
+            {
+                "indices": [
+                    108,
+                    131
+                ],
+                "url": "https://t.co/pLk7rvoRSn",
+                "display_url": "bloom.bg/1RETAha",
+                "expanded_url": "http://bloom.bg/1RETAha"
+            }
+        ],
+        "symbols": [],
+        "hashtags": []
+    },
+    "favorited": false,
+    "retweeted": false,
+    "is_quote_status": false,
+    "id": 714960401759387648,
+    "favorite_count": 0,
+    "retweeted_status": {
+        "in_reply_to_user_id": null,
+        "created_at": "Tue Mar 29 23:00:52 +0000 2016",
+        "filter_level": "low",
+        "truncated": false,
+        "possibly_sensitive": false,
+        "user": {
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/564111558/1449075077",
+            "created_at": "Thu Apr 26 20:50:01 +0000 2012",
+            "utc_offset": -14400,
+            "geo_enabled": false,
+            "notifications": null,
+            "lang": "en",
+            "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/540884395/Bloomberg_twback_orng.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/714804098890133504/cUO4gD1A_normal.jpg",
+            "time_zone": "Eastern Time (US & Canada)",
+            "listed_count": 1788,
+            "screen_name": "bpolitics",
+            "url": "http://www.bloombergpolitics.com",
+            "profile_background_tile": false,
+            "followers_count": 52842,
+            "profile_link_color": "0084B4",
+            "default_profile": false,
+            "name": "Bloomberg Politics",
+            "follow_request_sent": null,
+            "following": null,
+            "profile_use_background_image": true,
+            "profile_background_color": "C0DEED",
+            "id": 564111558,
+            "favourites_count": 114,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/714804098890133504/cUO4gD1A_normal.jpg",
+            "description": "Bloomberg Politics is the spot for smart, non-partisan political coverage + analysis. #WADR with @jheil and @MarkHalperin airs at 5pm ET on @BloombergTV.",
+            "id_str": "564111558",
+            "profile_sidebar_border_color": "C0DEED",
+            "protected": false,
+            "default_profile_image": false,
+            "contributors_enabled": false,
+            "profile_text_color": "333333",
+            "location": null,
+            "statuses_count": 36188,
+            "verified": true,
+            "friends_count": 539,
+            "is_translator": false,
+            "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/540884395/Bloomberg_twback_orng.jpg",
+            "profile_sidebar_fill_color": "DDEEF6"
+        },
+        "text": ".@krollbondrating's Christopher Whalen says Clinton is the weakest Dem candidate in 50 years https://t.co/pLk7rvoRSn https://t.co/lJcw0N8EZf",
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 714950482331041795,
+                    "type": "photo",
+                    "indices": [
+                        117,
+                        140
+                    ],
+                    "display_url": "pic.twitter.com/lJcw0N8EZf",
+                    "media_url": "http://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                    "sizes": {
+                        "large": {
+                            "w": 1024,
+                            "resize": "fit",
+                            "h": 691
+                        },
+                        "medium": {
+                            "w": 600,
+                            "resize": "fit",
+                            "h": 405
+                        },
+                        "small": {
+                            "w": 340,
+                            "resize": "fit",
+                            "h": 229
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "resize": "crop",
+                            "h": 150
+                        }
+                    },
+                    "expanded_url": "http://twitter.com/bpolitics/status/714950482930896897/photo/1",
+                    "id_str": "714950482331041795",
+                    "url": "https://t.co/lJcw0N8EZf"
+                }
+            ]
+        },
+        "in_reply_to_status_id": null,
+        "entities": {
+            "media": [
+                {
+                    "id": 714950482331041795,
+                    "type": "photo",
+                    "indices": [
+                        117,
+                        140
+                    ],
+                    "display_url": "pic.twitter.com/lJcw0N8EZf",
+                    "media_url": "http://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                    "sizes": {
+                        "large": {
+                            "w": 1024,
+                            "resize": "fit",
+                            "h": 691
+                        },
+                        "medium": {
+                            "w": 600,
+                            "resize": "fit",
+                            "h": 405
+                        },
+                        "small": {
+                            "w": 340,
+                            "resize": "fit",
+                            "h": 229
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "resize": "crop",
+                            "h": 150
+                        }
+                    },
+                    "expanded_url": "http://twitter.com/bpolitics/status/714950482930896897/photo/1",
+                    "id_str": "714950482331041795",
+                    "url": "https://t.co/lJcw0N8EZf"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id": 1963523857,
+                    "indices": [
+                        1,
+                        17
+                    ],
+                    "screen_name": "krollbondrating",
+                    "id_str": "1963523857",
+                    "name": "Kroll Bond Ratings"
+                }
+            ],
+            "urls": [
+                {
+                    "indices": [
+                        93,
+                        116
+                    ],
+                    "url": "https://t.co/pLk7rvoRSn",
+                    "display_url": "bloom.bg/1RETAha",
+                    "expanded_url": "http://bloom.bg/1RETAha"
+                }
+            ],
+            "symbols": [],
+            "hashtags": []
+        },
+        "favorited": false,
+        "retweeted": false,
+        "is_quote_status": false,
+        "id": 714950482930896897,
+        "favorite_count": 40,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id_str": null,
+        "id_str": "714950482930896897",
+        "in_reply_to_screen_name": null,
+        "coordinates": null,
+        "lang": "en",
+        "place": null,
+        "contributors": null,
+        "geo": null,
+        "retweet_count": 31,
+        "source": "<a href=\"http://www.hootsuite.com\" rel=\"nofollow\">Hootsuite</a>"
+    },
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id_str": null,
+    "id_str": "714960401759387648",
+    "in_reply_to_screen_name": null,
+    "coordinates": null,
+    "lang": "en",
+    "place": null,
+    "contributors": null,
+    "geo": null,
+    "retweet_count": 0,
+    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>"
+},
+{
+    "in_reply_to_user_id": null,
+    "created_at": "Tue Mar 29 23:40:17 +0000 2016",
+    "filter_level": "low",
+    "truncated": false,
+    "possibly_sensitive": false,
+    "timestamp_ms": "1459294817810",
+    "user": {
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/4851614681/1457054038",
+        "created_at": "Wed Jan 27 00:07:53 +0000 2016",
+        "utc_offset": null,
+        "geo_enabled": false,
+        "notifications": null,
+        "lang": "en",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/692633809200656384/joTnDm5v_normal.jpg",
+        "time_zone": null,
+        "listed_count": 16,
+        "screen_name": "blazebandit2015",
+        "url": null,
+        "profile_background_tile": false,
+        "followers_count": 797,
+        "profile_link_color": "E81C1F",
+        "default_profile": false,
+        "name": "Ourn Raphael Brown",
+        "follow_request_sent": null,
+        "following": null,
+        "profile_use_background_image": false,
+        "profile_background_color": "000000",
+        "id": 4851614681,
+        "favourites_count": 421,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/692633809200656384/joTnDm5v_normal.jpg",
+        "description": "24 yrs old American Patriot. NSSAR member. 7th Great Grand Parents Captain David Brown and Col. John Buttrick. The Revolutionary War. April 19 1775. #Trump2016",
+        "id_str": "4851614681",
+        "profile_sidebar_border_color": "000000",
+        "protected": false,
+        "default_profile_image": false,
+        "contributors_enabled": false,
+        "profile_text_color": "000000",
+        "location": "Maine, USA",
+        "statuses_count": 2308,
+        "verified": false,
+        "friends_count": 1391,
+        "is_translator": false,
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_sidebar_fill_color": "000000"
+    },
+    "text": "RT @HeidiAlpine: @dmartosko Cruz video found.....racing from the scene.... #cruzsexscandal https://t.co/zuAPZfQDk3",
+    "extended_entities": {
+        "media": [
+            {
+                "source_user_id_str": "932568674",
+                "source_user_id": 932568674,
+                "display_url": "pic.twitter.com/zuAPZfQDk3",
+                "media_url": "http://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                "source_status_id": 714656471963688960,
+                "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                "id_str": "714656417991536640",
+                "source_status_id_str": "714656471963688960",
+                "id": 714656417991536640,
+                "type": "animated_gif",
+                "indices": [
+                    91,
+                    114
+                ],
+                "url": "https://t.co/zuAPZfQDk3",
+                "sizes": {
+                    "large": {
+                        "w": 500,
+                        "resize": "fit",
+                        "h": 290
+                    },
+                    "medium": {
+                        "w": 500,
+                        "resize": "fit",
+                        "h": 290
+                    },
+                    "small": {
+                        "w": 340,
+                        "resize": "fit",
+                        "h": 197
+                    },
+                    "thumb": {
+                        "w": 150,
+                        "resize": "crop",
+                        "h": 150
+                    }
+                },
+                "video_info": {
+                    "variants": [
+                        {
+                            "content_type": "video/mp4",
+                            "bitrate": 0,
+                            "url": "https://pbs.twimg.com/tweet_video/Cer4OcrWsAAh-9p.mp4"
+                        }
+                    ],
+                    "aspect_ratio": [
+                        50,
+                        29
+                    ]
+                },
+                "expanded_url": "http://twitter.com/HeidiAlpine/status/714656471963688960/photo/1"
+            }
+        ]
+    },
+    "in_reply_to_status_id": null,
+    "entities": {
+        "media": [
+            {
+                "source_user_id_str": "932568674",
+                "source_user_id": 932568674,
+                "display_url": "pic.twitter.com/zuAPZfQDk3",
+                "media_url": "http://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                "source_status_id": 714656471963688960,
+                "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                "id_str": "714656417991536640",
+                "source_status_id_str": "714656471963688960",
+                "id": 714656417991536640,
+                "type": "photo",
+                "indices": [
+                    91,
+                    114
+                ],
+                "url": "https://t.co/zuAPZfQDk3",
+                "sizes": {
+                    "large": {
+                        "w": 500,
+                        "resize": "fit",
+                        "h": 290
+                    },
+                    "medium": {
+                        "w": 500,
+                        "resize": "fit",
+                        "h": 290
+                    },
+                    "small": {
+                        "w": 340,
+                        "resize": "fit",
+                        "h": 197
+                    },
+                    "thumb": {
+                        "w": 150,
+                        "resize": "crop",
+                        "h": 150
+                    }
+                },
+                "expanded_url": "http://twitter.com/HeidiAlpine/status/714656471963688960/photo/1"
+            }
+        ],
+        "user_mentions": [
+            {
+                "id": 932568674,
+                "indices": [
+                    3,
+                    15
+                ],
+                "screen_name": "HeidiAlpine",
+                "id_str": "932568674",
+                "name": "Heidi"
+            },
+            {
+                "id": 38497702,
+                "indices": [
+                    17,
+                    27
+                ],
+                "screen_name": "dmartosko",
+                "id_str": "38497702",
+                "name": "David Martosko"
+            }
+        ],
+        "urls": [],
+        "symbols": [],
+        "hashtags": [
+            {
+                "text": "cruzsexscandal",
+                "indices": [
+                    75,
+                    90
+                ]
+            }
+        ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "is_quote_status": false,
+    "id": 714960401977319424,
+    "favorite_count": 0,
+    "retweeted_status": {
+        "in_reply_to_user_id": 38497702,
+        "created_at": "Tue Mar 29 03:32:35 +0000 2016",
+        "filter_level": "low",
+        "truncated": false,
+        "possibly_sensitive": false,
+        "user": {
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/932568674/1353367156",
+            "created_at": "Wed Nov 07 17:45:25 +0000 2012",
+            "utc_offset": null,
+            "geo_enabled": false,
+            "notifications": null,
+            "lang": "en",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme4/bg.gif",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/654384398469476352/JNoe0tQz_normal.jpg",
+            "time_zone": null,
+            "listed_count": 22,
+            "screen_name": "HeidiAlpine",
+            "url": null,
+            "profile_background_tile": false,
+            "followers_count": 1004,
+            "profile_link_color": "0078B8",
+            "default_profile": false,
+            "name": "Heidi",
+            "follow_request_sent": null,
+            "following": null,
+            "profile_use_background_image": true,
+            "profile_background_color": "009AB9",
+            "id": 932568674,
+            "favourites_count": 17277,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/654384398469476352/JNoe0tQz_normal.jpg",
+            "description": "Ski-Travel-Foodie-Lab Service Dogs-Search & Rescue [Ski-Reise Foodie Hunde Suchen Rettungs]",
+            "id_str": "932568674",
+            "profile_sidebar_border_color": "FFFFFF",
+            "protected": false,
+            "default_profile_image": false,
+            "contributors_enabled": false,
+            "profile_text_color": "3C3940",
+            "location": "BC EU Ski Urlaubsort",
+            "statuses_count": 5448,
+            "verified": false,
+            "friends_count": 1030,
+            "is_translator": false,
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme4/bg.gif",
+            "profile_sidebar_fill_color": "95E8EC"
+        },
+        "text": "@dmartosko Cruz video found.....racing from the scene.... #cruzsexscandal https://t.co/zuAPZfQDk3",
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 714656417991536640,
+                    "type": "animated_gif",
+                    "indices": [
+                        74,
+                        97
+                    ],
+                    "display_url": "pic.twitter.com/zuAPZfQDk3",
+                    "media_url": "http://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                    "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                    "sizes": {
+                        "large": {
+                            "w": 500,
+                            "resize": "fit",
+                            "h": 290
+                        },
+                        "medium": {
+                            "w": 500,
+                            "resize": "fit",
+                            "h": 290
+                        },
+                        "small": {
+                            "w": 340,
+                            "resize": "fit",
+                            "h": 197
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "resize": "crop",
+                            "h": 150
+                        }
+                    },
+                    "video_info": {
+                        "variants": [
+                            {
+                                "content_type": "video/mp4",
+                                "bitrate": 0,
+                                "url": "https://pbs.twimg.com/tweet_video/Cer4OcrWsAAh-9p.mp4"
+                            }
+                        ],
+                        "aspect_ratio": [
+                            50,
+                            29
+                        ]
+                    },
+                    "expanded_url": "http://twitter.com/HeidiAlpine/status/714656471963688960/photo/1",
+                    "id_str": "714656417991536640",
+                    "url": "https://t.co/zuAPZfQDk3"
+                }
+            ]
+        },
+        "in_reply_to_status_id": 714550665838731264,
+        "entities": {
+            "media": [
+                {
+                    "id": 714656417991536640,
+                    "type": "photo",
+                    "indices": [
+                        74,
+                        97
+                    ],
+                    "display_url": "pic.twitter.com/zuAPZfQDk3",
+                    "media_url": "http://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                    "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                    "sizes": {
+                        "large": {
+                            "w": 500,
+                            "resize": "fit",
+                            "h": 290
+                        },
+                        "medium": {
+                            "w": 500,
+                            "resize": "fit",
+                            "h": 290
+                        },
+                        "small": {
+                            "w": 340,
+                            "resize": "fit",
+                            "h": 197
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "resize": "crop",
+                            "h": 150
+                        }
+                    },
+                    "expanded_url": "http://twitter.com/HeidiAlpine/status/714656471963688960/photo/1",
+                    "id_str": "714656417991536640",
+                    "url": "https://t.co/zuAPZfQDk3"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id": 38497702,
+                    "indices": [
+                        0,
+                        10
+                    ],
+                    "screen_name": "dmartosko",
+                    "id_str": "38497702",
+                    "name": "David Martosko"
+                }
+            ],
+            "urls": [],
+            "symbols": [],
+            "hashtags": [
+                {
+                    "text": "cruzsexscandal",
+                    "indices": [
+                        58,
+                        73
+                    ]
+                }
+            ]
+        },
+        "favorited": false,
+        "retweeted": false,
+        "is_quote_status": false,
+        "id": 714656471963688960,
+        "favorite_count": 20,
+        "in_reply_to_status_id_str": "714550665838731264",
+        "in_reply_to_user_id_str": "38497702",
+        "id_str": "714656471963688960",
+        "in_reply_to_screen_name": "dmartosko",
+        "coordinates": null,
+        "lang": "en",
+        "place": null,
+        "contributors": null,
+        "geo": null,
+        "retweet_count": 15,
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>"
+    },
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id_str": null,
+    "id_str": "714960401977319424",
+    "in_reply_to_screen_name": null,
+    "coordinates": null,
+    "lang": "en",
+    "place": null,
+    "contributors": null,
+    "geo": null,
+    "retweet_count": 0,
+    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>"
+},
+{
+    "in_reply_to_user_id": null,
+    "created_at": "Tue Mar 29 23:40:17 +0000 2016",
+    "filter_level": "low",
+    "in_reply_to_user_id_str": null,
+    "truncated": false,
+    "possibly_sensitive": false,
+    "timestamp_ms": "1459294817917",
+    "user": {
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/120160631/1453134805",
+        "created_at": "Fri Mar 05 17:02:32 +0000 2010",
+        "utc_offset": 7200,
+        "geo_enabled": true,
+        "notifications": null,
+        "lang": "en",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme18/bg.gif",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/709053755782619136/Uj7gZl9x_normal.jpg",
+        "time_zone": "Rome",
+        "listed_count": 20,
+        "screen_name": "djal1keq",
+        "url": "http://www.facebook.com/lyrical.warfare",
+        "profile_background_tile": true,
+        "followers_count": 400,
+        "profile_link_color": "3B94D9",
+        "default_profile": false,
+        "name": "Mi Ri",
+        "follow_request_sent": null,
+        "following": null,
+        "profile_use_background_image": true,
+        "profile_background_color": "ACDED6",
+        "id": 120160631,
+        "favourites_count": 221,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/709053755782619136/Uj7gZl9x_normal.jpg",
+        "description": "\u201cSometimes, saying \u201cGoodbye\u201d is like saying \u201cLet\u2019s stop hurting each other\u201d.",
+        "id_str": "120160631",
+        "profile_sidebar_border_color": "000000",
+        "protected": false,
+        "default_profile_image": false,
+        "contributors_enabled": false,
+        "profile_text_color": "000000",
+        "location": "(\u2665\u203f\u2665)  Albania (\u2665\u203f\u2665) ",
+        "statuses_count": 118946,
+        "verified": false,
+        "friends_count": 450,
+        "is_translator": false,
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme18/bg.gif",
+        "profile_sidebar_fill_color": "000000"
+    },
+    "text": "Njihuni me Zonj\u00ebn Trump !!! | Ekskluzive https://t.co/4KmsQi47VD",
+    "in_reply_to_status_id": null,
+    "entities": {
+        "user_mentions": [],
+        "urls": [
+            {
+                "indices": [
+                    41,
+                    64
+                ],
+                "url": "https://t.co/4KmsQi47VD",
+                "display_url": "fb.me/3ZOkPfHWn",
+                "expanded_url": "http://fb.me/3ZOkPfHWn"
+            }
+        ],
+        "symbols": [],
+        "hashtags": []
+    },
+    "retweeted": false,
+    "is_quote_status": false,
+    "id": 714960402426
+},
+{
+    "filter_level": "low",
+    "in_reply_to_user_id_str": null,
+    "truncated": false,
+    "user": {
+        "listed_count": 4,
+        "screen_name": "charliesanchez2",
+        "url": null,
+        "profile_background_tile": true,
+        "followers_count": 59,
+        "profile_link_color": "F00000",
+        "default_profile": false,
+        "name": "Charlie",
+        "follow_request_sent": null,
+        "following": null,
+        "profile_use_background_image": true,
+        "profile_background_color": "C0DEED",
+        "id": 169994273,
+        "favourites_count": 81,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/455648834608306176/iU0u-qU1_normal.jpeg",
+        "description": "I believe in God, the Constitution, and Capitalism. \n\nNo, I'm not Charlie Sanchez, the politician.",
+        "id_str": "169994273",
+        "profile_sidebar_border_color": "C0DEED",
+        "protected": false,
+        "default_profile_image": false,
+        "contributors_enabled": false,
+        "profile_text_color": "333333",
+        "location": "California",
+        "statuses_count": 1782,
+        "verified": false,
+        "friends_count": 103,
+        "is_translator": false,
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/190125479/26740_375485986614_595536614_4295006_6429957_n.jpg",
+        "profile_sidebar_fill_color": "EFEFEF"
+    },
+    "text": "Stop asking Bernie supporters if they\u2019ll vote for Hillary against Trump. We got a plan to beat Trump already. Called Bernie. Check him out.",
+    "in_reply_to_status_id": null,
+    "entities": {
+        "user_mentions": [],
+        "urls": [],
+        "symbols": [],
+        "hashtags": []
+    },
+    "retweeted": false,
+    "is_quote_status": false,
+    "id": 714810789681618944,
+    "favorite_count": 131,
+    "in_reply_to_status_id_str": null,
+    "favorited": false,
+    "id_str": "714810789681618944",
+    "in_reply_to_screen_name": null,
+    "coordinates": null,
+    "lang": "en",
+    "place": null,
+    "contributors": null,
+    "geo": null,
+    "retweet_count": 75,
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>"
+},
+{
+    "in_reply_to_user_id": null,
+    "created_at": "Tue Mar 29 23:40:17 +0000 2016",
+    "filter_level": "low",
+    "truncated": false,
+    "possibly_sensitive": false,
+    "timestamp_ms": "1459294817758",
+    "user": {
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/2290155049/1456586630",
+        "created_at": "Mon Jan 13 20:05:32 +0000 2014",
+        "utc_offset": 3600,
+        "geo_enabled": false,
+        "notifications": null,
+        "lang": "en",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/700888033558720512/KexOIMN4_normal.jpg",
+        "time_zone": "London",
+        "listed_count": 71,
+        "screen_name": "greyman25",
+        "url": "http://www.get-saved-today.webnode.com",
+        "profile_background_tile": false,
+        "followers_count": 578,
+        "profile_link_color": "1B95E0",
+        "default_profile": false,
+        "name": "Born in Britain",
+        "follow_request_sent": null,
+        "following": null,
+        "profile_use_background_image": false,
+        "profile_background_color": "000000",
+        "id": 2290155049,
+        "favourites_count": 3961,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/700888033558720512/KexOIMN4_normal.jpg",
+        "description": "Ex con, dry alcoholic, non smoker, love Jesus Christ &  Britain. Internet evangelist. Pro Israel.",
+        "id_str": "2290155049",
+        "profile_sidebar_border_color": "000000",
+        "protected": false,
+        "default_profile_image": false,
+        "contributors_enabled": false,
+        "profile_text_color": "000000",
+        "location": "Yorkshire and The Humber",
+        "statuses_count": 23034,
+        "verified": false,
+        "friends_count": 502,
+        "is_translator": false,
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_sidebar_fill_color": "000000"
+    },
+    "text": "RT @bpolitics: .@krollbondrating's Christopher Whalen says Clinton is the weakest Dem candidate in 50 years https://t.co/pLk7rvoRSn https:/\u2026",
+    "extended_entities": {
+        "media": [
+            {
+                "source_user_id_str": "564111558",
+                "source_user_id": 564111558,
+                "display_url": "pic.twitter.com/lJcw0N8EZf",
+                "media_url": "http://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                "source_status_id": 714950482930896897,
+                "media_url_https": "https://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                "id_str": "714950482331041795",
+                "source_status_id_str": "714950482930896897",
+                "id": 714950482331041795,
+                "type": "photo",
+                "indices": [
+                    139,
+                    140
+                ],
+                "url": "https://t.co/lJcw0N8EZf",
+                "sizes": {
+                    "large": {
+                        "w": 1024,
+                        "resize": "fit",
+                        "h": 691
+                    },
+                    "medium": {
+                        "w": 600,
+                        "resize": "fit",
+                        "h": 405
+                    },
+                    "small": {
+                        "w": 340,
+                        "resize": "fit",
+                        "h": 229
+                    },
+                    "thumb": {
+                        "w": 150,
+                        "resize": "crop",
+                        "h": 150
+                    }
+                },
+                "expanded_url": "http://twitter.com/bpolitics/status/714950482930896897/photo/1"
+            }
+        ]
+    },
+    "in_reply_to_status_id": null,
+    "entities": {
+        "media": [
+            {
+                "source_user_id_str": "564111558",
+                "source_user_id": 564111558,
+                "display_url": "pic.twitter.com/lJcw0N8EZf",
+                "media_url": "http://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                "source_status_id": 714950482930896897,
+                "media_url_https": "https://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                "id_str": "714950482331041795",
+                "source_status_id_str": "714950482930896897",
+                "id": 714950482331041795,
+                "type": "photo",
+                "indices": [
+                    139,
+                    140
+                ],
+                "url": "https://t.co/lJcw0N8EZf",
+                "sizes": {
+                    "large": {
+                        "w": 1024,
+                        "resize": "fit",
+                        "h": 691
+                    },
+                    "medium": {
+                        "w": 600,
+                        "resize": "fit",
+                        "h": 405
+                    },
+                    "small": {
+                        "w": 340,
+                        "resize": "fit",
+                        "h": 229
+                    },
+                    "thumb": {
+                        "w": 150,
+                        "resize": "crop",
+                        "h": 150
+                    }
+                },
+                "expanded_url": "http://twitter.com/bpolitics/status/714950482930896897/photo/1"
+            }
+        ],
+        "user_mentions": [
+            {
+                "id": 564111558,
+                "indices": [
+                    3,
+                    13
+                ],
+                "screen_name": "bpolitics",
+                "id_str": "564111558",
+                "name": "Bloomberg Politics"
+            },
+            {
+                "id": 1963523857,
+                "indices": [
+                    16,
+                    32
+                ],
+                "screen_name": "krollbondrating",
+                "id_str": "1963523857",
+                "name": "Kroll Bond Ratings"
+            }
+        ],
+        "urls": [
+            {
+                "indices": [
+                    108,
+                    131
+                ],
+                "url": "https://t.co/pLk7rvoRSn",
+                "display_url": "bloom.bg/1RETAha",
+                "expanded_url": "http://bloom.bg/1RETAha"
+            }
+        ],
+        "symbols": [],
+        "hashtags": []
+    },
+    "favorited": false,
+    "retweeted": false,
+    "is_quote_status": false,
+    "id": 714960401759387648,
+    "favorite_count": 0,
+    "retweeted_status": {
+        "in_reply_to_user_id": null,
+        "created_at": "Tue Mar 29 23:00:52 +0000 2016",
+        "filter_level": "low",
+        "truncated": false,
+        "possibly_sensitive": false,
+        "user": {
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/564111558/1449075077",
+            "created_at": "Thu Apr 26 20:50:01 +0000 2012",
+            "utc_offset": -14400,
+            "geo_enabled": false,
+            "notifications": null,
+            "lang": "en",
+            "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/540884395/Bloomberg_twback_orng.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/714804098890133504/cUO4gD1A_normal.jpg",
+            "time_zone": "Eastern Time (US & Canada)",
+            "listed_count": 1788,
+            "screen_name": "bpolitics",
+            "url": "http://www.bloombergpolitics.com",
+            "profile_background_tile": false,
+            "followers_count": 52842,
+            "profile_link_color": "0084B4",
+            "default_profile": false,
+            "name": "Bloomberg Politics",
+            "follow_request_sent": null,
+            "following": null,
+            "profile_use_background_image": true,
+            "profile_background_color": "C0DEED",
+            "id": 564111558,
+            "favourites_count": 114,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/714804098890133504/cUO4gD1A_normal.jpg",
+            "description": "Bloomberg Politics is the spot for smart, non-partisan political coverage + analysis. #WADR with @jheil and @MarkHalperin airs at 5pm ET on @BloombergTV.",
+            "id_str": "564111558",
+            "profile_sidebar_border_color": "C0DEED",
+            "protected": false,
+            "default_profile_image": false,
+            "contributors_enabled": false,
+            "profile_text_color": "333333",
+            "location": null,
+            "statuses_count": 36188,
+            "verified": true,
+            "friends_count": 539,
+            "is_translator": false,
+            "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/540884395/Bloomberg_twback_orng.jpg",
+            "profile_sidebar_fill_color": "DDEEF6"
+        },
+        "text": ".@krollbondrating's Christopher Whalen says Clinton is the weakest Dem candidate in 50 years https://t.co/pLk7rvoRSn https://t.co/lJcw0N8EZf",
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 714950482331041795,
+                    "type": "photo",
+                    "indices": [
+                        117,
+                        140
+                    ],
+                    "display_url": "pic.twitter.com/lJcw0N8EZf",
+                    "media_url": "http://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                    "sizes": {
+                        "large": {
+                            "w": 1024,
+                            "resize": "fit",
+                            "h": 691
+                        },
+                        "medium": {
+                            "w": 600,
+                            "resize": "fit",
+                            "h": 405
+                        },
+                        "small": {
+                            "w": 340,
+                            "resize": "fit",
+                            "h": 229
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "resize": "crop",
+                            "h": 150
+                        }
+                    },
+                    "expanded_url": "http://twitter.com/bpolitics/status/714950482930896897/photo/1",
+                    "id_str": "714950482331041795",
+                    "url": "https://t.co/lJcw0N8EZf"
+                }
+            ]
+        },
+        "in_reply_to_status_id": null,
+        "entities": {
+            "media": [
+                {
+                    "id": 714950482331041795,
+                    "type": "photo",
+                    "indices": [
+                        117,
+                        140
+                    ],
+                    "display_url": "pic.twitter.com/lJcw0N8EZf",
+                    "media_url": "http://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                    "sizes": {
+                        "large": {
+                            "w": 1024,
+                            "resize": "fit",
+                            "h": 691
+                        },
+                        "medium": {
+                            "w": 600,
+                            "resize": "fit",
+                            "h": 405
+                        },
+                        "small": {
+                            "w": 340,
+                            "resize": "fit",
+                            "h": 229
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "resize": "crop",
+                            "h": 150
+                        }
+                    },
+                    "expanded_url": "http://twitter.com/bpolitics/status/714950482930896897/photo/1",
+                    "id_str": "714950482331041795",
+                    "url": "https://t.co/lJcw0N8EZf"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id": 1963523857,
+                    "indices": [
+                        1,
+                        17
+                    ],
+                    "screen_name": "krollbondrating",
+                    "id_str": "1963523857",
+                    "name": "Kroll Bond Ratings"
+                }
+            ],
+            "urls": [
+                {
+                    "indices": [
+                        93,
+                        116
+                    ],
+                    "url": "https://t.co/pLk7rvoRSn",
+                    "display_url": "bloom.bg/1RETAha",
+                    "expanded_url": "http://bloom.bg/1RETAha"
+                }
+            ],
+            "symbols": [],
+            "hashtags": []
+        },
+        "favorited": false,
+        "retweeted": false,
+        "is_quote_status": false,
+        "id": 714950482930896897,
+        "favorite_count": 40,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id_str": null,
+        "id_str": "714950482930896897",
+        "in_reply_to_screen_name": null,
+        "coordinates": null,
+        "lang": "en",
+        "place": null,
+        "contributors": null,
+        "geo": null,
+        "retweet_count": 31,
+        "source": "<a href=\"http://www.hootsuite.com\" rel=\"nofollow\">Hootsuite</a>"
+    },
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id_str": null,
+    "id_str": "714960401759387648",
+    "in_reply_to_screen_name": null,
+    "coordinates": null,
+    "lang": "en",
+    "place": null,
+    "contributors": null,
+    "geo": null,
+    "retweet_count": 0,
+    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>"
+},
+{
+    "in_reply_to_user_id": null,
+    "created_at": "Tue Mar 29 23:40:17 +0000 2016",
+    "filter_level": "low",
+    "truncated": false,
+    "possibly_sensitive": false,
+    "timestamp_ms": "1459294817810",
+    "user": {
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/4851614681/1457054038",
+        "created_at": "Wed Jan 27 00:07:53 +0000 2016",
+        "utc_offset": null,
+        "geo_enabled": false,
+        "notifications": null,
+        "lang": "en",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/692633809200656384/joTnDm5v_normal.jpg",
+        "time_zone": null,
+        "listed_count": 16,
+        "screen_name": "blazebandit2015",
+        "url": null,
+        "profile_background_tile": false,
+        "followers_count": 797,
+        "profile_link_color": "E81C1F",
+        "default_profile": false,
+        "name": "Ourn Raphael Brown",
+        "follow_request_sent": null,
+        "following": null,
+        "profile_use_background_image": false,
+        "profile_background_color": "000000",
+        "id": 4851614681,
+        "favourites_count": 421,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/692633809200656384/joTnDm5v_normal.jpg",
+        "description": "24 yrs old American Patriot. NSSAR member. 7th Great Grand Parents Captain David Brown and Col. John Buttrick. The Revolutionary War. April 19 1775. #Trump2016",
+        "id_str": "4851614681",
+        "profile_sidebar_border_color": "000000",
+        "protected": false,
+        "default_profile_image": false,
+        "contributors_enabled": false,
+        "profile_text_color": "000000",
+        "location": "Maine, USA",
+        "statuses_count": 2308,
+        "verified": false,
+        "friends_count": 1391,
+        "is_translator": false,
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_sidebar_fill_color": "000000"
+    },
+    "text": "RT @HeidiAlpine: @dmartosko Cruz video found.....racing from the scene.... #cruzsexscandal https://t.co/zuAPZfQDk3",
+    "extended_entities": {
+        "media": [
+            {
+                "source_user_id_str": "932568674",
+                "source_user_id": 932568674,
+                "display_url": "pic.twitter.com/zuAPZfQDk3",
+                "media_url": "http://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                "source_status_id": 714656471963688960,
+                "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                "id_str": "714656417991536640",
+                "source_status_id_str": "714656471963688960",
+                "id": 714656417991536640,
+                "type": "animated_gif",
+                "indices": [
+                    91,
+                    114
+                ],
+                "url": "https://t.co/zuAPZfQDk3",
+                "sizes": {
+                    "large": {
+                        "w": 500,
+                        "resize": "fit",
+                        "h": 290
+                    },
+                    "medium": {
+                        "w": 500,
+                        "resize": "fit",
+                        "h": 290
+                    },
+                    "small": {
+                        "w": 340,
+                        "resize": "fit",
+                        "h": 197
+                    },
+                    "thumb": {
+                        "w": 150,
+                        "resize": "crop",
+                        "h": 150
+                    }
+                },
+                "video_info": {
+                    "variants": [
+                        {
+                            "content_type": "video/mp4",
+                            "bitrate": 0,
+                            "url": "https://pbs.twimg.com/tweet_video/Cer4OcrWsAAh-9p.mp4"
+                        }
+                    ],
+                    "aspect_ratio": [
+                        50,
+                        29
+                    ]
+                },
+                "expanded_url": "http://twitter.com/HeidiAlpine/status/714656471963688960/photo/1"
+            }
+        ]
+    },
+    "in_reply_to_status_id": null,
+    "entities": {
+        "media": [
+            {
+                "source_user_id_str": "932568674",
+                "source_user_id": 932568674,
+                "display_url": "pic.twitter.com/zuAPZfQDk3",
+                "media_url": "http://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                "source_status_id": 714656471963688960,
+                "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                "id_str": "714656417991536640",
+                "source_status_id_str": "714656471963688960",
+                "id": 714656417991536640,
+                "type": "photo",
+                "indices": [
+                    91,
+                    114
+                ],
+                "url": "https://t.co/zuAPZfQDk3",
+                "sizes": {
+                    "large": {
+                        "w": 500,
+                        "resize": "fit",
+                        "h": 290
+                    },
+                    "medium": {
+                        "w": 500,
+                        "resize": "fit",
+                        "h": 290
+                    },
+                    "small": {
+                        "w": 340,
+                        "resize": "fit",
+                        "h": 197
+                    },
+                    "thumb": {
+                        "w": 150,
+                        "resize": "crop",
+                        "h": 150
+                    }
+                },
+                "expanded_url": "http://twitter.com/HeidiAlpine/status/714656471963688960/photo/1"
+            }
+        ],
+        "user_mentions": [
+            {
+                "id": 932568674,
+                "indices": [
+                    3,
+                    15
+                ],
+                "screen_name": "HeidiAlpine",
+                "id_str": "932568674",
+                "name": "Heidi"
+            },
+            {
+                "id": 38497702,
+                "indices": [
+                    17,
+                    27
+                ],
+                "screen_name": "dmartosko",
+                "id_str": "38497702",
+                "name": "David Martosko"
+            }
+        ],
+        "urls": [],
+        "symbols": [],
+        "hashtags": [
+            {
+                "text": "cruzsexscandal",
+                "indices": [
+                    75,
+                    90
+                ]
+            }
+        ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "is_quote_status": false,
+    "id": 714960401977319424,
+    "favorite_count": 0,
+    "retweeted_status": {
+        "in_reply_to_user_id": 38497702,
+        "created_at": "Tue Mar 29 03:32:35 +0000 2016",
+        "filter_level": "low",
+        "truncated": false,
+        "possibly_sensitive": false,
+        "user": {
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/932568674/1353367156",
+            "created_at": "Wed Nov 07 17:45:25 +0000 2012",
+            "utc_offset": null,
+            "geo_enabled": false,
+            "notifications": null,
+            "lang": "en",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme4/bg.gif",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/654384398469476352/JNoe0tQz_normal.jpg",
+            "time_zone": null,
+            "listed_count": 22,
+            "screen_name": "HeidiAlpine",
+            "url": null,
+            "profile_background_tile": false,
+            "followers_count": 1004,
+            "profile_link_color": "0078B8",
+            "default_profile": false,
+            "name": "Heidi",
+            "follow_request_sent": null,
+            "following": null,
+            "profile_use_background_image": true,
+            "profile_background_color": "009AB9",
+            "id": 932568674,
+            "favourites_count": 17277,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/654384398469476352/JNoe0tQz_normal.jpg",
+            "description": "Ski-Travel-Foodie-Lab Service Dogs-Search & Rescue [Ski-Reise Foodie Hunde Suchen Rettungs]",
+            "id_str": "932568674",
+            "profile_sidebar_border_color": "FFFFFF",
+            "protected": false,
+            "default_profile_image": false,
+            "contributors_enabled": false,
+            "profile_text_color": "3C3940",
+            "location": "BC EU Ski Urlaubsort",
+            "statuses_count": 5448,
+            "verified": false,
+            "friends_count": 1030,
+            "is_translator": false,
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme4/bg.gif",
+            "profile_sidebar_fill_color": "95E8EC"
+        },
+        "text": "@dmartosko Cruz video found.....racing from the scene.... #cruzsexscandal https://t.co/zuAPZfQDk3",
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 714656417991536640,
+                    "type": "animated_gif",
+                    "indices": [
+                        74,
+                        97
+                    ],
+                    "display_url": "pic.twitter.com/zuAPZfQDk3",
+                    "media_url": "http://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                    "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                    "sizes": {
+                        "large": {
+                            "w": 500,
+                            "resize": "fit",
+                            "h": 290
+                        },
+                        "medium": {
+                            "w": 500,
+                            "resize": "fit",
+                            "h": 290
+                        },
+                        "small": {
+                            "w": 340,
+                            "resize": "fit",
+                            "h": 197
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "resize": "crop",
+                            "h": 150
+                        }
+                    },
+                    "video_info": {
+                        "variants": [
+                            {
+                                "content_type": "video/mp4",
+                                "bitrate": 0,
+                                "url": "https://pbs.twimg.com/tweet_video/Cer4OcrWsAAh-9p.mp4"
+                            }
+                        ],
+                        "aspect_ratio": [
+                            50,
+                            29
+                        ]
+                    },
+                    "expanded_url": "http://twitter.com/HeidiAlpine/status/714656471963688960/photo/1",
+                    "id_str": "714656417991536640",
+                    "url": "https://t.co/zuAPZfQDk3"
+                }
+            ]
+        },
+        "in_reply_to_status_id": 714550665838731264,
+        "entities": {
+            "media": [
+                {
+                    "id": 714656417991536640,
+                    "type": "photo",
+                    "indices": [
+                        74,
+                        97
+                    ],
+                    "display_url": "pic.twitter.com/zuAPZfQDk3",
+                    "media_url": "http://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                    "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                    "sizes": {
+                        "large": {
+                            "w": 500,
+                            "resize": "fit",
+                            "h": 290
+                        },
+                        "medium": {
+                            "w": 500,
+                            "resize": "fit",
+                            "h": 290
+                        },
+                        "small": {
+                            "w": 340,
+                            "resize": "fit",
+                            "h": 197
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "resize": "crop",
+                            "h": 150
+                        }
+                    },
+                    "expanded_url": "http://twitter.com/HeidiAlpine/status/714656471963688960/photo/1",
+                    "id_str": "714656417991536640",
+                    "url": "https://t.co/zuAPZfQDk3"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id": 38497702,
+                    "indices": [
+                        0,
+                        10
+                    ],
+                    "screen_name": "dmartosko",
+                    "id_str": "38497702",
+                    "name": "David Martosko"
+                }
+            ],
+            "urls": [],
+            "symbols": [],
+            "hashtags": [
+                {
+                    "text": "cruzsexscandal",
+                    "indices": [
+                        58,
+                        73
+                    ]
+                }
+            ]
+        },
+        "favorited": false,
+        "retweeted": false,
+        "is_quote_status": false,
+        "id": 714656471963688960,
+        "favorite_count": 20,
+        "in_reply_to_status_id_str": "714550665838731264",
+        "in_reply_to_user_id_str": "38497702",
+        "id_str": "714656471963688960",
+        "in_reply_to_screen_name": "dmartosko",
+        "coordinates": null,
+        "lang": "en",
+        "place": null,
+        "contributors": null,
+        "geo": null,
+        "retweet_count": 15,
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>"
+    },
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id_str": null,
+    "id_str": "714960401977319424",
+    "in_reply_to_screen_name": null,
+    "coordinates": null,
+    "lang": "en",
+    "place": null,
+    "contributors": null,
+    "geo": null,
+    "retweet_count": 0,
+    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>"
+},
+{
+    "in_reply_to_user_id": null,
+    "created_at": "Tue Mar 29 23:40:17 +0000 2016",
+    "filter_level": "low",
+    "in_reply_to_user_id_str": null,
+    "truncated": false,
+    "possibly_sensitive": false,
+    "timestamp_ms": "1459294817917",
+    "user": {
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/120160631/1453134805",
+        "created_at": "Fri Mar 05 17:02:32 +0000 2010",
+        "utc_offset": 7200,
+        "geo_enabled": true,
+        "notifications": null,
+        "lang": "en",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme18/bg.gif",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/709053755782619136/Uj7gZl9x_normal.jpg",
+        "time_zone": "Rome",
+        "listed_count": 20,
+        "screen_name": "djal1keq",
+        "url": "http://www.facebook.com/lyrical.warfare",
+        "profile_background_tile": true,
+        "followers_count": 400,
+        "profile_link_color": "3B94D9",
+        "default_profile": false,
+        "name": "Mi Ri",
+        "follow_request_sent": null,
+        "following": null,
+        "profile_use_background_image": true,
+        "profile_background_color": "ACDED6",
+        "id": 120160631,
+        "favourites_count": 221,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/709053755782619136/Uj7gZl9x_normal.jpg",
+        "description": "\u201cSometimes, saying \u201cGoodbye\u201d is like saying \u201cLet\u2019s stop hurting each other\u201d.",
+        "id_str": "120160631",
+        "profile_sidebar_border_color": "000000",
+        "protected": false,
+        "default_profile_image": false,
+        "contributors_enabled": false,
+        "profile_text_color": "000000",
+        "location": "(\u2665\u203f\u2665)  Albania (\u2665\u203f\u2665) ",
+        "statuses_count": 118946,
+        "verified": false,
+        "friends_count": 450,
+        "is_translator": false,
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme18/bg.gif",
+        "profile_sidebar_fill_color": "000000"
+    },
+    "text": "Njihuni me Zonj\u00ebn Trump !!! | Ekskluzive https://t.co/4KmsQi47VD",
+    "in_reply_to_status_id": null,
+    "entities": {
+        "user_mentions": [],
+        "urls": [
+            {
+                "indices": [
+                    41,
+                    64
+                ],
+                "url": "https://t.co/4KmsQi47VD",
+                "display_url": "fb.me/3ZOkPfHWn",
+                "expanded_url": "http://fb.me/3ZOkPfHWn"
+            }
+        ],
+        "symbols": [],
+        "hashtags": []
+    },
+    "retweeted": false,
+    "is_quote_status": false,
+    "id": 714960402426
+},
+{
+    "filter_level": "low",
+    "in_reply_to_user_id_str": null,
+    "truncated": false,
+    "user": {
+        "listed_count": 4,
+        "screen_name": "charliesanchez2",
+        "url": null,
+        "profile_background_tile": true,
+        "followers_count": 59,
+        "profile_link_color": "F00000",
+        "default_profile": false,
+        "name": "Charlie",
+        "follow_request_sent": null,
+        "following": null,
+        "profile_use_background_image": true,
+        "profile_background_color": "C0DEED",
+        "id": 169994273,
+        "favourites_count": 81,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/455648834608306176/iU0u-qU1_normal.jpeg",
+        "description": "I believe in God, the Constitution, and Capitalism. \n\nNo, I'm not Charlie Sanchez, the politician.",
+        "id_str": "169994273",
+        "profile_sidebar_border_color": "C0DEED",
+        "protected": false,
+        "default_profile_image": false,
+        "contributors_enabled": false,
+        "profile_text_color": "333333",
+        "location": "California",
+        "statuses_count": 1782,
+        "verified": false,
+        "friends_count": 103,
+        "is_translator": false,
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/190125479/26740_375485986614_595536614_4295006_6429957_n.jpg",
+        "profile_sidebar_fill_color": "EFEFEF"
+    },
+    "text": "Stop asking Bernie supporters if they\u2019ll vote for Hillary against Trump. We got a plan to beat Trump already. Called Bernie. Check him out.",
+    "in_reply_to_status_id": null,
+    "entities": {
+        "user_mentions": [],
+        "urls": [],
+        "symbols": [],
+        "hashtags": []
+    },
+    "retweeted": false,
+    "is_quote_status": false,
+    "id": 714810789681618944,
+    "favorite_count": 131,
+    "in_reply_to_status_id_str": null,
+    "favorited": false,
+    "id_str": "714810789681618944",
+    "in_reply_to_screen_name": null,
+    "coordinates": null,
+    "lang": "en",
+    "place": null,
+    "contributors": null,
+    "geo": null,
+    "retweet_count": 75,
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>"
+},
+{
+    "in_reply_to_user_id": null,
+    "created_at": "Tue Mar 29 23:40:17 +0000 2016",
+    "filter_level": "low",
+    "truncated": false,
+    "possibly_sensitive": false,
+    "timestamp_ms": "1459294817758",
+    "user": {
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/2290155049/1456586630",
+        "created_at": "Mon Jan 13 20:05:32 +0000 2014",
+        "utc_offset": 3600,
+        "geo_enabled": false,
+        "notifications": null,
+        "lang": "en",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/700888033558720512/KexOIMN4_normal.jpg",
+        "time_zone": "London",
+        "listed_count": 71,
+        "screen_name": "greyman25",
+        "url": "http://www.get-saved-today.webnode.com",
+        "profile_background_tile": false,
+        "followers_count": 578,
+        "profile_link_color": "1B95E0",
+        "default_profile": false,
+        "name": "Born in Britain",
+        "follow_request_sent": null,
+        "following": null,
+        "profile_use_background_image": false,
+        "profile_background_color": "000000",
+        "id": 2290155049,
+        "favourites_count": 3961,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/700888033558720512/KexOIMN4_normal.jpg",
+        "description": "Ex con, dry alcoholic, non smoker, love Jesus Christ &  Britain. Internet evangelist. Pro Israel.",
+        "id_str": "2290155049",
+        "profile_sidebar_border_color": "000000",
+        "protected": false,
+        "default_profile_image": false,
+        "contributors_enabled": false,
+        "profile_text_color": "000000",
+        "location": "Yorkshire and The Humber",
+        "statuses_count": 23034,
+        "verified": false,
+        "friends_count": 502,
+        "is_translator": false,
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_sidebar_fill_color": "000000"
+    },
+    "text": "RT @bpolitics: .@krollbondrating's Christopher Whalen says Clinton is the weakest Dem candidate in 50 years https://t.co/pLk7rvoRSn https:/\u2026",
+    "extended_entities": {
+        "media": [
+            {
+                "source_user_id_str": "564111558",
+                "source_user_id": 564111558,
+                "display_url": "pic.twitter.com/lJcw0N8EZf",
+                "media_url": "http://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                "source_status_id": 714950482930896897,
+                "media_url_https": "https://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                "id_str": "714950482331041795",
+                "source_status_id_str": "714950482930896897",
+                "id": 714950482331041795,
+                "type": "photo",
+                "indices": [
+                    139,
+                    140
+                ],
+                "url": "https://t.co/lJcw0N8EZf",
+                "sizes": {
+                    "large": {
+                        "w": 1024,
+                        "resize": "fit",
+                        "h": 691
+                    },
+                    "medium": {
+                        "w": 600,
+                        "resize": "fit",
+                        "h": 405
+                    },
+                    "small": {
+                        "w": 340,
+                        "resize": "fit",
+                        "h": 229
+                    },
+                    "thumb": {
+                        "w": 150,
+                        "resize": "crop",
+                        "h": 150
+                    }
+                },
+                "expanded_url": "http://twitter.com/bpolitics/status/714950482930896897/photo/1"
+            }
+        ]
+    },
+    "in_reply_to_status_id": null,
+    "entities": {
+        "media": [
+            {
+                "source_user_id_str": "564111558",
+                "source_user_id": 564111558,
+                "display_url": "pic.twitter.com/lJcw0N8EZf",
+                "media_url": "http://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                "source_status_id": 714950482930896897,
+                "media_url_https": "https://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                "id_str": "714950482331041795",
+                "source_status_id_str": "714950482930896897",
+                "id": 714950482331041795,
+                "type": "photo",
+                "indices": [
+                    139,
+                    140
+                ],
+                "url": "https://t.co/lJcw0N8EZf",
+                "sizes": {
+                    "large": {
+                        "w": 1024,
+                        "resize": "fit",
+                        "h": 691
+                    },
+                    "medium": {
+                        "w": 600,
+                        "resize": "fit",
+                        "h": 405
+                    },
+                    "small": {
+                        "w": 340,
+                        "resize": "fit",
+                        "h": 229
+                    },
+                    "thumb": {
+                        "w": 150,
+                        "resize": "crop",
+                        "h": 150
+                    }
+                },
+                "expanded_url": "http://twitter.com/bpolitics/status/714950482930896897/photo/1"
+            }
+        ],
+        "user_mentions": [
+            {
+                "id": 564111558,
+                "indices": [
+                    3,
+                    13
+                ],
+                "screen_name": "bpolitics",
+                "id_str": "564111558",
+                "name": "Bloomberg Politics"
+            },
+            {
+                "id": 1963523857,
+                "indices": [
+                    16,
+                    32
+                ],
+                "screen_name": "krollbondrating",
+                "id_str": "1963523857",
+                "name": "Kroll Bond Ratings"
+            }
+        ],
+        "urls": [
+            {
+                "indices": [
+                    108,
+                    131
+                ],
+                "url": "https://t.co/pLk7rvoRSn",
+                "display_url": "bloom.bg/1RETAha",
+                "expanded_url": "http://bloom.bg/1RETAha"
+            }
+        ],
+        "symbols": [],
+        "hashtags": []
+    },
+    "favorited": false,
+    "retweeted": false,
+    "is_quote_status": false,
+    "id": 714960401759387648,
+    "favorite_count": 0,
+    "retweeted_status": {
+        "in_reply_to_user_id": null,
+        "created_at": "Tue Mar 29 23:00:52 +0000 2016",
+        "filter_level": "low",
+        "truncated": false,
+        "possibly_sensitive": false,
+        "user": {
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/564111558/1449075077",
+            "created_at": "Thu Apr 26 20:50:01 +0000 2012",
+            "utc_offset": -14400,
+            "geo_enabled": false,
+            "notifications": null,
+            "lang": "en",
+            "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/540884395/Bloomberg_twback_orng.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/714804098890133504/cUO4gD1A_normal.jpg",
+            "time_zone": "Eastern Time (US & Canada)",
+            "listed_count": 1788,
+            "screen_name": "bpolitics",
+            "url": "http://www.bloombergpolitics.com",
+            "profile_background_tile": false,
+            "followers_count": 52842,
+            "profile_link_color": "0084B4",
+            "default_profile": false,
+            "name": "Bloomberg Politics",
+            "follow_request_sent": null,
+            "following": null,
+            "profile_use_background_image": true,
+            "profile_background_color": "C0DEED",
+            "id": 564111558,
+            "favourites_count": 114,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/714804098890133504/cUO4gD1A_normal.jpg",
+            "description": "Bloomberg Politics is the spot for smart, non-partisan political coverage + analysis. #WADR with @jheil and @MarkHalperin airs at 5pm ET on @BloombergTV.",
+            "id_str": "564111558",
+            "profile_sidebar_border_color": "C0DEED",
+            "protected": false,
+            "default_profile_image": false,
+            "contributors_enabled": false,
+            "profile_text_color": "333333",
+            "location": null,
+            "statuses_count": 36188,
+            "verified": true,
+            "friends_count": 539,
+            "is_translator": false,
+            "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/540884395/Bloomberg_twback_orng.jpg",
+            "profile_sidebar_fill_color": "DDEEF6"
+        },
+        "text": ".@krollbondrating's Christopher Whalen says Clinton is the weakest Dem candidate in 50 years https://t.co/pLk7rvoRSn https://t.co/lJcw0N8EZf",
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 714950482331041795,
+                    "type": "photo",
+                    "indices": [
+                        117,
+                        140
+                    ],
+                    "display_url": "pic.twitter.com/lJcw0N8EZf",
+                    "media_url": "http://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                    "sizes": {
+                        "large": {
+                            "w": 1024,
+                            "resize": "fit",
+                            "h": 691
+                        },
+                        "medium": {
+                            "w": 600,
+                            "resize": "fit",
+                            "h": 405
+                        },
+                        "small": {
+                            "w": 340,
+                            "resize": "fit",
+                            "h": 229
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "resize": "crop",
+                            "h": 150
+                        }
+                    },
+                    "expanded_url": "http://twitter.com/bpolitics/status/714950482930896897/photo/1",
+                    "id_str": "714950482331041795",
+                    "url": "https://t.co/lJcw0N8EZf"
+                }
+            ]
+        },
+        "in_reply_to_status_id": null,
+        "entities": {
+            "media": [
+                {
+                    "id": 714950482331041795,
+                    "type": "photo",
+                    "indices": [
+                        117,
+                        140
+                    ],
+                    "display_url": "pic.twitter.com/lJcw0N8EZf",
+                    "media_url": "http://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/CewDrPtWAAMerOm.jpg",
+                    "sizes": {
+                        "large": {
+                            "w": 1024,
+                            "resize": "fit",
+                            "h": 691
+                        },
+                        "medium": {
+                            "w": 600,
+                            "resize": "fit",
+                            "h": 405
+                        },
+                        "small": {
+                            "w": 340,
+                            "resize": "fit",
+                            "h": 229
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "resize": "crop",
+                            "h": 150
+                        }
+                    },
+                    "expanded_url": "http://twitter.com/bpolitics/status/714950482930896897/photo/1",
+                    "id_str": "714950482331041795",
+                    "url": "https://t.co/lJcw0N8EZf"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id": 1963523857,
+                    "indices": [
+                        1,
+                        17
+                    ],
+                    "screen_name": "krollbondrating",
+                    "id_str": "1963523857",
+                    "name": "Kroll Bond Ratings"
+                }
+            ],
+            "urls": [
+                {
+                    "indices": [
+                        93,
+                        116
+                    ],
+                    "url": "https://t.co/pLk7rvoRSn",
+                    "display_url": "bloom.bg/1RETAha",
+                    "expanded_url": "http://bloom.bg/1RETAha"
+                }
+            ],
+            "symbols": [],
+            "hashtags": []
+        },
+        "favorited": false,
+        "retweeted": false,
+        "is_quote_status": false,
+        "id": 714950482930896897,
+        "favorite_count": 40,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id_str": null,
+        "id_str": "714950482930896897",
+        "in_reply_to_screen_name": null,
+        "coordinates": null,
+        "lang": "en",
+        "place": null,
+        "contributors": null,
+        "geo": null,
+        "retweet_count": 31,
+        "source": "<a href=\"http://www.hootsuite.com\" rel=\"nofollow\">Hootsuite</a>"
+    },
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id_str": null,
+    "id_str": "714960401759387648",
+    "in_reply_to_screen_name": null,
+    "coordinates": null,
+    "lang": "en",
+    "place": null,
+    "contributors": null,
+    "geo": null,
+    "retweet_count": 0,
+    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>"
+},
+{
+    "in_reply_to_user_id": null,
+    "created_at": "Tue Mar 29 23:40:17 +0000 2016",
+    "filter_level": "low",
+    "truncated": false,
+    "possibly_sensitive": false,
+    "timestamp_ms": "1459294817810",
+    "user": {
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/4851614681/1457054038",
+        "created_at": "Wed Jan 27 00:07:53 +0000 2016",
+        "utc_offset": null,
+        "geo_enabled": false,
+        "notifications": null,
+        "lang": "en",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/692633809200656384/joTnDm5v_normal.jpg",
+        "time_zone": null,
+        "listed_count": 16,
+        "screen_name": "blazebandit2015",
+        "url": null,
+        "profile_background_tile": false,
+        "followers_count": 797,
+        "profile_link_color": "E81C1F",
+        "default_profile": false,
+        "name": "Ourn Raphael Brown",
+        "follow_request_sent": null,
+        "following": null,
+        "profile_use_background_image": false,
+        "profile_background_color": "000000",
+        "id": 4851614681,
+        "favourites_count": 421,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/692633809200656384/joTnDm5v_normal.jpg",
+        "description": "24 yrs old American Patriot. NSSAR member. 7th Great Grand Parents Captain David Brown and Col. John Buttrick. The Revolutionary War. April 19 1775. #Trump2016",
+        "id_str": "4851614681",
+        "profile_sidebar_border_color": "000000",
+        "protected": false,
+        "default_profile_image": false,
+        "contributors_enabled": false,
+        "profile_text_color": "000000",
+        "location": "Maine, USA",
+        "statuses_count": 2308,
+        "verified": false,
+        "friends_count": 1391,
+        "is_translator": false,
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_sidebar_fill_color": "000000"
+    },
+    "text": "RT @HeidiAlpine: @dmartosko Cruz video found.....racing from the scene.... #cruzsexscandal https://t.co/zuAPZfQDk3",
+    "extended_entities": {
+        "media": [
+            {
+                "source_user_id_str": "932568674",
+                "source_user_id": 932568674,
+                "display_url": "pic.twitter.com/zuAPZfQDk3",
+                "media_url": "http://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                "source_status_id": 714656471963688960,
+                "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                "id_str": "714656417991536640",
+                "source_status_id_str": "714656471963688960",
+                "id": 714656417991536640,
+                "type": "animated_gif",
+                "indices": [
+                    91,
+                    114
+                ],
+                "url": "https://t.co/zuAPZfQDk3",
+                "sizes": {
+                    "large": {
+                        "w": 500,
+                        "resize": "fit",
+                        "h": 290
+                    },
+                    "medium": {
+                        "w": 500,
+                        "resize": "fit",
+                        "h": 290
+                    },
+                    "small": {
+                        "w": 340,
+                        "resize": "fit",
+                        "h": 197
+                    },
+                    "thumb": {
+                        "w": 150,
+                        "resize": "crop",
+                        "h": 150
+                    }
+                },
+                "video_info": {
+                    "variants": [
+                        {
+                            "content_type": "video/mp4",
+                            "bitrate": 0,
+                            "url": "https://pbs.twimg.com/tweet_video/Cer4OcrWsAAh-9p.mp4"
+                        }
+                    ],
+                    "aspect_ratio": [
+                        50,
+                        29
+                    ]
+                },
+                "expanded_url": "http://twitter.com/HeidiAlpine/status/714656471963688960/photo/1"
+            }
+        ]
+    },
+    "in_reply_to_status_id": null,
+    "entities": {
+        "media": [
+            {
+                "source_user_id_str": "932568674",
+                "source_user_id": 932568674,
+                "display_url": "pic.twitter.com/zuAPZfQDk3",
+                "media_url": "http://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                "source_status_id": 714656471963688960,
+                "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                "id_str": "714656417991536640",
+                "source_status_id_str": "714656471963688960",
+                "id": 714656417991536640,
+                "type": "photo",
+                "indices": [
+                    91,
+                    114
+                ],
+                "url": "https://t.co/zuAPZfQDk3",
+                "sizes": {
+                    "large": {
+                        "w": 500,
+                        "resize": "fit",
+                        "h": 290
+                    },
+                    "medium": {
+                        "w": 500,
+                        "resize": "fit",
+                        "h": 290
+                    },
+                    "small": {
+                        "w": 340,
+                        "resize": "fit",
+                        "h": 197
+                    },
+                    "thumb": {
+                        "w": 150,
+                        "resize": "crop",
+                        "h": 150
+                    }
+                },
+                "expanded_url": "http://twitter.com/HeidiAlpine/status/714656471963688960/photo/1"
+            }
+        ],
+        "user_mentions": [
+            {
+                "id": 932568674,
+                "indices": [
+                    3,
+                    15
+                ],
+                "screen_name": "HeidiAlpine",
+                "id_str": "932568674",
+                "name": "Heidi"
+            },
+            {
+                "id": 38497702,
+                "indices": [
+                    17,
+                    27
+                ],
+                "screen_name": "dmartosko",
+                "id_str": "38497702",
+                "name": "David Martosko"
+            }
+        ],
+        "urls": [],
+        "symbols": [],
+        "hashtags": [
+            {
+                "text": "cruzsexscandal",
+                "indices": [
+                    75,
+                    90
+                ]
+            }
+        ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "is_quote_status": false,
+    "id": 714960401977319424,
+    "favorite_count": 0,
+    "retweeted_status": {
+        "in_reply_to_user_id": 38497702,
+        "created_at": "Tue Mar 29 03:32:35 +0000 2016",
+        "filter_level": "low",
+        "truncated": false,
+        "possibly_sensitive": false,
+        "user": {
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/932568674/1353367156",
+            "created_at": "Wed Nov 07 17:45:25 +0000 2012",
+            "utc_offset": null,
+            "geo_enabled": false,
+            "notifications": null,
+            "lang": "en",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme4/bg.gif",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/654384398469476352/JNoe0tQz_normal.jpg",
+            "time_zone": null,
+            "listed_count": 22,
+            "screen_name": "HeidiAlpine",
+            "url": null,
+            "profile_background_tile": false,
+            "followers_count": 1004,
+            "profile_link_color": "0078B8",
+            "default_profile": false,
+            "name": "Heidi",
+            "follow_request_sent": null,
+            "following": null,
+            "profile_use_background_image": true,
+            "profile_background_color": "009AB9",
+            "id": 932568674,
+            "favourites_count": 17277,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/654384398469476352/JNoe0tQz_normal.jpg",
+            "description": "Ski-Travel-Foodie-Lab Service Dogs-Search & Rescue [Ski-Reise Foodie Hunde Suchen Rettungs]",
+            "id_str": "932568674",
+            "profile_sidebar_border_color": "FFFFFF",
+            "protected": false,
+            "default_profile_image": false,
+            "contributors_enabled": false,
+            "profile_text_color": "3C3940",
+            "location": "BC EU Ski Urlaubsort",
+            "statuses_count": 5448,
+            "verified": false,
+            "friends_count": 1030,
+            "is_translator": false,
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme4/bg.gif",
+            "profile_sidebar_fill_color": "95E8EC"
+        },
+        "text": "@dmartosko Cruz video found.....racing from the scene.... #cruzsexscandal https://t.co/zuAPZfQDk3",
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 714656417991536640,
+                    "type": "animated_gif",
+                    "indices": [
+                        74,
+                        97
+                    ],
+                    "display_url": "pic.twitter.com/zuAPZfQDk3",
+                    "media_url": "http://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                    "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                    "sizes": {
+                        "large": {
+                            "w": 500,
+                            "resize": "fit",
+                            "h": 290
+                        },
+                        "medium": {
+                            "w": 500,
+                            "resize": "fit",
+                            "h": 290
+                        },
+                        "small": {
+                            "w": 340,
+                            "resize": "fit",
+                            "h": 197
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "resize": "crop",
+                            "h": 150
+                        }
+                    },
+                    "video_info": {
+                        "variants": [
+                            {
+                                "content_type": "video/mp4",
+                                "bitrate": 0,
+                                "url": "https://pbs.twimg.com/tweet_video/Cer4OcrWsAAh-9p.mp4"
+                            }
+                        ],
+                        "aspect_ratio": [
+                            50,
+                            29
+                        ]
+                    },
+                    "expanded_url": "http://twitter.com/HeidiAlpine/status/714656471963688960/photo/1",
+                    "id_str": "714656417991536640",
+                    "url": "https://t.co/zuAPZfQDk3"
+                }
+            ]
+        },
+        "in_reply_to_status_id": 714550665838731264,
+        "entities": {
+            "media": [
+                {
+                    "id": 714656417991536640,
+                    "type": "photo",
+                    "indices": [
+                        74,
+                        97
+                    ],
+                    "display_url": "pic.twitter.com/zuAPZfQDk3",
+                    "media_url": "http://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                    "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/Cer4OcrWsAAh-9p.jpg",
+                    "sizes": {
+                        "large": {
+                            "w": 500,
+                            "resize": "fit",
+                            "h": 290
+                        },
+                        "medium": {
+                            "w": 500,
+                            "resize": "fit",
+                            "h": 290
+                        },
+                        "small": {
+                            "w": 340,
+                            "resize": "fit",
+                            "h": 197
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "resize": "crop",
+                            "h": 150
+                        }
+                    },
+                    "expanded_url": "http://twitter.com/HeidiAlpine/status/714656471963688960/photo/1",
+                    "id_str": "714656417991536640",
+                    "url": "https://t.co/zuAPZfQDk3"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id": 38497702,
+                    "indices": [
+                        0,
+                        10
+                    ],
+                    "screen_name": "dmartosko",
+                    "id_str": "38497702",
+                    "name": "David Martosko"
+                }
+            ],
+            "urls": [],
+            "symbols": [],
+            "hashtags": [
+                {
+                    "text": "cruzsexscandal",
+                    "indices": [
+                        58,
+                        73
+                    ]
+                }
+            ]
+        },
+        "favorited": false,
+        "retweeted": false,
+        "is_quote_status": false,
+        "id": 714656471963688960,
+        "favorite_count": 20,
+        "in_reply_to_status_id_str": "714550665838731264",
+        "in_reply_to_user_id_str": "38497702",
+        "id_str": "714656471963688960",
+        "in_reply_to_screen_name": "dmartosko",
+        "coordinates": null,
+        "lang": "en",
+        "place": null,
+        "contributors": null,
+        "geo": null,
+        "retweet_count": 15,
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>"
+    },
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id_str": null,
+    "id_str": "714960401977319424",
+    "in_reply_to_screen_name": null,
+    "coordinates": null,
+    "lang": "en",
+    "place": null,
+    "contributors": null,
+    "geo": null,
+    "retweet_count": 0,
+    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>"
+},
+{
+    "in_reply_to_user_id": null,
+    "created_at": "Tue Mar 29 23:40:17 +0000 2016",
+    "filter_level": "low",
+    "in_reply_to_user_id_str": null,
+    "truncated": false,
+    "possibly_sensitive": false,
+    "timestamp_ms": "1459294817917",
+    "user": {
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/120160631/1453134805",
+        "created_at": "Fri Mar 05 17:02:32 +0000 2010",
+        "utc_offset": 7200,
+        "geo_enabled": true,
+        "notifications": null,
+        "lang": "en",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme18/bg.gif",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/709053755782619136/Uj7gZl9x_normal.jpg",
+        "time_zone": "Rome",
+        "listed_count": 20,
+        "screen_name": "djal1keq",
+        "url": "http://www.facebook.com/lyrical.warfare",
+        "profile_background_tile": true,
+        "followers_count": 400,
+        "profile_link_color": "3B94D9",
+        "default_profile": false,
+        "name": "Mi Ri",
+        "follow_request_sent": null,
+        "following": null,
+        "profile_use_background_image": true,
+        "profile_background_color": "ACDED6",
+        "id": 120160631,
+        "favourites_count": 221,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/709053755782619136/Uj7gZl9x_normal.jpg",
+        "description": "\u201cSometimes, saying \u201cGoodbye\u201d is like saying \u201cLet\u2019s stop hurting each other\u201d.",
+        "id_str": "120160631",
+        "profile_sidebar_border_color": "000000",
+        "protected": false,
+        "default_profile_image": false,
+        "contributors_enabled": false,
+        "profile_text_color": "000000",
+        "location": "(\u2665\u203f\u2665)  Albania (\u2665\u203f\u2665) ",
+        "statuses_count": 118946,
+        "verified": false,
+        "friends_count": 450,
+        "is_translator": false,
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme18/bg.gif",
+        "profile_sidebar_fill_color": "000000"
+    },
+    "text": "Njihuni me Zonj\u00ebn Trump !!! | Ekskluzive https://t.co/4KmsQi47VD",
+    "in_reply_to_status_id": null,
+    "entities": {
+        "user_mentions": [],
+        "urls": [
+            {
+                "indices": [
+                    41,
+                    64
+                ],
+                "url": "https://t.co/4KmsQi47VD",
+                "display_url": "fb.me/3ZOkPfHWn",
+                "expanded_url": "http://fb.me/3ZOkPfHWn"
+            }
+        ],
+        "symbols": [],
+        "hashtags": []
+    },
+    "retweeted": false,
+    "is_quote_status": false,
+    "id": 714960402426
+},
+{
+    "filter_level": "low",
+    "in_reply_to_user_id_str": null,
+    "truncated": false,
+    "user": {
+        "listed_count": 4,
+        "screen_name": "charliesanchez2",
+        "url": null,
+        "profile_background_tile": true,
+        "followers_count": 59,
+        "profile_link_color": "F00000",
+        "default_profile": false,
+        "name": "Charlie",
+        "follow_request_sent": null,
+        "following": null,
+        "profile_use_background_image": true,
+        "profile_background_color": "C0DEED",
+        "id": 169994273,
+        "favourites_count": 81,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/455648834608306176/iU0u-qU1_normal.jpeg",
+        "description": "I believe in God, the Constitution, and Capitalism. \n\nNo, I'm not Charlie Sanchez, the politician.",
+        "id_str": "169994273",
+        "profile_sidebar_border_color": "C0DEED",
+        "protected": false,
+        "default_profile_image": false,
+        "contributors_enabled": false,
+        "profile_text_color": "333333",
+        "location": "California",
+        "statuses_count": 1782,
+        "verified": false,
+        "friends_count": 103,
+        "is_translator": false,
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/190125479/26740_375485986614_595536614_4295006_6429957_n.jpg",
+        "profile_sidebar_fill_color": "EFEFEF"
+    },
+    "text": "Stop asking Bernie supporters if they\u2019ll vote for Hillary against Trump. We got a plan to beat Trump already. Called Bernie. Check him out.",
+    "in_reply_to_status_id": null,
+    "entities": {
+        "user_mentions": [],
+        "urls": [],
+        "symbols": [],
+        "hashtags": []
+    },
+    "retweeted": false,
+    "is_quote_status": false,
+    "id": 714810789681618944,
+    "favorite_count": 131,
+    "in_reply_to_status_id_str": null,
+    "favorited": false,
+    "id_str": "714810789681618944",
+    "in_reply_to_screen_name": null,
+    "coordinates": null,
+    "lang": "en",
+    "place": null,
+    "contributors": null,
+    "geo": null,
+    "retweet_count": 75,
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>"
+}
+]
