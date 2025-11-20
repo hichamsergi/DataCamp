@@ -23,6 +23,7 @@ El proyecto pretende realizar una recolecta de datos de un documento para poder 
     |	2 | 37 | services | married	| high_school |	0 |	1 |
     |	3 | 40 | admin_ | married | basic_6y |0 | 0 |
     |	4 | 56 | services | married | high_school | 0 | 0 |
+    |...|...|...|...|...|...|...|
 
 
 - ## `campaign.csv`:
@@ -46,6 +47,7 @@ El proyecto pretende realizar una recolecta de datos de un documento para poder 
     | 2	| 1	| 226 | 0 |	0 |	0 |	2022-May-23 |
     | 3	| 1	| 151 | 0 |	0 |	0 |	2022-May-27 |
     | 4 | 1	| 307 | 0 |	0 |	0 |	2022-May-3 |
+    |...|...|...|...|...|...|...|
 
 
 - ## `economics.csv`:
@@ -65,6 +67,7 @@ El proyecto pretende realizar una recolecta de datos de un documento para poder 
     | 2	| 93.994 | 4.857 |
     | 3	| 93.994 | 4.857 |
     | 4 | 93.994 | 4.857 |
+    |...|...|...|
 
 
 ## Anotaciones del proyecto:
