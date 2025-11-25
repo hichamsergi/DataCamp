@@ -21,8 +21,8 @@ El objetivo es consolidar conocimientos en Python, SQL, sistemas de datos y herr
 | [Introduction to Python](https://github.com/hichamsergi/DataCamp/tree/main/Introduction%20to%20Python)                      | ✅ **Completado** | Sintaxis básica · funciones · estructuras de datos |
 | [Intermediate Python](https://github.com/hichamsergi/DataCamp/tree/main/Intermediate%20Python)                         | ✅ **Completado** | List comprehensions · manejo de errores · módulos  |
 | [Introduction to Importing Data in Python](https://github.com/hichamsergi/DataCamp/tree/main/Introduction%20to%20Importing%20Data%20in%20Python)    | ✅ **Completado** | Importación de datos · formatos comunes · pandas   |
-| [Intermediate Importing Data in Python](https://github.com/hichamsergi/DataCamp/tree/main/Intermediate%20Importing%20Data%20in%20Python)       | 🔄 *En progreso* | Técnicas avanzadas de importación · optimización   |
-| Introduction to APIs in Python              | ⏳ Pendiente | Consumo de APIs · requests · JSON                  |
+| [Intermediate Importing Data in Python](https://github.com/hichamsergi/DataCamp/tree/main/Intermediate%20Importing%20Data%20in%20Python)       | ✅ **Completado** | Técnicas avanzadas de importación · optimización   |
+| Introduction to APIs in Python              | 🔄 *En progreso* | Consumo de APIs · requests · JSON                  |
 | Cleaning Data in Python                     | ⏳ Pendiente | Limpieza · valores nulos · normalización de datos  |
 | Writing Efficient Python Code               | ⏳ Pendiente | Optimización · complejidad · buenas prácticas      |
 | Streamlined Data Ingestion with pandas      | ⏳ Pendiente | Ingesta de datos · pipelines básicos con pandas    |
@@ -38,7 +38,7 @@ El objetivo es consolidar conocimientos en Python, SQL, sistemas de datos y herr
 
 | Proyecto                                    | Estado | Objetivo principal |
 |---------------------------------------------|---------|---------------------------------------------|
-| Cleaning Bank Marketing Campaign Data       | ⏳ Pendiente | Limpieza y preparación de datos reales       |
+| [Cleaning Bank Marketing Campaign Data](https://github.com/hichamsergi/DataCamp/tree/main/Cleaning%20Bank%20Marketing%20Campaign%20Data)       | ✅ **Completado** | Limpieza y preparación de datos reales       |
 | Performing a Code Review                    | ⏳ Pendiente | Aplicar buenas prácticas de ingeniería de software |
 | Building a Retail Data Pipeline             | ⏳ Pendiente | Construcción de un pipeline de datos de retail |
 | Cleaning Data in Python                     | ⏳ Pendiente | Técnicas avanzadas de limpieza con Python    |
