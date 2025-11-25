@@ -55,7 +55,7 @@ file.close()
 
 Como se puede ver en el fragmento de código anterior, al final utilizamos un cierre, `file.close()`. El cierre finaliza la función `open`, por lo que podemos decir que cerramos el fichero que hemos abierto. De esta forma, no solo nos aseguramos de que todos los datos se guarden correctamente, sino que también ejercemos una buena práctica de programación en Python.
 
-Pese a ello, si somos un poco perezosos y no queremos tener que acordarnos de cerrar todos los documentos que abramos, podemos hacerlo con una declaración `with`. está nos permite ejecutar comandos dentro de la declaración, con el documento abierto, y además sin necesidad de tener que acordarnos de cerrar el documento una vez estamos fuera de la declaración:
+Pese a ello, si somos un poco perezosos y no queremos tener que acordarnos de cerrar todos los documentos que abramos, podemos hacerlo con una declaración `with`. Está, nos permite ejecutar comandos dentro de la declaración, con el documento abierto, y además sin necesidad de tener que acordarnos de cerrar el documento una vez estamos fuera de la declaración:
 
 ```python
 with open('quijote.txt', 'r') as file:
@@ -104,7 +104,7 @@ datos = np.loadtxt(filename, delimiter=',') # Utilizamos está función para car
                                             # también definimos el delimitador como ','
 ```
 
-también nos podemos encontrar con casos en los que el documento tenga encabezados que debamos evitar en la carga de datos. Simplemente utilizamos el parámetro `skiprows`, indicandole el número de líneas a evitar:
+También nos podemos encontrar con casos en los que el documento tenga encabezados que debamos evitar en la carga de datos. Simplemente, utilizamos el parámetro `skiprows`, indicándole el número de líneas a evitar:
 
 ```python
 
@@ -140,7 +140,7 @@ En resumen, NumPy es la herramienta ideal para poder manejar datos numéricos da
 
 Pandas también tiene su forma de importar archivos planos. Pero su principal atractivo es algo de lo que ya hemos hablado antes, y en lo que ahora profundizaremos, los **DataFrames**. 
 
-esta estructura de datos organizada en filas y columnas similar a una tabla de base de datos. Y podemos organizar los datos importados de un documento en un **DataFrame**:
+Esta estructura de datos organizada en filas y columnas similar a una tabla de base de datos. Y podemos organizar los datos importados de un documento en un **DataFrame**:
 
 ```python
 
@@ -175,10 +175,12 @@ data = pd.read_csv(file, sep='\t', comment='#', na_values=['Nothing'])
 
 En este caso **\t** representa una tabulación, como **\n** podría representar un salto de línea.
 
+----------
+
 ### Capítulo 2: **<ins>Importar datos de otros tipos de archivos</ins>**
 
 #### 2.1) **<ins>Archivos Pickled</ins>**:
-Como el nombre del capítulo indica, hay otros tipos de archivo a parte de los planos. Podemos empezar, con los **archivos Pickled**, archivos encurtidos. Es un tipo de archivos nativos de Python, nace con la necesidad de almacenar diferentes tipos de datos de los que no es tan obvio como almacenarlos, como diccionarios o listas. Algún ejemplo:
+Como el nombre del capítulo indica, hay otros tipos de archivo aparte de los planos. Podemos empezar, con los **archivos Pickled**, archivos encurtidos. Es un tipo de archivos nativos de Python, nace con la necesidad de almacenar diferentes tipos de datos de los que no es tan obvio como almacenarlos, como diccionarios o listas. Algún ejemplo:
 
 ```python
 import pickle
@@ -215,7 +217,7 @@ df1 = data.parse('1960-1966') #Nombre de la hoja, como un string
 df2 = data.parse(1) #Índice de la hoja
 ```
 
-Dado que en ambos ejemplos hemos almacenado la información como DataFrame de la hoja que queremos utilizar, ahora tenemos contenido en las variables `df1` y `df2` únicamente la información que nos interesa. De hecho podemos jugar la función parse y generar DataFrames "personalizados", de forma que la información que contengan este organizada de la forma que deseemos:
+Dado que en ambos ejemplos hemos almacenado la información como DataFrame de la hoja que queremos utilizar, ahora tenemos contenido en las variables `df1` y `df2` únicamente la información que nos interesa. De hecho podemos jugar la función *parse* y generar DataFrames "personalizados", de forma que la información que contengan este organizada de la forma que deseemos:
 
 ```python
 
@@ -256,7 +258,7 @@ data = pd.read_stata('urbanpop.dta')
 ```
 
 #### 2.4) **<ins>Archivos HDF5</ins>**:
-Otro de los muchos tipos de archivos es **HDF5**, *Hierarchical Data Format version 5*. Lo que diferencia a HDF5 del resto, es el hecho de que es el formato más común para poder almacenar **grandes cantidades de datos numéricos**. Una pregunta lógica sería, `¿Qué tan grandes son estas cantidades?`, y el hecho es que estamos hablando de cientos de gigabytes, sino de terabytes.
+Otro de los muchos tipos de archivos es **HDF5**, *Hierarchical Data Format version 5*. Lo que diferencia a HDF5 del resto, es el hecho de que es el formato más común para poder almacenar **grandes cantidades de datos numéricos**. Una pregunta lógica sería, `¿Qué tan grandes son estas cantidades?`, y el hecho es que estamos hablando de cientos de gigabytes, si no de terabytes.
 
 Pero para poder entender la magnitud de la que hablamos necesitamos un ejemplo, pero lo primero sería aprender a importarlos:
 
@@ -269,7 +271,7 @@ file = 'LOSC_4_V1-815411200-4096.hdf5'
 data = h5py.File(file,'r') #Solo lectura
 ```
 
-Ahora que ya tenemos importado el archivo `LOSC_4_V1-815411200-4096.hdf5`, podemos empezar a jugar con el:
+Ahora que ya tenemos importado el archivo `LOSC_4_V1-815411200-4096.hdf5`, podemos empezar a jugar con él:
 
 ```python
 
@@ -300,7 +302,7 @@ Dado que son datos numéricos, conocemos la estructura jerárquica y sabemos uti
 print(np.array(data['meta']['Detector']), np.array(data['meta']['GPSstart']))
 ```
 
-De esta forma, los datos contenidos en la  jerarquia `meta/Detector` y `meta/GPSstart`, se verán transformados en una matriz de NumPy.
+De esta forma, los datos contenidos en la  jerarquía `meta/Detector` y `meta/GPSstart`, se verán transformados en una matriz de NumPy.
 
 #### 2.5) **<ins>Archivos MATLAB</ins>**:
 Matlab, la abreviación de *Matrix Laboratory*, es un tipo de documento ampliamente utilizado en entornos de ciencia e ingeniería. La extensión de este tipo de documentos es **\*.mat**. Pero en cuanto a este tipo de documentos, a diferencia del resto que hemos estado tratando, para poderlos importar necesitamos el módulo de funciones **SciPy**.
@@ -321,7 +323,7 @@ filename = 'test.mat'
 mat = scipy.io.loadmat(filename)
 ```
 
-Ahora bien, en el entorno de trabajo de MATLAB podemos visualizar directamente todas las variables utilizadas en nuestro código. En Python, en cambio, esto no funciona de la misma forma: el contenido del archivo .mat se interpreta como un diccionario, donde las claves corresponden a los nombres de las variables creadas en MATLAB, y los valores son los objetos asociados a dichas variables.
+Ahora bien, en el entorno de trabajo de MATLAB podemos visualizar directamente todas las variables utilizadas en nuestro código. En Python, en cambio, esto no funciona de la misma forma: el contenido del archivo *.mat* se interpreta como un diccionario, donde las claves corresponden a los nombres de las variables creadas en MATLAB, y los valores son los objetos asociados a dichas variables.
 
 Esto se entiende mejor si retomamos el ejemplo anterior y exploramos su estructura:
 
@@ -344,11 +346,11 @@ Como se puede observar, el primer objeto (mat) es un diccionario, ya que contien
 ### Capítulo 3: **<ins>Trabajar con bases de datos relacionales en Python</ins>**
 
 #### 3.1) **<ins>Introducción a las Bases de Datos Relacionales</ins>**:
-Para entender como funcionan las bases de datos relacionales en Python, hay que entender qué son las bases de datos relacionales. estás son bases de datos basadas en un modelo relacional de datos, lo que implica que la información está contenida en **tablas**, compuestás por **registros** y columnas, **atributos** de cada registro de datos.
+Para entender como funcionan las bases de datos relacionales en Python, hay que entender qué son las bases de datos relacionales. estás son bases de datos basadas en un modelo relacional de datos, lo que implica que la información está contenida en **tablas**, compuestas por **registros** y columnas, **atributos** de cada registro de datos.
 
-esta estructura de bases de datos, es especialmente eficiente cuando las diferentes tablas están interconectadas entre sí. Para poder hacerlo es esencial que cada registro tenga un identificador único, conocido como clave primaria, esto es útil para poder acceder al registro en concreto. Por lo tanto, al contener también claves primarias de otras tablas podemos relacionarlas entre sí. 
+Esta estructura de bases de datos, es especialmente eficiente cuando las diferentes tablas están interconectadas entre sí. Para poder hacerlo es esencial que cada registro tenga un identificador único, conocido como clave primaria, esto es útil para poder acceder al registro en concreto. Por lo tanto, al contener también claves primarias de otras tablas podemos relacionarlas entre sí. 
 
-Ahora bien, el lenguaje estándar de comunicación con bases de datos es **SQL**, *Structured Query Language* o Lenguaje de Consultas Estructurado. Si bien es diferente de Python, también tiene una sintáxis bastante fácil de comprender:
+Ahora bien, el lenguaje estándar de comunicación con bases de datos es **SQL**, *Structured Query Language* o Lenguaje de Consultas Estructurado. Si bien es diferente de Python, también tiene una sintaxis bastante fácil de comprender:
 
 ```sql
 SELECT * FROM pedidos WHERE IDcliente = '666';
@@ -364,7 +366,7 @@ Todo lo comentado previamente son conceptos básicos, pero imprescindibles, para
 
 Cuando pretendemos trabajar con una base de datos desde Python, lo primero que necesitamos es importar un *Sistema de Gestión de Bases de Datos Relacionales*, o **Relational Database Management System(RDBMS)**. Un RDBMS es un software utilizado para crear, gestionar y mantener bases de datos relacionales, los más utilizados serían SQLite, MySQL o PostgreSQL.
 
-Pero el RDBMS por si solo no nos permite hacer mucha cosa, por eso existen los **motores de bases de datos**. Estos son softwares que se encargan de crear, leer, actualizar y eliminar registros del RDBMS. Para poder crear un motor de bases de datos podemos hacerlo de la siguiente forma:
+Pero el RDBMS por si solo no nos permite hacer mucha cosa, por eso existen los **motores de bases de datos**. Estos son software que se encargan de crear, leer, actualizar y eliminar registros del RDBMS. Para poder generar un motor de bases de datos podemos hacerlo de la siguiente forma:
 
 ```python
 
@@ -380,7 +382,7 @@ engine = create_engine('sqlite:///Northwind.sqlite')
     - `sqlite`: Le indicamos el **RDBMS** de la base de datos que pretendemos manipular.
     - `..:///Northwind.sqlite`: Le indicamos el nombre y la ruta de la base de datos a la que debe conectarse.
 
-Importante recordar que si no sabemos el nombre de las tablas que contienen información podemos ejecutar el siguiente fragmento:
+Es relevante recordar que si no sabemos el nombre de las tablas que contienen información podemos ejecutar el siguiente fragmento:
 
 ```python
 table_names = engine.table_names()
@@ -424,7 +426,7 @@ df.columns = rs.keys() #Esto nos permite asignar el mismo nombre de las columnas
 con.close() #Cerramos
 ```
 
-Teniendo en cuenta los diferentes métodos para poder conectarnos y ejecutar consultar, lo interesante en ese punto es cómo el motor se comunica con la librería de Pandas. 
+Teniendo en cuenta los diferentes métodos para poder conectarnos y ejecutar consultas, lo interesante en ese punto es cómo el motor se comunica con la librería de Pandas. 
 
 * `rs.fetchall()`: Recuperamos todas las filas de la ejecución de la consulta. Combinando esto con la función `pd.DataFrame(...)` podemos transformar lo obtenido en un objeto DataFrame con la información consultada.
 
@@ -440,7 +442,7 @@ with engine.connect() as con:
 ```
 
 #### 3.3) **<ins>Consultar bases de datos con Pandas</ins>**:
-Despues de crear un motor de bases de datos, hemos obtenido los resultados de consultas utilizando múltiples líneas de código. Pandas, permite hacer exactamente lo mismo en una única línea:
+Después de crear un motor de bases de datos, hemos obtenido los resultados de consultas utilizando múltiples líneas de código. Pandas, permite hacer exactamente lo mismo en una única línea:
 
 ```python
 import pandas as pd
@@ -451,7 +453,7 @@ engine = create_engine('sqlite:///Logistica.sqlite')
 df = pd.read_sql_query('SELECT * FROM Pedidos ORDER BY Fecha_pedido', engine)
 ```
 
-Para generar el mismo DataFrame que teniamos en los ejemplos anteriores, hemos tenido que introducir diferentes argumentos a la función `pd.read_sql_query(...)`:
+Para generar el mismo DataFrame que teníamos en los ejemplos anteriores, hemos tenido que introducir diferentes argumentos a la función `pd.read_sql_query(...)`:
     
 * ``SELECT * FROM Pedidos ORDER BY Fecha_pedido``:  Sería la sentencia que queremos ejecutar.
 
