@@ -4,7 +4,11 @@
 
 ## 1. Descripción
 
-En este capítulo aprenderás
+En este capítulo aprenderás a importar datos directamente desde la web utilizando diferentes herramientas. Empezarás entendiendo qué son las URLs y aprenderás a descargar archivos desde Internet para trabajar con ellos en local. También profundizarás en conceptos clave del protocolo HTTP y cómo Python puede comunicarse con páginas web.
+
+Además, verás cómo interactuar con APIs para obtener datos estructurados en JSON y como manipularlos con Python. 
+
+Finalmente, explorarás un caso práctico con la API de Twitter, entendiendo las bases de la autenticación, el consumo de datos mediante solicitudes y el funcionamiento de la información en tiempo real.
 
 ---
 
@@ -15,7 +19,8 @@ En este capítulo aprenderás
     - [URLs y HTTP](#12-urls-y-http)
     - [Rastreando la web](#13-rastreando-la-web)
 2. [Interactuar con API para importar datos desde la web](#capítulo-2-interactuar-con-api-para-importar-datos-desde-la-web)
-3. []()
+    - [Cargar JSON en Python](#21-cargar-json-en-python)
+3. [La API de Twitter y autenticación](#capítulo-3-la-api-de-twitter-y-autenticación)
 ---
 
 ## 3. Apuntes
@@ -162,7 +167,20 @@ Como hemos comentado, tanto el que solicita información como el que la provee, 
 
 - `Valor`: Los valores, pueden ser cualquier tipo de datos, strings, enteros, matrices e incluso objetos.
 
-En este formato, y bajo estas características, se estructura toda la información de un archivo JSON.
+En este formato, y bajo estas características, se estructura toda la información de un archivo JSON:
+
+```json
+[
+{
+    "in_reply_to_user_id": null,
+    "created_at": "Tue Mar 29 23:40:17 +0000 2016",
+    "filter_level": "low",
+    "truncated": false,
+    "possibly_sensitive": false,
+    "timestamp_ms": "1459294817758",
+    "user": {
+        ....
+```
 
 #### 2.1) **<ins>Cargar JSON en Python</ins>**:
 En este sentido, pese a que pueda sonar repetitivo, la forma de interpretar los datos contenidos en un JSON es la misma, mediante el método `with`. La variante característica de este tipo de formato de documento, es el paquete que necesitamos para poder cargar los datos contenidos, el paquete `json`. Vamos a aprender a utilizarlo:
@@ -188,6 +206,6 @@ for key,value in json_data.items():
     print(key + ': ', value) #Nos mostrará todas las claves + valor que haya
 ```
 
-### Capítulo 3: **<ins>La API de Twitter y la autenticación</ins>**
+### Capítulo 3: **<ins>La API de Twitter y autenticación</ins>**
 Como ejercicio final, se ha hecho un pequeño proyecto guiado sobre la API de Twitter. El proyecto incluye el análisis de twitts on-stream y la visualización del dicho análisis. Podemos encontrarlo pulsando en [API de Twitter y visualización de datos](twitter_API_visualization.ipynb)
 
