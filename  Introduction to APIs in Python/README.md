@@ -15,11 +15,11 @@
 ## 3. Apuntes
 
 ### Capítulo 1: **<ins>Hacer peticiones a la API con Python</ins>**
-Com ya Hemos comentado alguna vez las **API**, o *Application Programming Interface*, son un conjunto de reglas, protocolos y rutinas, creadas para interactuar entre aplicaciones de software. En la realidad, funcionan como intermediarias entre dos aplicaciones, solicitante y proveedor de información.
+Como ya Hemos comentado alguna vez, las **API**, o *Application Programming Interface*, son un conjunto de reglas, protocolos y rutinas, creadas para interactuar entre aplicaciones de software. En la realidad, funcionan como intermediarias entre dos aplicaciones, solicitante y proveedor de información.
 
-Las que más nos interesarían, serían las **Web API**, un tipo de API que se comunica a través de Internet utilizando el protocolo **HTTP**. Esto implica que hay un *cliente*, que envia una petición de información a un *servidor*, utilizando Internet como medio. Este, le responde y contesta de vuelta. Hay de tres tipos:
+Las que más nos interesarían, serían las **Web API**, un tipo de API que se comunica a través de Internet utilizando el protocolo **HTTP**. Esto implica que hay un *cliente*, que envía una petición de información a un *servidor*, utilizando Internet como medio. Este le responde y contesta de vuelta. Hay de tres tipos:
 
-- **SOAP**: Emplea un estilo formal, y es comunmente utilizada en entornos empresariales que requieren una robustez y protocolos estrictos.
+- **SOAP**: Emplea un estilo formal, y es comúnmente utilizada en entornos empresariales que requieren una robustez y protocolos estrictos.
 
 - **REST**: Es el más popular y común, conocido por su simplicidad, escalabilidad y facilidad de integración.
 
@@ -94,10 +94,10 @@ Pero, dependiendo del tipo de método *HTTP* podemos hacer diferentes cosas, por
 
 |Método|Acción|Descripción|
 |------|------|-----------|
-|*GET*|Leer|Lo mismo de siempre, comprobar el contenido de un buzón sin sacar las cartas|
-|*POST*|Crear|Añadiríamos una nueva carta al buzón|
-|*PUT*|Actualizar|Remplazamos una carta preexistente por otra|
-|*DELETE*|Eliminar|Eliminamos una carta del buzón|
+|*GET*|Leer|Lo mismo de siempre, comprobar el recurso de una URL|
+|*POST*|Crear|Añadiríamos un nuevo recurso a la ruta|
+|*PUT*|Actualizar|Reemplazamos un recurso preexistente por otro|
+|*DELETE*|Eliminar|Eliminamos un recurso de la ruta|
 
 Pongamos un ejemplo práctico:
 ```python
@@ -116,8 +116,77 @@ response = requests.delete('http://350.5th-ave.com/unit/243')
 
 Como se puede ver, para los métodos `POST` y `PUT`, es necesario indicar información adicional además de la URL simple. En este caso, `data` es la forma de hacerlo, y es muy similar a `params` donde se le transmite mediante diccionarios. 
 
+#### 1.2) **<ins>Cabeceras y códigos de estado</ins>**:
+Dependiendo del tipo de orden que queramos darle al servidor, puede que nos interese saber o interpretar la respuesta que este nos dé. Esta respuesta se indica en un formato de códigos de 3 dígitos:
 
-#### 1.2) **<ins></ins>**:
+|TIPO DE CÓDIGO|SIGNIFICADO|USO FRECUENTE|
+|--------------|-----------|-------------|
+|`1xx`|Respuesta informativa||
+|`2xx`|Mensaje de éxito|`200`: La consulta tiene respuesta afirmativa|
+|`3xx`|Mensaje de redirección||
+|`4xx`|Error del lado del Cliente|`404`: No se encontró el recurso solicitado por el cliente|
+|`5xx`|Error del lado del Servidor|`500`: Error interno del servidor|
+
+Ahora bien, el contenido que se solicita, por parte del cliente, y se proporciona, por parte del servidor, se negocia en los encabezados. Este conjunto de información organizada en pares clave-valor, se separa por dos puntos. Vamos a analizar un conjunto de mensajes y sus encabezados:
+
+- Petición del cliente:
+```python
+GET /users/73 HTTP/1.1
+
+#Encabezado:
+Host: datacamp.com
+Accept: application/json
+```
+
+- Respuesta del servidor:
+```python
+HTTP/1.1 200 OK #Código de respuesta
+
+#Encabezado:
+Content-Type: application/json
+Content-Language: en-US
+Last-Modified: Wed, 21 Oct 2025 07:28:00 GMT
+
+#Cuerdo del mensaje:
+{
+    "id": 73,
+    "name": "Hicham Varo",
+    "age": 25,
+    "email": "hicham@datacamp.com"
+}
+```
+
+En este caso, podemos ver que el cliente envia el encabezado `Accept` con valor `application/json` indicando que puede aceptar respuestas en formato **JSON**.
+
+En respuesta, el servidor envía el encabezado `Content-Type` con valor `application/json`, para que el cliente sepa en que formato le están respondiendo.
+
+Todo esto, podemos integrarlo en nuestros scripts mediante el ya conocido paquete `requests`:
+```python
+import requests
+
+response = requests.get(
+    'https://api.datacamp.com',
+    headers={'accept':'application/json'}
+)
+```
+
+Como podemos ver, cada método HTTP, acepta un parámetro llamado `headers` en el que podemos indicar, en formato diccionario, tantos pares clave-valor como solicitudes queramos enviar al servidor. 
+
+También podemos ver los encabezados de la respuesta de la siguiente forma:
+```python
+response.headers['content-type'] #'application/json'
+
+response.headers.get('content-type') #'application/json'
+```
+
+Utilizando la solicitud anterior, también podemos ver el código HTTP que hemos generado:
+```python
+response.status_code == 200 #Nos devuelve 'True' si todo ha ido OK
+
+response.status_code == requests.codes.not_found
+
+response.status_code == requests.codes.ok
+```
 
 #### 1.3) **<ins></ins>**:
 
