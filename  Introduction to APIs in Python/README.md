@@ -183,11 +183,68 @@ Utilizando la solicitud anterior, también podemos ver el código HTTP que hemos
 ```python
 response.status_code == 200 #Nos devuelve 'True' si todo ha ido OK
 
-response.status_code == requests.codes.not_found
+response.status_code == requests.codes.not_found #No necesitamos saber el código HTTP concreto
 
-response.status_code == requests.codes.ok
+response.status_code == requests.codes.ok #No necesitamos saber el código HTTP concreto
 ```
 
-#### 1.3) **<ins></ins>**:
-
 ### Capítulo 2: **<ins>Más conceptos de solicitud API</ins>**
+Habitualmente, dado que las respuestas de las API contienen datos privados y sensibles, estas requieren algún método de autenticación. Vamos a catalogar algunos métodos de autenticación:
+
+|Método|Facilidad en la implementación|Seguridad|
+|------|------------------------------|---------|
+|Autenticación básica, user-passwd| 5/5 | 1/5 |
+|Token API| 4/5 | 2/5 |
+|Autenticación JWT| 3/5 | 4/5 |
+|OAuth 2.0| 2/5 | 5/5 |
+
+#### 2.1) **<ins>Autenticación básica</ins>**:
+En este caso añadimos una cabecera especifica al encabezado de la solicitud:
+```python
+GET /users/73 HTTP/1.1
+
+#Encabezado:
+Host: datacamp.com
+Accept: application/json
+Authorization: Basic XXXXXXXXXX
+```
+
+Esta cabecera contiene una combinación codificada en **Base64** de nuestro usuario y contraseña. Dado que **Base64** es una algoritmo de codificación bidireccional, cualquiera puede revertir la codificación de los datos, viento el contenido real del mensaje que hemos codificado.
+
+Podemos hacer todo esto utilizando el paquete `requests`:
+```python
+requests.get('http://api.music-catalog.com', auth=('username', 'password'))
+```
+
+`Requests` se encargará de añadir el encabezado al mensaje y codificarlo en **Base64**.
+
+#### 2.2) **<ins>Token API</ins>**:
+Esta opación es más interesante que la autenticación básica. Suponiendo que tenemos un token de la API a la que queremos hacer la solicitud, podemos añadirlo de las siguientes formar:
+
+- Añadimos el token de autenticación a la URL a la que queremos acceder, mediante `params`:
+```
+http://api.music-catalog.com/albums?access_token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+```
+
+```python
+params={'access_token':'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'}
+
+requests.get('http://api.music-catalog.com/albums', params=params)
+```
+
+- Utilizamos la cabecera `Authorization` y el método `Bearer` para añadirlo, sería como el token al portador:
+```python
+headers = {'Authorization': 'Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'}
+
+requests.get('http://api.music-catalog.com/albums', headers=headers)
+```
+
+```python
+GET /users/73 HTTP/1.1
+
+#Encabezado:
+Host: datacamp.com
+Accept: application/json
+Authorization: Bearer XXXXXXXXXXXXXXXXXXX #Ahora ya no indica 'Basic' sino 'Bearer'
+```
+
