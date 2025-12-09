@@ -221,7 +221,7 @@ requests.get('http://api.music-catalog.com', auth=('username', 'password'))
 #### 2.2) **<ins>Token API</ins>**:
 Esta opación es más interesante que la autenticación básica. Suponiendo que tenemos un token de la API a la que queremos hacer la solicitud, podemos añadirlo de las siguientes formar:
 
-- Añadimos el token de autenticación a la URL a la que queremos acceder, mediante `params`:
+- Añadimos el token de autenticación a la URL a la que queremos acceder, mediante `params`, como parámetro de consulta:
 ```
 http://api.music-catalog.com/albums?access_token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
@@ -248,3 +248,42 @@ Accept: application/json
 Authorization: Bearer XXXXXXXXXXXXXXXXXXX #Ahora ya no indica 'Basic' sino 'Bearer'
 ```
 
+### Capítulo 3: **<ins>Trabajar con datos estructurados</ins>**
+Una vez hecha la solicitud, se transmite la información que el cliente ha solicitado. Dicha información, comunmente, se hace llegar en formato **JSON**, un viejo conocido. Llamaremos **codificación** a la estructuración de datos en formato JSON para su transmisión, y **decodificación** a el proceso inverso.
+
+
+#### 3.1) **<ins>Recibir información JSON</ins>**:
+En Python, el paquete integrado `json` nos permite trabajar libremente en la codificación y decodificación de datos en este formato:
+```python
+import json
+
+album = {'id': 42, 'title':'Back in Black'} #Diccionario con información
+
+album_2_encode = json.dumps(album) #Codificamos el diccionario anterior en formato JSON
+
+album_2_decode = json.loads(album_2_encode) #Decodificamos el objecto JSON generado
+                                            # de esta forma generamos un diccionario de nuevo
+```
+
+Pero lo más interesante es cuando mezclamos esto con lo que hemos aprendido sobre las solicitudes API. Vamos a utilizalo con lo que hacemos con el paquete `requests`:
+```python
+
+#Realizamos una petición a la API, solicitando la info en formato JSON:
+response = requests.get('http://api.music-catalog.com/lyrics', headers={'accept': 'application/json'})
+
+#Decodificamos la información de forato JSON a un diccionario:
+data = response.json()
+```
+
+#### 3.2) **<ins>Enviar datos JSON</ins>**:
+Si entendemos como funciona lo que implica la codificación y decodificación de infromación, enviar datos mediante consultas a las APIs utilizando JSON es bastante simple:
+````python
+import requests
+
+playlist = {'name':'Road Trip', 'genre':'rock', 'private':'true'}
+
+#Añadimos la playlist utilizando JSON:
+response = requests.post('http://api.music-catalog.com/playlists', json=playlist)
+```
+
+Si utlizamos 'requests', es por el hecho de que este paquete nos ayuda a añadir todos los encabezados necesarios para poder enviar la solicitud, codificando la información. Por lo tanto, ahora tenemos
