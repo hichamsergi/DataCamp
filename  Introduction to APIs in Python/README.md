@@ -277,7 +277,8 @@ data = response.json()
 
 #### 3.2) **<ins>Enviar datos JSON</ins>**:
 Si entendemos como funciona lo que implica la codificación y decodificación de infromación, enviar datos mediante consultas a las APIs utilizando JSON es bastante simple:
-````python
+
+```python
 import requests
 
 playlist = {'name':'Road Trip', 'genre':'rock', 'private':'true'}
@@ -286,4 +287,76 @@ playlist = {'name':'Road Trip', 'genre':'rock', 'private':'true'}
 response = requests.post('http://api.music-catalog.com/playlists', json=playlist)
 ```
 
-Si utlizamos 'requests', es por el hecho de que este paquete nos ayuda a añadir todos los encabezados necesarios para poder enviar la solicitud, codificando la información. Por lo tanto, ahora tenemos
+### Capítulo 4: **<ins>Manejo de errores</ins>**
+Las API determinan si ha habido algún error en el manejo de las peticiones utilizando los código de error `4xx`, para los errores en el cliente, y `5xx`, para los errores en el servidor.
+
+Los errores de tipo `4xx`, habitualmente implican una solicitud mal hecha, fallo en la autenticación o incluso un encabezado incorrecto. Para solucionarlos, el cliente puede corregir la solicitud y volver a enviar la petición. Errores comunes:
+
+- `401 Unauthorized`: La solicitud se hace a recursos o información protegida. Las credenciales utilizadas son incorrectas.
+
+- `404 Not Found`: Los recursos que se han solicitado no existen, o no se han podido encontrar.
+
+- `429 Too Many Requests`: Se han emitido demasiadas solicitudes en un corto periodo de tiempo.
+
+Los errores de tipo `5xx`, habitualmente implican un error por el lado del servidor, por lo que se escapa al control del cliente. Normalmente son causados por una sobrecarga del mismo servidor, una mala configuración del mismo o errores internos. La forma correcta de manejarlos es contactar con el administrador de la API para que este pueda corregirlos. Errores comunes:
+
+- `500 Internal Server Error`: El servidor ha tenido algún problema que le imposibilita el hecho de enviarnos la respuesta.
+
+- `502 Bad Gateway`: El servidor API no ha podido alcanzar otro servidor necesario para poder realizar la respuesta.
+
+- `504 Gateway Timeout`: El servidor API no ha recibido respuesta en un tiempo determinado.
+
+Estos errores podemos detectarlos de las siguientes formas en nuestros scripts:
+```python
+import requests
+
+url = 'http://api.music-catalog.com/album'
+
+r = requests.get(url)
+
+if r.status_code >= 400:
+    #Algo ha ido mal
+
+else:
+    #Todo ha ido como se espera
+```
+
+Teniendo en cuenta que la misma libreria `requests` nos genera un error de conexión cuando algo va mal, podemos jugar con los bloques `try-except` para poder manejar los errores:
+```python
+import requests
+
+from requests.exceptions import ConnectionError
+
+url = 'http://api.music-catalog.com/album'
+
+try:
+    r = requests.get(url)
+    print(r.status_code)
+
+except ConnectionError as conn_err:
+    print(f'Connection Error! {conn_err}')
+    print(error)
+```
+
+Y aun más, podemos manejar los errores dependiendo del código que nos devuelvan:
+```python
+import requests
+
+from requests.exceptions import ConnectionError, HTTPError
+
+
+try:
+    r = requests.get('http://api.music-catalog.com/album')
+
+    #Habilitamos la detección de los errores por tipo de código:
+    r.raise_for_status()
+
+    print(r.status_code)
+
+except HTTPError as http_err:
+    print(f'HTTP error occurred: {http_err}')
+```
+
+Con la opción `r.raise_for_status` cuando ocurra un error, si lo hace, el script generará una excepción por tipo de código HTTP. 
+
+Esto en realidad implica que independientemente del error que ocurra, el error de la petición almacenado en `r.status_code` será filtrado por el bloque `except HTTPError`, devolviendonos el código de error exacto que haya generado la petición, haciendo más fácil la depuración de nuestro script para poder corregir el error en la petición. 
