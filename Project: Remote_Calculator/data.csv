@@ -1,366 +1,366 @@
-Dia;Entrada;Salida;Duracion;Tipo
-1;;;;Ausencia
-2;;;;Ausencia
-3;;;;Ausencia
-4;;;;Ausencia
-5;;;;Ausencia
-6;;;;Ausencia
-7;8;15;6h 30m;Presencial
-8;8;15;6h 30m;Presencial
-9;8;15;6h 30m;Presencial
-10;8;15;6h 30m;Presencial
-11;;;;Ausencia
-12;;;;Ausencia
-13;8;15;6h 30m;Teletrabajo
-14;8;15;6h 30m;Teletrabajo
-15;8;15;6h 30m;Teletrabajo
-16;8;15;6h 30m;Presencial
-17;8;15;6h 30m;Presencial
-18;;;;Ausencia
-19;;;;Ausencia
-20;9;18;7h 30m;Teletrabajo
-21;9;18;7h 30m;Teletrabajo
-22;9;18;7h 30m;Teletrabajo
-23;9;18;7h 30m;Teletrabajo
-24;9;18;7h 30m;Teletrabajo
-25;;;;Ausencia
-26;;;;Ausencia
-27;9;18;7h 30m;Teletrabajo
-28;9;18;7h 30m;Teletrabajo
-29;9;18;7h 30m;Teletrabajo
-30;9;18;7h 30m;Teletrabajo
-31;9;18;7h 30m;Teletrabajo
-32;;;;Ausencia
-33;;;;Ausencia
-34;12;20;6h 30m;Teletrabajo
-35;12;20;6h 30m;Teletrabajo
-36;12;20;6h 30m;Teletrabajo
-37;12;20;6h 30m;Teletrabajo
-38;12;20;6h 30m;Teletrabajo
-39;;;;Ausencia
-40;;;;Ausencia
-41;8;15;6h 30m;Teletrabajo
-42;8;15;6h 30m;Teletrabajo
-43;8;15;6h 30m;Teletrabajo
-44;8;15;6h 30m;Teletrabajo
-45;8;15;6h 30m;Teletrabajo
-46;;;;Ausencia
-47;;;;Ausencia
-48;8;15;6h 30m;Teletrabajo
-49;8;15;6h 30m;Presencial
-50;8;15;6h 30m;Teletrabajo
-51;8;15;6h 30m;Teletrabajo
-52;8;15;6h 30m;Teletrabajo
-53;;;;Ausencia
-54;;;;Ausencia
-55;9;18;7h 30m;Teletrabajo
-56;9;18;7h 30m;Teletrabajo
-57;9;18;7h 30m;Teletrabajo
-58;9;18;7h 30m;Teletrabajo
-59;9;18;7h 30m;Teletrabajo
-60;;;;Ausencia
-61;;;;Ausencia
-62;9;18;7h 30m;Teletrabajo
-63;9;18;7h 30m;Presencial
-64;9;18;7h 30m;Teletrabajo
-65;9;18;7h 30m;Teletrabajo
-66;9;18;7h 30m;Teletrabajo
-67;;;;Ausencia
-68;;;;Ausencia
-69;12;20;6h 30m;Teletrabajo
-70;12;20;6h 30m;Teletrabajo
-71;12;20;6h 30m;Teletrabajo
-72;12;20;6h 30m;Teletrabajo
-73;12;20;6h 30m;Teletrabajo
-74;;;;Ausencia
-75;;;;Ausencia
-76;8;15;6h 30m;Teletrabajo
-77;8;15;6h 30m;Teletrabajo
-78;8;15;6h 30m;Presencial
-79;8;15;6h 30m;Teletrabajo
-80;;;;Ausencia
-81;;;;Ausencia
-82;;;;Ausencia
-83;8;15;6h 30m;Teletrabajo
-84;8;15;6h 30m;Teletrabajo
-85;8;15;6h 30m;Teletrabajo
-86;8;15;6h 30m;Teletrabajo
-87;8;15;6h 30m;Teletrabajo
-88;;;;Ausencia
-89;;;;Ausencia
-90;9;18;7h 30m;Teletrabajo
-91;9;18;7h 30m;Teletrabajo
-92;9;18;7h 30m;Teletrabajo
-93;9;18;7h 30m;Teletrabajo
-94;9;18;7h 30m;Teletrabajo
-95;;;;Ausencia
-96;;;;Ausencia
-97;9;18;7h 30m;Teletrabajo
-98;9;18;7h 30m;Teletrabajo
-99;9;18;7h 30m;Teletrabajo
-100;9;18;7h 30m;Presencial
-101;9;18;7h 30m;Teletrabajo
-102;;;;Ausencia
-103;;;;Ausencia
-104;;;;Ausencia
-105;;;;Ausencia
-106;;;;Ausencia
-107;;;;Ausencia
-108;;;;Ausencia
-109;;;;Ausencia
-110;;;;Ausencia
-111;8;15;6h 30m;Teletrabajo
-112;8;15;6h 30m;Teletrabajo
-113;8;15;6h 30m;Teletrabajo
-114;8;15;6h 30m;Teletrabajo
-115;8;15;6h 30m;Teletrabajo
-116;;;;Ausencia
-117;;;;Ausencia
-118;8;15;6h 30m;Teletrabajo
-119;8;15;6h 30m;Teletrabajo
-120;8;15;6h 30m;Teletrabajo
-121;8;15;6h 30m;Teletrabajo
-122;8;15;6h 30m;Teletrabajo
-123;;;;Ausencia
-124;;;;Ausencia
-125;9;18;7h 30m;Teletrabajo
-126;9;18;7h 30m;Teletrabajo
-127;9;18;7h 30m;Teletrabajo
-128;9;18;7h 30m;Presencial
-129;9;18;7h 30m;Teletrabajo
-130;;;;Ausencia
-131;;;;Ausencia
-132;9;18;7h 30m;Teletrabajo
-133;9;18;7h 30m;Teletrabajo
-134;9;18;7h 30m;Teletrabajo
-135;9;18;7h 30m;Presencial
-136;9;18;7h 30m;Teletrabajo
-137;;;;Ausencia
-138;;;;Ausencia
-139;8;15;6h 30m;Teletrabajo
-140;8;15;6h 30m;Teletrabajo
-141;8;15;6h 30m;Teletrabajo
-142;8;15;6h 30m;Teletrabajo
-143;8;15;6h 30m;Teletrabajo
-144;;;;Ausencia
-145;;;;Ausencia
-146;9;18;7h 30m;Teletrabajo
-147;9;18;7h 30m;Presencial
-148;9;18;7h 30m;Presencial
-149;9;18;7h 30m;Teletrabajo
-150;9;18;7h 30m;Teletrabajo
-151;;;;Ausencia
-152;;;;Ausencia
-153;12;20;6h 30m;Teletrabajo
-154;12;20;6h 30m;Teletrabajo
-155;12;20;6h 30m;Teletrabajo
-156;12;20;6h 30m;Teletrabajo
-157;8;15;6h 30m;Presencial
-158;;;;Ausencia
-159;;;;Ausencia
-160;;;;Ausencia
-161;8;15;6h 30m;Teletrabajo
-162;8;15;6h 30m;Teletrabajo
-163;8;15;6h 30m;Teletrabajo
-164;8;15;6h 30m;Teletrabajo
-165;;;;Ausencia
-166;;;;Ausencia
-167;8;15;6h 30m;Teletrabajo
-168;8;15;6h 30m;Teletrabajo
-169;8;15;6h 30m;Teletrabajo
-170;8;15;6h 30m;Teletrabajo
-171;;;;Ausencia
-172;;;;Ausencia
-173;;;;Ausencia
-174;;;;Ausencia
-175;;;;Ausencia
-176;;;;Ausencia
-177;;;;Ausencia
-178;;;;Ausencia
-179;;;;Ausencia
-180;;;;Ausencia
-181;9;18;7h 30m;Teletrabajo
-182;9;18;7h 30m;Teletrabajo
-183;9;18;7h 30m;Teletrabajo
-184;9;18;7h 30m;Teletrabajo
-185;9;18;7h 30m;Teletrabajo
-186;;;;Ausencia
-187;;;;Ausencia
-188;8;15;6h 30m;Teletrabajo
-189;8;15;6h 30m;Teletrabajo
-190;8;15;6h 30m;Teletrabajo
-191;8;15;6h 30m;Teletrabajo
-192;8;15;6h 30m;Teletrabajo
-193;;;;Ausencia
-194;;;;Ausencia
-195;9;18;7h 30m;Teletrabajo
-196;9;18;7h 30m;Teletrabajo
-197;9;18;7h 30m;Teletrabajo
-198;9;18;7h 30m;Teletrabajo
-199;9;18;7h 30m;Teletrabajo
-200;;;;Ausencia
-201;;;;Ausencia
-202;12;20;6h 30m;Teletrabajo
-203;12;20;6h 30m;Teletrabajo
-204;12;20;6h 30m;Teletrabajo
-205;12;20;6h 30m;Teletrabajo
-206;12;20;6h 30m;Teletrabajo
-207;;;;Ausencia
-208;;;;Ausencia
-209;8;15;6h 30m;Teletrabajo
-210;8;15;6h 30m;Teletrabajo
-211;8;15;6h 30m;Teletrabajo
-212;8;15;6h 30m;Presencial
-213;8;15;6h 30m;Presencial
-214;;;;Ausencia
-215;;;;Ausencia
-216;8;15;6h 30m;Presencial
-217;8;15;6h 30m;Teletrabajo
-218;8;15;6h 30m;Teletrabajo
-219;8;15;6h 30m;Teletrabajo
-220;8;15;6h 30m;Teletrabajo
-221;;;;Ausencia
-222;;;;Ausencia
-223;9;18;7h 30m;Teletrabajo
-224;9;18;7h 30m;Teletrabajo
-225;9;18;7h 30m;Teletrabajo
-226;9;18;7h 30m;Teletrabajo
-227;;;;Ausencia
-228;;;;Ausencia
-229;;;;Ausencia
-230;9;18;7h 30m;Teletrabajo
-231;9;18;7h 30m;Teletrabajo
-232;9;18;7h 30m;Teletrabajo
-233;9;18;7h 30m;Teletrabajo
-234;;;;Ausencia
-235;;;;Ausencia
-236;;;;Ausencia
-237;;;;Ausencia
-238;;;;Ausencia
-239;;;;Ausencia
-240;;;;Ausencia
-241;;;;Ausencia
-242;;;;Ausencia
-243;;;;Ausencia
-244;9;18;7h 30m;Teletrabajo
-245;9;18;7h 30m;Teletrabajo
-246;9;18;7h 30m;Teletrabajo
-247;9;18;7h 30m;Presencial
-248;9;18;7h 30m;Teletrabajo
-249;;;;Ausencia
-250;;;;Ausencia
-251;12;20;6h 30m;Teletrabajo
-252;12;20;6h 30m;Teletrabajo
-253;12;20;6h 30m;Teletrabajo
-254;;;;Ausencia
-255;12;20;6h 30m;Teletrabajo
-256;;;;Ausencia
-257;;;;Ausencia
-258;8;15;6h 30m;Teletrabajo
-259;8;15;6h 30m;Presencial
-260;8;15;6h 30m;Presencial
-261;8;15;6h 30m;Presencial
-262;8;15;6h 30m;Teletrabajo
-263;;;;Ausencia
-264;;;;Ausencia
-265;8;15;6h 30m;Teletrabajo
-266;8;15;6h 30m;Teletrabajo
-267;;;;Ausencia
-268;8;15;6h 30m;Teletrabajo
-269;8;15;6h 30m;Teletrabajo
-270;;;;Ausencia
-271;;;;Ausencia
-272;9;18;7h 30m;Teletrabajo
-273;9;18;7h 30m;Presencial
-274;9;18;7h 30m;Presencial
-275;9;18;7h 30m;Presencial
-276;9;18;7h 30m;Teletrabajo
-277;;;;Ausencia
-278;;;;Ausencia
-279;9;18;7h 30m;Teletrabajo
-280;9;18;7h 30m;Presencial
-281;9;18;7h 30m;Presencial
-282;9;18;7h 30m;Presencial
-283;9;18;7h 30m;Teletrabajo
-284;;;;Ausencia
-285;;;;Ausencia
-286;8;15;6h 30m;Teletrabajo
-287;8;15;6h 30m;Teletrabajo
-288;8;15;6h 30m;Teletrabajo
-289;8;15;6h 30m;Presencial
-290;;;;Ausencia
-291;;;;Ausencia
-292;;;;Ausencia
-293;;;;Ausencia
-294;9;18;7h 30m;Teletrabajo
-295;9;18;7h 30m;Teletrabajo
-296;9;18;7h 30m;Teletrabajo
-297;9;18;7h 30m;Teletrabajo
-298;;;;Ausencia
-299;;;;Ausencia
-300;12;20;6h 30m;Teletrabajo
-301;12;20;6h 30m;Teletrabajo
-302;12;20;6h 30m;Teletrabajo
-303;12;20;6h 30m;Teletrabajo
-304;12;20;6h 30m;Teletrabajo
-305;;;;Ausencia
-306;;;;Ausencia
-307;8;15;6h 30m;Teletrabajo
-308;8;15;6h 30m;Teletrabajo
-309;8;15;6h 30m;Presencial
-310;8;15;6h 30m;Presencial
-311;8;15;6h 30m;Teletrabajo
-312;;;;Ausencia
-313;;;;Ausencia
-314;8;15;6h 30m;Teletrabajo
-315;8;15;6h 30m;Presencial
-316;8;15;6h 30m;Presencial
-317;8;15;6h 30m;Presencial
-318;8;15;6h 30m;Teletrabajo
-319;;;;Ausencia
-320;;;;Ausencia
-321;9;18;7h 30m;Teletrabajo
-322;9;18;7h 30m;Teletrabajo
-323;9;18;7h 30m;Presencial
-324;9;18;7h 30m;Presencial
-325;9;18;7h 30m;Teletrabajo
-326;;;;Ausencia
-327;;;;Ausencia
-328;9;18;7h 30m;Teletrabajo
-329;9;18;7h 30m;Teletrabajo
-330;9;18;7h 30m;Presencial
-331;9;18;7h 30m;Presencial
-332;9;18;7h 30m;Teletrabajo
-333;;;;Ausencia
-334;;;;Ausencia
-335;8;15;6h 30m;Teletrabajo
-336;8;15;6h 30m;Teletrabajo
-337;8;15;6h 30m;
-338;8;15;6h 30m;
-339;8;15;6h 30m;
-340;;;;Ausencia
-341;;;;Ausencia
-342;;;;Ausencia
-343;;;;
-344;;;;
-345;;;;
-346;;;;
-347;;;;Ausencia
-348;;;;Ausencia
-349;;;;
-350;;;;
-351;;;;
-352;;;;
-353;;;;
-354;;;;Ausencia
-355;;;;Ausencia
-356;;;;
-357;;;;
-358;;;;
-359;;;;Ausencia
-360;;;;Ausencia
-361;;;;Ausencia
-362;;;;Ausencia
-363;;;;Ausencia
-364;;;;Ausencia
-365;;;;Ausencia
+Dia,Entrada,Salida,Duracion,Tipo
+1,,,,Ausencia
+2,,,,Ausencia
+3,,,,Ausencia
+4,,,,Ausencia
+5,,,,Ausencia
+6,,,,Ausencia
+7,8,15,6h 30m,Presencial
+8,8,15,6h 30m,Presencial
+9,8,15,6h 30m,Presencial
+10,8,15,6h 30m,Presencial
+11,,,,Ausencia
+12,,,,Ausencia
+13,8,15,6h 30m,Teletrabajo
+14,8,15,6h 30m,Teletrabajo
+15,8,15,6h 30m,Teletrabajo
+16,8,15,6h 30m,Presencial
+17,8,15,6h 30m,Presencial
+18,,,,Ausencia
+19,,,,Ausencia
+20,9,18,7h 30m,Teletrabajo
+21,9,18,7h 30m,Teletrabajo
+22,9,18,7h 30m,Teletrabajo
+23,9,18,7h 30m,Teletrabajo
+24,9,18,7h 30m,Teletrabajo
+25,,,,Ausencia
+26,,,,Ausencia
+27,9,18,7h 30m,Teletrabajo
+28,9,18,7h 30m,Teletrabajo
+29,9,18,7h 30m,Teletrabajo
+30,9,18,7h 30m,Teletrabajo
+31,9,18,7h 30m,Teletrabajo
+32,,,,Ausencia
+33,,,,Ausencia
+34,12,20,6h 30m,Teletrabajo
+35,12,20,6h 30m,Teletrabajo
+36,12,20,6h 30m,Teletrabajo
+37,12,20,6h 30m,Teletrabajo
+38,12,20,6h 30m,Teletrabajo
+39,,,,Ausencia
+40,,,,Ausencia
+41,8,15,6h 30m,Teletrabajo
+42,8,15,6h 30m,Teletrabajo
+43,8,15,6h 30m,Teletrabajo
+44,8,15,6h 30m,Teletrabajo
+45,8,15,6h 30m,Teletrabajo
+46,,,,Ausencia
+47,,,,Ausencia
+48,8,15,6h 30m,Teletrabajo
+49,8,15,6h 30m,Presencial
+50,8,15,6h 30m,Teletrabajo
+51,8,15,6h 30m,Teletrabajo
+52,8,15,6h 30m,Teletrabajo
+53,,,,Ausencia
+54,,,,Ausencia
+55,9,18,7h 30m,Teletrabajo
+56,9,18,7h 30m,Teletrabajo
+57,9,18,7h 30m,Teletrabajo
+58,9,18,7h 30m,Teletrabajo
+59,9,18,7h 30m,Teletrabajo
+60,,,,Ausencia
+61,,,,Ausencia
+62,9,18,7h 30m,Teletrabajo
+63,9,18,7h 30m,Presencial
+64,9,18,7h 30m,Teletrabajo
+65,9,18,7h 30m,Teletrabajo
+66,9,18,7h 30m,Teletrabajo
+67,,,,Ausencia
+68,,,,Ausencia
+69,12,20,6h 30m,Teletrabajo
+70,12,20,6h 30m,Teletrabajo
+71,12,20,6h 30m,Teletrabajo
+72,12,20,6h 30m,Teletrabajo
+73,12,20,6h 30m,Teletrabajo
+74,,,,Ausencia
+75,,,,Ausencia
+76,8,15,6h 30m,Teletrabajo
+77,8,15,6h 30m,Teletrabajo
+78,8,15,6h 30m,Presencial
+79,8,15,6h 30m,Teletrabajo
+80,,,,Ausencia
+81,,,,Ausencia
+82,,,,Ausencia
+83,8,15,6h 30m,Teletrabajo
+84,8,15,6h 30m,Teletrabajo
+85,8,15,6h 30m,Teletrabajo
+86,8,15,6h 30m,Teletrabajo
+87,8,15,6h 30m,Teletrabajo
+88,,,,Ausencia
+89,,,,Ausencia
+90,9,18,7h 30m,Teletrabajo
+91,9,18,7h 30m,Teletrabajo
+92,9,18,7h 30m,Teletrabajo
+93,9,18,7h 30m,Teletrabajo
+94,9,18,7h 30m,Teletrabajo
+95,,,,Ausencia
+96,,,,Ausencia
+97,9,18,7h 30m,Teletrabajo
+98,9,18,7h 30m,Teletrabajo
+99,9,18,7h 30m,Teletrabajo
+100,9,18,7h 30m,Presencial
+101,9,18,7h 30m,Teletrabajo
+102,,,,Ausencia
+103,,,,Ausencia
+104,,,,Ausencia
+105,,,,Ausencia
+106,,,,Ausencia
+107,,,,Ausencia
+108,,,,Ausencia
+109,,,,Ausencia
+110,,,,Ausencia
+111,8,15,6h 30m,Teletrabajo
+112,8,15,6h 30m,Teletrabajo
+113,8,15,6h 30m,Teletrabajo
+114,8,15,6h 30m,Teletrabajo
+115,8,15,6h 30m,Teletrabajo
+116,,,,Ausencia
+117,,,,Ausencia
+118,8,15,6h 30m,Teletrabajo
+119,8,15,6h 30m,Teletrabajo
+120,8,15,6h 30m,Teletrabajo
+121,8,15,6h 30m,Teletrabajo
+122,8,15,6h 30m,Teletrabajo
+123,,,,Ausencia
+124,,,,Ausencia
+125,9,18,7h 30m,Teletrabajo
+126,9,18,7h 30m,Teletrabajo
+127,9,18,7h 30m,Teletrabajo
+128,9,18,7h 30m,Presencial
+129,9,18,7h 30m,Teletrabajo
+130,,,,Ausencia
+131,,,,Ausencia
+132,9,18,7h 30m,Teletrabajo
+133,9,18,7h 30m,Teletrabajo
+134,9,18,7h 30m,Teletrabajo
+135,9,18,7h 30m,Presencial
+136,9,18,7h 30m,Teletrabajo
+137,,,,Ausencia
+138,,,,Ausencia
+139,8,15,6h 30m,Teletrabajo
+140,8,15,6h 30m,Teletrabajo
+141,8,15,6h 30m,Teletrabajo
+142,8,15,6h 30m,Teletrabajo
+143,8,15,6h 30m,Teletrabajo
+144,,,,Ausencia
+145,,,,Ausencia
+146,9,18,7h 30m,Teletrabajo
+147,9,18,7h 30m,Presencial
+148,9,18,7h 30m,Presencial
+149,9,18,7h 30m,Teletrabajo
+150,9,18,7h 30m,Teletrabajo
+151,,,,Ausencia
+152,,,,Ausencia
+153,12,20,6h 30m,Teletrabajo
+154,12,20,6h 30m,Teletrabajo
+155,12,20,6h 30m,Teletrabajo
+156,12,20,6h 30m,Teletrabajo
+157,8,15,6h 30m,Presencial
+158,,,,Ausencia
+159,,,,Ausencia
+160,,,,Ausencia
+161,8,15,6h 30m,Teletrabajo
+162,8,15,6h 30m,Teletrabajo
+163,8,15,6h 30m,Teletrabajo
+164,8,15,6h 30m,Teletrabajo
+165,,,,Ausencia
+166,,,,Ausencia
+167,8,15,6h 30m,Teletrabajo
+168,8,15,6h 30m,Teletrabajo
+169,8,15,6h 30m,Teletrabajo
+170,8,15,6h 30m,Teletrabajo
+171,,,,Ausencia
+172,,,,Ausencia
+173,,,,Ausencia
+174,,,,Ausencia
+175,,,,Ausencia
+176,,,,Ausencia
+177,,,,Ausencia
+178,,,,Ausencia
+179,,,,Ausencia
+180,,,,Ausencia
+181,9,18,7h 30m,Teletrabajo
+182,9,18,7h 30m,Teletrabajo
+183,9,18,7h 30m,Teletrabajo
+184,9,18,7h 30m,Teletrabajo
+185,9,18,7h 30m,Teletrabajo
+186,,,,Ausencia
+187,,,,Ausencia
+188,8,15,6h 30m,Teletrabajo
+189,8,15,6h 30m,Teletrabajo
+190,8,15,6h 30m,Teletrabajo
+191,8,15,6h 30m,Teletrabajo
+192,8,15,6h 30m,Teletrabajo
+193,,,,Ausencia
+194,,,,Ausencia
+195,9,18,7h 30m,Teletrabajo
+196,9,18,7h 30m,Teletrabajo
+197,9,18,7h 30m,Teletrabajo
+198,9,18,7h 30m,Teletrabajo
+199,9,18,7h 30m,Teletrabajo
+200,,,,Ausencia
+201,,,,Ausencia
+202,12,20,6h 30m,Teletrabajo
+203,12,20,6h 30m,Teletrabajo
+204,12,20,6h 30m,Teletrabajo
+205,12,20,6h 30m,Teletrabajo
+206,12,20,6h 30m,Teletrabajo
+207,,,,Ausencia
+208,,,,Ausencia
+209,8,15,6h 30m,Teletrabajo
+210,8,15,6h 30m,Teletrabajo
+211,8,15,6h 30m,Teletrabajo
+212,8,15,6h 30m,Presencial
+213,8,15,6h 30m,Presencial
+214,,,,Ausencia
+215,,,,Ausencia
+216,8,15,6h 30m,Presencial
+217,8,15,6h 30m,Teletrabajo
+218,8,15,6h 30m,Teletrabajo
+219,8,15,6h 30m,Teletrabajo
+220,8,15,6h 30m,Teletrabajo
+221,,,,Ausencia
+222,,,,Ausencia
+223,9,18,7h 30m,Teletrabajo
+224,9,18,7h 30m,Teletrabajo
+225,9,18,7h 30m,Teletrabajo
+226,9,18,7h 30m,Teletrabajo
+227,,,,Ausencia
+228,,,,Ausencia
+229,,,,Ausencia
+230,9,18,7h 30m,Teletrabajo
+231,9,18,7h 30m,Teletrabajo
+232,9,18,7h 30m,Teletrabajo
+233,9,18,7h 30m,Teletrabajo
+234,,,,Ausencia
+235,,,,Ausencia
+236,,,,Ausencia
+237,,,,Ausencia
+238,,,,Ausencia
+239,,,,Ausencia
+240,,,,Ausencia
+241,,,,Ausencia
+242,,,,Ausencia
+243,,,,Ausencia
+244,9,18,7h 30m,Teletrabajo
+245,9,18,7h 30m,Teletrabajo
+246,9,18,7h 30m,Teletrabajo
+247,9,18,7h 30m,Presencial
+248,9,18,7h 30m,Teletrabajo
+249,,,,Ausencia
+250,,,,Ausencia
+251,12,20,6h 30m,Teletrabajo
+252,12,20,6h 30m,Teletrabajo
+253,12,20,6h 30m,Teletrabajo
+254,,,,Ausencia
+255,12,20,6h 30m,Teletrabajo
+256,,,,Ausencia
+257,,,,Ausencia
+258,8,15,6h 30m,Teletrabajo
+259,8,15,6h 30m,Presencial
+260,8,15,6h 30m,Presencial
+261,8,15,6h 30m,Presencial
+262,8,15,6h 30m,Teletrabajo
+263,,,,Ausencia
+264,,,,Ausencia
+265,8,15,6h 30m,Teletrabajo
+266,8,15,6h 30m,Teletrabajo
+267,,,,Ausencia
+268,8,15,6h 30m,Teletrabajo
+269,8,15,6h 30m,Teletrabajo
+270,,,,Ausencia
+271,,,,Ausencia
+272,9,18,7h 30m,Teletrabajo
+273,9,18,7h 30m,Presencial
+274,9,18,7h 30m,Presencial
+275,9,18,7h 30m,Presencial
+276,9,18,7h 30m,Teletrabajo
+277,,,,Ausencia
+278,,,,Ausencia
+279,9,18,7h 30m,Teletrabajo
+280,9,18,7h 30m,Presencial
+281,9,18,7h 30m,Presencial
+282,9,18,7h 30m,Presencial
+283,9,18,7h 30m,Teletrabajo
+284,,,,Ausencia
+285,,,,Ausencia
+286,8,15,6h 30m,Teletrabajo
+287,8,15,6h 30m,Teletrabajo
+288,8,15,6h 30m,Teletrabajo
+289,8,15,6h 30m,Presencial
+290,,,,Ausencia
+291,,,,Ausencia
+292,,,,Ausencia
+293,,,,Ausencia
+294,9,18,7h 30m,Teletrabajo
+295,9,18,7h 30m,Teletrabajo
+296,9,18,7h 30m,Teletrabajo
+297,9,18,7h 30m,Teletrabajo
+298,,,,Ausencia
+299,,,,Ausencia
+300,12,20,6h 30m,Teletrabajo
+301,12,20,6h 30m,Teletrabajo
+302,12,20,6h 30m,Teletrabajo
+303,12,20,6h 30m,Teletrabajo
+304,12,20,6h 30m,Teletrabajo
+305,,,,Ausencia
+306,,,,Ausencia
+307,8,15,6h 30m,Teletrabajo
+308,8,15,6h 30m,Teletrabajo
+309,8,15,6h 30m,Presencial
+310,8,15,6h 30m,Presencial
+311,8,15,6h 30m,Teletrabajo
+312,,,,Ausencia
+313,,,,Ausencia
+314,8,15,6h 30m,Teletrabajo
+315,8,15,6h 30m,Presencial
+316,8,15,6h 30m,Presencial
+317,8,15,6h 30m,Presencial
+318,8,15,6h 30m,Teletrabajo
+319,,,,Ausencia
+320,,,,Ausencia
+321,9,18,7h 30m,Teletrabajo
+322,9,18,7h 30m,Teletrabajo
+323,9,18,7h 30m,Presencial
+324,9,18,7h 30m,Presencial
+325,9,18,7h 30m,Teletrabajo
+326,,,,Ausencia
+327,,,,Ausencia
+328,9,18,7h 30m,Teletrabajo
+329,9,18,7h 30m,Teletrabajo
+330,9,18,7h 30m,Presencial
+331,9,18,7h 30m,Presencial
+332,9,18,7h 30m,Teletrabajo
+333,,,,Ausencia
+334,,,,Ausencia
+335,8,15,6h 30m,Teletrabajo
+336,8,15,6h 30m,Teletrabajo
+337,8,15,6h 30m,
+338,8,15,6h 30m,
+339,8,15,6h 30m,
+340,,,,Ausencia
+341,,,,Ausencia
+342,,,,Ausencia
+343,9,18,7h 30m,Teletrabajo
+344,9,18,7h 30m,Teletrabajo
+345,9,18,7h 30m,Presencial
+346,9,18,7h 30m,Teletrabajo
+347,,,,Ausencia
+348,,,,Ausencia
+349,12,20,6h 30m,Teletrabajo
+350,12,20,6h 30m,Teletrabajo
+351,12,20,6h 30m,Teletrabajo
+352,12,20,6h 30m,Teletrabajo
+353,12,20,6h 30m,Teletrabajo
+354,,,,Ausencia
+355,,,,Ausencia
+356,8,15,6h 30m,Presencial
+357,8,15,6h 30m,Presencial
+358,8,15,6h 30m,Presencial
+359,,,,Ausencia
+360,,,,Ausencia
+361,,,,Ausencia
+362,,,,Ausencia
+363,,,,Ausencia
+364,,,,Ausencia
+365,,,,Ausencia
