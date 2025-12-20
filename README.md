@@ -39,6 +39,7 @@ El objetivo es consolidar conocimientos en Python, SQL, sistemas de datos y herr
 | Proyecto                                    | Estado | Objetivo principal |
 |---------------------------------------------|---------|---------------------------------------------|
 | [Cleaning Bank Marketing Campaign Data](https://github.com/hichamsergi/DataCamp/tree/main/Project:%20Cleaning%20Bank%20Marketing%20Campaign%20Data)       | ✅ **Completado** | Limpieza y preparación de datos reales       |
+|[Remote Calculator](https://github.com/hichamsergi/DataCamp/blob/main/Project%3A%20Remote_Calculator/Solucion.ipynb)   | ✅ **Completado** | Absorción e interpretación de datos desde diferentes fuentes, generación de gráficos con la información extraida |
 | Performing a Code Review                    | ⏳ Pendiente | Aplicar buenas prácticas de ingeniería de software |
 | Building a Retail Data Pipeline             | ⏳ Pendiente | Construcción de un pipeline de datos de retail |
 | Cleaning Data in Python                     | ⏳ Pendiente | Técnicas avanzadas de limpieza con Python    |
