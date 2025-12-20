@@ -26,12 +26,13 @@ La solución consta de dos partes:
 - `t_teletrabajo = (df_csv["Tipo"] == "Teletrabajo").sum()`: Podemos sumar valores de un DataFrame bajo una misma condición utilizando `(...).sum()`. 
 <br>
 
-- `df_csv.loc[df_csv["Tipo"] == "Presencial", "Dia"]`: Iterar sobre valores de una columna para recoger información de otra. El método `df.loc[...]`, nos permite acceder a datos del DataFrame utilizando la etiqueta de la columna, y aplicandole una condición lógica. 
+- `df_csv.loc[df_csv["Tipo"] == "Presencial", "Dia"]`: Iterar sobre valores de una columna para recoger información de otra. El método `df.loc[...]`, nos permite acceder a datos del DataFrame utilizando la etiqueta de la columna, y aplicandole una condición lógica:
     <br>
     - El primer componente, `df_csv["Tipo"] == "Presencial"`, corresponde a la condición lógica que aplicamos al método. 
     <br>
+
     - El segundo, `"Dia"`, sería la etiqueta de la columna que finalmente recogeremos.
-<br>
+    <br>
 
 - `soup.find_all('tr')`: Recogemos todos los encabezados HTML que se indican.
 <br>
