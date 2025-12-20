@@ -10,7 +10,7 @@ Dicho esto, este proyecto nace como solución a los siguientes problemas:
 
 - Para conocer el porcentaje real, es necesario **solicitar la información directamente al encargado de departamento**.
 
-#### **LA SOLUCIÓN AL PROYECTO SE PUEDE ENCONTRAR EN:** [Solucion.ipynb](https://github.com/hichamsergi/DataCamp/blob/main/Project%3A%20Remote_Calculator/README.ipynb)
+#### **LA SOLUCIÓN AL PROYECTO SE PUEDE ENCONTRAR EN:** [Solucion.ipynb](https://github.com/hichamsergi/DataCamp/blob/main/Project%3A%20Remote_Calculator/Solucion.ipynb)
 
 La solución consta de dos partes:
 
