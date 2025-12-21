@@ -3,9 +3,8 @@
 Este proyecto pretende simular un proceso completo de ETL(*Extract Transform and Load*). La distribución del directorio es la siguiente:
 
 - `../dirty_data/`: Este directorio contiene los datos en bruto de 4 fuentes diferentes:
-<br>
 
-    - `../dataset_ventas.csv`: Dataset que contiene *10000* registros de ventas en formato **CSV**.
+- `../dataset_ventas.csv`: Dataset que contiene *10000* registros de ventas en formato **CSV**.
     - `../dataset_ventas.json`: Dataset que contiene *10000* registros de ventas en formato **JSON**.
     - `../dataset_ventas.txt`: Dataset que contiene *10000* registros de ventas en formato **plano**, con *|* de separador.
     - `../dataset_ventas.xlsx`: Dataset que contiene *10000* registros de ventas en formato **Excel**, *xls*.
