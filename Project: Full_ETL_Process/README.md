@@ -6,7 +6,7 @@ Este proyecto pretende simular un proceso completo de ETL(*Extract Transform and
 
     - `../dataset_ventas.csv`: Dataset que contiene *10000* registros de ventas en formato **CSV**.
     - `../dataset_ventas.json`: Dataset que contiene *10000* registros de ventas en formato **JSON**.
-    - `../dataset_ventas.txt`: Dataset que contiene *10000* registros de ventas en formato **plano**, con *|* de separador.
+    - `../dataset_ventas.txt`: Dataset que contiene *10000* registros de ventas en formato **plano**, con *" |"* de separador.
     - `../dataset_ventas.xlsx`: Dataset que contiene *10000* registros de ventas en formato **Excel**, *xls*.
 
 - `../processed_data/`: En este directorio se  alojaran los datasets, renombrados con el mismo nombre añadiendo el prefijo `processed_`.
