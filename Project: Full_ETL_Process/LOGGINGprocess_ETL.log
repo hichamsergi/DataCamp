@@ -1,0 +1,10 @@
+2026-01-05 00:51:08,244 - Se inicia la extraccion...
+2026-01-05 00:51:08,244 - Creamos el directorio 'processed_data'
+2026-01-05 00:51:08,245 - Documento dirty_data/dataset_ventas.csv procesado
+2026-01-05 00:51:08,251 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.csv
+2026-01-05 00:51:08,251 - Documento dirty_data/dataset_ventas.xlsx proceado
+2026-01-05 00:51:08,565 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.xlsx
+2026-01-05 00:51:08,565 - Documento dirty_data/dataset_ventas.txt procesado
+2026-01-05 00:51:08,568 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.txt
+2026-01-05 00:51:08,568 - Documento dirty_data/dataset_ventas.json procesado
+2026-01-05 00:51:08,582 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.json

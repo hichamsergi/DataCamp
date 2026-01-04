@@ -16,3 +16,5 @@ Este proyecto pretende simular un proceso completo de ETL(*Extract Transform and
 - `../base_datos/`: En este directorio se creará la base de datos con el contenido de los datasets, se llamará `sales_data.db`. Esta, se administrará con el *sistema de gestión de bases de datos relacionales* **SQLite**. 
 
 - [ETL.ipynb](ETL.ipynb): Este archivo contendrá el script que creará la pipeline de datos y archivos. También tiene el paso a paso de todo el proceso para poder entender el desarrollo.
+
+- [LOGGINGprocess_ETL.log](LOGGINGprocess_ETL.log): Archivo de logs donde se registra cada proceso que se ha llevado a cabo.
