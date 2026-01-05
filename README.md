@@ -23,6 +23,7 @@ El objetivo es consolidar conocimientos en Python, SQL, sistemas de datos y herr
 | [Introduction to Importing Data in Python](https://github.com/hichamsergi/DataCamp/tree/main/Introduction%20to%20Importing%20Data%20in%20Python)    | ✅ **Completado** | Importación de datos · formatos comunes · pandas   |
 | [Intermediate Importing Data in Python](https://github.com/hichamsergi/DataCamp/tree/main/Intermediate%20Importing%20Data%20in%20Python)       | ✅ **Completado** | Técnicas avanzadas de importación · optimización   |
 | [Introduction to APIs in Python](https://github.com/hichamsergi/DataCamp/tree/main/Introduction%20to%20APIs%20in%20Python)              | ✅ **Completado** | Consumo de APIs · requests · JSON                  |
+| [Data manipulation with Pandas](https://github.com/hichamsergi/DataCamp/tree/main/Data%20manipulation%20with%20Pandas) | 🔄 *En progreso* | Gestión, limpieza y manipulación de información con la libreria *Pandas* |
 | Cleaning Data in Python                     | ⏳ Pendiente | Limpieza · valores nulos · normalización de datos  |
 | Writing Efficient Python Code               | ⏳ Pendiente | Optimización · complejidad · buenas prácticas      |
 | Streamlined Data Ingestion with pandas      | ⏳ Pendiente | Ingesta de datos · pipelines básicos con pandas    |
