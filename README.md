@@ -22,7 +22,7 @@ El objetivo es consolidar conocimientos en Python, SQL, sistemas de datos y herr
 | [Intermediate Python](https://github.com/hichamsergi/DataCamp/tree/main/Intermediate%20Python)                         | ✅ **Completado** | List comprehensions · manejo de errores · módulos  |
 | [Introduction to Importing Data in Python](https://github.com/hichamsergi/DataCamp/tree/main/Introduction%20to%20Importing%20Data%20in%20Python)    | ✅ **Completado** | Importación de datos · formatos comunes · pandas   |
 | [Intermediate Importing Data in Python](https://github.com/hichamsergi/DataCamp/tree/main/Intermediate%20Importing%20Data%20in%20Python)       | ✅ **Completado** | Técnicas avanzadas de importación · optimización   |
-| Introduction to APIs in Python              | 🔄 *En progreso* | Consumo de APIs · requests · JSON                  |
+| [Introduction to APIs in Python](https://github.com/hichamsergi/DataCamp/tree/main/Introduction%20to%20APIs%20in%20Python)              | ✅ **Completado** | Consumo de APIs · requests · JSON                  |
 | Cleaning Data in Python                     | ⏳ Pendiente | Limpieza · valores nulos · normalización de datos  |
 | Writing Efficient Python Code               | ⏳ Pendiente | Optimización · complejidad · buenas prácticas      |
 | Streamlined Data Ingestion with pandas      | ⏳ Pendiente | Ingesta de datos · pipelines básicos con pandas    |
@@ -43,6 +43,7 @@ El objetivo es consolidar conocimientos en Python, SQL, sistemas de datos y herr
 | Performing a Code Review                    | ⏳ Pendiente | Aplicar buenas prácticas de ingeniería de software |
 | Building a Retail Data Pipeline             | ⏳ Pendiente | Construcción de un pipeline de datos de retail |
 | Cleaning Data in Python                     | ⏳ Pendiente | Técnicas avanzadas de limpieza con Python    |
+| [Full ETL Process](https://github.com/hichamsergi/DataCamp/tree/main/Project:%20Full_ETL_Process) | 🔄 *En progreso* | Proceso completo de ETL con datos de diferentes fuentes y formatos |
 
 ---
 
