@@ -6,9 +6,16 @@
 
 ## 2. Índice
 
-1. 
-2. 
-3. 
+1. [Hacer peticiones a la API con Python](#capítulo-1-hacer-peticiones-a-la-api-con-python)
+    - [Anatomía básica de una petición API](#11-anatomía-básica-de-una-petición-api)
+    - [Cabeceras y códigos de estado](#12-cabeceras-y-códigos-de-estado)
+2. [Más conceptos de solicitud API](#capítulo-2-más-conceptos-de-solicitud-api)
+    - [Autenticación básica](#21-autenticación-básica)
+    - [Token API](#22-token-api)
+3. [Trabajar con datos estructurados](#capítulo-3-trabajar-con-datos-estructurados)
+    - [Recibir información JSON](#31-recibir-información-json)
+    - [Enviar datos JSON](#32-enviar-datos-json)
+4. [Manejo de errores](#capítulo-4-manejo-de-errores)
 
 -----
 
