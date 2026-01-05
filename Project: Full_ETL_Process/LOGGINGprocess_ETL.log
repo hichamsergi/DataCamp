@@ -8,3 +8,71 @@
 2026-01-05 00:51:08,568 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.txt
 2026-01-05 00:51:08,568 - Documento dirty_data/dataset_ventas.json procesado
 2026-01-05 00:51:08,582 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.json
+2026-01-05 12:16:57,233 - Se inicia la extraccion...
+2026-01-05 12:16:57,234 - Creamos el directorio 'processed_data'
+2026-01-05 12:17:53,877 - Se inicia la extraccion...
+2026-01-05 12:17:53,877 - Creamos el directorio 'processed_data'
+2026-01-05 12:19:26,487 - Se inicia la extraccion...
+2026-01-05 12:19:26,488 - Creamos el directorio 'processed_data'
+2026-01-05 12:31:10,421 - Se inicia la extraccion...
+2026-01-05 12:31:10,422 - Creamos el directorio 'processed_data'
+2026-01-05 12:31:10,423 - Documento dirty_data/dataset_ventas.csv procesado
+2026-01-05 12:31:10,435 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.csv
+2026-01-05 12:31:10,436 - Documento dirty_data/dataset_ventas.json procesado
+2026-01-05 12:31:10,486 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.json
+2026-01-05 12:31:10,487 - Documento dirty_data/dataset_ventas.txt procesado
+2026-01-05 12:31:10,493 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.txt
+2026-01-05 12:31:10,494 - Documento dirty_data/dataset_ventas.xlsx proceado
+2026-01-05 12:31:13,051 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.xlsx
+2026-01-05 12:34:38,365 - Se inicia la extraccion...
+2026-01-05 12:34:38,365 - Creamos el directorio 'processed_data'
+2026-01-05 12:37:23,364 - Se inicia la extraccion...
+2026-01-05 12:37:23,364 - Creamos el directorio 'processed_data'
+2026-01-05 12:37:23,365 - Documento dirty_data/dataset_ventas.csv procesado
+2026-01-05 12:37:23,373 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.csv
+2026-01-05 12:37:23,374 - Documento dirty_data/dataset_ventas.json procesado
+2026-01-05 12:37:23,426 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.json
+2026-01-05 12:37:23,427 - Documento dirty_data/dataset_ventas.txt procesado
+2026-01-05 12:37:23,433 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.txt
+2026-01-05 12:37:23,434 - Documento dirty_data/dataset_ventas.xlsx proceado
+2026-01-05 12:37:23,903 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.xlsx
+2026-01-05 12:42:51,790 - Se inicia la extraccion...
+2026-01-05 12:42:51,791 - Creamos el directorio 'processed_data'
+2026-01-05 12:42:51,791 - Documento dirty_data/dataset_ventas.csv procesado
+2026-01-05 12:42:51,802 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.csv
+2026-01-05 12:42:51,809 - Documento dirty_data/dataset_ventas.json procesado
+2026-01-05 12:42:51,866 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.json
+2026-01-05 12:42:51,867 - Documento dirty_data/dataset_ventas.txt procesado
+2026-01-05 12:42:51,876 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.txt
+2026-01-05 12:42:51,877 - Documento dirty_data/dataset_ventas.xlsx proceado
+2026-01-05 12:42:52,335 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.xlsx
+2026-01-05 12:49:38,923 - Se inicia la extraccion...
+2026-01-05 12:49:38,924 - Creamos el directorio 'processed_data'
+2026-01-05 12:49:38,924 - Documento dirty_data/dataset_ventas.csv procesado
+2026-01-05 12:49:38,932 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.csv
+2026-01-05 12:49:38,933 - Documento dirty_data/dataset_ventas.json procesado
+2026-01-05 12:49:38,980 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.json
+2026-01-05 12:49:38,981 - Documento dirty_data/dataset_ventas.txt procesado
+2026-01-05 12:49:38,986 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.txt
+2026-01-05 12:49:38,987 - Documento dirty_data/dataset_ventas.xlsx proceado
+2026-01-05 12:49:39,453 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.xlsx
+2026-01-05 12:53:33,568 - Se inicia la extraccion...
+2026-01-05 12:53:33,569 - Directorio 'processed_data' existente
+2026-01-05 12:53:33,569 - Documento dirty_data/dataset_ventas.csv procesado
+2026-01-05 12:53:33,576 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.csv
+2026-01-05 12:53:33,584 - Documento dirty_data/dataset_ventas.json procesado
+2026-01-05 12:53:33,631 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.json
+2026-01-05 12:53:33,632 - Documento dirty_data/dataset_ventas.txt procesado
+2026-01-05 12:53:33,639 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.txt
+2026-01-05 12:53:33,640 - Documento dirty_data/dataset_ventas.xlsx proceado
+2026-01-05 12:53:34,101 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.xlsx
+2026-01-05 13:20:53,238 - Se inicia la extraccion...
+2026-01-05 13:20:53,238 - Directorio 'processed_data' existente
+2026-01-05 13:20:53,238 - Documento dirty_data/dataset_ventas.csv procesado
+2026-01-05 13:20:53,246 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.csv
+2026-01-05 13:20:53,247 - Documento dirty_data/dataset_ventas.json procesado
+2026-01-05 13:20:53,294 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.json
+2026-01-05 13:20:53,295 - Documento dirty_data/dataset_ventas.txt procesado
+2026-01-05 13:20:53,301 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.txt
+2026-01-05 13:20:53,302 - Documento dirty_data/dataset_ventas.xlsx proceado
+2026-01-05 13:20:53,758 - Movemos a la ruta de 'processed_data' al docuemnto dataset_ventas.xlsx
