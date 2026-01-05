@@ -163,9 +163,9 @@ Last-Modified: Wed, 21 Oct 2025 07:28:00 GMT
 }
 ```
 
-En este caso, podemos ver que el cliente envia el encabezado `Accept` con valor `application/json` indicando que puede aceptar respuestas en formato **JSON**.
+En este caso, podemos ver que el cliente envía el encabezado `Accept` con valor `application/json` indicando que puede aceptar respuestas en formato **JSON**.
 
-En respuesta, el servidor envía el encabezado `Content-Type` con valor `application/json`, para que el cliente sepa en que formato le están respondiendo.
+En respuesta, el servidor envía el encabezado `Content-Type` con valor `application/json`, para que el cliente sepa en qué formato le están respondiendo.
 
 Todo esto, podemos integrarlo en nuestros scripts mediante el ya conocido paquete `requests`:
 ```python
@@ -206,7 +206,7 @@ Habitualmente, dado que las respuestas de las API contienen datos privados y sen
 |OAuth 2.0| 2/5 | 5/5 |
 
 #### 2.1) **<ins>Autenticación básica</ins>**:
-En este caso añadimos una cabecera especifica al encabezado de la solicitud:
+En este caso añadimos una cabecera específica al encabezado de la solicitud:
 ```python
 GET /users/73 HTTP/1.1
 
@@ -226,7 +226,7 @@ requests.get('http://api.music-catalog.com', auth=('username', 'password'))
 `Requests` se encargará de añadir el encabezado al mensaje y codificarlo en **Base64**.
 
 #### 2.2) **<ins>Token API</ins>**:
-Esta opación es más interesante que la autenticación básica. Suponiendo que tenemos un token de la API a la que queremos hacer la solicitud, podemos añadirlo de las siguientes formar:
+Esta opción es más interesante que la autenticación básica. Suponiendo que tenemos un token de la API a la que queremos hacer la solicitud, podemos añadirlo de las siguientes formar:
 
 - Añadimos el token de autenticación a la URL a la que queremos acceder, mediante `params`, como parámetro de consulta:
 ```
@@ -255,8 +255,9 @@ Accept: application/json
 Authorization: Bearer XXXXXXXXXXXXXXXXXXX #Ahora ya no indica 'Basic' sino 'Bearer'
 ```
 
+
 ### Capítulo 3: **<ins>Trabajar con datos estructurados</ins>**
-Una vez hecha la solicitud, se transmite la información que el cliente ha solicitado. Dicha información, comunmente, se hace llegar en formato **JSON**, un viejo conocido. Llamaremos **codificación** a la estructuración de datos en formato JSON para su transmisión, y **decodificación** a el proceso inverso.
+Una vez hecha la solicitud, se transmite la información que el cliente ha solicitado. Dicha información, comúnmente, se hace llegar en formato **JSON**, un viejo conocido. Llamaremos **codificación** a la estructuración de datos en formato JSON para su transmisión, y **decodificación** al proceso inverso.
 
 
 #### 3.1) **<ins>Recibir información JSON</ins>**:
@@ -272,7 +273,7 @@ album_2_decode = json.loads(album_2_encode) #Decodificamos el objecto JSON gener
                                             # de esta forma generamos un diccionario de nuevo
 ```
 
-Pero lo más interesante es cuando mezclamos esto con lo que hemos aprendido sobre las solicitudes API. Vamos a utilizalo con lo que hacemos con el paquete `requests`:
+Pero lo más interesante es cuando mezclamos esto con lo que hemos aprendido sobre las solicitudes API. Vamos a utilizarlo con lo que hacemos con el paquete `requests`:
 ```python
 
 #Realizamos una petición a la API, solicitando la info en formato JSON:
@@ -283,7 +284,7 @@ data = response.json()
 ```
 
 #### 3.2) **<ins>Enviar datos JSON</ins>**:
-Si entendemos como funciona lo que implica la codificación y decodificación de infromación, enviar datos mediante consultas a las APIs utilizando JSON es bastante simple:
+Si entendemos como funciona lo que implica la codificación y decodificación de información, enviar datos mediante consultas a las APIs utilizando JSON es bastante simple:
 
 ```python
 import requests
@@ -295,9 +296,9 @@ response = requests.post('http://api.music-catalog.com/playlists', json=playlist
 ```
 
 ### Capítulo 4: **<ins>Manejo de errores</ins>**
-Las API determinan si ha habido algún error en el manejo de las peticiones utilizando los código de error `4xx`, para los errores en el cliente, y `5xx`, para los errores en el servidor.
+Las API determinan si ha habido algún error en el manejo de las peticiones utilizando los códigos de error `4xx`, para los errores en el cliente, y `5xx`, para los errores en el servidor.
 
-Los errores de tipo `4xx`, habitualmente implican una solicitud mal hecha, fallo en la autenticación o incluso un encabezado incorrecto. Para solucionarlos, el cliente puede corregir la solicitud y volver a enviar la petición. Errores comunes:
+Los errores de tipo `4xx`, habitualmente, implican una solicitud mal hecha, fallo en la autenticación o incluso un encabezado incorrecto. Para solucionarlos, el cliente puede corregir la solicitud y volver a enviar la petición. Errores comunes:
 
 - `401 Unauthorized`: La solicitud se hace a recursos o información protegida. Las credenciales utilizadas son incorrectas.
 
@@ -305,7 +306,7 @@ Los errores de tipo `4xx`, habitualmente implican una solicitud mal hecha, fallo
 
 - `429 Too Many Requests`: Se han emitido demasiadas solicitudes en un corto periodo de tiempo.
 
-Los errores de tipo `5xx`, habitualmente implican un error por el lado del servidor, por lo que se escapa al control del cliente. Normalmente son causados por una sobrecarga del mismo servidor, una mala configuración del mismo o errores internos. La forma correcta de manejarlos es contactar con el administrador de la API para que este pueda corregirlos. Errores comunes:
+Los errores de tipo `5xx`, habitualmente, implican un error por el lado del servidor, por lo que se escapa al control del cliente. Normalmente, son causados por una sobrecarga del mismo servidor, una mala configuración del mismo o errores internos. La forma correcta de manejarlos es contactar con el administrador de la API para que este pueda corregirlos. Errores frecuentes:
 
 - `500 Internal Server Error`: El servidor ha tenido algún problema que le imposibilita el hecho de enviarnos la respuesta.
 
@@ -328,7 +329,7 @@ else:
     #Todo ha ido como se espera
 ```
 
-Teniendo en cuenta que la misma libreria `requests` nos genera un error de conexión cuando algo va mal, podemos jugar con los bloques `try-except` para poder manejar los errores:
+Teniendo en cuenta que la misma librería `requests` nos genera un error de conexión cuando algo va mal, podemos jugar con los bloques `try-except` para poder manejar los errores:
 ```python
 import requests
 
@@ -345,7 +346,7 @@ except ConnectionError as conn_err:
     print(error)
 ```
 
-Y aun más, podemos manejar los errores dependiendo del código que nos devuelvan:
+Y aún más, podemos manejar los errores dependiendo del código que nos devuelvan:
 ```python
 import requests
 
@@ -366,4 +367,4 @@ except HTTPError as http_err:
 
 Con la opción `r.raise_for_status` cuando ocurra un error, si lo hace, el script generará una excepción por tipo de código HTTP. 
 
-Esto en realidad implica que independientemente del error que ocurra, el error de la petición almacenado en `r.status_code` será filtrado por el bloque `except HTTPError`, devolviendonos el código de error exacto que haya generado la petición, haciendo más fácil la depuración de nuestro script para poder corregir el error en la petición. 
+Esto en realidad implica que independientemente del error que ocurra, el error de la petición almacenado en `r.status_code` será filtrado por el bloque `except HTTPError`, devolviéndonos el código de error exacto que haya generado la petición, haciendo más fácil la depuración de nuestro script para poder corregir el error en la petición. 
