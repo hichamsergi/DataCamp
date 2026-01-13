@@ -50,6 +50,26 @@ Los atributos de los *DataFrames* también nos pueden proporcionar información 
 
 `my_dataframe.columns` y `my_dataframe.index`, contienen los nombes de las columnas y números de fila, respectivamente.
 
+#### 1.1) **<ins>Clasificacicion y subconjuntos</ins>**:
+Las necesidades de estructura de los *DataFrame* dependen de cada situación, por ese motivo, la clasificación de la información es importante. Podemos ordenar nuestro *DataFrame* de diferentes formas:
+
+* `my_dataframe.sort_values("column_name")`: Este método nos permite organizar los registros de un *DataFrame* en función de los valores contenidos en una columna. Añadiendo el argumento `ascending=False`, podemos organizarlo de forma inversa, de mayor a menor. Proporcionando una lista, como argumento para la ordenación, podemos ordenar por tantas columnas como valores contenga esa lista.
+
+* `my_dataframe["columna1"]`: De esta forma, accederemos únicamente a la columna indicada entre corchetes. Si queremos acceder a varias columnas únicas, debemos de convertir el valor contenido en una lista con los nombres deseados. 
+
+Subconjuntar registros también es posible si utilizamos operadores lógicos conocidos:
+
+* `my_dataframe[my_dataframe["column1"] > 50]`: En esta operación, obtendremos los registros de nuestro *Dataframe*, que contengan un valor superior a 50 en la columna `column1`.
+
+* `my_dataframe["color"].isin(["Red","Blue"])`:
+
+* `dogs[(dogs["height_cm"] > 60) & (dogs["color"] == "tan")]`:
+
+```python
+colors = ["brown", "black", "tan"]
+condition = dogs["color"].isin(colors)
+dogs[condition]
+```
 
 
 
