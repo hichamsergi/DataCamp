@@ -61,9 +61,11 @@ Subconjuntar registros también es posible si utilizamos operadores lógicos con
 
 * `my_dataframe[my_dataframe["column1"] > 50]`: En esta operación, obtendremos los registros de nuestro *Dataframe*, que contengan un valor superior a 50 en la columna `column1`.
 
-* `my_dataframe["color"].isin(["Red","Blue"])`:
+* `my_dataframe["color"].isin(["Red","Blue"])`: Mostramos los registros que únicamente tienen el valor "*Red*" o "*Blue*" en la columna "*color*".
 
-* `dogs[(dogs["height_cm"] > 60) & (dogs["color"] == "tan")]`:
+* `dogs[(dogs["height_cm"] > 60) & (dogs["color"] == "tan")]`: Esta es la sintaxis para generar una salida en la que únicamente se cumplan ambas condiciones.
+
+* Tambien podemos almacenar una condición dentro de una variable que posteriormente podemos aplicar para generar subconjuntos:
 
 ```python
 colors = ["brown", "black", "tan"]
@@ -71,6 +73,14 @@ condition = dogs["color"].isin(colors)
 dogs[condition]
 ```
 
+#### 1.2) **<ins>Nuevas columnas</ins>**:
+Muchas veces el contenido de un *DataFrame* no es suficiente y necesitamos añadir nuevas columnas con contenido de columans derivadas de columnas existentes. Por ejemplo, transformar la unidad de medida:
+
+```python
+my_dataframe["peso_Kg"] = my_dataframe["peso_G"] / 1000
+```
+
+La fuerza de *Pandas* está en el hecho de mezclar las herramientas para subconjuntar y la generación de nuevas columnas.
 
 
 ### Capítulo 2: **<ins>Agregar DataFrames</ins>**
