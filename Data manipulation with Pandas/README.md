@@ -84,6 +84,57 @@ La fuerza de *Pandas* está en el hecho de mezclar las herramientas para subconj
 
 
 ### Capítulo 2: **<ins>Agregar DataFrames</ins>**
+Como ya sabemos extraer columnas, dividirlas e incluso añadirlas, vamos a concentrarnos en los mismos datos que las componen. Podemos extraer información generica de todo un *DataFrame*, con la función `my_df.describe()`:
+
+```python
+         individuals  family_members     state_pop
+count      51.000000       51.000000  5.100000e+01
+mean     7225.784314     3504.882353  6.405637e+06
+std     15991.025083     7805.411811  7.327258e+06
+min       434.000000       75.000000  5.776010e+05
+25%      1446.500000      592.000000  1.777414e+06
+50%      3082.000000     1482.000000  4.461153e+06
+75%      6781.500000     3196.000000  7.340946e+06
+max    109008.000000    52070.000000  3.946159e+07
+```
+
+Como podemos ver, nos proporciona información general, y dicha información puede ser excesiva. De cualquier forma, podemos acceder pormenorizadamente a todos esos componentes que nos muestra `describe`:
+
+```python
+my_df["column1"].mean() #Media
+
+my_df["column1"].median() #Mediana
+
+
+my_df["birth_date"].min()
+```
+
+Y como con las funciones própias, podemos personalizar nuestras mismas funciones. Esto lo hacemos con el método `.agg`, de la siguiente forma:
+
+```python
+def pct30(column) #Definimos el método .agg
+    return column.quantile(0.3)
+
+my_df["columna3"].agg(pct30) #Este método calculará el percentil 30 de la columna 3
+
+my_df[["columna3","columna7"]].agg(pct30) #Aplicamos el método a las dos columnas
+```
+
+De la misma forma que hemos visto en el último ejemplo, no solo podemos trasladas varias columnas a un método, sino también varios métodos a una única columna: 
+
+```python
+my_df["peso_kg"].agg([pct30, pct40])
+```
+
+Dado que la estadística puede contener valores necesariamente acumulativos, como sumas totales de diferentes líneas de registros referentes a pesos, por ejemplo. Hay diversas funciones ya conocidas que podemos aplicar este añadido acumulativo:
+
+```python
+my_df["col1"].cumsum()
+my_df["col1"].cummax()
+my_df["col1"].cummin()
+my_df["col1"].cumprod()
+```
+
 
 ### Capítulo 3: **<ins>Segmentar e indexar DataFrames</ins>**
 
