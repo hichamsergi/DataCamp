@@ -9,7 +9,7 @@ Pandas es la biblioteca de Python más popular del mundo, utilizada para todo, d
 ## 2. Índice
 
 1. [Transformación de DataFrames](#capítulo-1-transformación-de-dataframes)
-2. [Agregar DataFrames](#capítulo-2-agregar-dataframes)
+2. [Estadística en DataFrames](#capítulo-2-estadística-en-dataframes)
 3. [Segmentar e indexar DataFrames](#capítulo-3-segmentar-e-indexar-dataframes)
 4. [Crear y visualizar DataFrames](#capítulo-4-crear-y-visualizar-dataframes)
 
@@ -83,7 +83,7 @@ my_dataframe["peso_Kg"] = my_dataframe["peso_G"] / 1000
 La fuerza de *Pandas* está en el hecho de mezclar las herramientas para subconjuntar y la generación de nuevas columnas.
 
 
-### Capítulo 2: **<ins>Agregar DataFrames</ins>**
+### Capítulo 2: **<ins>Estadística en DataFrames</ins>**
 Como ya sabemos extraer columnas, dividirlas e incluso añadirlas, vamos a concentrarnos en los mismos datos que las componen. Podemos extraer información generica de todo un *DataFrame*, con la función `my_df.describe()`:
 
 ```python
@@ -134,6 +134,51 @@ my_df["col1"].cummax()
 my_df["col1"].cummin()
 my_df["col1"].cumprod()
 ```
+
+La información, muchas veces es importante cruzarla. Los registros, cuando tenemos en cuenta varias columnas, pueden generar diferentes resultados con los módulos aprendidos hasta ahora, como `mean`. Para poder tener en cuenta agrupaciones de diferentes registros, basados en una columna, podemos hacerlo de la siguiente forma:
+
+```python
+my_df.groupby("color")["peso"].mean()
+```
+
+Con el ejemplo anterior, estamos agrupando los diferentes registros por los diferentes datos de la columna `color`, seleccionando unicamente el peso para poder obtener la media de dicho peso.
+
+Y eso no es todo, podemos proporcionar funciones agregadas a los extractos de registros que generemos:
+```python
+my_df.groupby("edad")["peso"].agg([min, max, "mean"])
+```
+
+E incluso podemos agregar por más de una columna:
+```python
+my_df.groupby(["color","edad"])["peso"].mean()
+```
+
+También es importante comentar que los duplicados pueden generarnos conflictos importante, sobretodo si queremos tener información limpia, o datos certeros como medias o cualquier otra información estadística. Limpiar de duplicados es facil:
+
+```python
+
+my_df.drop_duplicates(subset="col1")
+```
+
+Como podemos ver, el método es descriptivo. `subset="..."` es donde debemos de indicar la columna en la que aplicaremos el filtro de limpieza de duplicados, dicha columna debe de contener información única. Si no es así, eliminaremos registros que realmente no son duplicados. Ahora bien, podemos tener en cuenta varias columnas para la identificación de duplicados:
+
+```python
+my_df.drop_duplicates(subset=["col1","col3"])
+```
+
+Como ya hemos podido "limpiar" los datos y ahora no tenemos datos duplicados, podemos hacer un recuento:
+
+```python
+df_clean = my_df.drop_duplicates(subset=["col1","col3"])
+
+df_clean["col1"].value_counts(sort=True) #Lleva a cabo el recuento y ordena en consecuencia
+```
+
+Si queremos obtener las proporciones de dichos datos, en vez de los recuentos:
+```python
+df_clean["col1"].value_counts(normalize=True)
+```
+
 
 
 ### Capítulo 3: **<ins>Segmentar e indexar DataFrames</ins>**
