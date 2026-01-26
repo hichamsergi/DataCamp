@@ -9,7 +9,15 @@ Pandas es la biblioteca de Python más popular del mundo, utilizada para todo, d
 ## 2. Índice
 
 1. [Transformación de DataFrames](#capítulo-1-transformación-de-dataframes)
+    - [Clasificacicion y subconjuntos](#11-clasificacicion-y-subconjuntos)
+    - [Nuevas columnas](#12-nuevas-columnas)
 2. [Estadística en DataFrames](#capítulo-2-estadística-en-dataframes)
+    - [Funciones básicas](#21-funciones-básicas)
+    - [Funciones agregadas](#22-funciones-agregadas)
+    - [Funciones acumulativas](#23-funciones-acumulativas)
+    - [Información agrupada](#241-información-agrupada)
+    - [Tablas dinámicas](#242-tablas-dinámicas)
+    - [Datos límpios](#25-datos-límpios)
 3. [Segmentar e indexar DataFrames](#capítulo-3-segmentar-e-indexar-dataframes)
 4. [Crear y visualizar DataFrames](#capítulo-4-crear-y-visualizar-dataframes)
 
@@ -98,7 +106,8 @@ min       434.000000       75.000000  5.776010e+05
 max    109008.000000    52070.000000  3.946159e+07
 ```
 
-Como podemos ver, nos proporciona información general, y dicha información puede ser excesiva. De cualquier forma, podemos acceder pormenorizadamente a todos esos componentes que nos muestra `describe`:
+#### 2.1) **<ins>Funciones básicas</ins>**:
+En el ejemplo anterior, nos proporciona información general, y dicha información puede ser excesiva. De cualquier forma, podemos acceder pormenorizadamente a todos esos componentes que nos muestra `describe`:
 
 ```python
 my_df["column1"].mean() #Media
@@ -108,8 +117,8 @@ my_df["column1"].median() #Mediana
 
 my_df["birth_date"].min()
 ```
-
-Y como con las funciones própias, podemos personalizar nuestras mismas funciones. Esto lo hacemos con el método `.agg`, de la siguiente forma:
+#### 2.2) **<ins>Funciones agregadas</ins>**:
+Como las funciones regulares, podemos personalizar nuestras mismas funciones estadísiticas. Esto lo hacemos con el método `.agg`, de la siguiente forma:
 
 ```python
 def pct30(column) #Definimos el método .agg
@@ -126,6 +135,7 @@ De la misma forma que hemos visto en el último ejemplo, no solo podemos traslad
 my_df["peso_kg"].agg([pct30, pct40])
 ```
 
+#### 2.3) **<ins>Funciones acumulativas</ins>**:
 Dado que la estadística puede contener valores necesariamente acumulativos, como sumas totales de diferentes líneas de registros referentes a pesos, por ejemplo. Hay diversas funciones ya conocidas que podemos aplicar este añadido acumulativo:
 
 ```python
@@ -135,6 +145,7 @@ my_df["col1"].cummin()
 my_df["col1"].cumprod()
 ```
 
+#### 2.4.1) **<ins>Información agrupada</ins>**:
 La información, muchas veces es importante cruzarla. Los registros, cuando tenemos en cuenta varias columnas, pueden generar diferentes resultados con los módulos aprendidos hasta ahora, como `mean`. Para poder tener en cuenta agrupaciones de diferentes registros, basados en una columna, podemos hacerlo de la siguiente forma:
 
 ```python
@@ -153,6 +164,22 @@ E incluso podemos agregar por más de una columna:
 my_df.groupby(["color","edad"])["peso"].mean()
 ```
 
+#### 2.4.2) **<ins>Tablas dinámicas</ins>**:
+Como ya hemos aprendido, las estadísticas agrupadas por conjuntos son importantes. Anteriormente, hemos utilizado funciones como `groupby`, pero utilizar **tablas dinámicas** es otra forma de extraer información de conjuntos de datos.
+
+La sintaxis es diferente:
+
+```python
+df.pivot_table(values="columna_1", index="color", aggfunc="median")
+```
+
+* `values`: Indica el argumento que queremos resumir. Sobre el que aplicaremos, la función estadísitca.
+
+* `index`: Especifica la columna por la que agruparemos el conjunto de datos. 
+
+* `aggfunc`: Es claro, indicamos la función que aplicaremos a `values`. Si no indicamos este argumento, aplicará por defecto la función estadística `mean`. Y como siempre, si proporcionamos una lista de funciones, `[..., ...]`, podemos aplicar diferentes funciones.
+
+#### 2.5) **<ins>Datos límpios</ins>**:
 También es importante comentar que los duplicados pueden generarnos conflictos importante, sobretodo si queremos tener información limpia, o datos certeros como medias o cualquier otra información estadística. Limpiar de duplicados es facil:
 
 ```python
@@ -179,8 +206,86 @@ Si queremos obtener las proporciones de dichos datos, en vez de los recuentos:
 df_clean["col1"].value_counts(normalize=True)
 ```
 
-
-
 ### Capítulo 3: **<ins>Segmentar e indexar DataFrames</ins>**
+Una de las cosas que no hemos descrito aún, serían los indices de los *DataFrames*. Más allá de las columnas, podemos entender como índice aquellos identificadores únicos de los diferentes registros que componen un *DataFrame*. Por defecto, Pandas, asigna a cada registro un valor numérico que inícia en "0" y aumenta por cada registro:
 
+```python
+            fecha   cliente producto precio  cantidad
+0      2023.09.26   hicham     Mouse    -10       NaN
+1      2023.12.27     MARTA  Teclado  ERROR       NaN
+2      2023-05-05      luis   Cables   1200       5.0
+3             NaN    PeDro   Teclado  ERROR       5.0
+4      2023.08.15     sofia    Mouse   1200       2.0
+```
+
+Generalmente no es buena idea manipular estos índices, dado que nos interesa poder identificar de forma única cada regístro. 
+
+Pese a ello es importante entender el concepto y como este puede ser alterado. Dicho lo cual, vamos a aprender como hacerlo. Imaginemos que el *DataFrame* anterior, `ventas`, corresponde a nuestra muestra. Vamos a establecer que el índice del *DataFrame* sea `producto`:
+
+```python
+ventas.set_index("producto")
+
+fecha   cliente precio  cantidad
+producto                                       
+Mouse     2023.09.26   hicham     -10       NaN
+Teclado   2023.12.27     MARTA  ERROR       NaN
+Cables    2023-05-05      luis   1200       5.0
+Teclado          NaN    PeDro   ERROR       5.0
+Mouse     2023.08.15     sofia   1200       2.0
+```
+
+Si nos fijamos en la muestra, `producto`, contiene registros duplicados. Como hemos comentado, esto sería un gran error, dado que los indices deben de identificar de forma única a los registros. Por lo que lo más lógico sería revertir el cambio. Podemos hacerlo de la siguiente manera:
+
+```python
+ventas.reset_index() #Para revertir los cambios
+ventas.reset_index(drop=True) #Revertimos los cambios 
+                              #y eliminamos la columna establecida como índice
+
+               fecha   cliente precio  cantidad
+producto                                       
+Mouse     2023.09.26   hicham     -10       NaN
+Teclado   2023.12.27     MARTA  ERROR       NaN
+Cables    2023-05-05      luis   1200       5.0
+Teclado          NaN    PeDro   ERROR       5.0
+Mouse     2023.08.15     sofia   1200       2.0
+```
+
+Ahora que ya sabemos como modificar a nuestro antojo el índice de un *DataFrame*, podemos acceder a los registros que tengan un determinado índice a través del método `loc`:
+
+```python
+ventas.loc["Teclado"]
+
+               fecha cliente precio  cantidad
+producto                                     
+Teclado   2023.12.27   MARTA  ERROR       NaN
+Teclado          NaN  PeDro   ERROR       5.0
+```
+
+#### 3.1) **<ins>`loc` vs `iloc`</ins>**:
+Acabamos de ver las ventajas de `loc` en la segmentación de *DataFrames*, es tan fácil como indicar qué valores de la columna índice que queremos segmentar. Vamos a complicar un poco más la sintáxis:
+
+`df.loc[X, Y]`
+
+* `df`: Correspondería al *DataFrame* a segmentar.
+
+* `X`: Correspondería a los valores que queremos segmentar. En esta posición, también podemos indicar condiciones lógicas tales como `df["precio"] < 10`.
+
+* `Y`: Correspondería a la columna de la que segmentaremos los valores.
+
+Por lo tanto, lo que hemos indicado es que vamos a recoger todos los registros que en la columna `Y` contengan el valor `X`.
+
+Ahora vamos con `iloc`:
+
+`df.iloc[X, Y]`
+
+En resumidas cuentas, es la misa. La diferencia sería que en vez de indicar los nombres de los valores y columnas que queremos segmentar, indicamos las **posiciones** de los valores a segmentar.
+
+Breve tabla comparativa:
+
+| Característica | .loc| .iloc |
+|----------------|-----|-------|
+|Referencia|Se basa en etiquetas (nombres).|Se basa en posiciones enteras (índice 0, 1, 2...).
+|Filas|	Buscas por el nombre del índice.|	Buscas por el número de orden de la fila.
+|Columnas|	Usas el nombre de la columna (ej. "fecha").|	Usas el índice numérico (ej. 0 para la primera).
+|Slicing| (A:B)	Incluye el final (B es parte del resultado).| Excluye el final (estilo estándar de Python).
 ### Capítulo 4: **<ins>Crear y visualizar DataFrames</ins>**
