@@ -19,6 +19,7 @@ Pandas es la biblioteca de Python más popular del mundo, utilizada para todo, d
     - [Tablas dinámicas](#242-tablas-dinámicas)
     - [Datos límpios](#25-datos-límpios)
 3. [Segmentar e indexar DataFrames](#capítulo-3-segmentar-e-indexar-dataframes)
+    - [`loc` vs `iloc`](#31-loc-vs-iloc)
 4. [Crear y visualizar DataFrames](#capítulo-4-crear-y-visualizar-dataframes)
 
 ---
@@ -165,17 +166,19 @@ my_df.groupby(["color","edad"])["peso"].mean()
 ```
 
 #### 2.4.2) **<ins>Tablas dinámicas</ins>**:
-Como ya hemos aprendido, las estadísticas agrupadas por conjuntos son importantes. Anteriormente, hemos utilizado funciones como `groupby`, pero utilizar **tablas dinámicas** es otra forma de extraer información de conjuntos de datos.
+Como ya hemos aprendido, las estadísticas agrupadas por conjuntos son importantes. Anteriormente, hemos utilizado funciones como `groupby`, pero utilizar **tablas dinámicas** es otra forma de extraer información de conjuntos de datos. No es útil
 
 La sintaxis es diferente:
 
 ```python
-df.pivot_table(values="columna_1", index="color", aggfunc="median")
+df-test.pivot_table(values="columna_1", index="color", columns="altura_cm", aggfunc="median")
 ```
 
-* `values`: Indica el argumento que queremos resumir. Sobre el que aplicaremos, la función estadísitca.
+* `values`: Indica el valor sobre el que se aplicará la función que indiquemos.
 
-* `index`: Especifica la columna por la que agruparemos el conjunto de datos. 
+* `index`: Especifica la columna por la que agruparemos el conjunto de datos. Los datos se agruparán en filas según los registros únicos de esta columna.
+
+* `columns`***(Opcional)***: Nos permite establecer otro eje de agrupación, esta vez horizontal.
 
 * `aggfunc`: Es claro, indicamos la función que aplicaremos a `values`. Si no indicamos este argumento, aplicará por defecto la función estadística `mean`. Y como siempre, si proporcionamos una lista de funciones, `[..., ...]`, podemos aplicar diferentes funciones.
 
@@ -288,4 +291,87 @@ Breve tabla comparativa:
 |Filas|	Buscas por el nombre del índice.|	Buscas por el número de orden de la fila.
 |Columnas|	Usas el nombre de la columna (ej. "fecha").|	Usas el índice numérico (ej. 0 para la primera).
 |Slicing| (A:B)	Incluye el final (B es parte del resultado).| Excluye el final (estilo estándar de Python).
+
 ### Capítulo 4: **<ins>Crear y visualizar DataFrames</ins>**
+Hasta ahora, hemos aprendido a manipular y organizar datos. Cuando todos estos datos ya están limpios, lo único que queda es presentarlos de una forma atractiva. Pandas, por si solo no puede, pero la estructura del *DataFrame* puede ser utilizada por otras librerias complementarias, como **Matplotlib**.
+
+Ahora aprenderemos a visualizar datos de múltiples formas. Pero lo primero es lo primero, tenemos que importar la libreria:
+```python
+import matplotlib.pyplot as plt
+```
+
+Es un estándar llamar a *Matplotlib* como *plt*.
+
+Ahora que ya tenemos lo básico lo que nos falta es saber las diferentes opciones que tenemos para plantear los datos de forma gráfica:
+
+#### 4.1) **<ins>Histograma</ins>**:
+
+![hist](img/hist.png)
+
+Para presentar un histograma, simplemente seleccionamos la columna del *DataFrame* que queremos representar y la seguimos del módulo `.hist()`:
+
+```python
+df["altura"].hist()
+```
+
+Como los rangos de valores son de especial importancia en este tipo de gráfico, debemos de saber como poder alterarlos:
+
+```python
+df["altura"].hist(bins=20 )
+```
+De estea forma lo que hacemos es definir el rango tota en 20 intervalos.
+
+
+De igual forma, también podemos querer mostrar simultaneamente dos histogramas en un mismo gráfico:
+
+```python
+df[df["sexo"] == "H"]["altura"].hist(alpha=0.7)
+df[df["sexo"] == "M"]["altura"].hist(alpha=0.7)
+
+plt.legend(["H", "M"])
+```
+Lo relevante en el ejemplo sería que hemos definido una transparencia en ambos gráficos. De esta forma, podremos verlos a los dos sin que la opacidad los solape. 
+
+Indicando `plt.legend(...)`, añadiremos una leyenda en la parte superior del gráfico.
+
+#### 4.2) **<ins>Barras</ins>**:
+![barras](img/barras.png)
+
+Para contruir un grafico de barras, debemos de cambiar la sintaxis:
+```python
+df_altura.plot(kind="bar", title="Media de altura por edad")
+```
+
+- `df_altura.plot(...)`: *DataFrame* a representar.
+
+- `kind="bar"`: Definimos el tipo de gráfico que vamos a utilizar, de `Barras`.
+
+- `title="..."`; Indicamos el titulo del gráfico. Aparecerá en la parte superior. 
+
+
+#### 4.3) **<ins>Línea</ins>**:
+![linea](img/linea.png)
+
+
+En este caso, debemos de indicar la columna de datos que corresponderá a cada eje del gráfico. La misma librería de *Matplotlib*, se encargará de "unir los puntos":
+
+```python
+df_line.plot(x="date", y="peso", kind="line", rot=45)
+```
+Como podemos ver, se indican los dos ejes, y luego que será de tipo *línea*.
+
+#### 4.4) **<ins>Dispersión</ins>**:
+![scatter](img/scatter.png)
+
+
+Es el mismo caso y procedimiento que el anterior, cambiando el tipo de gráfico que vamos a representar, "scatter", de *dispersión*:
+
+`df_pack.plot(x="altura", y="peso", kind="scatter")`
+
+
+Y finalmente para mostrarlos en pantalla, solo debemos de indicarle a la libreria que debe mostrarlos:
+```python
+plt.show()
+````
+
+
