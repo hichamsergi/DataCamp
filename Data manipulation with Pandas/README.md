@@ -372,6 +372,37 @@ Es el mismo caso y procedimiento que el anterior, cambiando el tipo de gráfico 
 Y finalmente para mostrarlos en pantalla, solo debemos de indicarle a la libreria que debe mostrarlos:
 ```python
 plt.show()
-````
+```
+
+### Capítulo 5: ***<ins>Valores ausentes</ins>**
+
+Los datos que forman parte de un *DataFrame*, muchas veces no son perfectos, lo que implica que algunos campos no siempre pueden estar llenos. Estos valores ausentes, *Pandas*, los rellena como `NaN` indicandonos que no contiene nada.
+
+Para saber si una columna o *DataFrame* tiene valores ausentes, podemos averiguarlo de la siguiente forma:
+
+```python
+df_dogs.isna()
+
+df_dogs.isna().any()
+
+df_dogs.isna().sum()
+```
+
+* `df_dogs.isna()`: Nos devuelve un *DataFrame* rellenado con valores booleanos, *True* o *False*, indicandonos en que registros hay valores ausentes. 
+
+* `df_dogs.isna().any()`: Nos devuelve el resumen, columna por columna, indicando si cualquiera de los registros que forman el *DataFrame* es un valor nulo.
+
+* `df_dogs.isna().sum()`: Hace la suma y nos indica cuantos valores nulos hay en cada columna.
 
 
+Ahora ya podemos identificar si tenemos, o no, valores nulos en nuestro *DataFrame*. El siguiente paso sería ver que podemos hacer con estos espacios vacíos:
+
+```python
+df_dogs.dropna()
+
+df_dogs.fillna(0)
+```
+
+* `df_dogs.dropna()`: Eliminamos el registro **COMPLETO** que contenga algún dato ausente. Esta opción es un poco radical si queremos conservar alguna otra parte del registro.
+
+* `df_dogs.fillna(0)`: Rellenamos con `0` los valores ausentes, conservando el registro completo.
