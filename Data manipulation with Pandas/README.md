@@ -374,7 +374,7 @@ Y finalmente para mostrarlos en pantalla, solo debemos de indicarle a la libreri
 plt.show()
 ```
 
-### Capítulo 5: ***<ins>Valores ausentes</ins>**
+### Capítulo 5: **<ins>Valores ausentes</ins>**
 
 Los datos que forman parte de un *DataFrame*, muchas veces no son perfectos, lo que implica que algunos campos no siempre pueden estar llenos. Estos valores ausentes, *Pandas*, los rellena como `NaN` indicandonos que no contiene nada.
 
