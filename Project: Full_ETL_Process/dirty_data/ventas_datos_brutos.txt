@@ -15,7 +15,7 @@ id_venta|fecha|cliente|producto|precio|cantidad
 14|2023.03.11| hicham |Cables|350|
 15||luis|Teclado|-10|
 16|04/02/2023|JUAN|Cables|-10|10
-17|2023.05.10|luis|Mouse|ERROR|5
+17|2023.05.10||Mouse|ERROR|5
 18|2023-03-11|luis|Laptop|1200|1
 19|21/05/2023|luis|Monitor|-10|10
 20|2023-06-07|CARLA|Cables|350|2

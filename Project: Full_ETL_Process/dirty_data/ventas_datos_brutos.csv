@@ -9,7 +9,7 @@ id_venta,fecha,cliente,producto,precio,cantidad
 8,2024.07.11,JUAN,Monitor,-10,1
 9,2024-03-27,PeDro ,Auriculares,350,
 10,28/01/2023,hicham,Auriculares,0,10
-11,2024.03.12,hicham,Teclado,25,10
+11,2024.03.12,,Teclado,25,10
 12,09/01/2023, sofia,Auriculares,350,
 13,2022.04.24,MARTA,Cables,-10,10
 14,16/10/2024,ana,Teclado,25,
