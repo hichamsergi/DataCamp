@@ -40,15 +40,36 @@ Para verificar que hemos cambiado el tipo de dato, podemos utilizar la función 
 assert ventas["Revenue"].dtype == 'int'
 ```
 
-
+Ahora podemos asumir que nuestro *dataset* contiene la información en el formato que nos interesa. El paso lógico, podría ser aprender a filtrarla y quedarnos únicamente con los registros que nos interesan:
 
 ```python
 movies = movies[movies["avg_rating"] <= 5]
+```
+
+De esta forma, reasignamos el valor del *DataFrame* inicial al valor de el mismo con el promedio de rating(`avg_rating`) inferior o igual a `5`.
+
+
+Otro métodos para poder realizar un cribaje de registros no necesarios puede ser con el método `.drop()`:
+
+```python
 
 movies.drop(movies[movies["avg_rating"] <= 5].index, inplace = True)
+```
+Vamos a descomponer la función anterior para entenderla mejor:
 
+* `movies.drop(...)`: Indicamos el *DataFrame* del que vamos a eliminar los registros, seguido de la función `.drop()`.
+
+* `movies[movies["avg_rating"] <= 5].index`: Recogemos únicamente los indices de los registros que cumplan con la condición indicada.
+
+* `inplace = True`: Modificamos el *DataFrame* original. 
+
+
+Entendiendo lo previo, podemos saber por lo tanto lo que pretende hacer la siguiente función:
+
+```python
 movies.loc[movies[movies["avg_rating"] <= 5], 'avg_rating'] = 5
 ```
+Modificamos el *DataFrame* para que contenga únicamente el promedio de rating de los registros que tienen un promedio de rating inferior o igual a 5.
 
 
 
