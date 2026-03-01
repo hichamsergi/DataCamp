@@ -40,6 +40,16 @@ Para verificar que hemos cambiado el tipo de dato, podemos utilizar la función 
 assert ventas["Revenue"].dtype == 'int'
 ```
 
+También es importante saber que debido a la amplia variedad de formatos que puede haber en las fechas, estas son un caso especialmente importante a tener en cuenta.
+
+Pueden darse casos en los que las fechas se presenten como cadenas *string*. Debemos de tener cuidado en como lo convertimos a un *datatype* en formato fecha:
+
+```python
+ride_sharing['ride_dt'] = pd.to_datetime(ride_sharing['ride_date']).dt.date
+```
+
+Lo primero que hemos hecho, ha sido utilizar la función `to_datetime` de Pandas para indicar que la columna `ride_date` corresponde a un *datetype* de fecha. Una vez lo tenemos, especificamos el tipo de dato, `dt`, y luego le indicamos que parte de esa fecha es la que nos vamos a quedar. En el ejemplo anterior indicamos `date`, que correspondería a la parte de la fecha que equivale a `YYYY-MM-DD`. Pese a todo, hay multiples formatos y podemos recoger diferente información en función de nuestras encesidades. 
+
 Ahora podemos asumir que nuestro *dataset* contiene la información en el formato que nos interesa. El paso lógico, podría ser aprender a filtrarla y quedarnos únicamente con los registros que nos interesan:
 
 ```python
@@ -47,7 +57,6 @@ movies = movies[movies["avg_rating"] <= 5]
 ```
 
 De esta forma, reasignamos el valor del *DataFrame* inicial al valor de el mismo con el promedio de rating(`avg_rating`) inferior o igual a `5`.
-
 
 Otro métodos para poder realizar un cribaje de registros no necesarios puede ser con el método `.drop()`:
 
@@ -63,14 +72,25 @@ Vamos a descomponer la función anterior para entenderla mejor:
 
 * `inplace = True`: Modificamos el *DataFrame* original. 
 
-
 Entendiendo lo previo, podemos saber por lo tanto lo que pretende hacer la siguiente función:
 
 ```python
 movies.loc[movies[movies["avg_rating"] <= 5], 'avg_rating'] = 5
 ```
+
 Modificamos el *DataFrame* para que contenga únicamente el promedio de rating de los registros que tienen un promedio de rating inferior o igual a 5.
 
+Ahora que ya sabemos filtrar para eliminar registros que no cumplen con los parametros que queramos, podemos aprender a como eliminar datos duplicados. Los datos duplicados son otro de los grandes problemas que podemos llegar a tener, ya que implica tener en cuenta la misma información 2 veces. Para esta tarea utilizaremos dos funciones que nos serán de gran ayuda:
+
+* `df.duplicated(...)`: Funciona como un buscador de duplicados, no elimina directamente, sino que señala duplicados.
+
+* `df.drop_duplicates(...)`: Es el ejecutor de la eliminación de duplicados, realmente se encarga de eliminar los registros que sean identicos a otros.
+
+Poder saber si se trata de un registro completamente duplicado, o simplemente de uno con un dato duplicado, es algo que no podemos pasar por alto y es muy importante. En ambas funciones podemos utilizar los siguientes atributos que nos ayudarán a poder identificar si un duplicado es parcial o completo:
+
+* `(subset=['...','...'], ...)`: Con `subset` podemos identificar que columnas queremos analizar para poder focalizar la busqueda de duplicados.
+
+* `(..., keep=False)`: Podemos indicarle si queremos conservar alguno de los duplicados encontrados. Hay diferentes posibles argumentos, False, `first` y `last`. Con el primero eliminamos todos los duplicados, con los dos siguientes, dariamos por valido el primero o el último registro duplicado.
 
 
 ### Capítulo 2: **<ins>Problemas de texto y datos categóricos</ins>**
