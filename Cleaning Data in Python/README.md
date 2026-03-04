@@ -94,6 +94,66 @@ Poder saber si se trata de un registro completamente duplicado, o simplemente de
 
 
 ### Capítulo 2: **<ins>Problemas de texto y datos categóricos</ins>**
+Como ya hemos trabajado con *DataFrames*, conocemos los diferentes tipos de datos. Ahora bien, en ciertas columnas los datos pueden estar determinado a un conjunto de posibles opciones, esos datos, se llamarán **datos categóricos**(`category`). Este conjunto de posibles respuestas, es especialmente importante si pensamos en una encuesta de satisfacción, tipos de sangre o cualquier tipo de información que deba ceñirse a un conjunto limitado de opciones.
+
+Entendiendo esto, debemos saber utilizar Python para poder localizar estos registros inconsistentes y limpiar nuestro *DataFrame*. Podemos definir 3 pasos simples a la hora de realizar la limpieza de datos categoricos y datos inconsistentes:
+
+1) Localizar los valores inconsistentes. En este punto, necesitaremos alguna especie de registro o *DataFrame* que contenga los posibles datos, los correctos:
+
+```python
+categorias_incons = set(datos_estudio['tipo_sangre']).difference(categoria['tipos_sangre'])
+```
+
+2) Localizar los registros que contengan estos valores inconsistentes:
+
+```python
+registros_incons = datos_estudio['tipo_sangre'].isin(categorias_incons)
+```
+
+3) Poder diferenciar entre los valores inconsistentes y los valores consistentes:
+
+```python
+datos_estudio[~registros_incons] #Datos consistentes
+datos_estudio[registros_incons] #Datos inconsistentes
+```
+
+Ahora bien, los datos categóricos siguen siendo datos de texto. Por lo que lo que más debería de preocuparnos es el hecho de saber como limpiarlos antes de tomarlos como categóricos. Vamos a aprender:
+
+```python
+df['columna1'].str.lower()
+df['columna1'].str.strip()
+```
+De igual forma que utilizamos `lower()` o `strip()` para normalizar el texto de un registro cualquiera lo utilizamos para normalizar datos de tipo *string* en un registro. Solo debemos de añadir `.str.lower()` o `.str.strip()` a las funciones de normalización. 
+
+```python
+phones['phone_number'] = phones['phone_number'].str.replace(r'\D+', '')
+```
+
+```python
+
+import pandas as pd
+
+group_names=['0-200k', '200k-500k', '500k+']
+
+demographics['income_group'] = pd.qcut(demographics['household_income'], q=3, labels=group_names)
+
+demographics[['income_group','household_income']]
+
+
+label_ranges = [0, 60, 180, np.inf]
+label_names = ['short', 'medium', 'long']
+
+# Create wait_type column
+airlines['wait_type'] = pd.cut(airlines['wait_min'], bins = label_ranges, 
+                                labels = label_names)
+
+
+mappings = {'Monday':'weekday', 'Tuesday':'weekday', 'Wednesday': 'weekday', 
+            'Thursday': 'weekday', 'Friday': 'weekday', 
+            'Saturday': 'weekend', 'Sunday': 'weekend'}
+
+airlines['day_week'] = airlines['day'].replace(mappings)
+```
 
 ### Capítulo 3: **<ins>Problemas avanzados de datos</ins>**
 
