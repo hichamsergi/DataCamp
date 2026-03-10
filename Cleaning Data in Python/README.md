@@ -94,9 +94,9 @@ Poder saber si se trata de un registro completamente duplicado, o simplemente de
 
 
 ### Capítulo 2: **<ins>Problemas de texto y datos categóricos</ins>**
-Como ya hemos trabajado con *DataFrames*, conocemos los diferentes tipos de datos. Ahora bien, en ciertas columnas los datos pueden estar determinado a un conjunto de posibles opciones, esos datos, se llamarán **datos categóricos**(`category`). Este conjunto de posibles respuestas, es especialmente importante si pensamos en una encuesta de satisfacción, tipos de sangre o cualquier tipo de información que deba ceñirse a un conjunto limitado de opciones.
+Como ya hemos trabajado con *DataFrames*, conocemos los diferentes tipos de datos. Ahora bien, en ciertas columnas los datos pueden estar determinado a un conjunto de posibles opciones, esos datos se llamarán **datos categóricos**(`category`). Este conjunto de posibles respuestas, es especialmente importante si pensamos en una encuesta de satisfacción, tipos de sangre o cualquier tipo de información que deba ceñirse a un conjunto limitado de opciones.
 
-Entendiendo esto, debemos saber utilizar Python para poder localizar estos registros inconsistentes y limpiar nuestro *DataFrame*. Podemos definir 3 pasos simples a la hora de realizar la limpieza de datos categoricos y datos inconsistentes:
+Entendiendo esto, debemos saber utilizar Python para poder localizar registros inconsistentes y limpiar nuestro *DataFrame*. Podemos definir 3 pasos simples a la hora de realizar la limpieza de datos categoricos y datos inconsistentes:
 
 1) Localizar los valores inconsistentes. En este punto, necesitaremos alguna especie de registro o *DataFrame* que contenga los posibles datos, los correctos:
 
@@ -113,8 +113,8 @@ registros_incons = datos_estudio['tipo_sangre'].isin(categorias_incons)
 3) Poder diferenciar entre los valores inconsistentes y los valores consistentes:
 
 ```python
-datos_estudio[~registros_incons] #Datos consistentes
-datos_estudio[registros_incons] #Datos inconsistentes
+datos_estudio[~registros_incons] #Datos inconsistentes
+datos_estudio[registros_incons] #Datos consistentes
 ```
 
 Ahora bien, los datos categóricos siguen siendo datos de texto. Por lo que lo que más debería de preocuparnos es el hecho de saber como limpiarlos antes de tomarlos como categóricos. Vamos a aprender:
@@ -129,6 +129,13 @@ De igual forma que utilizamos `lower()` o `strip()` para normalizar el texto de 
 phones['phone_number'] = phones['phone_number'].str.replace(r'\D+', '')
 ```
 
+En el caso del ejemplo anterior lo que hemos hecho ha sido utilizar una expresión regular, `\D`, para poder remplazar los carácteres que no sean números por nada, eliminarlos.
+
+Una vez hemos conseguido poder normalizar las categorías, y los registros contienen solo los datos categóricos que nos interesan, podemos empezar a jugar con los datos. 
+
+
+Ahora vamos a aprender a como crear categorias en funcón de los datos:
+
 ```python
 
 import pandas as pd
@@ -138,23 +145,60 @@ group_names=['0-200k', '200k-500k', '500k+']
 demographics['income_group'] = pd.qcut(demographics['household_income'], q=3, labels=group_names)
 
 demographics[['income_group','household_income']]
+```
 
+En el ejemplo que acabamos de ver, hemos hecho lo siguiente:
+
+1. Definir los límites de 3 categorias diferentes.
+2. Dividir la columna `household_income` en 3 grupos que contengan los mismos número de registros. Mientras creamos una nueva columna, `income_group`, en función del valor y en que rango de límites se encuentra, lo asignamos a uno de los 3 grupos.
+3. Mostramos los resultados de `income_group` y `household_income`.
+
+El ejemplo es muy útil cuando sabemos los rangos exactos que debemos definir. En caso de no saberlos, podemos utilizar el siguiente ejemplo:
+
+```python
 
 label_ranges = [0, 60, 180, np.inf]
 label_names = ['short', 'medium', 'long']
 
 # Create wait_type column
-airlines['wait_type'] = pd.cut(airlines['wait_min'], bins = label_ranges, 
-                                labels = label_names)
-
-
-mappings = {'Monday':'weekday', 'Tuesday':'weekday', 'Wednesday': 'weekday', 
-            'Thursday': 'weekday', 'Friday': 'weekday', 
-            'Saturday': 'weekend', 'Sunday': 'weekend'}
-
-airlines['day_week'] = airlines['day'].replace(mappings)
+airlines['wait_type'] = pd.cut(airlines['wait_min'], bins = label_ranges, labels = label_names)
 ```
 
+El ejemplo es parecido al que ya hemos aprendido, con varias diferencias:
+
+1. En vez de rangos, definimos los valores límite.
+2. Indicamos los nombres de las etiquetas.
+3. Inicamos que en vez de dividir los registros en 3 grupos diferentes, lo haga en base a los límites de los rangos definidos previamente.
+
 ### Capítulo 3: **<ins>Problemas avanzados de datos</ins>**
+
+```python
+birthdays['Birthday'] = pd.to_datetime(birthdays['Birthday'],# Return NA for rows where conversion failed
+                                      errors = 'coerce')
+
+
+birthdays['Birthday'] = birthdays['Birthday'].dt.strftime("%d-%m-%Y")
+
+import datetime as dt 
+
+today = dt.date.today()
+
+inv_equ = banking[fund_columns].sum(axis=1) == banking['inv_amount']
+
+
+today = dt.date.today()
+ages_manual = today.year - banking['birth_date'].dt.year
+
+airquality_dropped = airquality.dropna(subset = ['CO2'])
+
+co2_mean = airquality['CO2'].mean()
+
+airquality_fillna = airquality.fillna({'CO2': co2_mean})
+
+import missingno as msno
+
+msno.matrix(banking)
+plt.show()
+```
 
 ### Capítulo 4: **<ins>Vinculación de registros</ins>**
