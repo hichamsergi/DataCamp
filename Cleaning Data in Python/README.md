@@ -171,21 +171,33 @@ El ejemplo es parecido al que ya hemos aprendido, con varias diferencias:
 3. Inicamos que en vez de dividir los registros en 3 grupos diferentes, lo haga en base a los límites de los rangos definidos previamente.
 
 ### Capítulo 3: **<ins>Problemas avanzados de datos</ins>**
+Como hemos comentado en algún punto, las fechas son datos especialmente sensibles. Ya sea por la gran cantida de formatos, por la mezcla de números y texto e inclusión de carácteres sepadores, son datos que pueden dar más de un dolor de cabeza si intentamos regularizar información. 
+
+También hemos hablado de que la función `to_datetime`, que traduce del formato nativo de la fuente de datos a un formato genérico del que podemos extraer información sobre fechas:
 
 ```python
-birthdays['Birthday'] = pd.to_datetime(birthdays['Birthday'],# Return NA for rows where conversion failed
-                                      errors = 'coerce')
+birthdays['Birthday'] = pd.to_datetime(birthdays['Birthday'],
+                                    errors = 'coerce')
+```
+El argumento `.., errors= 'coerce'` nos permite auto-rellenar los valores que den error en la conversión con un `NaN`.
 
+Pero lo realmente interesante, es como podemos manejar las fechas cuando ya las hemos regularizado:
 
+```python
 birthdays['Birthday'] = birthdays['Birthday'].dt.strftime("%d-%m-%Y")
+```
+El punto que nos interesaría sería el siguiente,`.dt.strftime("%d-%m-%Y")`. Básicamente estamos indicando al registro que analizamos que recoja un dato tipo `dt`, datetime. Al indicarle que es de ese formato, podemos especificarle que pese a que lo que analiza es una cadena *string*, el dato corresponde a una fecha, por lo que podemos utilizar expresiones regulares para extrar `%d`, el día `%m`, el mes, y `%Y`, el año. Estas expresiones nos pueden ayudar a extraer estos datos de forma individual, o conjunta, como en el ejemplo.
 
+Otros errores importantes pueden ser los relacionados con la validación cruzada de campos, es decir, datos que para ser consistentes deben de corresponder con información contenida en otros campos. Por ejemplo:
+```python
+
+inv_equ = banking[fund_columns].sum(axis=1) <= banking['inv_amount']
+```
+En la expresión booleana que hay encima podemos ver que utilizamos la suma de las columnas que corresponden a fondos dutilizados por el cliente, para verificar si los fondos disponibles de dicho cliente se han visto sobrepasados o no. De esta forma podemos ver si el cliente ha utilizado más fondos de los que debería, por lo que, utilizamos una validación cruzada de datos. 
+
+
+```python
 import datetime as dt 
-
-today = dt.date.today()
-
-inv_equ = banking[fund_columns].sum(axis=1) == banking['inv_amount']
-
-
 today = dt.date.today()
 ages_manual = today.year - banking['birth_date'].dt.year
 
