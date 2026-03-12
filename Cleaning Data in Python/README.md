@@ -195,22 +195,22 @@ inv_equ = banking[fund_columns].sum(axis=1) <= banking['inv_amount']
 ```
 En la expresión booleana que hay encima podemos ver que utilizamos la suma de las columnas que corresponden a fondos dutilizados por el cliente, para verificar si los fondos disponibles de dicho cliente se han visto sobrepasados o no. De esta forma podemos ver si el cliente ha utilizado más fondos de los que debería, por lo que, utilizamos una validación cruzada de datos. 
 
+Y por encima de esos errores, podemos toparnos con los que podemos considerar los más importantes, los valores ausentes. La ausencia puede deberese a múltiples causas, pero debemos decidir qué hacer con ellos. Hay dos opciones, eliminamos el registro que tenga el valor ausente o rellenamos el valor ausente para que deje de serlo:
 
 ```python
-import datetime as dt 
-today = dt.date.today()
-ages_manual = today.year - banking['birth_date'].dt.year
-
 airquality_dropped = airquality.dropna(subset = ['CO2'])
+```
+En el ejemplo anterior lo que hacemos es eliminar el registro con la función `.dropna(...)`, siendo `Nan` la representación de un valor ausente en un dato de un registro. Pero lo que estamos indicando con el argumento `subset = ['CO2']` es que elimine los registros que tengan valores ausentes en la columna *CO2*.
 
+En cambio, si decidimos rellenar esos valores, podemos hacerlo con la función `fillna`:
+```python
 co2_mean = airquality['CO2'].mean()
 
 airquality_fillna = airquality.fillna({'CO2': co2_mean})
-
-import missingno as msno
-
-msno.matrix(banking)
-plt.show()
 ```
+En el ejemplo, generamos un diccionario que substituirá todos los valores ausentes en la columna *CO2* por el promedio de dicha columna.
 
 ### Capítulo 4: **<ins>Vinculación de registros</ins>**
+
+```python
+```
