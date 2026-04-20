@@ -24,7 +24,7 @@ A la hora de entregar correctamente estos datos, los errores más básicos que p
 ventas["Revenue"] = ventas["Revenue"].astype('int')
 ```
 
-Con la función `.astype(..)` podemos convertir un tipo de dato en otro, siempre y cuando este "sea convertible". Es decir, podemos convertir un '1' en entero, pero no podemos converir '1$' a entero, ya que al contener el simbolo '$' trataríamos una cadena string con un simbolo no convertible a entero.
+Con la función `.astype(..)` podemos convertir un tipo de dato en otro, siempre y cuando este "sea convertible". Es decir, podemos convertir un '1' en entero, pero no podemos converir '1\$' a entero, ya que al contener el simbolo '\$' trataríamos una cadena string con un simbolo no convertible a entero.
 
 El ejemplo anterior es especialmente útil. Imaginemos que como el valor de la columna 'Revenue' contiene valores numéricos seguidos del simbolo '$', queremos eliminar el simbolo para convertir los registros de la columna en enteros.
 
@@ -195,7 +195,7 @@ inv_equ = banking[fund_columns].sum(axis=1) <= banking['inv_amount']
 ```
 En la expresión booleana que hay encima podemos ver que utilizamos la suma de las columnas que corresponden a fondos dutilizados por el cliente, para verificar si los fondos disponibles de dicho cliente se han visto sobrepasados o no. De esta forma podemos ver si el cliente ha utilizado más fondos de los que debería, por lo que, utilizamos una validación cruzada de datos. 
 
-Y por encima de esos errores, podemos toparnos con los que podemos considerar los más importantes, los valores ausentes. La ausencia puede deberese a múltiples causas, pero debemos decidir qué hacer con ellos. Hay dos opciones, eliminamos el registro que tenga el valor ausente o rellenamos el valor ausente para que deje de serlo:
+Y por encima de esos errores, podemos toparnos con los que podemos considerar los más importantes, los valores ausentes. La ausencia puede deberese a múltiples causas, pero debemos decidir qué hacer con ellos. Hay dos opciones, eliminamos el registro que tenga el valor ausente o rellenamos el valor ausente para que deje de serlo:V
 
 ```python
 airquality_dropped = airquality.dropna(subset = ['CO2'])
@@ -212,5 +212,58 @@ En el ejemplo, generamos un diccionario que substituirá todos los valores ausen
 
 ### Capítulo 4: **<ins>Vinculación de registros</ins>**
 
+Como ya hemos aprendido, la limpieza de datos es de los mayores retos que podemos encontrarnos. Ya sea por datos ausentes o formatos de fechas, hasta ahora hemos aprendido a como gesitonar una gran mayoria de problemas.
+
+Aun así, poder asociar valores erróneos a los correctos es de los mayores retos que podemos encontrarnos, más aun si pretendemos hacerlo de forma automática. Esto se debe a que debemos asumir qué, por similitud, los valores deben de ser substituido por los correctos. Y esto es posible gracias a que podemos medir la distancia de Levenshtein.
+
+**La distancia de Levenshtein**, es un algoritmo que mide la diferencia entre dos textos. Asignando una puntuación de *0*, el más diferente, a *100*, un texto idéntico, este algoritmo mide la cantidad de cambios a realizar en un string para transformarlo en otro. Esto lo hace midiendo 3 tipos posibles de cambios a realizar:
+
+- **Inserción:** Añadir una letra (ej: "Luz" ==> "Luz**a**").
+
+- **Eliminación:** Quitar una letra (ej: "**P**lato" ==> "Lato").
+
+- **Sustitución:** Cambiar una letra (ej: "**C**asa" ==> "**M**asa")
+
+Un ejemplo de todo esto sería calcular la tranformación de "**MAR**" en "**SOL**":
+
+1. Sustituir 'M' por 'S'.
+
+2. Sustituir 'A' por 'O'.
+
+3. Sustituir 'R' por 'L'.
+
+Dando una puntuación de *0*.
+
+En cambio la transformación de "**SAL**" a "**SOL**":
+
+1. Nada
+2. Sustituir 'A' por 'O'.
+3. Nada
+
+Dando una puntuación de *67*.
+
+De todas formas, es importante conocer el concepto, pero tampoco es esencial saber como se realiza dicho cálculo. Dado que tenemos la libreria *thefuzz*, podemos calcularlo llamando a sus funciones:
 ```python
+#Importamos la libreria:
+from thefuzz import fuzz, process 
+
+#Compare reeding vs reading: 0 to 100, beeing 100 the most similar
+fuzz.WRatio('Reeding','Reading')
+
+#Da una puntuación basada en los cambios necesarios para poder transformar un string en otro
+
+
+#Recorremos la lista con los datos que sabemos que estan bien escritos para poder almacenarlos:
+for state in categories['state']:
+
+    #Por cada estado correcto, medimos la distancia de Levenshtein con los datos 'sucios' de survey. Lo hacemos fila a fila, indicando shape[0]:
+    matches = process.extract(state, survey['state'], limit = survey.shape[0])
+
+    #Recorremos la tupla que nos ha devuelto ('Registro encontrado', Puntuación e Índice)
+    for potential_match in matches:
+
+        #Recogemos únicamente el dato de la túpla que nos interesa, la Puntuación de Levenshtein. Si la puntuación es parecida susbtituímos todos los registros de 'survey' por el estado que estamos analizando:
+        if potential_match[1] >= 80:
+            survey.loc[survey['state'] == potential_match[0], 'state'] = state
+
 ```
