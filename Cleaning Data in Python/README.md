@@ -242,27 +242,34 @@ En cambio la transformación de "**SAL**" a "**SOL**":
 
 Dando una puntuación de *67*.
 
-De todas formas, es importante conocer el concepto, pero tampoco es esencial saber como se realiza dicho cálculo. Dado que tenemos la libreria *thefuzz*, podemos calcularlo llamando a sus funciones:
+De todas formas, es importante conocer el concepto, pero tampoco es esencial saber como se realiza dicho cálculo. Como tenemos la libreria *thefuzz*, podemos calcular la distancia de Levenshtein llamando a sus funciones:
 ```python
 #Importamos la libreria:
-from thefuzz import fuzz, process 
+from thefuzz import fuzz#, process 
 
-#Compare reeding vs reading: 0 to 100, beeing 100 the most similar
+#Comparamos 'Reeding' vs 'Reading'
 fuzz.WRatio('Reeding','Reading')
+```
+Con la función`WRatio` del módulo `fuzz`, conseguimos la puntuación basada en los cambios necesarios para poder transformar un string en otro.
 
-#Da una puntuación basada en los cambios necesarios para poder transformar un string en otro
+Si bien de esta forma podemos obtener una la puntuación que buscamos, `WRatio` únicamente puede comparar dos palabras a la vez. Esto es muy util, pero algo limitado, solo estamos comparando dos strings a la vez.
 
+La solución al hecho de tener que comparar muchas cadenas de texto a una sola, podemos solucionarla con el módulo `process`. 
 
-#Recorremos la lista con los datos que sabemos que estan bien escritos para poder almacenarlos:
+```python
+
+from thefuzz import process
+
+#Recorremos una lista de valores considerados correctos para poder contrastar:
 for state in categories['state']:
 
-    #Por cada estado correcto, medimos la distancia de Levenshtein con los datos 'sucios' de survey. Lo hacemos fila a fila, indicando shape[0]:
+    #Por cada valor correcto, medimos la distancia de Levenshtein con los datos a analizar en `survey`. Lo hacemos fila a fila, indicando shape[0]:
     matches = process.extract(state, survey['state'], limit = survey.shape[0])
 
-    #Recorremos la tupla que nos ha devuelto ('Registro encontrado', Puntuación e Índice)
+    #Recorremos la tupla que nos ha devuelto (String analizado, Puntuación del string, Índice del string)
     for potential_match in matches:
 
-        #Recogemos únicamente el dato de la túpla que nos interesa, la Puntuación de Levenshtein. Si la puntuación es parecida susbtituímos todos los registros de 'survey' por el estado que estamos analizando:
+        #Recogemos únicamente el dato de la túpla que nos interesa, la Puntuación de Levenshtein. Si la puntuación es 80 o superior susbtituímos todos los registros de 'survey' por el registro que estamos analizando:
         if potential_match[1] >= 80:
             survey.loc[survey['state'] == potential_match[0], 'state'] = state
 
