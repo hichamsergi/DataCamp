@@ -75,7 +75,7 @@ Vamos a descomponer la función anterior para entenderla mejor:
 Entendiendo lo previo, podemos saber por lo tanto lo que pretende hacer la siguiente función:
 
 ```python
-movies.loc[movies[movies["avg_rating"] <= 5], 'avg_rating'] = 5
+movies.loc[movies["avg_rating"] <= 5, 'avg_rating'] = 5
 ```
 
 Modificamos el *DataFrame* para que contenga únicamente el promedio de rating de los registros que tienen un promedio de rating inferior o igual a 5.
