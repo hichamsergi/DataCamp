@@ -272,5 +272,60 @@ for state in categories['state']:
         #Recogemos únicamente el dato de la túpla que nos interesa, la Puntuación de Levenshtein. Si la puntuación es 80 o superior susbtituímos todos los registros de 'survey' por el registro que estamos analizando:
         if potential_match[1] >= 80:
             survey.loc[survey['state'] == potential_match[0], 'state'] = state
-
 ```
+Ahora entendemos la vinculación de registros por comparación de similitud. Pero podemos comprender una nueva forma de vincular registros, como **vinculación de registros**. El concepto es simple, pretendemos encontrar a una persona en dos DataFrame diferentes donde los registros pueden llegar a estar mal escritos o de forma diferente. Esto es diferente a comparar un string con otro basandonos en la distancia de Levenshtein.
+
+Pero vamos con un ejemplo practico para entenderlo, imaginamos que tenemos dos censos, **Censo_A** y **Censo_B**. Y queremos saber quien es quien sin tener que comparar fila a fila:
+
+```python
+import recordlinkage
+
+indexer = recordlinkage.Index() # Creamos un objeto de indexación, que nos permitirá generar pares para indexar
+
+indexer.block('state') 
+```
+Al generar un objeto de indexación e indicarle que queremos utilizar el método `block`, lo que hacemos es indicarle a indexer que queremos utilizar únicamente la columna *state* para comparar. De esta forma, lo que hacemos es comparar reigstros de ambos censos primero por la columna indicada, haciendo que en el caso de que el registro a analizar no sea del mismo estado, lo descartemos como similar ahorrando tiempo.
+
+En resumidas cuentas, estamos generando una estrategia de busqueda de similitudes.
+
+```python
+#Generacion de pares
+pairs = indexer.index(census_A, census_B)
+```
+Aquí lo que hacemos es utilizar la estrategia de busquedad, proporcionando los censos a comparar. 
+
+Almacenamos en la variable `pairs`, las coincidencias dignas de analisis con mayor profundidad.
+
+```python
+#Comapracion de pares
+compare_cl = record_linkage.Compare()
+
+#Encuentra coincidencias exactas entre pares para date_of_birth y state
+compare_cl.exact('date_of_birth', 'date_of_birth', label='date_of_birth')
+compare_cl.exact('state', 'state', label='state')
+
+#Econtrar coincidencias parecidas entre pares por surname y address_1 usando la similitud entre strings
+compare_cl.string('surname', 'surname', threshold=0.85, label='surname')
+compare_cl.string('address_1', 'address_1', threshold=0.85, label='address_1')
+```
+Con el método `Compare` estamos inicializando las reglas de comparación que nos validarán qué consideramos posibles coincidencias.
+
+En este punto, una vez inicializado `Compare`, definimos dos posibles métodos de comparación:
+
+* `exact`: No devolverá un 1 o un 0, si la fecha de naciemiento y el estado son exactamente igual o no. 
+
+* `string`: Definimos un margen de error del 15%. Si el apellido y la dirección son un 85% parecidos, o superior, al string que estamos analizando la daremos por valida. Devolviendo 1 o 0 en función de a coincidencia. 
+
+
+```python
+#Encuentra coincidencias
+potential_matches = compare_cl.compute(pairs, census_A, census_B)
+
+#Para encontrar potenciales coincidencias
+
+potential_matches[potential_matches.sum(axis=1) => 2]
+```
+
+Primero, con `compute`, ejecutamos las reglas de comparación sobre los dos censos que pretendemos comprar.
+
+Indicando `potential_matches[potential_matches.sum(axis=1) => 2]` queremos que solo aparezcan los registros que tengan en cuenta coincidencias en ambas reglas. Es decir, que tanto la regla `exact` como `string`, tengan un 1 indicando que es correcta. 
