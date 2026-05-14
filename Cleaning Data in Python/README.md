@@ -294,7 +294,7 @@ pairs = indexer.index(census_A, census_B)
 ```
 Aquí lo que hacemos es utilizar la estrategia de busquedad, proporcionando los censos a comparar. 
 
-Almacenamos en la variable `pairs`, las coincidencias dignas de analisis con mayor profundidad.
+Almacenamos en la variable `pairs`, las coincidencias dignas de un analisis con mayor profundidad.
 
 ```python
 #Comapracion de pares
@@ -312,7 +312,7 @@ Con el método `Compare` estamos inicializando las reglas de comparación que no
 
 En este punto, una vez inicializado `Compare`, definimos dos posibles métodos de comparación:
 
-* `exact`: No devolverá un 1 o un 0, si la fecha de naciemiento y el estado son exactamente igual o no. 
+* `exact`: No devolverá un 1 o un 0, si la fecha de naciemiento y el estado son exactamente igual o no. Lo podemos utilizar para afinar aun mas la busqueda 
 
 * `string`: Definimos un margen de error del 15%. Si el apellido y la dirección son un 85% parecidos, o superior, al string que estamos analizando la daremos por valida. Devolviendo 1 o 0 en función de a coincidencia. 
 
