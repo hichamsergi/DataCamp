@@ -4,11 +4,11 @@
 
 ## 2. Índice
 
-1. [Título del apartado 1](#capítulo-1-título-del-apartado-1)
+1. [1](#)
 
-2. [Título del apartado 2](#capítulo-2-título-del-apartado-2)
+2. [2](#)
 
-3. [Título del apartado 3](#capítulo-3-título-del-apartado-3)
+3. [3](#)
 
 ---
 
@@ -323,9 +323,30 @@ potential_matches = compare_cl.compute(pairs, census_A, census_B)
 
 #Para encontrar potenciales coincidencias
 
-potential_matches[potential_matches.sum(axis=1) => 2]
+matches = potential_matches[potential_matches.sum(axis=1) >= 3]
 ```
 
 Primero, con `compute`, ejecutamos las reglas de comparación sobre los dos censos que pretendemos comprar.
 
-Indicando `potential_matches[potential_matches.sum(axis=1) => 2]` queremos que solo aparezcan los registros que tengan en cuenta coincidencias en ambas reglas. Es decir, que tanto la regla `exact` como `string`, tengan un 1 indicando que es correcta. 
+Indicando `potential_matches[potential_matches.sum(axis=1) >= 3]` queremos que solo aparezcan los registros que tengan en cuenta coincidencias en ambas reglas. Es decir, que tanto las reglas `exact` como `string`, tengan un 1 indicando que son correctas.
+
+```python
+#Obtener únicamente indices del censo B: 
+duplicate_rows = matches.index.get_level_values(1)
+```
+Entendiendo los pasos anteriores, se comprende que las reglas y validaciones que hemos establecido hacen que `matches` contenga los registros que podemos encontrar tanto en el censo A como en el censo B. Es decir, los duplicados.
+
+Con `matches.index.get_level_values(1)` obtenemos los registros duplicados que se hallan en el censo B.
+
+```python
+#Encontrar duplicados en el censo B
+census_B_duplicates = census_B[census_B.index.isin(duplicate_rows)]
+
+#Encontrar nuevas líneas en censo_B
+census_B_notinA = census_B[~census_B.index.isin(duplicate_rows)]
+
+#Vinculamos el DataFrame
+full_census = pd.concat([census_A, census_B_notinA])
+```
+
+Y finalmente, como ya podemos localizar los duplicados, podemos identificar tambien los no-duplicados. Por lo tanto, se entiende que los registros contenidos únicamente en el censo A más los registros únicos del censo B, concatenados, crean el dataset de información única que queremos generar. 
