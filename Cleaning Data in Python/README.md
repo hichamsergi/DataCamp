@@ -4,11 +4,10 @@
 
 ## 2. Índice
 
-1. [1](#)
-
-2. [2](#)
-
-3. [3](#)
+1. [Dificultades habituales con los datos](#capítulo-1-dificultades-habituales-con-los-datos)
+2. [Problemas de texto y datos categóricos](#capítulo-2-problemas-de-texto-y-datos-categóricos)
+3. [Problemas avanzados de datos](#capítulo-3-problemas-avanzados-de-datos)
+4. [Vinculación de registros](#capítulo-4-vinculación-de-registros)
 
 ---
 
