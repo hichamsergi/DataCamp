@@ -1,8 +1,6 @@
-# 📘 Nombre del capítulo
+# 📘 Cleaning data in Python
 
-## 1. Descripción
-
-## 2. Índice
+## 1. Índice
 
 1. [Dificultades habituales con los datos](#capítulo-1-dificultades-habituales-con-los-datos)
 2. [Problemas de texto y datos categóricos](#capítulo-2-problemas-de-texto-y-datos-categóricos)
@@ -11,7 +9,7 @@
 
 ---
 
-## 3. Apuntes
+## 2. Apuntes
 
 ### Capítulo 1: **<ins>Dificultades habituales con los datos</ins>**
 
