@@ -299,11 +299,11 @@ compare_cl = record_linkage.Compare()
 
 #Encuentra coincidencias exactas entre pares para date_of_birth y state
 compare_cl.exact('date_of_birth', 'date_of_birth', label='date_of_birth')
-compare_cl.exact('state', 'state', label='state')
+compare_cl.exact('state', 'state', label='state') #compare_cl.exact('columna_censoA', 'columna_censoB', label='columna_censoComaprativo')
 
 #Econtrar coincidencias parecidas entre pares por surname y address_1 usando la similitud entre strings
-compare_cl.string('surname', 'surname', threshold=0.85, label='surname')
-compare_cl.string('address_1', 'address_1', threshold=0.85, label='address_1')
+compare_cl.string('surname', 'surname', threshold=0.85, label='surname') #compare_cl.string('columna_censoA', 'columna_censoB', threshold=%_d_similitud, label='columna_censoComaprativo')
+compare_cl.string('address_1', 'address_1', threshold=0.85, label='address_1') 
 ```
 Con el método `Compare` estamos inicializando las reglas de comparación que nos validarán qué consideramos posibles coincidencias.
 
