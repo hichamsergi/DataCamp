@@ -95,3 +95,71 @@ list(cuadrados) #[1, 4, 9, 16, 25]
 ```
 
 De esta forma podemos ahorrarnos la necesidad de crear un bucle.
+
+**NumPy**, la librería de Python especialmente útil para la ciéncia de datos, también nos provee de herramientas útiles para escribir código eficinete en Python. 
+
+El principal benefício de esta librería serían las matrices NumPy. Es un tipo de dato homogénio, por lo que debe contener el mísmo tipo de valor, flotantes o numérico, o cualquier otro, pero únicamente de un tipo. Estas matríces son mucho más eficientes con la memória que las listas básicas de Python:
+
+```python
+
+num_lista = [*range(5)] #[0, 1, 2, 3, 4]
+
+#
+import numpy as np
+
+numpy_array = np.array(range(5)) #array([0, 1, 2, 3 , 4])
+```
+
+Si generamos un array con diferentes típos, NumPy estandarizará los valores:
+
+```python
+
+numpy_array = np.array([1, 2.5, 3]) #array([1. , 2.5, 3. ]) 
+```
+
+Esto hace que las matrices, sean mucho más eficientes que las simples listas de Python dado que tenemos el mismo tipo de dato en todos los valores que analizamos. 
+
+Pero de todas formas, estas matrices nos permiten hacer cosas que las listas de Python harían de una forma mucho menos eficiente, como aplicar una función a todos los conjuntos de una lista. Imaginemos que queremos elevar al cuadrado todos los valores que contiene una lista. Con una lista, podríamos hacerlo aplicando un bucle que itere y aplique el cuadrado o con una comprensión de listas. Pero si queremos hacerlo más eficiente aun, podemos hacerlo a través de una matriz:
+
+```python
+
+num_np = np.array([-2, -1, 0, 1, 2])
+
+num_np ** 2 #array([4, 1, 0, 1, 4])
+```
+
+Con una simple operación, hemos podido hacer lo que pretendiamos ahorrando memoria y tiempo.
+
+Pero si escalamos la dificultad, las ventajas de estas matrices se hacen aun más evidentes. Intentemos acceder a diferentes valores de una lista bidimensional, y de una matriz bidimiensional. A nivel estructural, serían lo mismo, pero al acceder a una u otra, vemos claramente las diferencias:
+
+```python
+
+#2-D lista:
+num_2D = [
+    [1, 2, 3],
+    [4, 5, 6]
+]
+##Indexar el segundo valor de la primera lista:
+num_2D[0][1] #2
+##Devolver el primer valor de ambas listas:
+[row[0] for row in num_2D] #1, 4
+
+#2-D array:
+num_array = np.array(nums_2)
+##Indexar el segundo valor de la primera fila:
+num_array[0, 1] #2
+##Devolver el primer valor de ambas filas:
+num_array[:,0] #1, 4
+```
+
+También existe una forma especial de indexar con estas matrices, la **indexación booleana**. Funciona de la siguiente forma:
+```python
+
+num_np = np.array([-2, -1, 0, 1, 2])
+
+num_np > 0 #array([False, False, False, True, True])
+
+num_np[num_np > 0] #array([1, 2])
+```
+
+Esto, sigue siendo extremadamente más eficiente que hacer una comprensión de lista para poder filtrar valores. 
