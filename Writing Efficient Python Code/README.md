@@ -284,3 +284,35 @@ combos_obj = combinations(pokemon, 2)
 
 #[('Geodude', 'Cubone'), ('Geodude', 'Lickitung'), ('Geodude', 'Persian'), ('Geodude', 'Diglett'), ('Cubone', 'Lickitung'), ('Cubone', 'Persian'), ('Cubone', 'Diglett'), ('Lickitung', 'Persian'), ('Lickitung', 'Diglett'), ('Persian', 'Diglett')] 
 ```
+
+El análisis sobre dos grupos para poder identificar diferencias y similitudes es bastante común. En matemáticas esto se llama **Teoría de Conjuntoss**, y nosotros podemos sacar ventaja de esta rama mediante el típo de dato **set**.
+
+**Set**, que en inglés significa *conjunto*, tiene la peculiaridad de contener datos únicos. Esto implica que la información contenida no se repite en ningún punto del mismo conjunto. Esto lo hace muy atractivo para el análisis de información, y para ello tiene varíos métodos que nos son muy útiles para analizar varios conjuntos:
+
+* `intersection()`: Elementos contenidos en ambos conjuntos.
+
+* `difference()`: Elementos hallados en un conjunto, pero no en otro.
+
+* `symmetric_difference()`: Elementos contenidos únicamente en uno de los conjuntos.
+
+* `union()`: Elementos en cualquiera de los dos.
+
+De cualquier forma, veamos un ejemplo práctico sobre estos conjuntos:
+
+```python
+
+lista_A = [1, 2, 3, 4, 5]
+
+lista_B = [6, 7, 8, 9, 5]
+
+set_A = set(lista_A) #{1, 2, 3, 4, 5}
+set_B = set(lista_B) #{6, 7, 8, 9, 5}
+
+set_A.intersection(set_B) #{5}
+set_A.difference(set_B) #{1, 2, 3, 4}
+set_A.symmetric_difference(set_B) #{1, 2, 3, 4, 6, 7, 8, 9}
+set_A.union(set_B) #{1, 2, 3, 4, 5, 6, 7, 8, 9}
+```
+Como se puede ver en el ejemplo de `union()`, el duplicado solo se aplica una vez dado que estamos tratando un **set**
+
+El hecho de utilizar conjuntos es mucho más rápido y eficiente que intentar realizar las mismas operaciones mediante un bucle anidado. Pero si realizamos una prueba de pertenencia a un conjunto, mediante `in`, y verificamos si un dato se encuentra en un *set, lista o tupla*, veremos que la ejecución más rápida se realiza con el *set*.
