@@ -226,7 +226,7 @@ num_list_np = np.array(range(1000))
 sys.getsizeof(num_list_np) #8096
 ```
 
-Como hemos visto anteriormente, el módulo `sys` es muy parecido a `%timeit`, perfile y da información de bloques individuales de código. A nosotros nos interesa poder analizar bloques del mismo, por eso queremos utilizar erramientas más potentes, como `memory_profiler`.
+Como hemos visto anteriormente, el módulo `sys` es muy parecido a `%timeit`, perfile y da información de bloques individuales de código. A nosotros nos interesa poder analizar bloques del mismo, por eso queremos utilizar herramientas más potentes, como `memory_profiler`.
 
 El paquete `memory_profiler`, funciona exactamente igual que `line_profiler`, analizamos bloques de código para poder valorar el impacto que tiene en memoria, en vez de en el tiempo de ejecución. Para poder utilizarlo seguimos los mismos pasos:
 
@@ -273,7 +273,7 @@ type_counts = Counter(poke_type) #Counter({'Water: 105,
                                  # 'Normal': 92, 'Bug': 65...})
 ```
 
-Si queremos poder iterar de forma eficiente, podemos utilizar otro módulo, `itertools`. Con esta erramienta, e importanto la función `combinations`, podemos generar todas las posibles combinaciones de elementos de una lista, con el tamaño que indiquemos. Por ejemplo:
+Si queremos poder iterar de forma eficiente, podemos utilizar otro módulo, `itertools`. Con esta herramienta, e importanto la función `combinations`, podemos generar todas las posibles combinaciones de elementos de una lista, con el tamaño que indiquemos. Por ejemplo:
 
 ```python
 # Import combinations from itertools
@@ -316,3 +316,37 @@ set_A.union(set_B) #{1, 2, 3, 4, 5, 6, 7, 8, 9}
 Como se puede ver en el ejemplo de `union()`, el duplicado solo se aplica una vez dado que estamos tratando un **set**
 
 El hecho de utilizar conjuntos es mucho más rápido y eficiente que intentar realizar las mismas operaciones mediante un bucle anidado. Pero si realizamos una prueba de pertenencia a un conjunto, mediante `in`, y verificamos si un dato se encuentra en un *set, lista o tupla*, veremos que la ejecución más rápida se realiza con el *set*.
+
+Alguna de las cosas que más hemos podido repetir, es la poca eficiencia que tiene el uso de bucles. Precisamente por esa poca eficiencia, se recomienda siempre intentar evitar su uso en la medida de lo posible.
+
+Pese a evitar su uso, debemos entender que bucles como `for` y `while` iteran elemento a elemento. Este punto es el que los hace ineficientes. Pero vamos a ver un ejemplo:
+
+* Suponemos que tenemos el siguiente array de **NumPy** :
+```python
+
+lista_n = np.array([
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    ...
+])
+```
+
+* Con un bucle, para obtener la media de cada una deberíamos hacer lo siguiente:
+
+```python
+
+avg_filas = []
+
+for fila in lista_n:
+    
+    avg_f = np.mean(fila)
+    avg_filas.append(avg_f)
+```
+
+* Si utilizamos **Numpy** como, podemos hacerlo de una forma mucho más pitónica:
+
+```python
+
+avg_filas = lista_n.mean(axis=1)º
+
+De esta forma hemos hecho lo mismo de una forma extremadamente más eficiente, indicandole `axis=1` como una forma de promediar fila a fila.
