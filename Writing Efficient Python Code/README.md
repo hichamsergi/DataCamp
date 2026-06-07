@@ -5,7 +5,7 @@
 1. [Fundamentos de eficiencia](#capítulo-1-fundamentos-de-eficiencia)
 2. [Temporización y perfilamiento de código](#capítulo-2-temporización-y-perfilamiento-de-código)
 3. [Ganando eficiéncia](#capítulo-3-ganando-eficiéncia)
-4. []
+4. [Optimización básica de Pandas](#capítulo-4-optimización-básica-de-pandas)
 
 ------
 
