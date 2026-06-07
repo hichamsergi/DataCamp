@@ -347,6 +347,58 @@ for fila in lista_n:
 
 ```python
 
-avg_filas = lista_n.mean(axis=1)º
+avg_filas = lista_n.mean(axis=1)
+```
 
 De esta forma hemos hecho lo mismo de una forma extremadamente más eficiente, indicandole `axis=1` como una forma de promediar fila a fila.
+
+### Capítulo 4: **<ins>Optimización básica de Pandas</ins>**
+
+Damos por mencionada y conocida a la libreria **Pandas**, dado que es la que más hemos podido utilizar. Así pues, pasamos directamente a ver como **Pandas** nos puede servir para optimizar nuestro código y hacerlo más eficiente.
+
+Es tentador el hecho de utilizar la función `*.iloc[]` para poder localizar el índice de un valor, pero al igual que sucede con los bucles, es muy poco eficiente. Como alternativa, podemos utilizar `df.iterrows()` que nos genera una tupla con un primer valor, referente al índice analizado, y el segundo, como una Serie de Pandas. 
+
+```python
+
+for i,row in giants_df.iterrows():
+    runs_scored = row['RS']
+    runs_allowed = row['RA']
+```
+
+Pero hay otras herramientas incluso más eficientes que `.iterrows()`, `.itertuples()`. Esta, ahorra el hecho de tener que entrar acceder mediante corchetes a los valores contenidos, ya que nos genera un tipo de dato llamado **namedtuple**.
+
+Este tipo de dato, se comporta como una tupla, pero tiene campos accesibles mediante atributos. Esto implica lo siguiente:
+
+```python
+for row_namedtuple in tema_wins_df.itertuples():
+    print(row_namedtuple)
+
+Pandas(Index=0, Team='ARI', Year=2012, W=81)
+Pandas(Index=1, Team='ATL', Year=2012, W=94)
+```
+
+Ahora vamos a utilizar la busqueda de tributos:
+
+```python
+print(row_namedtuple.Team) #ATL , en el caso de la segunda iteración
+```
+
+Esta forma de iterar, es considerablemente eficinete, ya que el acceso a una Serie de Pandas requiere más recursos que el acceso a atributos. 
+
+Volviendo al concepto de evitar siempre que sea posible los bucles, vamos a ver como podemos seguir esta máxima con una libreria como Pandas. 
+
+`.apply()`, al igual que la función integrada `map(..., ...)`, aplica una función indicada sobre el *DataFrame*. Eso si, con alguna variación:
+
+```python
+
+baseball_df.apply(
+    lambda row: calc_run_diff(row['RS'], row['RA']),
+    axis=1
+)
+```
+
+* *función lambda*: Esta es la función que queremos aplicar a todo el *DataFrame*, baseball_df. 
+
+* *axis*: `0` o `1`, para indicar columna o fila. 
+
+En resumen, estamos aplicando la cunción `calc_run_diff(..., ...)` a todas las filas del *DataFrame*.
