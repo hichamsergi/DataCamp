@@ -1,12 +1,8 @@
 # 📘 Introduction to APIs in Python
 
-## 1. Descripción
-
-[]
-
 -------
 
-## 2. Índice
+## 1. Índice
 
 1. [Hacer peticiones a la API con Python](#capítulo-1-hacer-peticiones-a-la-api-con-python)
     - [Anatomía básica de una petición API](#11-anatomía-básica-de-una-petición-api)
@@ -21,7 +17,7 @@
 
 -----
 
-## 3. Apuntes
+## 2. Apuntes
 
 ### Capítulo 1: **<ins>Hacer peticiones a la API con Python</ins>**
 Como ya Hemos comentado alguna vez, las **API**, o *Application Programming Interface*, son un conjunto de reglas, protocolos y rutinas, creadas para interactuar entre aplicaciones de software. En la realidad, funcionan como intermediarias entre dos aplicaciones, solicitante y proveedor de información.
