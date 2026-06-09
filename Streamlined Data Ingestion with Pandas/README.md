@@ -80,6 +80,7 @@ df = pd.read_csv("us_tax_data_2019.csv", na_values={"zipcode": 0})
 
 Mediante el argumento `na_values`, indicamos que queremos rellenar los valores que sean como *NaN*. De esta manera evitamos que un dato erróneo sea considerado como correcto o valido.
 
+
 Pero un *DataFrame* es muy grande y puede contener errores múltiples que pueden pasarse por alto. Por eso, indicar lo que queremos que haga Pandas al procesarlos es imprescindible para evitar que los scripts se vean interrumpidos:
 
 ```python
@@ -96,7 +97,50 @@ En estos casos, los siguientes argumentos indican cosas diferentes:
 
 ### Capítulo 2: **<ins>Importación de datos de archivos Excel</ins>**
 
+Es muy común que en los archivos Excel haya más de una hoja, cada una con los datos pertinentes, pero `read_excel` únicamente importa la primera si no le indicamos lo contrario. Es por eso que Pandas ofrece la posibilidad de indicar la hoja de la que queremos recoger los datos.
 
+Utilizando el argumento `sheet_name`, dentro de `read_excel()`, podemos indicar no solo el nombre de la hoja que queremos recoger, sino también el índice que esta ocupa, o una lista de ellos para poder importar varias hojas.
+
+```python
+data = pd.read_excel('fcc_data.xlsx',
+                        sheet_name=1)
+
+data = pd.read_excel('fcc_data.xlsx',
+                        sheet_name='2026')      
+```
+
+Pero, *como podemos hacer para importar todas las hojas?*. Es apregunta, se responde facilmente y utilizando el mismo argumento que acabamos de aprender, `sheet_name=None`:
+
+```python
+data = pd.read_excel('fcc_data.xlsx',
+                        sheet_name=None)  
+```
+
+El problema de utilizar este método es que realmente no importamos un *DataFrame* con toda la infromación. Lo que realmente recibimos es un diccionario ordenado con pares clave valor que corresponden a el nombre de la hoja, como clave, y un *DataFrame*, como valor.
+
+Si queremos organizarlo todo en un mismo *DataFrame* deberemos realizar algun paso extra:
+
+```python
+
+todas_hojas = pd.DataFrame() #DataFrame vacio
+
+for sheet_name, data_f in data.items():
+
+    data_f["Year"] = sheet_name
+
+    todas_hojas = pd.concat([todas_hojas, data_f])
+```
+
+Pero en el capítulo anterior hemos aprendido a como indicar que queremos importar un determinado tipo de datos, con `dtype`. Pero los datos booleanos requieren una mencion especial, no por el hecho de ser binarios, o **True** o **False**, sino por el hecho de que algunas veces podemos verlos representados de diferentes formas, como **Yes** o **No**.
+
+Este tipo de casos, en los que no se indica explicitamente **True** o **False**, son en los que nos vamos a concentrar. Con el argumento `true_values`, podemos indicarle los valores que consideremos como **True**, proporcionandole una lista:
+
+```python
+data = pd.read_excel('fcc_data.xlsx',
+                        true_values=['Yes'],
+                        false_values=['No'])  
+```
+Pese a ello, la conversión debe valorarse y considerar las posibles implicaciones de la conversión, dado que las operaciones que se lleven a cabo sobre el dataset basadas en datos booleanos pueden tener un impacto no deseado.
 
 ### Capítulo 3: **<ins>Importación de datos de Bases de Datos</ins>**
 
