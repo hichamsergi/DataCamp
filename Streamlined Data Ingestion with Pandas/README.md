@@ -142,6 +142,227 @@ data = pd.read_excel('fcc_data.xlsx',
 ```
 Pese a ello, la conversión debe valorarse y considerar las posibles implicaciones de la conversión, dado que las operaciones que se lleven a cabo sobre el dataset basadas en datos booleanos pueden tener un impacto no deseado.
 
+Pero como ya sabemos, los datos booleanos no son los más difíciles de gestionar, sino que los son las fechas. Así pues, cuando queremos especificar que una columna contiene fechas, no lo hacemos con `dtype` sino con un argumento especial, `parse_dates`:
+
+```python
+
+date_cols = ["Columna_fecha1", "Columna_fecha2"]
+
+data = pd.read_excel('fcc_data.xlsx',
+                        parse_dates=date_cols)
+```
+
+De todas forma, este método solo funciona si Pandas reconoce el formato de la fecha. Si este formato no pertenece a un estándar, deberemos importar los datos utilizando `parse_dates` y posteriormente utilizar la función `.to_datetime()`. Esta función es muy útil, y funcional, ya que podemos indicar el formato específico de nuestra fecha no estandarizada:
+
+```python
+
+formato_fecha = "%m%d%Y %H:%M:%S"
+
+date2_standarize = pd.to_datetime('fcc_data.xlsx',
+                        format=formato_fecha)
+```
+
+* `%Y`: Indicando año, en formato de 4 dígitos.
+
+* `%m`: Mes, en formato de 2 dígitos.
+
+* `%d`: Día, en formato de 2 dígitos.
+
+* `%H`: Hora, en formato de 24 horas.
+
+* `%M`: Minutos, en formato de 2 dígitos.
+
+* `%S`: Segundos, en formato de 2 dígitos.
+
 ### Capítulo 3: **<ins>Importación de datos de Bases de Datos</ins>**
 
+Pero la ingesta de datos no solo se puede dar por los diferentes tipos de archivos que ya hemos comentado. Si tenemos una base de datos a la que podamos realizar consultas, podemos hacerlo tanto con Pandas como con una libreria ya conocida, `sqlalchemy`. Esta libreria nos permite generar el motor a través del cual lanzaremos nuestras consultas:
+
+```python
+# Importamos la función create_engine() de la libreria sqlalchemy
+from sqlalchemy import create_engine
+
+# Creamos el motor de la base de datos
+engine = create_engine('sqlite:///data.db')
+```
+
+Ahora bien, este es solo el primer paso. `sqlalchemy` solo nos permite conectarnos a la base de datos, cuando ya hemos podido acceder, toca utilizar Pandas:
+
+```python
+# Load hpd311calls without any SQL
+hpd_calls = pd.read_sql("SELECT * FROM hpd311calls", engine)
+```
+
+Como se puede ver, `.read_sql(...)` nos permite lanzar una consulta SQL, mediante Pandas. Lo que recibimos de esta función es un *DataFrame* con los datos solicitados. Pero podemos complicar más el proceso, haciendo más compleja nuestras sonsultas de SQL:
+
+```python
+# Obtener date, tmax, y tmin de weather
+query = """
+SELECT date, 
+       tmax, 
+       tmin
+  FROM weather;
+"""
+
+# Obtenemos todo de hpd311calls cuando el tipo de queja corresponda a 'SAFETY'
+query = """
+SELECT *
+FROM hpd311calls
+WHERE 'SAFETY' == complaint_type;
+"""
+
+# Recoge los registros que tengan temps <= 32 o snow >= 1
+query = """
+SELECT *
+  FROM weather
+  WHERE tmax <= 32
+  OR snow >= 1;
+"""
+
+# Obtenemos registros únicos de la combinación de borough y complaint_type
+query = """
+SELECT DISTINCT borough, 
+       complaint_type
+  FROM hpd311calls;
+"""
+```
+
+Como podemos ver, hay muchas formas de complicarnos la vida y hacer extremadamente complejas nuestras consultas. Y como Python, SQL también tiene sus funciones integradas y nos permite agrupar registros de tal forma que podemos rizar el rizo aun más:
+
+```python
+# Obtener un recuento de todas las quejas agrupadas por su tipo
+query = """
+SELECT complaint_type, 
+     COUNT(*)
+  FROM hpd311calls
+  GROUP BY complaint_type;
+"""
+
+# 
+query = """
+SELECT month, 
+        MAX(tmax), 
+        MIN(tmin),
+        SUM(prcp)
+  FROM weather 
+ GROUP BY month;
+"""
+```
+
+Pero lo más interesante puede ser la forma de mezclar tablas, que para SQL corresponderían a diferentes *DataFrames* si queremos entenderlo a través de Pandas. Para hacerlo, necesitamos importar la tablas externa de la que recogeremos o combinaremos datos. Para hacerlo, utilizaremos `JOIN` y especificamos mediante una sentencia lógica como mezclaremos los datos:
+
+```python
+# Query to join weather to call records by date columns
+query = """
+SELECT * 
+  FROM hpd311calls
+  JOIN weather 
+  ON hpd311calls.created_date = weather.date;
+"""
+
+# Query to get hpd311calls and precipitation values
+query = """
+SELECT hpd311calls.*, weather.prcp
+  FROM hpd311calls
+  JOIN weather
+  ON hpd311calls.created_date = weather.date;"""
+
+# Modify query to join tmax and tmin from weather by date
+query = """
+SELECT hpd311calls.created_date, 
+	   COUNT(*), 
+       weather.tmax,
+       weather.tmin
+  FROM hpd311calls 
+       JOIN weather
+       ON hpd311calls.created_date = weather.date
+ WHERE hpd311calls.complaint_type = 'HEAT/HOT WATER' 
+ GROUP BY hpd311calls.created_date;
+ """
+```
+
 ### Capítulo 4: **<ins>Importación de datos JSON y trabajo con APIs</ins>**
+
+Y para finalizar, el último método de importación de datos, **JSON** y las **API**. De la misma forma que los ejemplos anteriores, vamos a utilizar Pandas para poder manipular y leer datos en dicho formato. 
+
+Pero tenemos que aplicar un poco lo que ya conociamos, y es que Pandas en realidad no es tan listo o intuitivo como nos pensado. Para poder leer correctamente ciertos datos, debemos entender que dependiendo de la orientación de nuestros datos JSON, y es por eso que merece la pena explicar los dos tipos de orientación:
+
+* `orient='index'`: Esta correspondería al clasico diccionario anidado, en el que tenemos una clave indice que corresponde al indice del registro y el diccionario anidado, al nombre de la columna y el valor que queremos cargar en esta.
+
+* `orient='split'`: Esta correspondería a tres claves, `columns`, `index` y `data`, que contienen listas con la información a cargar en cada una de los apartados que describen.
+
+```python
+
+df = pd.read_json("dhs_report_reformatted.json",
+                      orient='split')
+```
+
+Ahora bien, para poder recibir la infromación que nos hace falta de los archivos JSON, debemos realizar una solicitud mediante APIs. Estas solicitudes requieren de una vieja conocida, la libreria `requests`, y para poder solicitar utilizaremos la siguiente función:
+
+```python
+
+requested_data = requests.get(url_string,
+                              params=...,
+                              headers=...)
+```
+
+En este caso, asumimos que el primer argumento de la función es la URL de la que pretendemos recibir información. Pero el resto de argumentos nos sirven para lo siguiente:
+
+* `params`: Toma un diccionario, con pares clave-valor que funcionarán como los parámetros de consulta para la API.
+
+* `headers`: Toma un diccionario, con pares clave-valor que funcionarán como valores customizables de los encabezados HTTP que mandamos.
+
+En definitiva, lo que recibimos de una consulta es un objeto `response`. Pero este objeto puede contener información que no nos es útil. Para recibir la información en formato JSON utilizaremos `response_data.json()`. Y como nuestro objetivo es convertir esa respuesta en un *DataFrame*, generaremos uno vacio con `pd.DataFrame()`, para que no dé un error al utilizar la función `pd.read_json(...)`:
+
+```python
+
+responsed_data = requested_data.json()
+
+final_df = pd.DataFrame(responsed_data["businesses"])
+```
+
+Ahora que sabemos como recoger información de diferentes fuentes, debemos saber como combinar entre si la información que acabamos de recoger. Esto podemos hacerlo con la función `.concat([..., ...])` de Pandas, que conctatenará los diferentes elementos proporcionados en la lista que le indiquemos:
+
+```python
+df1 = pd.DataFrame({"Nombre": ["Ana"]}, index=[0])
+df2 = pd.DataFrame({"Nombre": ["Eva"]}, index=[0])  # ¡Mismo índice!
+
+#Ejemplo simple con error
+concator = pd.concat([df1, df2]) 
+```
+
+Es importante comentar que no es tan fácil como concatenar *DataFrames*, tenemos que tenre cuidado con elementos como los números de índices que Pandas genera en las filas. También podemos hacerlo con el argumento `ignore_index=True`:
+
+```python
+
+# BIEN: Resetea el contador de filas de arriba a abajo
+bien = pd.concat([df1, df2], ignore_index=True)
+# Resultado: filas indexadas limpiamente como 0 y 1.
+```
+
+Otra forma de mezclar información de diferentes *DataFrames* es utilizando `.merge(..., ...)` que nos permite hacer operaciones o consultas en dos *DataFrames* simultaneamente. Funciona de froma parecida a los **JOIN** de *SQL*, pero con algunas variaciones:
+
+```python
+ventas = pd.DataFrame({
+    "id_partido": [101, 102],
+    "entradas_vendidas": [12000, 8500]
+})
+
+# Tabla 2: Datos de los partidos
+partidos = pd.DataFrame({
+    "id_partido": [101, 102],
+    "rival": ["Barça", "Real Madrid"]
+})
+
+# Fusionamos usando 'id_partido' como puente
+partidos_completos = ventas.merge(partidos, on="id_partido")
+```
+
+Y como en *SQL* hay una forma más compleja de utilizar *merge*:
+
+```python
+
+merged = call_counts.merge(weather,
+                            left_on='created_date',
+                            right_on='date')
+```
