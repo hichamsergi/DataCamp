@@ -40,7 +40,7 @@ El objetivo es consolidar conocimientos en Python, SQL, sistemas de datos y herr
 |---------------------------------------------|---------|---------------------------------------------|
 | [Cleaning Bank Marketing Campaign Data](https://github.com/hichamsergi/DataCamp/tree/main/Project:%20Cleaning%20Bank%20Marketing%20Campaign%20Data)       | ✅ **Completado** | Limpieza y preparación de datos reales       |
 |[Remote Calculator](https://github.com/hichamsergi/DataCamp/blob/main/Project%3A%20Remote_Calculator/README.md)   | ✅ **Completado** | Recogida e interpretación de datos desde diferentes fuentes, generación de gráficos con la información extraida |
-| Performing a Code Review                    | ⏳ Pendiente | Aplicar buenas prácticas de ingeniería de software |
+| Performing a Code Review                    |  ✅ **Completado** | Aplicar buenas prácticas de ingeniería de software |
 | Building a Retail Data Pipeline             | ⏳ Pendiente | Construcción de un pipeline de datos de retail |
 | Cleaning Data in Python                     | ⏳ Pendiente | Técnicas avanzadas de limpieza con Python    |
 | [Full ETL Process](https://github.com/hichamsergi/DataCamp/tree/main/Project:%20Full_ETL_Process) | 🔄 *En progreso* | Proceso completo de ETL con datos de diferentes fuentes y formatos |
