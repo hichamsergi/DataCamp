@@ -132,7 +132,32 @@ barca.historial_goles
 barca.formacion_habitual
 ```
 
-De la forma descrita anteriormente podemos crear al equipo `FC Barcelona`, con los atributos descritos, y también acceder a cualquiera de los atributos descritos en la clase. 
+De la forma descrita anteriormente podemos crear al equipo `FC Barcelona`, con los atributos descritos, y también acceder a cualquiera de los atributos descritos en la clase.
 
+Hay que indicar que dentro de la Ingeniería de Software existe un concepto llamado **DRY**, acronimo de **Don't Repeat Yourself**. Consiste en el hecho de intentar evitar el copiar y pegar bloques de códigos para ahorrar tiempo. De esta forma, cuando se detecta un error hay que modificar todos los fragmentos de código que se han reutilizado.
+
+En lo que nos atañe, podemos implementar este concepto mediante las clases. Creando una clase con herencia, podemos generar una nueva clase heredando atributos y funciones de la clase padre:
+
+```python
+
+from .parent_class import EquipoFut
+
+class entrenador(EquipoFut):
+
+    def __init__(self, nombre_train):
+        
+        EquipoFut.__init__(self)
+        self.nombre_train = nombre_train
+```
+
+Ahora bien, hay una clase madre y una clase hija, pero puede haber herencia de múltiples clases. A esto se le llama *herencia multinivel*:
+
+```python
+class jugadora(entrenador):
+
+    def __init__(self, nombre):
+        super().__init__()
+        self.nombre = nombre
+```
 
 ### Capítulo 4: **<ins>Mantenibilidad</ins>**
